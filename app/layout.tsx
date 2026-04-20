@@ -1,11 +1,11 @@
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { cn } from "@/lib/utils";
-import "./global.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/common/header";
 import { ThemeProvider } from "next-themes";
 import { createMetadata } from "@/lib/metadata";
 import { fonts } from "@/lib/fonts";
+import "./global.css";
 
 export const metadata = createMetadata({
   title: {
