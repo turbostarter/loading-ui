@@ -1,13 +1,30 @@
 ---
-title: Hello World
-description: Your first document
+title: Introduction
+description: Guides and component reference for loading-ui — loading states and indicators for TanStack Start.
+icon: Rocket
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+Welcome to **loading-ui**. These docs cover setup, usage philosophy, and individual components you can drop into a **TanStack Start** app alongside your existing UI stack.
 
-## What is Next?
+## Quick links
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
-</Cards>
+## What you’ll find
+
+| Topic                          | Page                               |
+| ------------------------------ | ---------------------------------- |
+| Install and wire up primitives | [Usage](/docs/usage)               |
+| Values and constraints         | [Philosophy](/docs/philosophy)     |
+| Help and discussion            | [Community](/docs/community)       |
+| Contributing                   | [Contributing](/docs/contributing) |
+
+### Minimal example
+
+```tsx
+import { Spinner } from "@/components/ui/spinner";
+
+export function Example() {
+  return <Spinner className="size-6 text-muted-foreground" />;
+}
+```
+
+The site is built with **Fumadocs** on TanStack Start — MDX pages support rich examples alongside navigation and search.

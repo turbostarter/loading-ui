@@ -1,3 +1,5 @@
+"use client";
+
 import { getPagesFromFolder } from "@/lib/page-tree";
 import type { source } from "@/lib/source";
 import {
@@ -49,7 +51,7 @@ export function DocsSidebar({
                       isActive={item.url === pathname}
                       className="data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
                       render={
-                        <Link to={item.url}>
+                        <Link href={item.url}>
                           <span className="absolute inset-0 flex w-(--sidebar-menu-width) bg-transparent" />
                           {item.name}
                           {PAGES_NEW.includes(item.url) && (
@@ -94,7 +96,7 @@ export function DocsSidebar({
                           isActive={page.url === pathname}
                           className="data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
                           render={
-                            <Link to={page.url}>
+                            <Link href={page.url}>
                               <span className="absolute inset-0 flex w-(--sidebar-menu-width) bg-transparent" />
                               {page.name}
                               {PAGES_NEW.includes(page.url) && (

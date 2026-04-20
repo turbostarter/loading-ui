@@ -1,0 +1,78 @@
+{
+  "name": "loading-ui",
+  "homepage": "https://loading-ui.com",
+  "items": [
+    {
+      "name": "index",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [],
+      "cssVars": {},
+      "css": {},
+      "type": "registry:style"
+    },
+    {
+      "name": "style",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [],
+      "cssVars": {},
+      "css": {},
+      "type": "registry:style"
+    },
+    {
+      "name": "ring",
+      "files": [
+        {
+          "path": "registry/ui/ring.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "spokes",
+      "files": [
+        {
+          "path": "registry/ui/spokes.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "classic",
+      "files": [
+        {
+          "path": "registry/ui/classic.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "analyzing-image",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/ui/analyzing-image.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "utils",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    }
+  ]
+}

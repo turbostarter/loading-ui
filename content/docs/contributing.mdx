@@ -1,0 +1,43 @@
+---
+title: Contributing
+description: How to report issues, open pull requests, and help improve loading-ui.
+icon: GitPullRequest
+---
+
+Thank you for considering a contribution. Small fixes and documentation improvements are as welcome as larger features.
+
+## Before you start
+
+- Check existing **issues** and **pull requests** to avoid duplicating work.
+- For non-trivial changes, open an issue first so maintainers can agree on direction.
+
+## Local development
+
+From the repository root, install dependencies and run the docs app:
+
+```bash
+bun install
+bun run dev
+```
+
+Run checks before you submit:
+
+```bash
+bun run types:check
+bun run lint
+```
+
+## Pull requests
+
+- **One logical change per PR** when possible — easier to review and revert.
+- **Describe the why** in the PR body, not only the what.
+- **Update docs** if you change public behavior or add props.
+- Follow existing **style and patterns** in the codebase (formatting, imports, component APIs).
+
+## Documentation
+
+Docs live under `content/docs`. When you add or change a component, update the relevant MDX page and any meta or navigation files your project uses.
+
+## Licensing
+
+By contributing, you agree that your contributions are licensed under the same license as the project.

@@ -1,0 +1,56 @@
+---
+title: Usage
+description: Install loading-ui pieces in your TanStack Start application and drop them into your routes.
+icon: BookOpen
+---
+
+This project ships documentation and UI primitives you can copy or install alongside **shadcn-style** tooling. Adapt paths and package manager commands to match your repo.
+
+## Prerequisites
+
+- A **TanStack Start** (or compatible) React app
+- **Tailwind CSS** configured the same way as your other UI components
+
+## Install a component
+
+Use the CLI where available (see each component page), or copy the source into your codebase and fix imports.
+
+### Example: CLI
+
+```bash
+npx shadcn@latest add spinner
+```
+
+### Example: manual
+
+<Steps>
+
+<Step>
+  Copy the component files into your project (for example under
+  `src/components/ui`).
+</Step>
+
+<Step>Align **import paths** with your aliases (e.g. `@/components/...`).</Step>
+
+<Step>Ensure shared utilities (`cn`, etc.) exist or adjust imports.</Step>
+
+</Steps>
+
+## Use in a route or layout
+
+```tsx
+import { Spinner } from "@/components/ui/spinner";
+
+export function PendingFallback() {
+  return (
+    <div className="flex items-center justify-center p-8">
+      <Spinner className="size-6" />
+    </div>
+  );
+}
+```
+
+## Next steps
+
+- Browse [Components](/docs/components) for individual APIs and demos.
+- Read [Philosophy](/docs/philosophy) for design constraints and goals.

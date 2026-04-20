@@ -11,7 +11,7 @@ function normalizeRegistryFiles(item: RegistryItem): Array<{
   target?: string;
 }> {
   return (
-    item.files?.map((file) => ({
+    item.files?.map(file => ({
       path: typeof file === "string" ? file : file.path,
       type: typeof file === "string" ? item.type : file.type,
       target: typeof file === "string" ? undefined : file.target,
@@ -52,17 +52,17 @@ async function formatGeneratedJson(value: unknown, filePath: string) {
 }
 
 async function buildExamplesIndex() {
-  const examplesDir = path.join(process.cwd(), "src/registry/examples");
+  const examplesDir = path.join(process.cwd(), "registry/examples");
 
   const allEntries = await fs.readdir(examplesDir, { withFileTypes: true });
   const files = allEntries
     .filter(
-      (entry) =>
+      entry =>
         entry.isFile() &&
         entry.name.endsWith(".tsx") &&
         !entry.name.startsWith("__"),
     )
-    .map((entry) => entry.name)
+    .map(entry => entry.name)
     .sort();
 
   console.log(`   Found ${files.length} demos for examples`);
@@ -80,7 +80,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {`;
     index += `
     "${name}": {
       name: "${name}",
-      filePath: "src/registry/examples/${file}",
+      filePath: "registry/examples/${file}",
       component: React.lazy(async () => {
         const mod = await import("./${file}")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "${name}"
@@ -107,7 +107,7 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {`;
   for (const item of registry.items) {
-    const resolveFiles = item.files?.map((file) => `registry/${file.path}`);
+    const resolveFiles = item.files?.map(file => `registry/${file.path}`);
     if (!resolveFiles) {
       continue;
     }
@@ -124,8 +124,8 @@ export const Index: Record<string, any> = {`;
     registryDependencies: ${JSON.stringify(item.registryDependencies)},
     files: [${
       item.files
-        ?.map((file) => {
-          const filePath = `src/registry/${typeof file === "string" ? file : file.path}`;
+        ?.map(file => {
+          const filePath = `registry/${typeof file === "string" ? file : file.path}`;
           const resolvedFilePath = path.resolve(filePath);
           return typeof file === "string"
             ? `"${resolvedFilePath}"`
@@ -156,7 +156,7 @@ export const Index: Record<string, any> = {`;
 
   console.log(`#️⃣  ${Object.keys(registry.items).length} items found`);
 
-  const outputPath = path.join(process.cwd(), "src/registry/__index__.tsx");
+  const outputPath = path.join(process.cwd(), "registry/__index__.tsx");
   await writeIfChanged(
     outputPath,
     (await formatGeneratedSource(index, outputPath)).code,
@@ -166,10 +166,10 @@ export const Index: Record<string, any> = {`;
 async function buildRegistryJsonFile() {
   const fixedRegistry = {
     ...registry,
-    items: registry.items.map((item) => {
-      const files = normalizeRegistryFiles(item).map((file) =>
+    items: registry.items.map(item => {
+      const files = normalizeRegistryFiles(item).map(file =>
         Object.assign({}, file, {
-          path: `src/registry/${file.path}`,
+          path: `registry/${file.path}`,
         }),
       );
       return files.length > 0 ? Object.assign({}, item, { files }) : item;

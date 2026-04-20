@@ -184,7 +184,7 @@ function MobileNavLink({
 }) {
   return (
     <Link
-      to={href}
+      href={href}
       data-active={isActive}
       onClick={() => onOpenChange?.(false)}
       className={SIDEBAR_LINK_CLASS_NAME}

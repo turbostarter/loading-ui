@@ -6,26 +6,24 @@ import * as React from "react";
 export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-demo": {
     name: "ring-demo",
-    filePath: "src/registry/examples/ring-demo.tsx",
+    filePath: "registry/examples/ring-demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring-demo.tsx");
       const exportName =
         Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
+          key => typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "ring-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
   "spokes-demo": {
     name: "spokes-demo",
-    filePath: "src/registry/examples/spokes-demo.tsx",
+    filePath: "registry/examples/spokes-demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes-demo.tsx");
       const exportName =
         Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
+          key => typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "spokes-demo";
       return { default: mod.default || mod[exportName] };
     }),
