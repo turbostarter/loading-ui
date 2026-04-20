@@ -4,7 +4,6 @@ import { ui } from "./ui/_registry";
 import { lib } from "./lib/_registry";
 import { z } from "zod";
 import { registryItemSchema } from "./schema";
-import { baseUrl } from "@/lib/metadata";
 
 const BASE_STYLE = {
   type: "registry:style",
@@ -17,8 +16,8 @@ const BASE_STYLE = {
 };
 
 export const registry = registrySchema.parse({
-  name: "loading-ui",
-  homepage: baseUrl,
+  name: "@loading-ui",
+  homepage: "https://loading-ui.com",
   items: z.array(registryItemSchema).parse([
     {
       name: "index",

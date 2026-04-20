@@ -70,7 +70,7 @@ export async function GET(
 }
 
 export function generateStaticParams() {
-  return source.generateParams().map(page =>
+  return source.generateParams().map((page) =>
     Object.assign({}, page, {
       ...page,
       slug: [...page.slug, "image.png"],

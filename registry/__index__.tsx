@@ -33,7 +33,7 @@ export const Index: Record<string, any> = {
       {
         path: "registry/ui/ring.tsx",
         type: "registry:ui",
-        target: "",
+        target: "components/loading-ui/ring.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -57,7 +57,7 @@ export const Index: Record<string, any> = {
       {
         path: "registry/ui/spokes.tsx",
         type: "registry:ui",
-        target: "",
+        target: "components/loading-ui/spokes.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -81,7 +81,7 @@ export const Index: Record<string, any> = {
       {
         path: "registry/ui/classic.tsx",
         type: "registry:ui",
-        target: "",
+        target: "components/loading-ui/classic.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -105,7 +105,7 @@ export const Index: Record<string, any> = {
       {
         path: "registry/ui/analyzing-image.tsx",
         type: "registry:ui",
-        target: "",
+        target: "components/loading-ui/analyzing-image.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -129,7 +129,7 @@ export const Index: Record<string, any> = {
       {
         path: "registry/lib/utils.ts",
         type: "registry:lib",
-        target: "",
+        target: "components/loading-ui/utils.tsx",
       },
     ],
     component: React.lazy(async () => {

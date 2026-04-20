@@ -5,6 +5,10 @@ import { exec } from "node:child_process";
 import { format } from "oxfmt";
 import { RegistryItem } from "shadcn/schema";
 
+function getFileTarget(file: { target?: string }, item: RegistryItem): string {
+  return file.target ?? `components/loading-ui/${item.name}.tsx`;
+}
+
 function normalizeRegistryFiles(item: RegistryItem): Array<{
   path: string;
   type: string;
@@ -44,7 +48,10 @@ async function writeIfChanged(filePath: string, content: string) {
 }
 
 async function formatGeneratedSource(content: string, filePath: string) {
-  return format(filePath, content);
+  const config = JSON.parse(
+    await fs.readFile(path.join(process.cwd(), ".oxfmtrc.json"), "utf8"),
+  );
+  return (await format(filePath, content, config)).code;
 }
 
 async function formatGeneratedJson(value: unknown, filePath: string) {
@@ -90,12 +97,12 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {`;
   }
 
   index += `
-  },`;
+  };`;
 
   const outputPath = path.join(examplesDir, "__index__.tsx");
   await writeIfChanged(
     outputPath,
-    (await formatGeneratedSource(index, outputPath)).code,
+    await formatGeneratedSource(index, outputPath),
   );
 }
 
@@ -132,7 +139,7 @@ export const Index: Record<string, any> = {`;
             : `{
       path: "${filePath}",
       type: "${file.type}",
-      target: "${file.target ?? ""}"
+      target: "${getFileTarget(file, item)}"
     }`;
         })
         .join(",\n") ?? ""
@@ -159,7 +166,7 @@ export const Index: Record<string, any> = {`;
   const outputPath = path.join(process.cwd(), "registry/__index__.tsx");
   await writeIfChanged(
     outputPath,
-    (await formatGeneratedSource(index, outputPath)).code,
+    await formatGeneratedSource(index, outputPath),
   );
 }
 
@@ -170,6 +177,7 @@ async function buildRegistryJsonFile() {
       const files = normalizeRegistryFiles(item).map((file) =>
         Object.assign({}, file, {
           path: `registry/${file.path}`,
+          target: getFileTarget(file, item),
         }),
       );
       return files.length > 0 ? Object.assign({}, item, { files }) : item;
@@ -181,7 +189,7 @@ async function buildRegistryJsonFile() {
     fixedRegistry,
     registryJsonPath,
   );
-  await writeIfChanged(registryJsonPath, registryJson.code);
+  await writeIfChanged(registryJsonPath, registryJson);
 }
 
 async function buildRegistry() {

@@ -101,7 +101,10 @@ function ComponentCode({
           {title}
         </figcaption>
       )}
-      <CopyButton value={code} />
+      <CopyButton
+        value={code}
+        className="opacity-70 hover:opacity-100 focus-visible:opacity-100"
+      />
       <div dangerouslySetInnerHTML={{ __html: highlightedCode }} />
     </figure>
   );

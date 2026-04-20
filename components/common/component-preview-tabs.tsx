@@ -53,12 +53,12 @@ export function ComponentPreviewTabs({
           ) : (
             <div className="relative">
               {sourcePreview}
-              <div className="absolute inset-0 flex items-center justify-center pb-4">
+              <div className="absolute inset-0 flex items-center justify-center py-4">
                 <div
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(to top, var(--color-code), color-mix(in oklab, var(--color-code) 60%, transparent), transparent)",
+                      "linear-gradient(to top, var(--color-code), color-mix(in oklab, var(--color-code) 80%, transparent), transparent)",
                   }}
                 />
                 <Button

@@ -17,18 +17,20 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 ## Getting Started
 
 1. **Fork and Clone**
+
    ```sh
    git clone https://github.com/YOUR_USERNAME/loading-ui.git
    cd loading-ui
    ```
 
 2. **Install Dependencies**
+
    ```sh
    bun install
    ```
 
 3. **Development Setup**
-   
+
    We recommend using VSCode (or a fork like [Cursor](https://www.cursor.com) or [Windsurf](https://windsurf.com)) with the [recommended extensions](./.vscode/extensions.json) installed:
    - Arktype
    - Biome (formatter/linter)
@@ -55,10 +57,11 @@ This repository contains:
 ### Creating Changes
 
 1. **Create a Feature Branch**
+
    ```sh
    git checkout -b feature/your-feature-name
    ```
-   
+
    > **Important:** Always create pull requests from feature branches, not from your main branch.
 
 2. **Make Your Changes**
@@ -105,6 +108,7 @@ This repository contains:
 ### Before Submitting
 
 1. **Run Quality Checks**
+
    ```sh
    bun run lint   # Check for linting issues
    bun run format # Check formatting
@@ -140,18 +144,21 @@ This repository contains:
 ## Areas for Contribution
 
 ### Code Contributions
+
 - New loading components and variants
 - Bug fixes and performance improvements
 - Accessibility improvements
 - Better composition APIs and ergonomics
 
 ### Documentation
+
 - Improve existing documentation
 - Add examples for different loading states/use cases
 - Create practical integration guides
 - Fix typos and improve clarity
 
 ### Testing
+
 - Add coverage for component state transitions
 - Validate accessibility and visual regressions where practical
 

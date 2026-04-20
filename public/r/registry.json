@@ -1,5 +1,5 @@
 {
-  "name": "loading-ui",
+  "name": "@loading-ui",
   "homepage": "https://loading-ui.com",
   "items": [
     {
@@ -27,7 +27,8 @@
       "files": [
         {
           "path": "registry/ui/ring.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/loading-ui/ring.tsx"
         }
       ],
       "type": "registry:ui"
@@ -37,7 +38,8 @@
       "files": [
         {
           "path": "registry/ui/spokes.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/loading-ui/spokes.tsx"
         }
       ],
       "type": "registry:ui"
@@ -47,7 +49,8 @@
       "files": [
         {
           "path": "registry/ui/classic.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/loading-ui/classic.tsx"
         }
       ],
       "type": "registry:ui"
@@ -58,7 +61,8 @@
       "files": [
         {
           "path": "registry/ui/analyzing-image.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/loading-ui/analyzing-image.tsx"
         }
       ],
       "type": "registry:ui"
@@ -69,7 +73,8 @@
       "files": [
         {
           "path": "registry/lib/utils.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": "components/loading-ui/utils.tsx"
         }
       ],
       "type": "registry:lib"
