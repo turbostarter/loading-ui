@@ -1,0 +1,53 @@
+name: "Bug report"
+description: Report an issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thanks for taking the time to create a bug report. Please search open/closed issues before submitting, as the issue may have already been reported/addressed.
+
+  - type: markdown
+    attributes:
+      value: |
+        #### If you aren't sure this is a bug or not, please open a discussion instead:
+        - [Discussions](https://github.com/turbostarter/loading-ui/discussions/new?category=general)
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us how in the description. Thanks!
+      placeholder: Bug description
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How to reproduce
+      description: A step-by-step description of how to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: "Please include browser console and dev server logs around the time this bug occurred. Optional if you provided a clear reproduction. Prefer plain text over screenshots."
+      render: bash
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Information about browsers, system or binaries that's relevant.
+      render: bash
+      placeholder: System, Binaries, Browsers
+    validations:
+      required: true
