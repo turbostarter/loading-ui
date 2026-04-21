@@ -105,10 +105,7 @@ export const Examples = async () => {
         const { name, item, ExampleComponent } = tile;
 
         return (
-          <div
-            key={name}
-            className="group/component relative aspect-4/3 md:aspect-square"
-          >
+          <div key={name} className="group/component relative aspect-4/3">
             <div className="absolute inset-x-0 z-10 top-0 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
               <div className="flex items-center gap-1.5">
                 <CopyComponent item={item} />

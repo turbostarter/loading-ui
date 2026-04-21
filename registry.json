@@ -68,6 +68,41 @@
       "type": "registry:component"
     },
     {
+      "name": "skeleton",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/skeleton.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "text-shimmer",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/text-shimmer.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "text-shimmer-wave",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/text-shimmer-wave.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "utils",
       "dependencies": ["clsx", "tailwind-merge"],
       "files": [

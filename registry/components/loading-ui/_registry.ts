@@ -42,4 +42,36 @@ export const components = [
     ],
     dependencies: ["motion"],
   },
+  {
+    name: "skeleton",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/skeleton.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "text-shimmer",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/text-shimmer.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
+  {
+    name: "text-shimmer-wave",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/text-shimmer-wave.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
 ] satisfies Registry["items"];

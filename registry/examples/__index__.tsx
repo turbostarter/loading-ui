@@ -4,6 +4,19 @@
 import * as React from "react";
 
 export const ExamplesIndex: Record<string, Record<string, any>> = {
+  "analyzing-image-demo": {
+    name: "analyzing-image-demo",
+    filePath: "registry/examples/analyzing-image-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "ring-demo": {
     name: "ring-demo",
     filePath: "registry/examples/ring-demo.tsx",
@@ -17,6 +30,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "skeleton-demo": {
+    name: "skeleton-demo",
+    filePath: "registry/examples/skeleton-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "spokes-demo": {
     name: "spokes-demo",
     filePath: "registry/examples/spokes-demo.tsx",
@@ -27,6 +53,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "spokes-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-demo": {
+    name: "text-shimmer-demo",
+    filePath: "registry/examples/text-shimmer-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-demo": {
+    name: "text-shimmer-wave-demo",
+    filePath: "registry/examples/text-shimmer-wave-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
