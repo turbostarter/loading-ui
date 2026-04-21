@@ -3,7 +3,9 @@
   "name": "style",
   "dependencies": [],
   "devDependencies": [],
-  "registryDependencies": ["utils"],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [],
   "cssVars": {},
   "css": {},

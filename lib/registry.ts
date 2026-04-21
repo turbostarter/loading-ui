@@ -9,6 +9,7 @@ import {
 import { LRUCache } from "lru-cache";
 import path from "path";
 import { promises as fs } from "fs";
+import { registry } from "@/registry/registry";
 
 // LRU cache for cross-request caching of registry items.
 // File reads are I/O-bound, so caching improves dev server performance.
@@ -170,7 +171,7 @@ function fixFilePaths(files: RegistryItem["files"]) {
   const firstFilePath = files[0].path;
   const firstFilePathDir = path.dirname(firstFilePath);
 
-  return files.map((file) => {
+  return files.map(file => {
     return {
       ...file,
       path: path.relative(firstFilePathDir, file.path),
@@ -213,4 +214,8 @@ export function fixImport(content: string) {
   };
 
   return content.replace(regex, replacement);
+}
+
+export function getCLICommand(name: string) {
+  return `npx shadcn add ${registry.name}/${name}`;
 }

@@ -1,17 +1,10 @@
-import { promises as fsPromises } from "fs";
-import path from "path";
-import {
-  createStyleMap,
-  transformIcons,
-  transformMenu,
-  transformRender,
-  transformStyle,
-} from "shadcn/utils";
+import { transformIcons, transformMenu, transformRender } from "shadcn/utils";
 import { Project, ScriptKind, type SourceFile } from "ts-morph";
 
 function buildDisplayConfig() {
   return {
     $schema: "https://ui.shadcn.com/schema.json",
+    style: "base-nova",
     rsc: true,
     tsx: true,
     tailwind: {
@@ -50,19 +43,7 @@ type DisplayTransformer = (opts: {
 }) => Promise<unknown>;
 
 export async function formatCode(code: string) {
-  //   code = code.replaceAll(`@/registry/${styleName}/`, "@/components/");
-
-  code = code.replace(
-    /@\/styles\/([\w-]+)\/(ui-rtl|ui)\/([\w-]+)/g,
-    (match, _styleName, type, component) => {
-      if (type === "ui" || type === "ui-rtl") {
-        return `@/components/ui/${component}`;
-      }
-
-      return match;
-    },
-  );
-
+  code = code.replaceAll(`@/registry`, "@");
   code = code.replaceAll("export default", "export");
 
   try {
@@ -77,16 +58,19 @@ export async function formatCode(code: string) {
       transformMenu as DisplayTransformer,
       transformRender as DisplayTransformer,
     ];
-    for (const transformer of transformers) {
-      await transformer({
-        filename: "component.tsx",
-        raw: code,
-        sourceFile,
-        config,
-      });
-    }
 
-    return sourceFile.getText();
+    await Promise.all(
+      transformers.map(transformer =>
+        transformer({
+          filename: "component.tsx",
+          raw: code,
+          sourceFile,
+          config,
+        }),
+      ),
+    );
+
+    return sourceFile.getText().trim();
   } catch (error) {
     console.error("Transform failed:", error);
     return code;

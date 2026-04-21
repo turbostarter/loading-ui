@@ -1,6 +1,8 @@
-import { Ring } from "@/registry/ui/ring";
+import { Ring } from "@/registry/components/loading-ui/ring";
 import { Installer } from "@/components/common/installer";
 import { Section } from "@/components/common/section";
+import { getCLICommand } from "@/lib/registry";
+import { Index } from "@/registry/__index__";
 
 export const Hero = () => {
   return (
@@ -21,7 +23,7 @@ export const Hero = () => {
 
         <div className="mx-auto inline-flex w-fit flex-wrap items-center gap-3">
           <Installer
-            command="npx shadcn add @loading-ui/ring"
+            command={getCLICommand(Object.keys(Index)[0])}
             className="w-64 text-xs md:w-72"
           />
         </div>

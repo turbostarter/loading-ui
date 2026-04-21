@@ -5,17 +5,13 @@ import { exec } from "node:child_process";
 import { format } from "oxfmt";
 import { RegistryItem } from "shadcn/schema";
 
-function getFileTarget(file: { target?: string }, item: RegistryItem): string {
-  return file.target ?? `components/loading-ui/${item.name}.tsx`;
-}
-
 function normalizeRegistryFiles(item: RegistryItem): Array<{
   path: string;
   type: string;
   target?: string;
 }> {
   return (
-    item.files?.map((file) => ({
+    item.files?.map(file => ({
       path: typeof file === "string" ? file : file.path,
       type: typeof file === "string" ? item.type : file.type,
       target: typeof file === "string" ? undefined : file.target,
@@ -64,12 +60,12 @@ async function buildExamplesIndex() {
   const allEntries = await fs.readdir(examplesDir, { withFileTypes: true });
   const files = allEntries
     .filter(
-      (entry) =>
+      entry =>
         entry.isFile() &&
         entry.name.endsWith(".tsx") &&
         !entry.name.startsWith("__"),
     )
-    .map((entry) => entry.name)
+    .map(entry => entry.name)
     .sort();
 
   console.log(`   Found ${files.length} demos for examples`);
@@ -114,8 +110,9 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {`;
   for (const item of registry.items) {
-    const resolveFiles = item.files?.map((file) => `registry/${file.path}`);
-    if (!resolveFiles) {
+    const files = normalizeRegistryFiles(item);
+
+    if (!files.length) {
       continue;
     }
 
@@ -131,7 +128,7 @@ export const Index: Record<string, any> = {`;
     registryDependencies: ${JSON.stringify(item.registryDependencies)},
     files: [${
       item.files
-        ?.map((file) => {
+        ?.map(file => {
           const filePath = `registry/${typeof file === "string" ? file : file.path}`;
           const resolvedFilePath = path.resolve(filePath);
           return typeof file === "string"
@@ -139,7 +136,7 @@ export const Index: Record<string, any> = {`;
             : `{
       path: "${filePath}",
       type: "${file.type}",
-      target: "${getFileTarget(file, item)}"
+      target: "${file.target ?? ""}"
     }`;
         })
         .join(",\n") ?? ""
@@ -173,11 +170,11 @@ export const Index: Record<string, any> = {`;
 async function buildRegistryJsonFile() {
   const fixedRegistry = {
     ...registry,
-    items: registry.items.map((item) => {
-      const files = normalizeRegistryFiles(item).map((file) =>
+    items: registry.items.map(item => {
+      const files = normalizeRegistryFiles(item).map(file =>
         Object.assign({}, file, {
           path: `registry/${file.path}`,
-          target: getFileTarget(file, item),
+          target: file.target ?? "",
         }),
       );
       return files.length > 0 ? Object.assign({}, item, { files }) : item;

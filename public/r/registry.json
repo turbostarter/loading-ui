@@ -26,46 +26,46 @@
       "name": "ring",
       "files": [
         {
-          "path": "registry/ui/ring.tsx",
-          "type": "registry:ui",
-          "target": "components/loading-ui/ring.tsx"
+          "path": "registry/components/loading-ui/ring.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "spokes",
       "files": [
         {
-          "path": "registry/ui/spokes.tsx",
-          "type": "registry:ui",
-          "target": "components/loading-ui/spokes.tsx"
+          "path": "registry/components/loading-ui/spokes.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "classic",
       "files": [
         {
-          "path": "registry/ui/classic.tsx",
-          "type": "registry:ui",
-          "target": "components/loading-ui/classic.tsx"
+          "path": "registry/components/loading-ui/classic.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "analyzing-image",
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/ui/analyzing-image.tsx",
-          "type": "registry:ui",
-          "target": "components/loading-ui/analyzing-image.tsx"
+          "path": "registry/components/loading-ui/analyzing-image.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "utils",
@@ -74,7 +74,7 @@
         {
           "path": "registry/lib/utils.ts",
           "type": "registry:lib",
-          "target": "components/loading-ui/utils.tsx"
+          "target": ""
         }
       ],
       "type": "registry:lib"

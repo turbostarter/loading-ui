@@ -1,6 +1,6 @@
 import { registrySchema } from "shadcn/schema";
 
-import { ui } from "./ui/_registry";
+import { components } from "./components/loading-ui/_registry";
 import { lib } from "./lib/_registry";
 import { z } from "zod";
 import { registryItemSchema } from "./schema";
@@ -27,7 +27,7 @@ export const registry = registrySchema.parse({
       name: "style",
       ...BASE_STYLE,
     },
-    ...ui,
+    ...components,
     ...lib,
   ]),
 });

@@ -3,11 +3,11 @@
   "name": "classic",
   "files": [
     {
-      "path": "registry/ui/classic.tsx",
+      "path": "registry/components/loading-ui/classic.tsx",
       "content": "import { cn } from \"@/lib/utils\";\n\nfunction Classic({\n  className,\n  size = \"md\",\n}: {\n  className?: string;\n  size?: \"sm\" | \"md\" | \"lg\";\n}) {\n  const sizeClasses = {\n    sm: \"size-4\",\n    md: \"size-5\",\n    lg: \"size-6\",\n  };\n\n  const barSizes = {\n    sm: { height: \"6px\", width: \"1.5px\" },\n    md: { height: \"8px\", width: \"2px\" },\n    lg: { height: \"10px\", width: \"2.5px\" },\n  };\n\n  return (\n    <div className={cn(\"relative\", sizeClasses[size], className)}>\n      <div className=\"absolute h-full w-full\">\n        {[...Array(12)].map((_, i) => (\n          <div\n            key={i}\n            className=\"bg-primary absolute animate-[spinner-fade_1.2s_linear_infinite] rounded-full\"\n            style={{\n              top: \"0\",\n              left: \"50%\",\n              marginLeft:\n                size === \"sm\" ? \"-0.75px\" : size === \"lg\" ? \"-1.25px\" : \"-1px\",\n              transformOrigin: `${size === \"sm\" ? \"0.75px\" : size === \"lg\" ? \"1.25px\" : \"1px\"} ${size === \"sm\" ? \"10px\" : size === \"lg\" ? \"14px\" : \"12px\"}`,\n              transform: `rotate(${i * 30}deg)`,\n              opacity: 0,\n              animationDelay: `${i * 0.1}s`,\n              height: barSizes[size].height,\n              width: barSizes[size].width,\n            }}\n          />\n        ))}\n      </div>\n      <span className=\"sr-only\">Loading</span>\n    </div>\n  );\n}\n\nexport { Classic };\n",
-      "type": "registry:ui",
-      "target": "components/loading-ui/classic.tsx"
+      "type": "registry:component",
+      "target": ""
     }
   ],
-  "type": "registry:ui"
+  "type": "registry:component"
 }

@@ -41,7 +41,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
               enabled: false,
             }}
           >
-            <TooltipProvider>
+            <TooltipProvider delay={0}>
               <Header />
               {children}
             </TooltipProvider>

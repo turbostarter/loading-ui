@@ -11,11 +11,13 @@ export function CopyButton({
   value,
   className,
   variant = "ghost",
+  icon = <Copy />,
+  onClick,
   ...props
 }: React.ComponentProps<typeof Button> & {
   value: string;
   src?: string;
-  tooltip?: string;
+  icon?: React.ReactNode;
 }) {
   const { isCopied, copyToClipboard } = useCopyToClipboard();
 
@@ -29,13 +31,14 @@ export function CopyButton({
         "bg-code absolute top-3 right-2 z-10 size-7 hover:opacity-100 focus-visible:opacity-100",
         className,
       )}
-      onClick={async () => {
+      onClick={async e => {
         await copyToClipboard(value);
+        onClick?.(e);
       }}
       {...props}
     >
       <span className="sr-only">Copy</span>
-      {isCopied ? <Check /> : <Copy />}
+      {isCopied ? <Check /> : icon}
     </Button>
   );
 }

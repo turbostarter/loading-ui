@@ -4,40 +4,20 @@
 import * as React from "react";
 
 export const Index: Record<string, any> = {
-  index: {
-    name: "index",
-    description: "",
-    type: "registry:style",
-    registryDependencies: ["utils"],
-    files: [],
-    component: null,
-    categories: undefined,
-    meta: undefined,
-  },
-  style: {
-    name: "style",
-    description: "",
-    type: "registry:style",
-    registryDependencies: ["utils"],
-    files: [],
-    component: null,
-    categories: undefined,
-    meta: undefined,
-  },
   ring: {
     name: "ring",
     description: "",
-    type: "registry:ui",
+    type: "registry:component",
     registryDependencies: undefined,
     files: [
       {
-        path: "registry/ui/ring.tsx",
-        type: "registry:ui",
-        target: "components/loading-ui/ring.tsx",
+        path: "registry/components/loading-ui/ring.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ui/ring.tsx");
+      const mod = await import("@/registry/components/loading-ui/ring.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -51,17 +31,17 @@ export const Index: Record<string, any> = {
   spokes: {
     name: "spokes",
     description: "",
-    type: "registry:ui",
+    type: "registry:component",
     registryDependencies: undefined,
     files: [
       {
-        path: "registry/ui/spokes.tsx",
-        type: "registry:ui",
-        target: "components/loading-ui/spokes.tsx",
+        path: "registry/components/loading-ui/spokes.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ui/spokes.tsx");
+      const mod = await import("@/registry/components/loading-ui/spokes.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -75,17 +55,17 @@ export const Index: Record<string, any> = {
   classic: {
     name: "classic",
     description: "",
-    type: "registry:ui",
+    type: "registry:component",
     registryDependencies: undefined,
     files: [
       {
-        path: "registry/ui/classic.tsx",
-        type: "registry:ui",
-        target: "components/loading-ui/classic.tsx",
+        path: "registry/components/loading-ui/classic.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ui/classic.tsx");
+      const mod = await import("@/registry/components/loading-ui/classic.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -99,17 +79,18 @@ export const Index: Record<string, any> = {
   "analyzing-image": {
     name: "analyzing-image",
     description: "",
-    type: "registry:ui",
+    type: "registry:component",
     registryDependencies: undefined,
     files: [
       {
-        path: "registry/ui/analyzing-image.tsx",
-        type: "registry:ui",
-        target: "components/loading-ui/analyzing-image.tsx",
+        path: "registry/components/loading-ui/analyzing-image.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ui/analyzing-image.tsx");
+      const mod =
+        await import("@/registry/components/loading-ui/analyzing-image.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -129,7 +110,7 @@ export const Index: Record<string, any> = {
       {
         path: "registry/lib/utils.ts",
         type: "registry:lib",
-        target: "components/loading-ui/utils.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
