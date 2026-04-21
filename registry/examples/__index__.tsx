@@ -17,6 +17,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "arc-demo": {
+    name: "arc-demo",
+    filePath: "registry/examples/arc-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-demo": {
+    name: "dual-arc-demo",
+    filePath: "registry/examples/dual-arc-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "ring-demo": {
     name: "ring-demo",
     filePath: "registry/examples/ring-demo.tsx",
@@ -53,6 +79,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "spokes-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-demo": {
+    name: "swirling-demo",
+    filePath: "registry/examples/swirling-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },

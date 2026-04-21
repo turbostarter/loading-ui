@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "arc",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/arc.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Arc({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"size-7 animate-spin rounded-full border-[3px] border-secondary border-t-primary\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Arc };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

@@ -7,7 +7,7 @@ import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wra
 import { CodeTabs } from "@/components/common/code-tabs";
 import { ComponentPreview } from "@/components/common/component-preview";
 import { ComponentSource } from "@/components/common/component-source";
-// import { ComponentsList } from "@/components/website/docs/components-list";
+import { ComponentsList } from "@/components/common/components-list";
 import { CopyButton } from "@/components/common/copy-button";
 import { getIconForLanguageExtension } from "@/components/common/icons";
 import {
@@ -332,7 +332,7 @@ export const mdxComponents = {
   ComponentPreview,
   ComponentSource,
   CodeCollapsibleWrapper,
-  // ComponentsList,
+  ComponentsList,
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
       className={cn("font-medium underline underline-offset-4", className)}

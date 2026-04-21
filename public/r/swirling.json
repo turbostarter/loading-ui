@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "swirling",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/swirling.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Swirling({ className, ...props }: React.ComponentProps<\"svg\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-swirling-spin {\n          to {\n            transform: rotate(360deg);\n          }\n        }\n\n        @keyframes loading-ui-swirling-dash {\n          0% {\n            stroke-dasharray: 1, 800;\n            stroke-dashoffset: 0;\n          }\n          50% {\n            stroke-dasharray: 400, 400;\n            stroke-dashoffset: -200px;\n          }\n          100% {\n            stroke-dasharray: 800, 1;\n            stroke-dashoffset: -800px;\n          }\n        }\n\n        .loading-ui-swirling-circle {\n          transform-origin: center;\n          animation:\n            loading-ui-swirling-dash 1.5s ease-in-out infinite alternate,\n            loading-ui-swirling-spin 2s linear infinite;\n        }\n      `}</style>\n      <svg\n        viewBox=\"0 0 800 800\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n        className={cn(\"text-primary size-14\", className)}\n        {...props}\n      >\n        <circle\n          className=\"loading-ui-swirling-circle\"\n          cx=\"400\"\n          cy=\"400\"\n          r=\"200\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          strokeLinecap=\"round\"\n          strokeWidth=\"50\"\n        />\n      </svg>\n    </>\n  );\n}\n\nexport { Swirling };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

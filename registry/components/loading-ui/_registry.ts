@@ -53,6 +53,36 @@ export const components = [
     ],
   },
   {
+    name: "swirling",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/swirling.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "arc",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/arc.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "dual-arc",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/dual-arc.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "text-shimmer",
     type: "registry:component",
     files: [

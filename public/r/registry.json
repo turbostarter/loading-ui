@@ -79,6 +79,39 @@
       "type": "registry:component"
     },
     {
+      "name": "swirling",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/swirling.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "dual-arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/dual-arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "text-shimmer",
       "dependencies": ["motion"],
       "files": [
