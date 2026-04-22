@@ -1,13 +1,11 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pulsating-dots",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "registry/components/loading-ui/pulsating-dots.tsx",
-      "content": "\"use client\";\n\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction PulsatingDots({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      role=\"status\"\n      className={cn(\"inline-flex items-center justify-center\", className)}\n      {...props}\n    >\n      <span aria-hidden=\"true\" className=\"inline-flex gap-[0.5em]\">\n        {Array.from({ length: 3 }, (_, index) => (\n          <motion.span\n            key={index}\n            className=\"inline-block rounded-full bg-current\"\n            style={{\n              width: \"0.75em\",\n              height: \"0.75em\",\n            }}\n            animate={{\n              scale: [1, 1.5, 1],\n              opacity: [0.5, 1, 0.5],\n            }}\n            transition={{\n              duration: 1,\n              ease: \"easeInOut\",\n              repeat: Infinity,\n              delay: index * 0.3,\n            }}\n          />\n        ))}\n      </span>\n      <span className=\"sr-only\">Loading</span>\n    </span>\n  );\n}\n\nexport { PulsatingDots };\n",
+      "content": "\"use client\";\n\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction PulsatingDots({\n  className,\n  dots = 3,\n  ...props\n}: React.ComponentProps<\"span\"> & { dots?: number }) {\n  return (\n    <span\n      role=\"status\"\n      className={cn(\"inline-flex items-center justify-center\", className)}\n      {...props}\n    >\n      <span aria-hidden=\"true\" className=\"inline-flex gap-[16%] w-full\">\n        {Array.from({ length: dots }, (_, index) => (\n          <motion.span\n            key={index}\n            className=\"inline-block rounded-full bg-current grow aspect-square\"\n            animate={{\n              scale: [1, 1.5, 1],\n              opacity: [0.5, 1, 0.5],\n            }}\n            transition={{\n              duration: 1,\n              ease: \"easeInOut\",\n              repeat: Infinity,\n              delay: index * 0.3,\n            }}\n          />\n        ))}\n      </span>\n      <span className=\"sr-only\">Loading</span>\n    </span>\n  );\n}\n\nexport { PulsatingDots };\n",
       "type": "registry:component",
       "target": ""
     }

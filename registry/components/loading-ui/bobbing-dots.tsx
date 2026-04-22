@@ -29,7 +29,7 @@ function BobbingDots({
           initial={{ y: 0 }}
           animate={{ y: [0, "0.625em", 0] }}
           transition={transition(index)}
-          className="inline-block rounded-full grow bg-current shadow-sm aspect-square"
+          className="inline-block aspect-square grow rounded-full bg-current shadow-sm"
         />
       ))}
       <span className="sr-only">Loading</span>

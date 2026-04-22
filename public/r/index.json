@@ -3,9 +3,7 @@
   "name": "index",
   "dependencies": [],
   "devDependencies": [],
-  "registryDependencies": [
-    "utils"
-  ],
+  "registryDependencies": ["utils"],
   "files": [],
   "cssVars": {},
   "css": {},

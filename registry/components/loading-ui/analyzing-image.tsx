@@ -59,7 +59,7 @@ function AnalyzingImage({ className, ...props }: React.ComponentProps<"div">) {
           ],
         }}
         transition={transition}
-        className="bg-current absolute z-10 h-full w-[7%] rounded-full"
+        className="absolute z-10 h-full w-[7%] rounded-full bg-current"
       />
       <svg
         viewBox="0 0 24 24"

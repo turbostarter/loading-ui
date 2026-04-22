@@ -53,13 +53,13 @@ export function MobileNav({
               <div className="relative size-4">
                 <span
                   className={cn(
-                    "absolute left-0 block h-0.5 w-4 bg-foreground transition-all duration-100",
+                    "bg-foreground absolute left-0 block h-0.5 w-4 transition-all duration-100",
                     open ? "top-[0.4rem] -rotate-45" : "top-1",
                   )}
                 />
                 <span
                   className={cn(
-                    "absolute left-0 block h-0.5 w-4 bg-foreground transition-all duration-100",
+                    "bg-foreground absolute left-0 block h-0.5 w-4 transition-all duration-100",
                     open ? "top-[0.4rem] rotate-45" : "top-2.5",
                   )}
                 />
@@ -70,7 +70,7 @@ export function MobileNav({
         }
       />
       <PopoverContent
-        className="no-scrollbar h-(--available-height) ring-0 w-(--available-width) overflow-y-auto rounded-none border-none bg-background/90 p-0 shadow-none backdrop-blur duration-100 data-open:animate-none!"
+        className="no-scrollbar bg-background/90 h-(--available-height) w-(--available-width) overflow-y-auto rounded-none border-none p-0 shadow-none ring-0 backdrop-blur duration-100 data-open:animate-none!"
         align="start"
         side="bottom"
         alignOffset={-16}
@@ -78,7 +78,7 @@ export function MobileNav({
       >
         <div className="flex flex-col gap-10 overflow-auto p-5">
           <div className="flex flex-col gap-4">
-            <div className="text-sm font-medium text-muted-foreground">
+            <div className="text-muted-foreground text-sm font-medium">
               Menu
             </div>
             <div className="flex flex-col gap-3">
@@ -93,11 +93,11 @@ export function MobileNav({
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="text-sm font-medium text-muted-foreground">
+            <div className="text-muted-foreground text-sm font-medium">
               Sections
             </div>
             <div className="flex flex-col gap-3">
-              {topLevelPages.map(item => {
+              {topLevelPages.map((item) => {
                 return (
                   <MobileLink
                     key={item.url}
@@ -117,7 +117,7 @@ export function MobileNav({
             </div>
           </div>
           <div className="flex flex-col gap-8">
-            {tree?.children?.map(group => {
+            {tree?.children?.map((group) => {
               if (EXCLUDED_SECTIONS.has(group.$id ?? "")) {
                 return null;
               }
@@ -130,11 +130,11 @@ export function MobileNav({
 
               return (
                 <div key={group.$id} className="flex flex-col gap-4">
-                  <div className="text-sm font-medium text-muted-foreground">
+                  <div className="text-muted-foreground text-sm font-medium">
                     {group.name}
                   </div>
                   <div className="flex flex-col gap-3">
-                    {pages.map(item => {
+                    {pages.map((item) => {
                       if (EXCLUDED_PAGES.has(item.url)) {
                         return null;
                       }

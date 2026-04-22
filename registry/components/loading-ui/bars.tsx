@@ -30,7 +30,7 @@ function Bars({
           <span
             key={index}
             aria-hidden="true"
-            className="inline-block h-full bg-current rounded-[1px]"
+            className="inline-block h-full rounded-[1px] bg-current"
             style={{
               width: `${100 / bars}%`,
               animation: "loading-ui-wave-bars 1.2s ease-in-out infinite",

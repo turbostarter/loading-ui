@@ -13,13 +13,13 @@ Loading UI is a Next.js project with a component registry and docs site.
 
 ## Repository structure
 
-| Path | Description |
-| --- | --- |
-| `app/` | App Router routes, docs pages, and API routes. |
-| `components/` | Shared site UI and reusable React components. |
-| `content/` | MDX content for the documentation site. |
-| `registry/` | Registry source files and registry build scripts. |
-| `public/r/` | Generated registry artifacts consumed by the installer. |
+| Path          | Description                                             |
+| ------------- | ------------------------------------------------------- |
+| `app/`        | App Router routes, docs pages, and API routes.          |
+| `components/` | Shared site UI and reusable React components.           |
+| `content/`    | MDX content for the documentation site.                 |
+| `registry/`   | Registry source files and registry build scripts.       |
+| `public/r/`   | Generated registry artifacts consumed by the installer. |
 
 ## Getting started
 

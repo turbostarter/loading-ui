@@ -2,11 +2,11 @@
   "name": "loading-ui",
   "version": "0.0.0",
   "private": true,
-  "license": "MIT",
   "homepage": "https://loading-ui.com",
   "bugs": {
     "url": "https://github.com/turbostarter/loading-ui/issues"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/turbostarter/loading-ui.git"

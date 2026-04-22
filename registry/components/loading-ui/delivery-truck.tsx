@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function DeliveryTruck({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function DeliveryTruck({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <>
       <style>{`
@@ -44,7 +41,7 @@ function DeliveryTruck({
       <span
         role="status"
         className={cn(
-          "relative inline-block [--truck-main:currentColor] [--truck-accent:color-mix(in_srgb,currentColor_70%,white)] [--truck-detail:color-mix(in_srgb,currentColor_12%,white)] [--truck-wheel:color-mix(in_srgb,currentColor_35%,black)]",
+          "relative inline-block [--truck-accent:color-mix(in_srgb,currentColor_70%,white)] [--truck-detail:color-mix(in_srgb,currentColor_12%,white)] [--truck-main:currentColor] [--truck-wheel:color-mix(in_srgb,currentColor_35%,black)]",
           className,
         )}
         style={{
@@ -60,7 +57,7 @@ function DeliveryTruck({
       >
         <span
           aria-hidden="true"
-          className="absolute bottom-[0.625em] left-[0.75em] block box-content rounded-full border-[0.625em]"
+          className="absolute bottom-[0.625em] left-[0.75em] box-content block rounded-full border-[0.625em]"
           style={{
             width: "0.625em",
             height: "0.625em",
@@ -68,12 +65,13 @@ function DeliveryTruck({
             borderColor: "var(--truck-wheel)",
             boxShadow:
               "4.875em 0 0 -0.625em var(--truck-detail), 4.875em 0 0 0 var(--truck-wheel)",
-            animation: "loading-ui-delivery-truck-bounce 0.75s ease-in infinite alternate",
+            animation:
+              "loading-ui-delivery-truck-bounce 0.75s ease-in infinite alternate",
           }}
         />
         <span
           aria-hidden="true"
-          className="absolute right-full top-0 block"
+          className="absolute top-0 right-full block"
           style={{
             width: "4.375em",
             height: "4.375em",

@@ -30,7 +30,7 @@ function BouncingDots({
           <span
             key={index}
             aria-hidden="true"
-            className="inline-block rounded-full grow bg-current aspect-square"
+            className="inline-block aspect-square grow rounded-full bg-current"
             style={{
               animation: "loading-ui-bouncing-dots 1.4s ease-in-out infinite",
               animationDelay: `${index * 0.2}s`,

@@ -1,13 +1,11 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bobbing-dots",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "registry/components/loading-ui/bobbing-dots.tsx",
-      "content": "\"use client\";\n\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction BobbingDots({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  const transition = (index: number) => ({\n    duration: 1,\n    repeat: Infinity,\n    repeatType: \"loop\" as const,\n    delay: index * 0.2,\n    ease: \"easeInOut\" as const,\n  });\n\n  return (\n    <span\n      role=\"status\"\n      className={cn(\"inline-flex items-center gap-[0.5em]\", className)}\n      {...props}\n    >\n      {Array.from({ length: 3 }, (_, index) => (\n        <motion.span\n          key={index}\n          aria-hidden=\"true\"\n          initial={{ y: 0 }}\n          animate={{ y: [0, \"0.625em\", 0] }}\n          transition={transition(index)}\n          className=\"inline-block rounded-full border border-current bg-current/80 shadow-sm\"\n          style={{\n            width: \"1em\",\n            height: \"1em\",\n          }}\n        />\n      ))}\n      <span className=\"sr-only\">Loading</span>\n    </span>\n  );\n}\n\nexport { BobbingDots };\n",
+      "content": "\"use client\";\n\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction BobbingDots({\n  className,\n  dots = 3,\n  ...props\n}: React.ComponentProps<\"span\"> & { dots?: number }) {\n  const transition = (index: number) => ({\n    duration: 1,\n    repeat: Infinity,\n    repeatType: \"loop\" as const,\n    delay: index * 0.2,\n    ease: \"easeInOut\" as const,\n  });\n\n  return (\n    <span\n      role=\"status\"\n      className={cn(\"inline-flex items-center gap-[12%]\", className)}\n      {...props}\n    >\n      {Array.from({ length: dots }, (_, index) => (\n        <motion.span\n          key={index}\n          aria-hidden=\"true\"\n          initial={{ y: 0 }}\n          animate={{ y: [0, \"0.625em\", 0] }}\n          transition={transition(index)}\n          className=\"inline-block rounded-full grow bg-current shadow-sm aspect-square\"\n        />\n      ))}\n      <span className=\"sr-only\">Loading</span>\n    </span>\n  );\n}\n\nexport { BobbingDots };\n",
       "type": "registry:component",
       "target": ""
     }

@@ -31,7 +31,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
     >
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="h-(--top-spacing) shrink-0" />
-        <div className="mx-auto flex w-full max-w-[40rem] min-w-0 flex-1 flex-col gap-6 px-6 text-neutral-800 md:px-0 py-8 dark:text-neutral-300">
+        <div className="mx-auto flex w-full max-w-[40rem] min-w-0 flex-1 flex-col gap-6 px-6 py-8 text-neutral-800 md:px-0 dark:text-neutral-300">
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between md:items-start">

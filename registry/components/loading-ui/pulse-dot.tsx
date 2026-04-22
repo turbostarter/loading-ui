@@ -19,7 +19,7 @@ function PulseDot({ className, ...props }: React.ComponentProps<"span">) {
       `}</style>
       <span
         role="status"
-        className={cn("bg-current inline-block rounded-full", className)}
+        className={cn("inline-block rounded-full bg-current", className)}
         style={{
           animation: "loading-ui-pulse-dot 1.2s ease-in-out infinite",
         }}

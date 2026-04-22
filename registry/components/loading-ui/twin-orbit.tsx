@@ -13,7 +13,7 @@ function TwinOrbit({ className, ...props }: React.ComponentProps<"span">) {
       <span
         role="status"
         className={cn(
-          "relative aspect-square inline-block rounded-full bg-current",
+          "relative inline-block aspect-square rounded-full bg-current",
           className,
         )}
         {...props}

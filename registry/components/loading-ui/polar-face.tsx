@@ -27,7 +27,7 @@ function PolarFace({ className, ...props }: React.ComponentProps<"span">) {
       <span
         role="status"
         className={cn(
-          "relative inline-block [--loader-shell:currentColor] [--loader-feature:color-mix(in_srgb,currentColor_90%,black)] [--loader-accent:color-mix(in_srgb,currentColor_30%,white)]",
+          "relative inline-block [--loader-accent:color-mix(in_srgb,currentColor_30%,white)] [--loader-feature:color-mix(in_srgb,currentColor_90%,black)] [--loader-shell:currentColor]",
           className,
         )}
         style={{
@@ -40,19 +40,20 @@ function PolarFace({ className, ...props }: React.ComponentProps<"span">) {
       >
         <span
           aria-hidden="true"
-          className="absolute left-[-20%] top-0 h-[6.25em] w-[140%]"
+          className="absolute top-0 left-[-20%] h-[6.25em] w-[140%]"
           style={{
             backgroundImage:
               "radial-gradient(circle, var(--loader-shell) 48%, transparent 50%), radial-gradient(circle, var(--loader-shell) 48%, transparent 50%)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "4.0625em 4.0625em",
             backgroundPosition: "0 0.75em, 9.0625em 0.75em",
-            animation: "loading-ui-polar-face-ears 3s linear infinite alternate",
+            animation:
+              "loading-ui-polar-face-ears 3s linear infinite alternate",
           }}
         />
         <span
           aria-hidden="true"
-          className="absolute left-1/2 top-[1.5625em] h-[7.8125em] w-[6.25em]"
+          className="absolute top-[1.5625em] left-1/2 h-[7.8125em] w-[6.25em]"
           style={{
             transform: "translateX(-50%)",
             backgroundImage:
@@ -62,7 +63,8 @@ function PolarFace({ className, ...props }: React.ComponentProps<"span">) {
               "1em 1em, 1em 1em, 0.625em 0.625em, 2.625em 2.625em, 0.75em 0.1875em, 3.125em 1.5625em, 4.375em 4.375em, 4.375em 4.375em",
             backgroundPosition:
               "1.5625em 0.625em, 3.4375em 0.625em, 2.25em 2.75em, 50% 1.875em, 50% 5.3125em, 50% 3.125em, 50% 1.375em, 50% 2.8125em",
-            animation: "loading-ui-polar-face-shift 3s linear infinite alternate",
+            animation:
+              "loading-ui-polar-face-shift 3s linear infinite alternate",
           }}
         />
         <span className="sr-only">Loading</span>

@@ -14,11 +14,11 @@ function PulsatingDots({
       className={cn("inline-flex items-center justify-center", className)}
       {...props}
     >
-      <span aria-hidden="true" className="inline-flex gap-[16%] w-full">
+      <span aria-hidden="true" className="inline-flex w-full gap-[16%]">
         {Array.from({ length: dots }, (_, index) => (
           <motion.span
             key={index}
-            className="inline-block rounded-full bg-current grow aspect-square"
+            className="inline-block aspect-square grow rounded-full bg-current"
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],

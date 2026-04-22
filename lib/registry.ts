@@ -171,7 +171,7 @@ function fixFilePaths(files: RegistryItem["files"]) {
   const firstFilePath = files[0].path;
   const firstFilePathDir = path.dirname(firstFilePath);
 
-  return files.map(file => {
+  return files.map((file) => {
     return {
       ...file,
       path: path.relative(firstFilePathDir, file.path),

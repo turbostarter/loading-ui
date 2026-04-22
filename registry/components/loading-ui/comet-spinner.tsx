@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function CometSpinner({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function CometSpinner({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <>
       <style>{`

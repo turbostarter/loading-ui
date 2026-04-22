@@ -36,7 +36,7 @@ function Dots({
               animation: "loading-ui-dots-blink 1.4s infinite both",
               animationDelay: `${index * 0.2}s`,
             }}
-            className="rounded-full bg-current grow aspect-square"
+            className="aspect-square grow rounded-full bg-current"
           />
         ))}
         <span className="sr-only">Loading</span>

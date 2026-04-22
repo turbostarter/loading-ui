@@ -29,7 +29,7 @@ function ConcentricRing({ className, ...props }: React.ComponentProps<"span">) {
         />
         <span
           aria-hidden="true"
-          className="absolute left-1/2 top-1/2 rounded-full border-2 border-transparent border-b-current"
+          className="absolute top-1/2 left-1/2 rounded-full border-2 border-transparent border-b-current"
           style={{
             width: "83.333%",
             height: "83.333%",

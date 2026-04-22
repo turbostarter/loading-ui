@@ -27,7 +27,7 @@ function ClockRing({ className, ...props }: React.ComponentProps<"span">) {
       >
         <span
           aria-hidden="true"
-          className="absolute left-1/2 top-0 bg-current"
+          className="absolute top-0 left-1/2 bg-current"
           style={{
             width: "6.25%",
             height: "50%",

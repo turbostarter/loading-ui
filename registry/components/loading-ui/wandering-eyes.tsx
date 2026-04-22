@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function WanderingEyes({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function WanderingEyes({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <>
       <style>{`

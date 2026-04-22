@@ -25,7 +25,7 @@ const CopyComponent = ({ item }: { item: RegistryItem }) => {
             variant="secondary"
             size="icon"
             value={item?.files?.[0]?.content ?? ""}
-            className="static size-9 bg-secondary"
+            className="bg-secondary static size-9"
           />
         }
       />
@@ -43,7 +43,7 @@ const CopyCLICommand = ({ item }: { item: RegistryItem }) => {
             variant="secondary"
             size="icon"
             value={getCLICommand(item.name)}
-            className="static size-9 bg-secondary"
+            className="bg-secondary static size-9"
             icon={<Terminal />}
           />
         }
@@ -97,8 +97,8 @@ export const Examples = async () => {
   );
 
   return (
-    <Section className="bg-border content-start flex flex-wrap items-stretch gap-px p-0!">
-      {tiles.map(tile => {
+    <Section className="bg-border flex flex-wrap content-start items-stretch gap-px p-0!">
+      {tiles.map((tile) => {
         if (!tile) {
           return null;
         }
@@ -108,9 +108,9 @@ export const Examples = async () => {
         return (
           <div
             key={name}
-            className="group/component aspect-4/3 relative w-full max-w-full shrink-0 grow-0 sm:w-[calc((100%-1px)/2)] md:w-[calc((100%-2px)/3)] lg:w-[calc((100%-3px)/4)]"
+            className="group/component relative aspect-4/3 w-full max-w-full shrink-0 grow-0 sm:w-[calc((100%-1px)/2)] md:w-[calc((100%-2px)/3)] lg:w-[calc((100%-3px)/4)]"
           >
-            <div className="absolute inset-x-0 z-10 top-0 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
+            <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
               <div className="flex items-center gap-1.5">
                 <CopyComponent item={item} />
                 <CopyCLICommand item={item} />
@@ -134,10 +134,10 @@ export const Examples = async () => {
         );
       })}
 
-      <div className="bg-background flex w-full py-16 px-8 flex-col gap-4 min-h-0 min-w-0 flex-1 items-center justify-center self-stretch sm:min-w-40 sm:w-auto">
+      <div className="bg-background flex min-h-0 w-full min-w-0 flex-1 flex-col items-center justify-center gap-4 self-stretch px-8 py-16 sm:w-auto sm:min-w-40">
         <div className="flex flex-col items-center gap-2">
           <span className="text-lg font-medium">Missing component?</span>
-          <p className="text-muted-foreground text-sm max-w-md text-center text-pretty">
+          <p className="text-muted-foreground max-w-md text-center text-sm text-pretty">
             We're always looking for new components to add to the library. If
             you have an idea for a component, please let us know.
           </p>

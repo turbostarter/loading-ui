@@ -7,13 +7,13 @@ import { source } from "@/lib/source";
 export function ComponentsList() {
   const list = getPagesFromFolder(
     source.pageTree.children.find(
-      page => page.$id === "components",
+      (page) => page.$id === "components",
     ) as PageTreeFolder,
   );
 
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-x-8 lg:gap-x-16 lg:gap-y-6 xl:gap-x-20">
-      {list.map(component => (
+      {list.map((component) => (
         <Link
           key={component.$id}
           href={component.url}

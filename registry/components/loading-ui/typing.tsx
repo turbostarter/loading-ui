@@ -30,7 +30,7 @@ function Typing({
           <span
             key={index}
             aria-hidden="true"
-            className="inline-block rounded-full grow bg-current aspect-square"
+            className="inline-block aspect-square grow rounded-full bg-current"
             style={{
               animation: "loading-ui-typing 1s infinite",
               animationDelay: `${index * 160}ms`,

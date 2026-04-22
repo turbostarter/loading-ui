@@ -147,6 +147,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "dots-ring-demo": {
+    name: "dots-ring-demo",
+    filePath: "registry/examples/dots-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dual-arc-demo": {
     name: "dual-arc-demo",
     filePath: "registry/examples/dual-arc-demo.tsx",
@@ -287,19 +300,6 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "satellite-ring-demo";
-      return { default: mod.default || mod[exportName] };
-    }),
-  },
-  "shadow-spinner-demo": {
-    name: "shadow-spinner-demo",
-    filePath: "registry/examples/shadow-spinner-demo.tsx",
-    component: React.lazy(async () => {
-      const mod = await import("./shadow-spinner-demo.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "shadow-spinner-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },

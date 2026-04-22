@@ -14,7 +14,7 @@ export const Hero = () => {
           loading state
         </h1>
 
-        <p className="text-muted-foreground lg:text-lg xl:text-xl 2xl:text-2xl mx-auto max-w-2xl text-center">
+        <p className="text-muted-foreground mx-auto max-w-2xl text-center lg:text-lg xl:text-xl 2xl:text-2xl">
           A curated collection of spinners, loaders and animations for your next
           project. Free and open source, forever.
         </p>

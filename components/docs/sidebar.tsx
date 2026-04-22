@@ -40,7 +40,7 @@ export function DocsSidebar({
       collapsible="none"
       {...props}
     >
-      <SidebarContent className="no-scrollbar w-(--sidebar-menu-width) overflow-x-hidden">
+      <SidebarContent className="no-scrollbar w-(--sidebar-menu-width) overflow-x-hidden pb-8">
         {topLevelPages.length > 0 && (
           <SidebarGroup className="pt-6">
             <SidebarGroupContent>
@@ -116,7 +116,7 @@ export function DocsSidebar({
             </SidebarGroup>
           );
         })}
-        <div className="from-background via-background/80 to-background/50 sticky -bottom-1 z-10 h-16 shrink-0 bg-linear-to-t blur-xs" />
+        <div className="from-background via-background/80 to-background/50 pointer-events-none absolute inset-x-2 -bottom-1 z-10 h-16 shrink-0 bg-linear-to-t blur-xs" />
       </SidebarContent>
     </Sidebar>
   );

@@ -18,7 +18,7 @@ function Classic({ className, ...props }: ClassicProps) {
       `}</style>
       <span
         role="status"
-        className={cn("text-primary inline-block box-border size-5", className)}
+        className={cn("text-primary box-border inline-block size-5", className)}
         {...props}
       >
         <span
@@ -28,7 +28,7 @@ function Classic({ className, ...props }: ClassicProps) {
           {Array.from({ length: 12 }, (_, index) => (
             <span
               key={index}
-              className="bg-current absolute top-[-3.9%] left-[-10%] block h-[8%] w-[24%] rounded-(--radius)"
+              className="absolute top-[-3.9%] left-[-10%] block h-[8%] w-[24%] rounded-(--radius) bg-current"
               style={{
                 transform: `rotate(${index * 30}deg) translate(146%)`,
                 animation: "loading-ui-classic-fade 1.2s linear infinite",

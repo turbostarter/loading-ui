@@ -60,7 +60,7 @@ export async function formatCode(code: string) {
     ];
 
     await Promise.all(
-      transformers.map(transformer =>
+      transformers.map((transformer) =>
         transformer({
           filename: "component.tsx",
           raw: code,

@@ -56,10 +56,10 @@
       "type": "registry:component"
     },
     {
-      "name": "shadow-spinner",
+      "name": "dots-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/shadow-spinner.tsx",
+          "path": "registry/components/loading-ui/dots-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -256,17 +256,6 @@
       "type": "registry:component"
     },
     {
-      "name": "triple-dot-spinner",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/triple-dot-spinner.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
       "name": "twin-orbit",
       "files": [
         {
@@ -283,6 +272,17 @@
       "files": [
         {
           "path": "registry/components/loading-ui/pulsating-dots.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "triple-dot-spinner",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/triple-dot-spinner.tsx",
           "type": "registry:component",
           "target": ""
         }

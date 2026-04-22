@@ -27,7 +27,7 @@ function SatelliteRing({ className, ...props }: React.ComponentProps<"span">) {
       >
         <span
           aria-hidden="true"
-          className="absolute left-0 top-0 rounded-full bg-current"
+          className="absolute top-0 left-0 rounded-full bg-current"
           style={{
             width: "33.333%",
             height: "33.333%",

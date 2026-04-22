@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function QuarterRing({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function QuarterRing({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <>
       <style>{`

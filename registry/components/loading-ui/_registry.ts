@@ -32,11 +32,11 @@ export const components = [
     ],
   },
   {
-    name: "shadow-spinner",
+    name: "dots-ring",
     type: "registry:component",
     files: [
       {
-        path: "components/loading-ui/shadow-spinner.tsx",
+        path: "components/loading-ui/dots-ring.tsx",
         type: "registry:component",
       },
     ],
