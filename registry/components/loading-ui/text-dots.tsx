@@ -4,11 +4,7 @@ type TextDotsProps = React.ComponentProps<"span"> & {
   text?: string;
 };
 
-function TextDots({
-  className,
-  text = "Thinking",
-  ...props
-}: TextDotsProps) {
+function TextDots({ className, text, ...props }: TextDotsProps) {
   return (
     <>
       <style>{`

@@ -16,9 +16,12 @@ function ClockRing({ className, ...props }: React.ComponentProps<"span">) {
       `}</style>
       <span
         role="status"
-        className={cn("relative inline-block rounded-full border border-current", className)}
+        className={cn(
+          "relative inline-block rounded-full border-2 border-current",
+          className,
+        )}
         style={{
-          animation: "loading-ui-clock-ring-rotation 1s linear infinite",
+          animation: "loading-ui-clock-ring-rotation 1.5s linear infinite",
         }}
         {...props}
       >

@@ -1,5 +1,9 @@
 import { TextShimmerWave } from "@/registry/components/loading-ui/text-shimmer-wave";
 
 export function TextShimmerDemo() {
-  return <TextShimmerWave duration={1}>Tinkering...</TextShimmerWave>;
+  return (
+    <TextShimmerWave className="text-xl" duration={1}>
+      Thinking...
+    </TextShimmerWave>
+  );
 }

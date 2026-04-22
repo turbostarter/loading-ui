@@ -5,23 +5,20 @@ import { cn } from "@/lib/utils";
 
 function PulsatingDots({
   className,
+  dots = 3,
   ...props
-}: React.ComponentProps<"span">) {
+}: React.ComponentProps<"span"> & { dots?: number }) {
   return (
     <span
       role="status"
       className={cn("inline-flex items-center justify-center", className)}
       {...props}
     >
-      <span aria-hidden="true" className="inline-flex gap-[0.5em]">
-        {Array.from({ length: 3 }, (_, index) => (
+      <span aria-hidden="true" className="inline-flex gap-[16%] w-full">
+        {Array.from({ length: dots }, (_, index) => (
           <motion.span
             key={index}
-            className="inline-block rounded-full bg-current"
-            style={{
-              width: "0.75em",
-              height: "0.75em",
-            }}
+            className="inline-block rounded-full bg-current grow aspect-square"
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],

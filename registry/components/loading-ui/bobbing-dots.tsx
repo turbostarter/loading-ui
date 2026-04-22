@@ -5,8 +5,9 @@ import { cn } from "@/lib/utils";
 
 function BobbingDots({
   className,
+  dots = 3,
   ...props
-}: React.ComponentProps<"span">) {
+}: React.ComponentProps<"span"> & { dots?: number }) {
   const transition = (index: number) => ({
     duration: 1,
     repeat: Infinity,
@@ -18,21 +19,17 @@ function BobbingDots({
   return (
     <span
       role="status"
-      className={cn("inline-flex items-center gap-[0.5em]", className)}
+      className={cn("inline-flex items-center gap-[12%]", className)}
       {...props}
     >
-      {Array.from({ length: 3 }, (_, index) => (
+      {Array.from({ length: dots }, (_, index) => (
         <motion.span
           key={index}
           aria-hidden="true"
           initial={{ y: 0 }}
           animate={{ y: [0, "0.625em", 0] }}
           transition={transition(index)}
-          className="inline-block rounded-full border border-current bg-current/80 shadow-sm"
-          style={{
-            width: "1em",
-            height: "1em",
-          }}
+          className="inline-block rounded-full grow bg-current shadow-sm aspect-square"
         />
       ))}
       <span className="sr-only">Loading</span>

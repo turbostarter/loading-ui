@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
 
-function Dots({ className, ...props }: React.ComponentProps<"span">) {
+function Dots({
+  className,
+  dots = 3,
+  ...props
+}: React.ComponentProps<"span"> & { dots?: number }) {
   return (
     <>
       <style>{`
@@ -18,12 +22,12 @@ function Dots({ className, ...props }: React.ComponentProps<"span">) {
       <span
         role="status"
         className={cn(
-          "inline-flex items-center justify-center gap-[15%]",
+          "inline-flex items-center justify-center gap-[12%]",
           className,
         )}
         {...props}
       >
-        {Array.from({ length: 3 }, (_, index) => (
+        {Array.from({ length: dots }, (_, index) => (
           <span
             key={index}
             data-slot="dot"

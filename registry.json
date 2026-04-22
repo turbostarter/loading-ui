@@ -34,17 +34,6 @@
       "type": "registry:component"
     },
     {
-      "name": "ripple",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/ripple.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
       "name": "spokes",
       "files": [
         {
@@ -60,6 +49,62 @@
       "files": [
         {
           "path": "registry/components/loading-ui/classic.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "shadow-spinner",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/shadow-spinner.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "spiral",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/spiral.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "swirling",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/swirling.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "dual-arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/dual-arc.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -122,98 +167,10 @@
       "type": "registry:component"
     },
     {
-      "name": "glossy-orb",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/glossy-orb.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
       "name": "comet-spinner",
       "files": [
         {
           "path": "registry/components/loading-ui/comet-spinner.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "shadow-spinner",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/shadow-spinner.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "triple-dot-spinner",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/triple-dot-spinner.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "twin-orbit",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/twin-orbit.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "wandering-eyes",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/wandering-eyes.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "swirling",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/swirling.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "arc",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/arc.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "dual-arc",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/dual-arc.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -232,33 +189,21 @@
       "type": "registry:component"
     },
     {
+      "name": "ripple",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/ripple.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "pulse-dot",
       "files": [
         {
           "path": "registry/components/loading-ui/pulse-dot.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "pulse-ring",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/pulse-ring.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "pulsating-dots",
-      "dependencies": ["motion"],
-      "files": [
-        {
-          "path": "registry/components/loading-ui/pulsating-dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -311,10 +256,10 @@
       "type": "registry:component"
     },
     {
-      "name": "wave",
+      "name": "triple-dot-spinner",
       "files": [
         {
-          "path": "registry/components/loading-ui/wave.tsx",
+          "path": "registry/components/loading-ui/triple-dot-spinner.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -322,10 +267,10 @@
       "type": "registry:component"
     },
     {
-      "name": "bars",
+      "name": "twin-orbit",
       "files": [
         {
-          "path": "registry/components/loading-ui/bars.tsx",
+          "path": "registry/components/loading-ui/twin-orbit.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -333,78 +278,11 @@
       "type": "registry:component"
     },
     {
-      "name": "delivery-truck",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/delivery-truck.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "polar-face",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/polar-face.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "analyzing-image",
+      "name": "pulsating-dots",
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/analyzing-image.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "spiral",
-      "dependencies": ["motion"],
-      "files": [
-        {
-          "path": "registry/components/loading-ui/spiral.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "skeleton",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/skeleton.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "terminal",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/terminal.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "infinity",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/infinity.tsx",
+          "path": "registry/components/loading-ui/pulsating-dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -451,6 +329,106 @@
       "files": [
         {
           "path": "registry/components/loading-ui/text-shimmer-wave.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "wave",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/wave.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "bars",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/bars.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "analyzing-image",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/analyzing-image.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "skeleton",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/skeleton.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "terminal",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/terminal.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "infinity",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/infinity.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "wandering-eyes",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/wandering-eyes.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "delivery-truck",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/delivery-truck.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "polar-face",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/polar-face.tsx",
           "type": "registry:component",
           "target": ""
         }

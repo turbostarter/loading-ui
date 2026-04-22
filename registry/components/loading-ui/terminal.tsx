@@ -4,11 +4,7 @@ type TerminalProps = React.ComponentProps<"span"> & {
   prompt?: string;
 };
 
-function Terminal({
-  className,
-  prompt = ">",
-  ...props
-}: TerminalProps) {
+function Terminal({ className, prompt = ">", ...props }: TerminalProps) {
   return (
     <>
       <style>{`
@@ -25,7 +21,10 @@ function Terminal({
       `}</style>
       <span
         role="status"
-        className={cn("inline-flex items-center gap-[0.25em] font-mono", className)}
+        className={cn(
+          "inline-flex items-center gap-[0.25em] font-mono",
+          className,
+        )}
         {...props}
       >
         <span aria-hidden="true">{prompt}</span>

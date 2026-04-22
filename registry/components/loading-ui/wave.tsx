@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const WAVE_BAR_HEIGHTS = ["0.5em", "0.75em", "1em", "0.75em", "0.5em"] as const;
+const WAVE_BAR_HEIGHTS = ["50%", "75%", "100%", "75%", "50%"] as const;
 
 function Wave({ className, ...props }: React.ComponentProps<"span">) {
   return (
@@ -19,7 +19,7 @@ function Wave({ className, ...props }: React.ComponentProps<"span">) {
       `}</style>
       <span
         role="status"
-        className={cn("inline-flex items-center gap-[0.125em]", className)}
+        className={cn("inline-flex items-center gap-[2.5%]", className)}
         {...props}
       >
         {WAVE_BAR_HEIGHTS.map((height, index) => (
@@ -28,7 +28,7 @@ function Wave({ className, ...props }: React.ComponentProps<"span">) {
             aria-hidden="true"
             className="inline-block rounded-full bg-current"
             style={{
-              width: "0.125em",
+              width: "12.5%",
               height,
               animation: "loading-ui-wave 1s ease-in-out infinite",
               animationDelay: `${index * 100}ms`,

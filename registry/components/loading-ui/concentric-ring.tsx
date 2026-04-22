@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function ConcentricRing({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function ConcentricRing({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <>
       <style>{`
@@ -27,12 +24,12 @@ function ConcentricRing({
       >
         <span
           aria-hidden="true"
-          className="absolute inset-0 rounded-full border border-current"
+          className="absolute inset-0 rounded-full border-2 border-current"
           style={{ opacity: 0.25 }}
         />
         <span
           aria-hidden="true"
-          className="absolute left-1/2 top-1/2 rounded-full border border-transparent border-b-current"
+          className="absolute left-1/2 top-1/2 rounded-full border-2 border-transparent border-b-current"
           style={{
             width: "83.333%",
             height: "83.333%",

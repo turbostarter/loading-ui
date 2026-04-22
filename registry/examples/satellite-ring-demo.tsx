@@ -1,5 +1,5 @@
 import { SatelliteRing } from "@/registry/components/loading-ui/satellite-ring";
 
 export function SatelliteRingDemo() {
-  return <SatelliteRing className="size-12 text-primary" />;
+  return <SatelliteRing className="size-14" />;
 }

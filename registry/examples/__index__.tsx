@@ -160,19 +160,6 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "glossy-orb-demo": {
-    name: "glossy-orb-demo",
-    filePath: "registry/examples/glossy-orb-demo.tsx",
-    component: React.lazy(async () => {
-      const mod = await import("./glossy-orb-demo.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "glossy-orb-demo";
-      return { default: mod.default || mod[exportName] };
-    }),
-  },
   "infinity-demo": {
     name: "infinity-demo",
     filePath: "registry/examples/infinity-demo.tsx",
@@ -248,19 +235,6 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "pulse-dot-demo";
-      return { default: mod.default || mod[exportName] };
-    }),
-  },
-  "pulse-ring-demo": {
-    name: "pulse-ring-demo",
-    filePath: "registry/examples/pulse-ring-demo.tsx",
-    component: React.lazy(async () => {
-      const mod = await import("./pulse-ring-demo.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "pulse-ring-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },

@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function SatelliteRing({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function SatelliteRing({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <>
       <style>{`
@@ -19,9 +16,12 @@ function SatelliteRing({
       `}</style>
       <span
         role="status"
-        className={cn("relative inline-block rounded-full border border-current", className)}
+        className={cn(
+          "relative inline-block rounded-full border-2 border-current/25",
+          className,
+        )}
         style={{
-          animation: "loading-ui-satellite-ring-rotation 1s linear infinite",
+          animation: "loading-ui-satellite-ring-rotation 1.5s linear infinite",
         }}
         {...props}
       >

@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
 
-function Bars({ className, ...props }: React.ComponentProps<"span">) {
+function Bars({
+  className,
+  bars = 3,
+  ...props
+}: React.ComponentProps<"span"> & { bars?: number }) {
   return (
     <>
       <style>{`
@@ -19,15 +23,16 @@ function Bars({ className, ...props }: React.ComponentProps<"span">) {
       `}</style>
       <span
         role="status"
-        className={cn("inline-flex h-[1em] items-stretch gap-[0.25em]", className)}
+        className={cn("inline-flex items-stretch gap-[5%]", className)}
         {...props}
       >
-        {Array.from({ length: 3 }, (_, index) => (
+        {Array.from({ length: bars }, (_, index) => (
           <span
             key={index}
             aria-hidden="true"
-            className="inline-block h-full w-[0.25em] bg-current"
+            className="inline-block h-full bg-current rounded-[1px]"
             style={{
+              width: `${100 / bars}%`,
               animation: "loading-ui-wave-bars 1.2s ease-in-out infinite",
               animationDelay: `${index * 0.2}s`,
             }}

@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
 
-function Typing({ className, ...props }: React.ComponentProps<"span">) {
+function Typing({
+  className,
+  dots = 3,
+  ...props
+}: React.ComponentProps<"span"> & { dots?: number }) {
   return (
     <>
       <style>{`
@@ -12,26 +16,24 @@ function Typing({ className, ...props }: React.ComponentProps<"span">) {
           }
 
           50% {
-            transform: translateY(-0.125em);
+            transform: translateY(-50%);
             opacity: 1;
           }
         }
       `}</style>
       <span
         role="status"
-        className={cn("inline-flex items-center gap-[0.25em]", className)}
+        className={cn("inline-flex items-center gap-[12%]", className)}
         {...props}
       >
-        {Array.from({ length: 3 }, (_, index) => (
+        {Array.from({ length: dots }, (_, index) => (
           <span
             key={index}
             aria-hidden="true"
-            className="inline-block rounded-full bg-current"
+            className="inline-block rounded-full grow bg-current aspect-square"
             style={{
-              width: "0.375em",
-              height: "0.375em",
               animation: "loading-ui-typing 1s infinite",
-              animationDelay: `${index * 250}ms`,
+              animationDelay: `${index * 160}ms`,
             }}
           />
         ))}

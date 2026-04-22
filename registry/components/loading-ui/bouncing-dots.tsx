@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
 
-function BouncingDots({ className, ...props }: React.ComponentProps<"span">) {
+function BouncingDots({
+  className,
+  dots = 3,
+  ...props
+}: React.ComponentProps<"span"> & { dots?: number }) {
   return (
     <>
       <style>{`
@@ -19,19 +23,17 @@ function BouncingDots({ className, ...props }: React.ComponentProps<"span">) {
       `}</style>
       <span
         role="status"
-        className={cn("inline-flex items-center gap-[0.25em]", className)}
+        className={cn("inline-flex items-center gap-[12%]", className)}
         {...props}
       >
-        {Array.from({ length: 3 }, (_, index) => (
+        {Array.from({ length: dots }, (_, index) => (
           <span
             key={index}
             aria-hidden="true"
-            className="inline-block rounded-full bg-current"
+            className="inline-block rounded-full grow bg-current aspect-square"
             style={{
-              width: "0.5em",
-              height: "0.5em",
               animation: "loading-ui-bouncing-dots 1.4s ease-in-out infinite",
-              animationDelay: `${index * 160}ms`,
+              animationDelay: `${index * 0.2}s`,
             }}
           />
         ))}

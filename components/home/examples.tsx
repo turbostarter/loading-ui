@@ -14,6 +14,7 @@ import { ExamplesIndex } from "@/registry/examples/__index__";
 import { CopyButton } from "@/components/common/copy-button";
 import { RegistryItem } from "@/registry/schema";
 import { cn } from "@/lib/utils";
+import { GITHUB_URL } from "@/lib/constants";
 
 const CopyComponent = ({ item }: { item: RegistryItem }) => {
   return (
@@ -96,7 +97,7 @@ export const Examples = async () => {
   );
 
   return (
-    <Section className="bg-border grid grid-cols-1 gap-px p-0! sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <Section className="bg-border content-start flex flex-wrap items-stretch gap-px p-0!">
       {tiles.map(tile => {
         if (!tile) {
           return null;
@@ -105,7 +106,10 @@ export const Examples = async () => {
         const { name, item, ExampleComponent } = tile;
 
         return (
-          <div key={name} className="group/component relative aspect-4/3">
+          <div
+            key={name}
+            className="group/component aspect-4/3 relative w-full max-w-full shrink-0 grow-0 sm:w-[calc((100%-1px)/2)] md:w-[calc((100%-2px)/3)] lg:w-[calc((100%-3px)/4)]"
+          >
             <div className="absolute inset-x-0 z-10 top-0 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
               <div className="flex items-center gap-1.5">
                 <CopyComponent item={item} />
@@ -129,6 +133,27 @@ export const Examples = async () => {
           </div>
         );
       })}
+
+      <div className="bg-background flex w-full py-16 px-8 flex-col gap-4 min-h-0 min-w-0 flex-1 items-center justify-center self-stretch sm:min-w-40 sm:w-auto">
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-lg font-medium">Missing component?</span>
+          <p className="text-muted-foreground text-sm max-w-md text-center text-pretty">
+            We're always looking for new components to add to the library. If
+            you have an idea for a component, please let us know.
+          </p>
+        </div>
+        <Link
+          href={`${GITHUB_URL}/issues/new?template=feature_request.yml&labels=new-component`}
+          target="_blank"
+          rel="noreferrer noopener"
+          className={buttonVariants({
+            variant: "outline",
+            className: "px-3",
+          })}
+        >
+          Request a component
+        </Link>
+      </div>
     </Section>
   );
 };

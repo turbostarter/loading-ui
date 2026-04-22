@@ -1,5 +1,5 @@
 import { Terminal } from "@/registry/components/loading-ui/terminal";
 
 export function TerminalDemo() {
-  return <Terminal className="text-primary text-base" />;
+  return <Terminal className="text-xl" />;
 }

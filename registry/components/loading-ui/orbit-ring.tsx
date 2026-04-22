@@ -24,12 +24,12 @@ function OrbitRing({ className, ...props }: React.ComponentProps<"span">) {
       >
         <span
           aria-hidden="true"
-          className="absolute inset-0 rounded-full border border-current"
+          className="absolute inset-0 rounded-full border-2 border-current"
           style={{ opacity: 0.25 }}
         />
         <span
           aria-hidden="true"
-          className="absolute left-1/2 top-1/2 rounded-full border border-transparent border-b-current"
+          className="absolute left-1/2 top-1/2 rounded-full border-2 border-transparent border-b-current"
           style={{
             width: "116.667%",
             height: "116.667%",
