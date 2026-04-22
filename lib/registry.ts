@@ -1,5 +1,4 @@
 import { readFileFromRoot } from "@/lib/read-file";
-import { baseUrl } from "@/lib/metadata";
 import { Index } from "@/registry/__index__";
 import { ExamplesIndex } from "@/registry/examples/__index__";
 import {
