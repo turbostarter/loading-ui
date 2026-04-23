@@ -1,6 +1,102 @@
 ---
 title: Dash ring
-description: An animated dash-stroke ring for compact indeterminate loading states.
+description: An SVG dash-stroke ring with morphing length—strong for streaming and indeterminate progress.
 ---
 
-Coming soon.
+<ComponentPreview name="dash-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/dash-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dash-ring" title="components/loading-ui/dash-ring.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { DashRing } from "@/components/loading-ui/dash-ring";
+```
+
+```tsx
+<DashRing />
+```
+
+## Customization
+
+`DashRing` is an SVG with a faint track and an animated dash. The motion blends rotation with changing dash length, which reads well for **streaming**, **LLM output**, and other states where percent-complete is fuzzy.
+
+### Size
+
+Use `size-*` on the SVG root for inline controls, headers, and empty-state icons.
+
+<ComponentPreview name="dash-ring-size" />
+
+### Color
+
+`stroke="currentColor"` on the circles means text and foreground utilities tint both the track and the active dash.
+
+<ComponentPreview name="dash-ring-color" />
+
+### Ring weight
+
+Target the circles with a descendant selector to tune stroke width without forking the component.
+
+<ComponentPreview name="dash-ring-ring-weight" />
+
+### Animation cadence
+
+The dash morph and rotation timings are defined on the SVG’s `<animate>` elements. To change the feel, edit those `dur` values (and matching `keyTimes`) in `dash-ring.tsx`—they are not wired to Tailwind’s `animation-duration` utilities.
+
+## Examples
+
+These examples lean into **fluid, in-flight** work: streaming copy, expandable diagnostics, and assistant surfaces.
+
+### Button
+
+In buttons, the dash ring signals blending or merging work rather than a simple fetch.
+
+<ComponentPreview name="dash-ring-button" />
+
+### Alert
+
+Use it when you want a calm, non-blocking heads-up that output quality is still converging.
+
+<ComponentPreview name="dash-ring-alert" />
+
+### Collapsible
+
+Tuck verbose logs behind a collapsible while the spinner stays visible in the summary row.
+
+<ComponentPreview name="dash-ring-collapsible" />
+
+### Input group
+
+A textarea footer is a natural place to show synthesis status tied to the prompt above.
+
+<ComponentPreview name="dash-ring-input-group" />

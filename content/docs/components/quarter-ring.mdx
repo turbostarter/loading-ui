@@ -1,6 +1,107 @@
 ---
 title: Quarter ring
-description: A quarter-arc ring for compact spinners in tight UI.
+description: A quarter-arc ring for compact spinners when space is tight but motion still matters.
 ---
 
-Coming soon.
+<ComponentPreview name="quarter-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/quarter-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="quarter-ring"
+  title="components/loading-ui/quarter-ring.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { QuarterRing } from "@/components/loading-ui/quarter-ring";
+```
+
+```tsx
+<QuarterRing />
+```
+
+## Customization
+
+`QuarterRing` only paints the top-right quadrant of a ring, so it stays visually lighter than a full stroke while still reading clearly at small sizes. It fits inline labels, dense toolbars, and “quick pass” states.
+
+### Size
+
+Step through `size-*` utilities to match chips, table rows, and icon slots.
+
+<ComponentPreview name="quarter-ring-size" />
+
+### Color
+
+The arc uses `currentColor`, so inheritance and semantic text colors apply without extra props.
+
+<ComponentPreview name="quarter-ring-color" />
+
+### Ring weight
+
+Border thickness changes how punchy the arc feels against whitespace—especially next to monospace or tabular data.
+
+<ComponentPreview name="quarter-ring-ring-weight" />
+
+### Duration
+
+`animation-duration-*` maps through `--tw-animation-duration`, so you can slow the rotation for background tasks or speed it up for snappy micro-interactions.
+
+<ComponentPreview name="quarter-ring-duration" />
+
+## Examples
+
+These examples highlight **small-footprint** feedback: pills, empty states, and hover tips where a full ring would feel crowded.
+
+### Button
+
+The quarter arc keeps button height comfortable while the label carries most of the meaning.
+
+<ComponentPreview name="quarter-ring-button" />
+
+### Badge
+
+Badges stay balanced because the spinner silhouette matches the height of adjacent text.
+
+<ComponentPreview name="quarter-ring-badge" />
+
+### Empty
+
+For “lightweight preview” empty states, the arc suggests work in progress without dominating the illustration slot.
+
+<ComponentPreview name="quarter-ring-empty" />
+
+### Tooltip
+
+Pair the loader with short explanatory copy when the delay is user-visible but not worth a modal.
+
+<ComponentPreview name="quarter-ring-tooltip" />

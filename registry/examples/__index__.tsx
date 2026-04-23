@@ -485,6 +485,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "dash-ring-alert": {
+    name: "dash-ring-alert",
+    filePath: "registry/examples/dash-ring/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dash-ring-button": {
+    name: "dash-ring-button",
+    filePath: "registry/examples/dash-ring/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dash-ring-collapsible": {
+    name: "dash-ring-collapsible",
+    filePath: "registry/examples/dash-ring/collapsible.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-collapsible";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dash-ring-color": {
+    name: "dash-ring-color",
+    filePath: "registry/examples/dash-ring/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dash-ring-demo": {
     name: "dash-ring-demo",
     filePath: "registry/examples/dash-ring/demo.tsx",
@@ -495,6 +547,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "dash-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dash-ring-input-group": {
+    name: "dash-ring-input-group",
+    filePath: "registry/examples/dash-ring/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dash-ring-ring-weight": {
+    name: "dash-ring-ring-weight",
+    filePath: "registry/examples/dash-ring/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dash-ring-size": {
+    name: "dash-ring-size",
+    filePath: "registry/examples/dash-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dash-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -927,6 +1018,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "quarter-ring-badge": {
+    name: "quarter-ring-badge",
+    filePath: "registry/examples/quarter-ring/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-button": {
+    name: "quarter-ring-button",
+    filePath: "registry/examples/quarter-ring/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-color": {
+    name: "quarter-ring-color",
+    filePath: "registry/examples/quarter-ring/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "quarter-ring-demo": {
     name: "quarter-ring-demo",
     filePath: "registry/examples/quarter-ring/demo.tsx",
@@ -937,6 +1067,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "quarter-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-duration": {
+    name: "quarter-ring-duration",
+    filePath: "registry/examples/quarter-ring/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-empty": {
+    name: "quarter-ring-empty",
+    filePath: "registry/examples/quarter-ring/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-ring-weight": {
+    name: "quarter-ring-ring-weight",
+    filePath: "registry/examples/quarter-ring/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-size": {
+    name: "quarter-ring-size",
+    filePath: "registry/examples/quarter-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-tooltip": {
+    name: "quarter-ring-tooltip",
+    filePath: "registry/examples/quarter-ring/tooltip.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring/tooltip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-tooltip";
       return { default: mod.default || mod[exportName] };
     }),
   },

@@ -21,7 +21,8 @@ function QuarterRing({ className, ...props }: React.ComponentProps<"span">) {
           className,
         )}
         style={{
-          animation: "loading-ui-quarter-ring-rotation 1s linear infinite",
+          animation:
+            "loading-ui-quarter-ring-rotation var(--tw-animation-duration, 1s) linear infinite",
         }}
         {...props}
       >
