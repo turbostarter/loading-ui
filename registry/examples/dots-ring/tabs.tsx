@@ -1,9 +1,4 @@
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DotsRing } from "@/registry/components/loading-ui/dots-ring";
 
 export default function DotsRingTabs() {
@@ -16,7 +11,7 @@ export default function DotsRingTabs() {
       <TabsContent value="overview">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 p-2 text-primary">
+            <div className="rounded-full bg-primary/10 size-9 flex items-center justify-center">
               <DotsRing className="size-5" dots={8} dotScale={0.22} />
             </div>
             <div className="space-y-1">

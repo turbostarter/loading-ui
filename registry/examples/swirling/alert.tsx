@@ -3,6 +3,7 @@ import {
   Alert,
   AlertAction,
   AlertDescription,
+  AlertMedia,
   AlertTitle,
 } from "@/components/ui/alert";
 import { Swirling } from "@/registry/components/loading-ui/swirling";
@@ -10,7 +11,9 @@ import { Swirling } from "@/registry/components/loading-ui/swirling";
 export default function SwirlingAlert() {
   return (
     <Alert className="w-full max-w-md">
-      <Swirling className="size-5 text-primary" />
+      <AlertMedia>
+        <Swirling className="size-5 text-primary" />
+      </AlertMedia>
       <AlertTitle>Media processing is still underway</AlertTitle>
       <AlertDescription>
         Large video assets are being transcoded in the background. This step can

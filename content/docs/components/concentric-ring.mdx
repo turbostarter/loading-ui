@@ -3,4 +3,105 @@ title: Concentric ring
 description: Layered rings for a deep, technical loading look.
 ---
 
-Coming soon.
+<ComponentPreview name="concentric-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/concentric-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="concentric-ring"
+  title="components/loading-ui/concentric-ring.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ConcentricRing } from "@/components/loading-ui/concentric-ring";
+```
+
+```tsx
+<ConcentricRing />
+```
+
+## Customization
+
+`ConcentricRing` has a tighter, more technical feel than a plain ring spinner. The overall look comes from the relationship between the outer guide ring and the inner rotating segment, so the most useful adjustments are the ones that change weight, color, pace, and overall scale.
+
+### Size
+
+Use `size-*` utilities to move the loader between compact inline states and more prominent framed layouts.
+
+<ComponentPreview name="concentric-ring-size" />
+
+### Color
+
+Both rings use `currentColor`, so the component can inherit tone from its parent or be styled directly with text color utilities.
+
+<ComponentPreview name="concentric-ring-color" />
+
+### Ring Weight
+
+Changing the border thickness shifts the component from delicate and precise to more assertive and mechanical.
+
+<ComponentPreview name="concentric-ring-ring-weight" />
+
+### Duration
+
+Animation timing helps determine whether the loader feels calm and backgrounded or more active and urgent.
+
+<ComponentPreview name="concentric-ring-duration" />
+
+## Examples
+
+These examples focus on compact, structured UI where `ConcentricRing` feels particularly at home. It tends to work best in technical or dashboard-like contexts where the extra ring detail reads as intentional rather than decorative.
+
+### Button
+
+Inside buttons, `ConcentricRing` gives the pending state a slightly more engineered feel than a basic spinner.
+
+<ComponentPreview name="concentric-ring-button" />
+
+### Badge
+
+In small status pills, the layered shape still reads clearly without becoming too heavy.
+
+<ComponentPreview name="concentric-ring-badge" />
+
+### Collapsible
+
+Within a collapsible task panel, it helps anchor a processing summary while deeper details remain visible below.
+
+<ComponentPreview name="concentric-ring-collapsible" />
+
+### Alert
+
+For visible but non-blocking activity, `ConcentricRing` makes a strong alert marker without overpowering the surrounding copy.
+
+<ComponentPreview name="concentric-ring-alert" />

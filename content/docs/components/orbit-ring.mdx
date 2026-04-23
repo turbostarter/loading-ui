@@ -3,4 +3,102 @@ title: Orbit ring
 description: A ring with orbiting elements for a dynamic loading indicator.
 ---
 
-Coming soon.
+<ComponentPreview name="orbit-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/orbit-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="orbit-ring" title="components/loading-ui/orbit-ring.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { OrbitRing } from "@/components/loading-ui/orbit-ring";
+```
+
+```tsx
+<OrbitRing />
+```
+
+## Customization
+
+`OrbitRing` feels a bit more expansive than `ConcentricRing` because the moving arc sits outside the base ring. That makes it especially useful when you want a loader with a slightly wider footprint and a more dynamic silhouette.
+
+### Size
+
+Scale the component with `size-*` utilities depending on whether it appears inline or anchors a larger state.
+
+<ComponentPreview name="orbit-ring-size" />
+
+### Color
+
+The ring and orbiting segment inherit `currentColor`, so the component can easily match muted UI, primary accents, or stronger contextual tones.
+
+<ComponentPreview name="orbit-ring-color" />
+
+### Ring Weight
+
+Border thickness changes how crisp or substantial the orbit feels, especially at medium and larger sizes.
+
+<ComponentPreview name="orbit-ring-ring-weight" />
+
+### Duration
+
+Animation speed changes the overall mood from calm background activity to something more energetic.
+
+<ComponentPreview name="orbit-ring-duration" />
+
+## Examples
+
+These examples lean into the wider, slightly more atmospheric quality of `OrbitRing`. It tends to read best in states that need a little more presence than a minimal inline spinner, but still want to stay clean and product-focused.
+
+### Button
+
+In buttons, `OrbitRing` works well when the action should feel active and noticeable without becoming flashy.
+
+<ComponentPreview name="orbit-ring-button" />
+
+### Input Group
+
+Inside input groups, it can signal resolving, drafting, or sending work while keeping the feedback local to the control.
+
+<ComponentPreview name="orbit-ring-input-group" />
+
+### Empty
+
+For section-level waiting states, the outer orbit gives the loader enough presence to hold the layout on its own.
+
+<ComponentPreview name="orbit-ring-empty" />
+
+### Tabs
+
+Within tabbed workspaces, it can indicate that one panel is still refreshing while the rest of the view remains available.
+
+<ComponentPreview name="orbit-ring-tabs" />

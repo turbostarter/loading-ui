@@ -7,24 +7,24 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { Swirling } from "@/registry/components/loading-ui/swirling";
+import { OrbitRing } from "@/registry/components/loading-ui/orbit-ring";
 
-export default function SwirlingEmpty() {
+export default function OrbitRingEmpty() {
   return (
     <Empty className="w-full max-w-md">
       <EmptyHeader>
-        <EmptyMedia variant="icon">
-          <Swirling className="size-7 text-primary" />
+        <EmptyMedia variant="icon" className="size-14 rounded-full">
+          <OrbitRing className="size-7 text-primary" />
         </EmptyMedia>
-        <EmptyTitle>Building your campaign kit</EmptyTitle>
+        <EmptyTitle>Mapping your workspace</EmptyTitle>
         <EmptyDescription>
-          Layout variants, cropped assets, and share previews are still being
-          assembled.
+          Projects, dependencies, and recent branches are still being connected
+          into a fresh view.
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
         <Button variant="outline" size="sm">
-          Notify me later
+          Open previous snapshot
         </Button>
       </EmptyContent>
     </Empty>

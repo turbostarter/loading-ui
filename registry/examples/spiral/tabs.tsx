@@ -1,9 +1,4 @@
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Spiral } from "@/registry/components/loading-ui/spiral";
 
 export default function SpiralTabs() {
@@ -16,7 +11,7 @@ export default function SpiralTabs() {
       <TabsContent value="summary">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 p-2 text-primary">
+            <div className="rounded-full bg-primary/10 p-2 leading-none">
               <Spiral className="size-5" dots={8} />
             </div>
             <div className="space-y-1">

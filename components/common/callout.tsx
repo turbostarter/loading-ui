@@ -1,5 +1,10 @@
 import { cn } from "@/lib/utils";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertMedia,
+  AlertTitle,
+} from "@/components/ui/alert";
 
 export function Callout({
   title,
@@ -21,7 +26,7 @@ export function Callout({
       )}
       {...props}
     >
-      {icon}
+      {icon ? <AlertMedia>{icon}</AlertMedia> : null}
       {title && <AlertTitle>{title}</AlertTitle>}
       <AlertDescription className="text-card-foreground/80">
         {children}

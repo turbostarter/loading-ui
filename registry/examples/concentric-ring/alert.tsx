@@ -6,18 +6,18 @@ import {
   AlertMedia,
   AlertTitle,
 } from "@/components/ui/alert";
-import { DotsRing } from "@/registry/components/loading-ui/dots-ring";
+import { ConcentricRing } from "@/registry/components/loading-ui/concentric-ring";
 
-export default function DotsRingAlert() {
+export default function ConcentricRingAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <DotsRing className="size-4" dots={8} dotScale={0.24} />
+        <ConcentricRing className="size-5 text-primary" />
       </AlertMedia>
-      <AlertTitle>Search index is updating</AlertTitle>
+      <AlertTitle>Repository scan is still running</AlertTitle>
       <AlertDescription>
-        New files are being processed in the background. Results may shift for a
-        moment.
+        File metadata and dependency information are still being collected in
+        the background.
       </AlertDescription>
       <AlertAction>
         <Button variant="outline" size="xs">

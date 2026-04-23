@@ -264,6 +264,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "concentric-ring-alert": {
+    name: "concentric-ring-alert",
+    filePath: "registry/examples/concentric-ring/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-badge": {
+    name: "concentric-ring-badge",
+    filePath: "registry/examples/concentric-ring/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-button": {
+    name: "concentric-ring-button",
+    filePath: "registry/examples/concentric-ring/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-collapsible": {
+    name: "concentric-ring-collapsible",
+    filePath: "registry/examples/concentric-ring/collapsible.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-collapsible";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-color": {
+    name: "concentric-ring-color",
+    filePath: "registry/examples/concentric-ring/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "concentric-ring-demo": {
     name: "concentric-ring-demo",
     filePath: "registry/examples/concentric-ring/demo.tsx",
@@ -274,6 +339,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "concentric-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-duration": {
+    name: "concentric-ring-duration",
+    filePath: "registry/examples/concentric-ring/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-ring-weight": {
+    name: "concentric-ring-ring-weight",
+    filePath: "registry/examples/concentric-ring/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-size": {
+    name: "concentric-ring-size",
+    filePath: "registry/examples/concentric-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -563,6 +667,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "orbit-ring-button": {
+    name: "orbit-ring-button",
+    filePath: "registry/examples/orbit-ring/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-color": {
+    name: "orbit-ring-color",
+    filePath: "registry/examples/orbit-ring/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "orbit-ring-demo": {
     name: "orbit-ring-demo",
     filePath: "registry/examples/orbit-ring/demo.tsx",
@@ -573,6 +703,84 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "orbit-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-duration": {
+    name: "orbit-ring-duration",
+    filePath: "registry/examples/orbit-ring/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-empty": {
+    name: "orbit-ring-empty",
+    filePath: "registry/examples/orbit-ring/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-input-group": {
+    name: "orbit-ring-input-group",
+    filePath: "registry/examples/orbit-ring/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-ring-weight": {
+    name: "orbit-ring-ring-weight",
+    filePath: "registry/examples/orbit-ring/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-size": {
+    name: "orbit-ring-size",
+    filePath: "registry/examples/orbit-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-tabs": {
+    name: "orbit-ring-tabs",
+    filePath: "registry/examples/orbit-ring/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -742,6 +950,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "ring-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ring-stroke-width": {
+    name: "ring-stroke-width",
+    filePath: "registry/examples/ring/stroke-width.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ring/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-stroke-width";
       return { default: mod.default || mod[exportName] };
     }),
   },

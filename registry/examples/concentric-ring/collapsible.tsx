@@ -5,9 +5,9 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { Spiral } from "@/registry/components/loading-ui/spiral";
+import { ConcentricRing } from "@/registry/components/loading-ui/concentric-ring";
 
-export default function SpiralCollapsible() {
+export default function ConcentricRingCollapsible() {
   return (
     <Collapsible
       defaultOpen
@@ -16,12 +16,12 @@ export default function SpiralCollapsible() {
       <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 p-4 text-left">
         <div className="flex items-center gap-3">
           <div className="rounded-full bg-primary/10 p-2 leading-none">
-            <Spiral className="size-5" dots={8} />
+            <ConcentricRing className="size-5" />
           </div>
           <div className="space-y-1">
-            <div className="font-medium">Review bundle is processing</div>
+            <div className="font-medium">Compilation pipeline is active</div>
             <p className="text-muted-foreground text-sm">
-              Comments, summaries, and suggested edits are still being grouped.
+              Bundles, types, and static assets are still being finalized.
             </p>
           </div>
         </div>
@@ -29,9 +29,9 @@ export default function SpiralCollapsible() {
       </CollapsibleTrigger>
       <CollapsibleContent className="border-t px-4 py-3">
         <div className="flex flex-col gap-2 text-sm">
-          <div className="rounded-md border px-3 py-2">Critical findings</div>
-          <div className="rounded-md border px-3 py-2">Suggested fixes</div>
-          <div className="rounded-md border px-3 py-2">Regression scan</div>
+          <div className="rounded-md border px-3 py-2">Type generation</div>
+          <div className="rounded-md border px-3 py-2">Asset hashing</div>
+          <div className="rounded-md border px-3 py-2">Manifest publish</div>
         </div>
       </CollapsibleContent>
     </Collapsible>
