@@ -3,4 +3,111 @@ title: Dots ring
 description: A ring of animated dots that scales with the parent container.
 ---
 
-Coming soon.
+<ComponentPreview name="dots-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/dots-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="dots-ring"
+  title="components/loading-ui/dots-ring.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { DotsRing } from "@/components/loading-ui/dots-ring";
+```
+
+```tsx
+<DotsRing />
+```
+
+## Customization
+
+`DotsRing` is more configurable than most of the simpler spinners in the set. Since the component exposes props for dot count, pulse timing, dot size, and ring radius, it is a good fit when you want to tune the motion itself instead of only swapping utility classes around it.
+
+### Size
+
+Use `size-*` utilities to control the overall footprint of the ring in compact and larger layouts.
+
+<ComponentPreview name="dots-ring-size" />
+
+### Dot Count
+
+Increase or decrease the number of dots to make the motion feel denser or more minimal.
+
+<ComponentPreview name="dots-ring-dots" />
+
+### Duration
+
+The `duration` prop adjusts how quickly the pulse travels around the ring.
+
+<ComponentPreview name="dots-ring-duration" />
+
+### Dot Scale
+
+Use `dotScale` to change the size of each dot relative to the overall ring.
+
+<ComponentPreview name="dots-ring-dot-scale" />
+
+### Radius Scale
+
+The `radiusScale` prop controls how far the dots sit from the center, which changes how tight or airy the ring feels.
+
+<ComponentPreview name="dots-ring-radius-scale" />
+
+## Examples
+
+These examples focus on smaller, more interface-oriented contexts where `DotsRing` feels precise and a little more designed than a plain spinner, without becoming overly expressive.
+
+### Badge
+
+In compact status pills, `DotsRing` gives you a more distinctive loading marker while still reading clearly at small sizes.
+
+<ComponentPreview name="dots-ring-badge" />
+
+### Input Group
+
+Inside input groups, it works well for inline checking and drafting states where the feedback should stay close to the field.
+
+<ComponentPreview name="dots-ring-input-group" />
+
+### Alert
+
+For visible but non-blocking system activity, `DotsRing` makes a good alert icon when you want something more refined than a single stroke spinner.
+
+<ComponentPreview name="dots-ring-alert" />
+
+### Tabs
+
+Within tabbed views, it can signal that one panel is still refreshing while the rest of the workspace remains available.
+
+<ComponentPreview name="dots-ring-tabs" />

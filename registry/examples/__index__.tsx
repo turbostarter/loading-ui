@@ -290,6 +290,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "dots-ring-alert": {
+    name: "dots-ring-alert",
+    filePath: "registry/examples/dots-ring/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-badge": {
+    name: "dots-ring-badge",
+    filePath: "registry/examples/dots-ring/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dots-ring-demo": {
     name: "dots-ring-demo",
     filePath: "registry/examples/dots-ring/demo.tsx",
@@ -300,6 +326,97 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "dots-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-dot-scale": {
+    name: "dots-ring-dot-scale",
+    filePath: "registry/examples/dots-ring/dot-scale.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/dot-scale.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-dot-scale";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-dots": {
+    name: "dots-ring-dots",
+    filePath: "registry/examples/dots-ring/dots.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-dots";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-duration": {
+    name: "dots-ring-duration",
+    filePath: "registry/examples/dots-ring/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-input-group": {
+    name: "dots-ring-input-group",
+    filePath: "registry/examples/dots-ring/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-radius-scale": {
+    name: "dots-ring-radius-scale",
+    filePath: "registry/examples/dots-ring/radius-scale.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/radius-scale.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-radius-scale";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-size": {
+    name: "dots-ring-size",
+    filePath: "registry/examples/dots-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-ring-tabs": {
+    name: "dots-ring-tabs",
+    filePath: "registry/examples/dots-ring/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-ring/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -667,6 +784,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "spiral-button": {
+    name: "spiral-button",
+    filePath: "registry/examples/spiral/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-collapsible": {
+    name: "spiral-collapsible",
+    filePath: "registry/examples/spiral/collapsible.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-collapsible";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-color": {
+    name: "spiral-color",
+    filePath: "registry/examples/spiral/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "spiral-demo": {
     name: "spiral-demo",
     filePath: "registry/examples/spiral/demo.tsx",
@@ -677,6 +833,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "spiral-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-dots": {
+    name: "spiral-dots",
+    filePath: "registry/examples/spiral/dots.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-dots";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-empty": {
+    name: "spiral-empty",
+    filePath: "registry/examples/spiral/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-radius": {
+    name: "spiral-radius",
+    filePath: "registry/examples/spiral/radius.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/radius.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-radius";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-size": {
+    name: "spiral-size",
+    filePath: "registry/examples/spiral/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-tabs": {
+    name: "spiral-tabs",
+    filePath: "registry/examples/spiral/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },

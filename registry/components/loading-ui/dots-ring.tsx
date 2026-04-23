@@ -1,7 +1,5 @@
 import { cn } from "@/lib/utils";
 
-const ANIMATION = "loading-ui-dots-ring-pulse";
-
 type DotsRingProps = React.ComponentProps<"span"> & {
   dots?: number;
   duration?: React.CSSProperties["animationDuration"] | number;
@@ -35,7 +33,7 @@ function DotsRing({
   return (
     <>
       <style>{`
-        @keyframes ${ANIMATION} {
+        @keyframes loading-ui-dots-ring-pulse {
           0%,
           100% {
             opacity: 0.25;
@@ -86,7 +84,8 @@ function DotsRing({
                 <span
                   className="block size-full rounded-full bg-current"
                   style={{
-                    animation: `${ANIMATION} var(--loading-ui-dots-ring-duration) linear infinite`,
+                    animation:
+                      "loading-ui-dots-ring-pulse var(--loading-ui-dots-ring-duration) linear infinite",
                     animationDelay: `calc(var(--loading-ui-dots-ring-duration) / ${dotCount} * ${index - dotCount})`,
                   }}
                 />

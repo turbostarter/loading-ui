@@ -3,4 +3,102 @@ title: Spiral
 description: A spiral motion path for a distinctive busy state.
 ---
 
-Coming soon.
+<ComponentPreview name="spiral-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/spiral
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="spiral" title="components/loading-ui/spiral.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Spiral } from "@/components/loading-ui/spiral";
+```
+
+```tsx
+<Spiral />
+```
+
+## Customization
+
+`Spiral` is a more characterful loader that builds its motion from dots moving around a circular path. The most meaningful changes come from dot density, how wide the spiral sits, and the overall size and color treatment.
+
+### Size
+
+Scale the component with `size-*` utilities depending on whether it appears inline or anchors a larger loading state.
+
+<ComponentPreview name="spiral-size" />
+
+### Color
+
+Because each dot uses `currentColor`, the component can inherit the surrounding tone or be styled directly with any text color utility.
+
+<ComponentPreview name="spiral-color" />
+
+### Dot Count
+
+The `dots` prop changes the density of the motion path, from more minimal to more continuous.
+
+<ComponentPreview name="spiral-dots" />
+
+### Radius
+
+Use the `radius` prop to tighten or widen the spiral without changing the outer size of the component.
+
+<ComponentPreview name="spiral-radius" />
+
+## Examples
+
+These examples use `Spiral` in places where its motion can add a bit more personality to the waiting state instead of disappearing into the background.
+
+### Button
+
+In primary actions, `Spiral` gives the pending state a little more energy than a plain inline spinner.
+
+<ComponentPreview name="spiral-button" />
+
+### Collapsible
+
+Inside a collapsible processing panel, it helps anchor the summary while deeper details remain available underneath.
+
+<ComponentPreview name="spiral-collapsible" />
+
+### Empty
+
+For featured waiting states, `Spiral` has enough presence to hold the layout without needing extra decoration.
+
+<ComponentPreview name="spiral-empty" />
+
+### Tabs
+
+In tabbed workspaces, it works well when one panel is still loading but the rest of the UI should stay usable.
+
+<ComponentPreview name="spiral-tabs" />
