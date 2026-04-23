@@ -33,7 +33,8 @@ function Dots({
             data-slot="dot"
             aria-hidden="true"
             style={{
-              animation: "loading-ui-dots-blink 1.4s infinite both",
+              animation:
+                "loading-ui-dots-blink var(--tw-animation-duration, 1.4s) infinite both",
               animationDelay: `${index * 0.2}s`,
             }}
             className="aspect-square grow rounded-full bg-current"

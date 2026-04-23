@@ -147,6 +147,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "bobbing-dots-alert": {
+    name: "bobbing-dots-alert",
+    filePath: "registry/examples/bobbing-dots/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-badge": {
+    name: "bobbing-dots-badge",
+    filePath: "registry/examples/bobbing-dots/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-button": {
+    name: "bobbing-dots-button",
+    filePath: "registry/examples/bobbing-dots/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-color": {
+    name: "bobbing-dots-color",
+    filePath: "registry/examples/bobbing-dots/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-count": {
+    name: "bobbing-dots-count",
+    filePath: "registry/examples/bobbing-dots/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "bobbing-dots-demo": {
     name: "bobbing-dots-demo",
     filePath: "registry/examples/bobbing-dots/demo.tsx",
@@ -157,6 +222,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "bobbing-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-duration": {
+    name: "bobbing-dots-duration",
+    filePath: "registry/examples/bobbing-dots/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-popover": {
+    name: "bobbing-dots-popover",
+    filePath: "registry/examples/bobbing-dots/popover.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-popover";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-sheet": {
+    name: "bobbing-dots-sheet",
+    filePath: "registry/examples/bobbing-dots/sheet.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-sheet";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-size": {
+    name: "bobbing-dots-size",
+    filePath: "registry/examples/bobbing-dots/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bobbing-dots-tabs": {
+    name: "bobbing-dots-tabs",
+    filePath: "registry/examples/bobbing-dots/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -823,6 +953,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "dots-accordion": {
+    name: "dots-accordion",
+    filePath: "registry/examples/dots/accordion.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-accordion";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-badge": {
+    name: "dots-badge",
+    filePath: "registry/examples/dots/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-button": {
+    name: "dots-button",
+    filePath: "registry/examples/dots/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-color": {
+    name: "dots-color",
+    filePath: "registry/examples/dots/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-count": {
+    name: "dots-count",
+    filePath: "registry/examples/dots/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dots-demo": {
     name: "dots-demo",
     filePath: "registry/examples/dots/demo.tsx",
@@ -833,6 +1028,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-empty": {
+    name: "dots-empty",
+    filePath: "registry/examples/dots/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-input-group": {
+    name: "dots-input-group",
+    filePath: "registry/examples/dots/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-size": {
+    name: "dots-size",
+    filePath: "registry/examples/dots/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-size";
       return { default: mod.default || mod[exportName] };
     }),
   },

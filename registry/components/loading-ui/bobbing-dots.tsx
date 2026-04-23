@@ -6,10 +6,11 @@ import { cn } from "@/lib/utils";
 function BobbingDots({
   className,
   dots = 3,
+  duration = 1,
   ...props
-}: React.ComponentProps<"span"> & { dots?: number }) {
+}: React.ComponentProps<"span"> & { dots?: number; duration?: number }) {
   const transition = (index: number) => ({
-    duration: 1,
+    duration,
     repeat: Infinity,
     repeatType: "loop" as const,
     delay: index * 0.2,

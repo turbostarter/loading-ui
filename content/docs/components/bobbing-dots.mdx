@@ -1,6 +1,123 @@
 ---
 title: Bobbing dots
-description: Bouncing dot markers that read well as a playful loading state.
+description: Motion-driven dots that bounce in phase—playful loading for creative tools, media, and lighthearted flows.
 ---
 
-Coming soon.
+<ComponentPreview name="bobbing-dots-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/bobbing-dots
+```
+
+The registry entry pulls in **Motion** (`motion`); the CLI step should install it alongside the component.
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Add Motion if you do not already use it (`motion` on npm—the import path is `motion/react`).</Step>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="bobbing-dots"
+  title="components/loading-ui/bobbing-dots.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { BobbingDots } from "@/components/loading-ui/bobbing-dots";
+```
+
+```tsx
+<BobbingDots />
+```
+
+## Customization
+
+`BobbingDots` mirrors `Dots` layout: percentage gap, `grow` dots, and **`text-*`** for `bg-current`. Vertical motion is handled by Motion with a staggered delay per index. Use **`duration`** (seconds, default `1`) to speed up or slow the bounce without touching the keyframes.
+
+### Size
+
+Scale the row with width utilities; larger widths give each dot more room to travel visually.
+
+<ComponentPreview name="bobbing-dots-size" />
+
+### Color
+
+Semantic row first, vivid hex row second—same idea as the blinking `Dots` showcase.
+
+<ComponentPreview name="bobbing-dots-color" />
+
+### Duration
+
+Pass `duration` as a number of seconds. Lower values feel snappier; higher values feel floatier.
+
+<ComponentPreview name="bobbing-dots-duration" />
+
+### Dot count
+
+More dots add rhythm; keep widths generous so the bounce does not feel cramped.
+
+<ComponentPreview name="bobbing-dots-count" />
+
+## Examples
+
+Mix surfaces so the motion never feels copy-pasted: dashed alerts, sheets with breathing room, tabs with soft gradients, and popovers for micro-delights.
+
+### Button
+
+Spacing the label with `gap-2` keeps the bounce from colliding with button text.
+
+<ComponentPreview name="bobbing-dots-button" />
+
+### Badge
+
+Gradient-backed badges sell “play mode” energy without extra illustration.
+
+<ComponentPreview name="bobbing-dots-badge" />
+
+### Alert
+
+A dashed, tinted alert reads celebratory—good for short waits in onboarding or labs.
+
+<ComponentPreview name="bobbing-dots-alert" />
+
+### Sheet
+
+Centered motion plus a sentence of context helps mobile-friendly workflows feel guided.
+
+<ComponentPreview name="bobbing-dots-sheet" />
+
+### Tabs
+
+Let one tab hold the hero preview while the other stays lightweight—users can switch without losing the playful loop.
+
+<ComponentPreview name="bobbing-dots-tabs" />
+
+### Popover
+
+Keep copy short; the dots are the star of this transient surface.
+
+<ComponentPreview name="bobbing-dots-popover" />

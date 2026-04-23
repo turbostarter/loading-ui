@@ -1,6 +1,104 @@
 ---
 title: Dots
-description: A classic blinking-dots row for text-adjacent and inline loading.
+description: A classic blinking-dot row—perfect beside copy, in composers, and anywhere “typing” should read instantly.
 ---
 
-Coming soon.
+<ComponentPreview name="dots-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/dots
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dots" title="components/loading-ui/dots.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Dots } from "@/components/loading-ui/dots";
+```
+
+```tsx
+<Dots />
+```
+
+## Customization
+
+`Dots` lays out `aspect-square` markers with `grow` inside a flex row, so **width** on the root (for example `w-16`) is the main lever for overall scale. Each dot blinks on a staggered delay; color comes from `bg-current`, so set **`text-*`** (or inherit from a parent) to tint the row.
+
+### Size
+
+Widen or narrow the container—the dots distribute evenly with a percentage gap.
+
+<ComponentPreview name="dots-size" />
+
+### Color
+
+The first row uses semantic utilities; the second uses arbitrary hex so swatches stay obvious in any theme.
+
+<ComponentPreview name="dots-color" />
+
+### Dot count
+
+Pass `dots` when you want a longer ellipsis or a denser beat (three is the default).
+
+<ComponentPreview name="dots-count" />
+
+## Examples
+
+These examples lean into **chat, drafts, and typing** metaphors—pair with honest labels so users know it is progress, not decoration.
+
+### Button
+
+Disabled buttons plus dots communicate a short blocking action without swapping in a different icon set.
+
+<ComponentPreview name="dots-button" />
+
+### Badge
+
+Tight chips for “typing” or “AI drafting” stay scannable because the row height matches the badge line box.
+
+<ComponentPreview name="dots-badge" />
+
+### Accordion
+
+Use the accordion header as a live status surface while longer copy stays tucked in the panel.
+
+<ComponentPreview name="dots-accordion" />
+
+### Input group
+
+A textarea footer mirrors classic messenger UX: dots plus a single line of system copy.
+
+<ComponentPreview name="dots-input-group" />
+
+### Empty
+
+Gradient framing makes the empty state feel transitional—swap to a message list once the first typist appears.
+
+<ComponentPreview name="dots-empty" />
