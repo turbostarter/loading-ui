@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -52,7 +53,7 @@ function InputGroupAddon({
       data-slot="input-group-addon"
       data-align={align}
       className={cn(inputGroupAddonVariants({ align }), className)}
-      onClick={(e) => {
+      onClick={e => {
         if ((e.target as HTMLElement).closest("button")) {
           return;
         }

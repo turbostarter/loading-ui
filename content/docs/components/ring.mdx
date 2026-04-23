@@ -3,4 +3,102 @@ title: Ring
 description: A circular indeterminate loader for inline actions, page transitions, and general pending states.
 ---
 
-Coming soon.
+<ComponentPreview name="ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ring" title="components/loading-ui/ring.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Ring } from "@/components/loading-ui/ring";
+```
+
+```tsx
+<Ring />
+```
+
+## Customization
+
+`Ring` is intentionally simple to adapt. Most visual changes come from standard utility classes on the SVG itself, while animation behavior can be tuned to better match the pace and tone of the surrounding interface.
+
+### Size
+
+Use the `size-*` utility class to change the size of the component.
+
+<ComponentPreview name="ring-size" />
+
+### Color
+
+Since the loader uses `currentColor`, you can change its appearance with any text color utility or inherited color from a parent container.
+
+<ComponentPreview name="ring-color" />
+
+### Duration
+
+Animation speed can be adjusted when you want the spinner to feel calmer, more energetic, or better aligned with the rest of a transition.
+
+<ComponentPreview name="ring-duration" />
+
+### Direction
+
+You can also reverse the motion direction to better fit specific visual systems or pair the loader with other rotating elements in the UI.
+
+<ComponentPreview name="ring-direction" />
+
+## Examples
+
+These examples show how `Ring` behaves when it is embedded inside common interface patterns instead of standing alone. The loader works best when it inherits spacing, color, and alignment from surrounding primitives, so these compositions are usually the most useful reference when wiring it into product UI.
+
+### Button
+
+Buttons are the most common place to use `Ring` for short-lived actions like submitting forms, saving settings, or kicking off async mutations.
+
+<ComponentPreview name="ring-button" />
+
+### Badge
+
+In badges, `Ring` works well for compact status labels like syncing, updating, or processing states that need to stay visible without taking over the layout.
+
+<ComponentPreview name="ring-badge" />
+
+### Input Group
+
+Inside input groups, the loader can signal inline validation, request processing, or message sending without forcing the field into a separate loading view.
+
+<ComponentPreview name="ring-input-group" />
+
+### Empty
+
+For larger waiting states, `Ring` can sit inside an empty-state container to communicate that a full-screen or section-level operation is still in progress.
+
+<ComponentPreview name="ring-empty" />

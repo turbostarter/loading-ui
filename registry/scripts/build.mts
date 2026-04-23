@@ -43,6 +43,26 @@ async function writeIfChanged(filePath: string, content: string) {
   return true;
 }
 
+async function collectFiles(
+  directoryPath: string,
+  predicate: (filePath: string) => boolean,
+): Promise<string[]> {
+  const entries = await fs.readdir(directoryPath, { withFileTypes: true });
+  const files: string[][] = await Promise.all(
+    entries.map(async (entry): Promise<string[]> => {
+      const entryPath = path.join(directoryPath, entry.name);
+
+      if (entry.isDirectory()) {
+        return collectFiles(entryPath, predicate);
+      }
+
+      return predicate(entryPath) ? [entryPath] : [];
+    }),
+  );
+
+  return files.flat().sort();
+}
+
 async function formatGeneratedSource(content: string, filePath: string) {
   const config = JSON.parse(
     await fs.readFile(path.join(process.cwd(), ".oxfmtrc.json"), "utf8"),
@@ -57,16 +77,15 @@ async function formatGeneratedJson(value: unknown, filePath: string) {
 async function buildExamplesIndex() {
   const examplesDir = path.join(process.cwd(), "registry/examples");
 
-  const allEntries = await fs.readdir(examplesDir, { withFileTypes: true });
-  const files = allEntries
-    .filter(
-      (entry) =>
-        entry.isFile() &&
-        entry.name.endsWith(".tsx") &&
-        !entry.name.startsWith("__"),
-    )
-    .map((entry) => entry.name)
-    .sort();
+  const files = (await collectFiles(
+    examplesDir,
+    (filePath) =>
+      filePath.endsWith(".tsx") &&
+      path.basename(filePath) !== "__index__.tsx" &&
+      !path.basename(filePath).startsWith("__"),
+  )).map((filePath: string) =>
+    path.relative(examplesDir, filePath).replaceAll("\\", "/"),
+  );
 
   console.log(`   Found ${files.length} demos for examples`);
 
@@ -78,7 +97,10 @@ import * as React from "react"
 export const ExamplesIndex: Record<string, Record<string, any>> = {`;
 
   for (const file of files) {
-    const name = file.replace(/\.tsx$/, "");
+    const name = file
+      .replace(/\.tsx$/, "")
+      .split("/")
+      .join("-");
 
     index += `
     "${name}": {
