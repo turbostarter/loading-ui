@@ -121,16 +121,16 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "delivery-truck-demo": {
-    name: "delivery-truck-demo",
-    filePath: "registry/examples/delivery-truck-demo.tsx",
+  "dash-ring-demo": {
+    name: "dash-ring-demo",
+    filePath: "registry/examples/dash-ring-demo.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./delivery-truck-demo.tsx");
+      const mod = await import("./dash-ring-demo.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "delivery-truck-demo";
+        ) || "dash-ring-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -196,19 +196,6 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "orbit-ring-demo";
-      return { default: mod.default || mod[exportName] };
-    }),
-  },
-  "polar-face-demo": {
-    name: "polar-face-demo",
-    filePath: "registry/examples/polar-face-demo.tsx",
-    component: React.lazy(async () => {
-      const mod = await import("./polar-face-demo.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "polar-face-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },

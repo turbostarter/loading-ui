@@ -1,7 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "spiral",
-  "dependencies": ["motion"],
+  "dependencies": [
+    "motion"
+  ],
   "files": [
     {
       "path": "registry/components/loading-ui/spiral.tsx",

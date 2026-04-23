@@ -19,16 +19,20 @@ function TripleDotSpinner({
       `}</style>
       <span
         role="status"
-        className={cn(
-          "relative mx-auto block rounded-full bg-current",
-          className,
-        )}
-        style={{
-          boxShadow: "-150% 0 currentColor, 150% 0 currentColor",
-          animation: "loading-ui-triple-dot-rotation 2s ease-in-out infinite",
-        }}
+        className={cn("relative inline-block", className)}
         {...props}
       >
+        <span
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            animation: "loading-ui-triple-dot-rotation 2s ease-in-out infinite",
+          }}
+        >
+          <span className="absolute left-1/2 top-1/2 size-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-current" />
+          <span className="absolute left-1/2 top-1/2 size-full -translate-x-[200%] -translate-y-1/2 rounded-full bg-current" />
+          <span className="absolute left-1/2 top-1/2 size-full translate-x-full -translate-y-1/2 rounded-full bg-current" />
+        </span>
         <span className="sr-only">Loading</span>
       </span>
     </>

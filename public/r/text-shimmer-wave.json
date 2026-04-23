@@ -1,7 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text-shimmer-wave",
-  "dependencies": ["motion"],
+  "dependencies": [
+    "motion"
+  ],
   "files": [
     {
       "path": "registry/components/loading-ui/text-shimmer-wave.tsx",

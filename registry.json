@@ -167,6 +167,17 @@
       "type": "registry:component"
     },
     {
+      "name": "dash-ring",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/dash-ring.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "comet-spinner",
       "files": [
         {
@@ -407,28 +418,6 @@
       "files": [
         {
           "path": "registry/components/loading-ui/wandering-eyes.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "delivery-truck",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/delivery-truck.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "polar-face",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/polar-face.tsx",
           "type": "registry:component",
           "target": ""
         }

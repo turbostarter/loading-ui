@@ -1,10 +1,8 @@
 import { cn } from "@/lib/utils";
 
-type TextDotsProps = React.ComponentProps<"span"> & {
-  text?: string;
-};
+type TextDotsProps = React.ComponentProps<"span">;
 
-function TextDots({ className, text, ...props }: TextDotsProps) {
+function TextDots({ className, children, ...props }: TextDotsProps) {
   return (
     <>
       <style>{`
@@ -24,7 +22,7 @@ function TextDots({ className, text, ...props }: TextDotsProps) {
         className={cn("inline-flex items-center", className)}
         {...props}
       >
-        <span>{text}</span>
+        <span>{children}</span>
         <span aria-hidden="true" className="inline-flex">
           {["0.2s", "0.4s", "0.6s"].map((delay, index) => (
             <span

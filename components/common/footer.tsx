@@ -6,7 +6,7 @@ export const Footer = () => {
       <p className="text-muted-foreground text-sm">
         Made with ❤️ and{" "}
         <a
-          href={TURBOSTARTER_URL}
+          href={`${TURBOSTARTER_URL}?utm_source=loading-ui&utm_medium=referral`}
           target="_blank"
           rel="noreferrer"
           className="text-primary underline"

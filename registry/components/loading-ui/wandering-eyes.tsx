@@ -1,10 +1,53 @@
 import { cn } from "@/lib/utils";
 
-function WanderingEyes({ className, ...props }: React.ComponentProps<"span">) {
+const MOVE_ANIMATION = "loading-ui-wandering-eyes-move";
+const BLINK_ANIMATION = "loading-ui-wandering-eyes-blink";
+
+type WanderingEyesProps = React.ComponentProps<"span"> & {
+  duration?: React.CSSProperties["animationDuration"] | number;
+  eyeScale?: number;
+  gapScale?: number;
+  pupilScale?: number;
+  blinkScale?: number;
+  travelScale?: number;
+};
+
+function clamp(value: number, min: number, max: number) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function WanderingEyes({
+  className,
+  style,
+  duration = "10s",
+  eyeScale = 0.44,
+  gapScale = 0.11,
+  pupilScale = 0.29,
+  blinkScale = 0.375,
+  travelScale = 0.3125,
+  ...props
+}: WanderingEyesProps) {
+  const safeEyeScale = clamp(eyeScale, 0.22, 0.48);
+  const safeGapScale = clamp(gapScale, 0.04, 0.3);
+  const safePupilScale = clamp(pupilScale, 0.12, 0.45);
+  const safeBlinkScale = clamp(blinkScale, 0.15, 1);
+  const safeTravelScale = clamp(travelScale, 0.08, 0.5);
+  const durationValue =
+    typeof duration === "number" ? `${duration}ms` : duration;
+  const eyesStyle = {
+    ...style,
+    "--loading-ui-wandering-eyes-duration": durationValue,
+    "--loading-ui-wandering-eyes-eye": `${(safeEyeScale * 100).toFixed(2)}cqmin`,
+    "--loading-ui-wandering-eyes-gap": `${(safeGapScale * 100).toFixed(2)}cqmin`,
+    "--loading-ui-wandering-eyes-pupil-scale": `${safePupilScale}`,
+    "--loading-ui-wandering-eyes-blink": `${safeBlinkScale}`,
+    "--loading-ui-wandering-eyes-travel-scale": `${safeTravelScale}`,
+  } as React.CSSProperties;
+
   return (
     <>
       <style>{`
-        @keyframes loading-ui-wandering-eyes-move {
+        @keyframes ${MOVE_ANIMATION} {
           0%,
           10% {
             background-position: 0 0;
@@ -12,17 +55,17 @@ function WanderingEyes({ className, ...props }: React.ComponentProps<"span">) {
 
           13%,
           40% {
-            background-position: -0.9375em 0;
+            background-position: calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-travel-scale) * -1) 0;
           }
 
           43%,
           70% {
-            background-position: 0.9375em 0;
+            background-position: calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-travel-scale)) 0;
           }
 
           73%,
           90% {
-            background-position: 0 0.9375em;
+            background-position: 0 calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-travel-scale));
           }
 
           93%,
@@ -31,7 +74,7 @@ function WanderingEyes({ className, ...props }: React.ComponentProps<"span">) {
           }
         }
 
-        @keyframes loading-ui-wandering-eyes-blink {
+        @keyframes ${BLINK_ANIMATION} {
           0%,
           10%,
           12%,
@@ -47,7 +90,7 @@ function WanderingEyes({ className, ...props }: React.ComponentProps<"span">) {
           92%,
           98%,
           100% {
-            height: 3em;
+            height: var(--loading-ui-wandering-eyes-eye);
           }
 
           11%,
@@ -57,34 +100,39 @@ function WanderingEyes({ className, ...props }: React.ComponentProps<"span">) {
           71%,
           91%,
           99% {
-            height: 1.125em;
+            height: calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-blink));
           }
         }
       `}</style>
       <span
         role="status"
         className={cn(
-          "inline-flex w-[6.75em] items-center justify-between [--eye-color:currentColor] [--pupil-color:color-mix(in_srgb,currentColor_20%,black)]",
+          "@container-[size] relative inline-flex aspect-[9/4] items-center justify-center align-middle [--eye-color:currentColor] [--pupil-color:color-mix(in_srgb,currentColor_20%,black)]",
           className,
         )}
+        style={eyesStyle}
         {...props}
       >
-        {Array.from({ length: 2 }, (_, index) => (
-          <span
-            key={index}
-            aria-hidden="true"
-            className="inline-block w-[3em] rounded-full"
-            style={{
-              height: "3em",
-              backgroundColor: "var(--eye-color)",
-              backgroundImage:
-                "radial-gradient(circle 0.875em, var(--pupil-color) 100%, transparent 0)",
-              backgroundRepeat: "no-repeat",
-              animation:
-                "loading-ui-wandering-eyes-move 10s infinite, loading-ui-wandering-eyes-blink 10s infinite",
-            }}
-          />
-        ))}
+        <span
+          aria-hidden="true"
+          className="inline-flex items-center justify-center gap-[var(--loading-ui-wandering-eyes-gap)]"
+        >
+          {Array.from({ length: 2 }, (_, index) => (
+            <span
+              key={index}
+              className="inline-block rounded-full"
+              style={{
+                width: "var(--loading-ui-wandering-eyes-eye)",
+                height: "var(--loading-ui-wandering-eyes-eye)",
+                backgroundColor: "var(--eye-color)",
+                backgroundImage:
+                  "radial-gradient(circle calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-pupil-scale)), var(--pupil-color) 100%, transparent 0)",
+                backgroundRepeat: "no-repeat",
+                animation: `${MOVE_ANIMATION} var(--loading-ui-wandering-eyes-duration) infinite, ${BLINK_ANIMATION} var(--loading-ui-wandering-eyes-duration) infinite`,
+              }}
+            />
+          ))}
+        </span>
         <span className="sr-only">Loading</span>
       </span>
     </>

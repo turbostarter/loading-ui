@@ -27,7 +27,11 @@ export function TurbostarterCta({
       <Button variant="outline" size="sm" className="mt-2 w-fit">
         Try TurboStarter
       </Button>
-      <a href={TURBOSTARTER_URL} target="_blank" className="absolute inset-0">
+      <a
+        href={`${TURBOSTARTER_URL}?utm_source=loading-ui&utm_medium=referral`}
+        target="_blank"
+        className="absolute inset-0"
+      >
         <span className="sr-only">Try TurboStarter</span>
       </a>
     </div>

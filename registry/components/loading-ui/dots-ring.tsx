@@ -23,7 +23,7 @@ function DotsRing({
   ...props
 }: DotsRingProps) {
   const dotCount = Math.max(4, Math.floor(dots));
-  const safeDotScale = clamp(dotScale, 0.08, 0.4);
+  const safeDotScale = clamp(dotScale, 0.2, 0.4);
   const safeRadiusScale = clamp(radiusScale, 0, 0.5 - safeDotScale / 2);
   const durationValue =
     typeof duration === "number" ? `${duration}ms` : duration;

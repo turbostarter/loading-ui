@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "registry/components/loading-ui/pulse-dot.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nfunction PulseDot({ className, ...props }: React.ComponentProps<\"span\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-pulse-dot {\n          0%,\n          100% {\n            transform: scale(1);\n            opacity: 0.8;\n          }\n\n          50% {\n            transform: scale(1.5);\n            opacity: 1;\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\"bg-current inline-block rounded-full\", className)}\n        style={{\n          animation: \"loading-ui-pulse-dot 1.2s ease-in-out infinite\",\n        }}\n        {...props}\n      >\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { PulseDot };\n",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction PulseDot({ className, ...props }: React.ComponentProps<\"span\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-pulse-dot {\n          0%,\n          100% {\n            transform: scale(1);\n            opacity: 0.8;\n          }\n\n          50% {\n            transform: scale(1.5);\n            opacity: 1;\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\"inline-block rounded-full bg-current\", className)}\n        style={{\n          animation: \"loading-ui-pulse-dot 1.2s ease-in-out infinite\",\n        }}\n        {...props}\n      >\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { PulseDot };\n",
       "type": "registry:component",
       "target": ""
     }

@@ -135,6 +135,16 @@ export const components = [
     ],
   },
   {
+    name: "dash-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/dash-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "comet-spinner",
     type: "registry:component",
     files: [
@@ -357,26 +367,6 @@ export const components = [
     files: [
       {
         path: "components/loading-ui/wandering-eyes.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "delivery-truck",
-    type: "registry:component",
-    files: [
-      {
-        path: "components/loading-ui/delivery-truck.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "polar-face",
-    type: "registry:component",
-    files: [
-      {
-        path: "components/loading-ui/polar-face.tsx",
         type: "registry:component",
       },
     ],
