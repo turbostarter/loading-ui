@@ -3,4 +3,102 @@ title: Dual arc
 description: Two complementary arcs for a balanced indeterminate progress feel.
 ---
 
-Coming soon.
+<ComponentPreview name="dual-arc-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/dual-arc
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dual-arc" title="components/loading-ui/dual-arc.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { DualArc } from "@/components/loading-ui/dual-arc";
+```
+
+```tsx
+<DualArc />
+```
+
+## Customization
+
+`DualArc` sits in a useful middle ground: more distinctive than a plain spinner, but still restrained enough for everyday product UI. Since the shape comes from borders and rotation, the most helpful changes are size, color, thickness, and pacing.
+
+### Size
+
+Scale the component with `size-*` utilities depending on whether it appears inline or anchors a slightly larger state.
+
+<ComponentPreview name="dual-arc-size" />
+
+### Color
+
+Because the arcs use `currentColor`, they can easily inherit tone from the surrounding surface or be styled directly with text color utilities.
+
+<ComponentPreview name="dual-arc-color" />
+
+### Border Width
+
+Border thickness changes how assertive the arcs feel, especially when you use the loader at medium or large sizes.
+
+<ComponentPreview name="dual-arc-border-width" />
+
+### Duration
+
+Adjusting animation speed lets the component read as either calm background activity or more active in-progress feedback.
+
+<ComponentPreview name="dual-arc-duration" />
+
+## Examples
+
+These examples show where `DualArc` usually fits best: balanced interface patterns that need a clearer loading signal than the lightest spinners, but not the visual intensity of the more expressive variants.
+
+### Badge
+
+In small status pills, `DualArc` stays readable while giving the label a bit more structure than a single stroke spinner.
+
+<ComponentPreview name="dual-arc-badge" />
+
+### Input Group
+
+Inside inputs and message composers, it helps communicate checking, drafting, or sending states without breaking the local flow.
+
+<ComponentPreview name="dual-arc-input-group" />
+
+### Alert
+
+For visible but non-blocking background work, `DualArc` gives alerts a stable activity marker that still feels refined.
+
+<ComponentPreview name="dual-arc-alert" />
+
+### Tabs
+
+Within tabbed workspaces, it can indicate a panel-level refresh while the broader interface stays interactive.
+
+<ComponentPreview name="dual-arc-tabs" />

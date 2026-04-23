@@ -316,6 +316,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "dual-arc-alert": {
+    name: "dual-arc-alert",
+    filePath: "registry/examples/dual-arc/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-badge": {
+    name: "dual-arc-badge",
+    filePath: "registry/examples/dual-arc/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-border-width": {
+    name: "dual-arc-border-width",
+    filePath: "registry/examples/dual-arc/border-width.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/border-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-border-width";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-color": {
+    name: "dual-arc-color",
+    filePath: "registry/examples/dual-arc/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dual-arc-demo": {
     name: "dual-arc-demo",
     filePath: "registry/examples/dual-arc/demo.tsx",
@@ -326,6 +378,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "dual-arc-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-duration": {
+    name: "dual-arc-duration",
+    filePath: "registry/examples/dual-arc/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-input-group": {
+    name: "dual-arc-input-group",
+    filePath: "registry/examples/dual-arc/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-size": {
+    name: "dual-arc-size",
+    filePath: "registry/examples/dual-arc/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dual-arc-tabs": {
+    name: "dual-arc-tabs",
+    filePath: "registry/examples/dual-arc/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dual-arc/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -693,6 +797,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "swirling-alert": {
+    name: "swirling-alert",
+    filePath: "registry/examples/swirling/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-button": {
+    name: "swirling-button",
+    filePath: "registry/examples/swirling/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-collapsible": {
+    name: "swirling-collapsible",
+    filePath: "registry/examples/swirling/collapsible.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-collapsible";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-color": {
+    name: "swirling-color",
+    filePath: "registry/examples/swirling/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "swirling-demo": {
     name: "swirling-demo",
     filePath: "registry/examples/swirling/demo.tsx",
@@ -703,6 +859,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "swirling-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-empty": {
+    name: "swirling-empty",
+    filePath: "registry/examples/swirling/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-line-cap": {
+    name: "swirling-line-cap",
+    filePath: "registry/examples/swirling/line-cap.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/line-cap.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-line-cap";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-size": {
+    name: "swirling-size",
+    filePath: "registry/examples/swirling/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "swirling-stroke-width": {
+    name: "swirling-stroke-width",
+    filePath: "registry/examples/swirling/stroke-width.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./swirling/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-stroke-width";
       return { default: mod.default || mod[exportName] };
     }),
   },

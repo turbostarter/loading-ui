@@ -3,4 +3,102 @@ title: Swirling
 description: A fluid swirl effect for high-motion loading affordances.
 ---
 
-Coming soon.
+<ComponentPreview name="swirling-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/swirling
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="swirling" title="components/loading-ui/swirling.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Swirling } from "@/components/loading-ui/swirling";
+```
+
+```tsx
+<Swirling />
+```
+
+## Customization
+
+`Swirling` is one of the more expressive loaders in the set. It works best when you want motion to feel visible and intentional rather than quietly backgrounded, so the most useful adjustments are the ones that shift its visual weight and character directly.
+
+### Size
+
+Use `size-*` utilities to move the spinner between compact control states and larger featured loading surfaces.
+
+<ComponentPreview name="swirling-size" />
+
+### Color
+
+The stroke uses `currentColor`, which makes it straightforward to align with accent colors, muted surfaces, or stronger brand moments.
+
+<ComponentPreview name="swirling-color" />
+
+### Stroke Width
+
+Changing the stroke width noticeably affects how bold or airy the swirl feels, especially at larger sizes.
+
+<ComponentPreview name="swirling-stroke-width" />
+
+### Line Cap
+
+Adjusting the stroke line cap changes the overall texture of the motion, from softer rounded edges to a sharper mechanical look.
+
+<ComponentPreview name="swirling-line-cap" />
+
+## Examples
+
+These examples lean into the more expressive side of `Swirling`. It usually works best in higher-visibility states where a bit of motion helps anchor attention instead of disappearing into the background.
+
+### Button
+
+Use `Swirling` in buttons when the action is central enough that the pending state should feel active and noticeable.
+
+<ComponentPreview name="swirling-button" />
+
+### Collapsible
+
+Inside a collapsible task summary, the loader can signal that detailed work is still progressing while the rest of the panel remains explorable.
+
+<ComponentPreview name="swirling-collapsible" />
+
+### Alert
+
+For long-running system work that deserves a stronger presence than a minimal spinner, `Swirling` gives the alert a more animated focal point.
+
+<ComponentPreview name="swirling-alert" />
+
+### Empty
+
+In section-level loading states, the swirl has enough motion and visual mass to hold the layout on its own.
+
+<ComponentPreview name="swirling-empty" />
