@@ -420,6 +420,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "spokes-alert": {
+    name: "spokes-alert",
+    filePath: "registry/examples/spokes/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-badge": {
+    name: "spokes-badge",
+    filePath: "registry/examples/spokes/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-button": {
+    name: "spokes-button",
+    filePath: "registry/examples/spokes/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-color": {
+    name: "spokes-color",
+    filePath: "registry/examples/spokes/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "spokes-demo": {
     name: "spokes-demo",
     filePath: "registry/examples/spokes/demo.tsx",
@@ -430,6 +482,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "spokes-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-duration": {
+    name: "spokes-duration",
+    filePath: "registry/examples/spokes/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-input-group": {
+    name: "spokes-input-group",
+    filePath: "registry/examples/spokes/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-size": {
+    name: "spokes-size",
+    filePath: "registry/examples/spokes/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spokes-stroke-width": {
+    name: "spokes-stroke-width",
+    filePath: "registry/examples/spokes/stroke-width.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spokes/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-stroke-width";
       return { default: mod.default || mod[exportName] };
     }),
   },

@@ -3,4 +3,102 @@ title: Spokes
 description: A segmented spinner for lightweight indeterminate loading states.
 ---
 
-Coming soon.
+<ComponentPreview name="spokes-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/spokes
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="spokes" title="components/loading-ui/spokes.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Spokes } from "@/components/loading-ui/spokes";
+```
+
+```tsx
+<Spokes />
+```
+
+## Customization
+
+`Spokes` is a good fit when you want a loader that still reads clearly at small sizes without the visual weight of a continuous ring. It inherits `currentColor`, accepts standard SVG props, and can be tuned entirely with utility classes.
+
+### Size
+
+Scale the loader with `size-*` utilities depending on whether it sits inline with text, inside a control, or in a more prominent waiting state.
+
+<ComponentPreview name="spokes-size" />
+
+### Color
+
+Because the stroke uses `currentColor`, the component can inherit surrounding text color or be styled directly with any text utility.
+
+<ComponentPreview name="spokes-color" />
+
+### Line Weight
+
+When you scale `Spokes` up, adjusting the stroke width helps keep the spinner balanced instead of feeling too thin or too heavy.
+
+<ComponentPreview name="spokes-stroke-width" />
+
+### Duration
+
+Animation speed can be slowed down for calmer background work or tightened up for quick action feedback.
+
+<ComponentPreview name="spokes-duration" />
+
+## Examples
+
+These examples focus on the kinds of compact product UI where `Spokes` tends to work best. The segmented shape keeps the indicator noticeable without overpowering nearby text, borders, or status colors.
+
+### Button
+
+Use `Spokes` in buttons when the action is pending but the control should still feel lightweight and responsive.
+
+<ComponentPreview name="spokes-button" />
+
+### Badge
+
+For small status pills, `Spokes` is easier to tuck into a badge than a heavier spinner style.
+
+<ComponentPreview name="spokes-badge" />
+
+### Input Group
+
+Inside input groups, the loader can communicate inline validation, lookup, or send states without introducing a separate loading row.
+
+<ComponentPreview name="spokes-input-group" />
+
+### Alert
+
+For background tasks that should stay visible but not interrupt the flow, `Spokes` works well as a subtle activity marker inside an alert.
+
+<ComponentPreview name="spokes-alert" />
