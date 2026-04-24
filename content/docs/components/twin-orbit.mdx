@@ -3,4 +3,81 @@ title: Twin orbit
 description: Two orbiting markers for a balanced circular loading animation.
 ---
 
-Coming soon.
+`TwinOrbit` is a compact loader built from one center dot and two markers that
+orbit in a half-cycle offset. The balanced motion makes it a good fit for
+pairing, matching, comparison, replication, or reconciliation states where a
+single-direction spinner feels too generic.
+
+<ComponentPreview name="twin-orbit-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/twin-orbit
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="twin-orbit"
+  title="components/loading-ui/twin-orbit.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { TwinOrbit } from "@/components/loading-ui/twin-orbit";
+```
+
+```tsx
+<TwinOrbit />
+```
+
+## Customization
+
+`TwinOrbit` uses `currentColor` and scales from the element size. Because the
+orbiting markers travel outside the center dot, leave a little more horizontal
+space than the declared `size-*` utility suggests.
+
+### Size
+
+Small sizes work well inline, while larger dots can anchor compact panel or
+status-row loading states.
+
+<ComponentPreview name="twin-orbit-size" />
+
+### Color
+
+The center and orbiting markers inherit `currentColor`, so color can come from
+the surrounding shadcn component or a direct text color utility.
+
+<ComponentPreview name="twin-orbit-color" />
+
+### Duration
+
+Set `--duration` to tune the pace. The second marker stays
+half a cycle behind so the orbit remains balanced at slower and faster speeds.
+
+<ComponentPreview name="twin-orbit-duration" />

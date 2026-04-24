@@ -33,8 +33,9 @@ function Bars({
             className="inline-block h-full rounded-[1px] bg-current"
             style={{
               width: `${100 / bars}%`,
-              animation: "loading-ui-wave-bars 1.2s ease-in-out infinite",
-              animationDelay: `${index * 0.2}s`,
+              animation:
+                "loading-ui-wave-bars var(--duration, 1.2s) ease-in-out infinite",
+              animationDelay: `calc(var(--delay, 0.2s) * ${index})`,
             }}
           />
         ))}

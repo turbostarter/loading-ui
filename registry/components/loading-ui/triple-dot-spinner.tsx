@@ -19,14 +19,15 @@ function TripleDotSpinner({
       `}</style>
       <span
         role="status"
-        className={cn("relative inline-block", className)}
+        className={cn("relative inline-block shrink-0", className)}
         {...props}
       >
         <span
           aria-hidden="true"
           className="absolute inset-0"
           style={{
-            animation: "loading-ui-triple-dot-rotation 2s ease-in-out infinite",
+            animation:
+              "loading-ui-triple-dot-rotation var(--duration, 2s) ease-in-out infinite",
           }}
         >
           <span className="absolute top-1/2 left-1/2 size-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-current" />

@@ -3,4 +3,106 @@ title: Triple dot spinner
 description: Three dots arranged in a compact rotating spinner for buttons and list rows.
 ---
 
-Coming soon.
+`TripleDotSpinner` rotates three compact markers around their shared center. It
+has more motion than a static dot row, but it stays small enough for buttons,
+badges, table rows, and local refresh states.
+
+<ComponentPreview name="triple-dot-spinner-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/triple-dot-spinner
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="triple-dot-spinner"
+  title="components/loading-ui/triple-dot-spinner.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { TripleDotSpinner } from "@/components/loading-ui/triple-dot-spinner";
+```
+
+```tsx
+<span className="grid size-5 place-items-center">
+  <TripleDotSpinner className="size-1.5" />
+</span>
+```
+
+## Customization
+
+The `size-*` utility controls the dot size, not the whole visual footprint. The
+three-dot shape rotates outside that box, so reserve a small fixed slot in
+buttons, badges, and table cells.
+
+### Size
+
+Wrap the spinner in a stable slot, then scale the dots with `size-*`.
+
+<ComponentPreview name="triple-dot-spinner-size" />
+
+### Color
+
+All three markers use `currentColor`, so the spinner can inherit text color or
+use a direct foreground utility.
+
+<ComponentPreview name="triple-dot-spinner-color" />
+
+### Duration
+
+Set `--duration` to make the rotation snappier or calmer.
+
+<ComponentPreview name="triple-dot-spinner-duration" />
+
+## Examples
+
+These examples favor dense surfaces: save buttons, status chips, and compact
+alerts where the spinner needs to stay small.
+
+### Button
+
+A `size-5` icon slot keeps the rotating dots centered without shifting the
+button label.
+
+<ComponentPreview name="triple-dot-spinner-button" />
+
+### Badge
+
+Use the smallest dot size inside chips so the rotating shape does not crowd the
+label.
+
+<ComponentPreview name="triple-dot-spinner-badge" />
+
+### Alert
+
+Alerts give compact refresh feedback a little more context without blocking the
+page.
+
+<ComponentPreview name="triple-dot-spinner-alert" />

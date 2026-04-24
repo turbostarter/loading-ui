@@ -3,4 +3,111 @@ title: Text shimmer wave
 description: A wave of shimmer along text for animated placeholder copy.
 ---
 
-Coming soon.
+`TextShimmerWave` animates each character through a small shimmer wave. It is
+the most expressive text loader, best reserved for assistant-style thinking
+states, short generated labels, and places where character-level motion supports
+the product language.
+
+<ComponentPreview name="text-shimmer-wave-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/text-shimmer-wave
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="text-shimmer-wave"
+  title="components/loading-ui/text-shimmer-wave.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { TextShimmerWave } from "@/components/loading-ui/text-shimmer-wave";
+```
+
+```tsx
+<TextShimmerWave>Thinking</TextShimmerWave>
+```
+
+## Customization
+
+Because every character moves independently, `TextShimmerWave` works best with
+short phrases. For longer labels, prefer `TextShimmer`.
+
+### Color
+
+By default, the resting and active colors are derived from `currentColor`, so
+the wave works inside filled buttons and badges. Use `baseColor` and
+`shimmerColor` for explicit swatches.
+
+<ComponentPreview name="text-shimmer-wave-color" />
+
+### Duration
+
+Shorter durations feel like active thinking; slower durations feel more ambient.
+
+<ComponentPreview name="text-shimmer-wave-duration" />
+
+### Motion
+
+Tune depth, vertical lift, and rotation when you need the wave to feel subtler
+or more expressive.
+
+<ComponentPreview name="text-shimmer-wave-motion" />
+
+## Examples
+
+These examples keep the wave scoped to short assistant and drafting states so
+the moving characters stay readable.
+
+### Button
+
+Buttons can use wave text as the full action label when the task is generating
+or composing.
+
+<ComponentPreview name="text-shimmer-wave-button" />
+
+### Badge
+
+Badges are a good fit for compact AI or composing states.
+
+<ComponentPreview name="text-shimmer-wave-badge" />
+
+### Alert
+
+Use an alert when the wave needs one short sentence of explanation.
+
+<ComponentPreview name="text-shimmer-wave-alert" />
+
+### Tabs
+
+Tabs can separate a live reply from sources or supporting material that appears
+later.
+
+<ComponentPreview name="text-shimmer-wave-tabs" />

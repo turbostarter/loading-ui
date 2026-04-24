@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "registry/components/loading-ui/skeleton.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Skeleton({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"skeleton\"\n      className={cn(\"bg-muted animate-pulse rounded-md\", className)}\n      {...props}\n    />\n  );\n}\n\nexport { Skeleton };\n",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Skeleton({ className, style, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-skeleton-pulse {\n          50% {\n            opacity: 0.5;\n          }\n        }\n      `}</style>\n      <div\n        data-slot=\"skeleton\"\n        className={cn(\"bg-muted rounded-md\", className)}\n        style={{\n          animationName: \"loading-ui-skeleton-pulse\",\n          animationDuration: \"var(--duration, 2s)\",\n          animationTimingFunction: \"cubic-bezier(0.4, 0, 0.6, 1)\",\n          animationIterationCount: \"infinite\",\n          ...style,\n        }}\n        {...props}\n      />\n    </>\n  );\n}\n\nexport { Skeleton };\n",
       "type": "registry:component",
       "target": ""
     }

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "registry/components/loading-ui/arc.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Arc({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"animate-spin rounded-full border-[5px] border-current/10 border-t-current\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Arc };\n",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Arc({ className, style, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-arc-spin {\n          to {\n            transform: rotate(360deg);\n          }\n        }\n      `}</style>\n      <div\n        className={cn(\n          \"rounded-full border-[5px] border-current/10 border-t-current\",\n          className,\n        )}\n        style={{\n          animationName: \"loading-ui-arc-spin\",\n          animationDuration: \"var(--duration, 1s)\",\n          animationTimingFunction: \"linear\",\n          animationIterationCount: \"infinite\",\n          ...style,\n        }}\n        {...props}\n      />\n    </>\n  );\n}\n\nexport { Arc };\n",
       "type": "registry:component",
       "target": ""
     }

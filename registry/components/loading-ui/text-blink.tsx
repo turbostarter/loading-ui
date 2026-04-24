@@ -1,17 +1,18 @@
 import { cn } from "@/lib/utils";
 
-type TextBlinkProps = {
-  children: string;
+type TextBlinkProps = Omit<React.ComponentProps<"span">, "children"> & {
+  children: React.ReactNode;
   as?: React.ElementType;
-  className?: string;
-  duration?: number;
+  minOpacity?: number;
 };
 
 function TextBlink({
   children,
   as: Component = "p",
   className,
-  duration = 2,
+  minOpacity = 0.45,
+  style,
+  ...props
 }: TextBlinkProps) {
   return (
     <>
@@ -23,15 +24,21 @@ function TextBlink({
           }
 
           50% {
-            opacity: 0.45;
+            opacity: var(--loading-ui-text-blink-opacity);
           }
         }
       `}</style>
       <Component
         className={cn("inline-block font-medium", className)}
-        style={{
-          animation: `loading-ui-text-blink ${duration}s ease-in-out infinite`,
-        }}
+        style={
+          {
+            ...style,
+            "--loading-ui-text-blink-opacity": minOpacity,
+            animation:
+              "loading-ui-text-blink var(--duration, 2s) ease-in-out infinite",
+          } as React.CSSProperties
+        }
+        {...props}
       >
         {children}
       </Component>

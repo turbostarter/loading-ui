@@ -11,7 +11,7 @@ export default function CometSpinnerTabs() {
       <TabsContent value="transfer">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <CometSpinner className="size-3" duration="1.5s" />
+            <CometSpinner className="size-3 [--duration:1.5s]" />
             <div className="space-y-1">
               <div className="font-medium">Burst upload active</div>
               <p className="text-muted-foreground text-sm">

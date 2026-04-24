@@ -12,7 +12,7 @@ export default function CometSpinnerAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <CometSpinner className="size-2.5" duration="1.4s" />
+        <CometSpinner className="size-2.5 [--duration:1.4s]" />
       </AlertMedia>
       <AlertTitle>Large upload entering the fast lane</AlertTitle>
       <AlertDescription>

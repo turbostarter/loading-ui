@@ -3,4 +3,105 @@ title: Text dots
 description: Trailing or inline dots for ongoing status text.
 ---
 
-Coming soon.
+`TextDots` appends animated dots to ordinary status copy. It is the lightest
+text loader in the set: useful for short waits, inline labels, disabled actions,
+and places where a graphic spinner would pull too much attention.
+
+<ComponentPreview name="text-dots-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/text-dots
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="text-dots" title="components/loading-ui/text-dots.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { TextDots } from "@/components/loading-ui/text-dots";
+```
+
+```tsx
+<TextDots>Thinking</TextDots>
+```
+
+## Customization
+
+`TextDots` keeps your copy as normal text and only animates the appended marks.
+Use it when the wording matters more than the animation.
+
+### Color
+
+The text and dots inherit `currentColor`, so the component works naturally
+inside buttons, badges, alerts, and muted helper text.
+
+<ComponentPreview name="text-dots-color" />
+
+### Dot Count
+
+Three dots are the default. Use fewer for very compact labels, or more when the
+status should feel a little longer-running.
+
+<ComponentPreview name="text-dots-count" />
+
+### Duration
+
+Tune `--duration` and `--delay` with CSS time values.
+
+<ComponentPreview name="text-dots-duration" />
+
+## Examples
+
+These examples keep the animation attached to status copy instead of treating it
+as a standalone loader.
+
+### Button
+
+Use `TextDots` when the button label itself is the loading state.
+
+<ComponentPreview name="text-dots-button" />
+
+### Badge
+
+Status chips stay compact because the animated marks do not need icon space.
+
+<ComponentPreview name="text-dots-badge" />
+
+### Input Group
+
+Input addons are a natural place for search, generation, and validation copy.
+
+<ComponentPreview name="text-dots-input-group" />
+
+### Alert
+
+In alerts, the title can carry the active state while the description explains
+what is still happening.
+
+<ComponentPreview name="text-dots-alert" />

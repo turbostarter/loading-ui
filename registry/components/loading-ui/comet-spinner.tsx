@@ -4,8 +4,6 @@ const SHADOW_ANIMATION = "loading-ui-comet-shadow";
 const ROTATION_ANIMATION = "loading-ui-comet-rotation";
 
 type CometSpinnerProps = React.ComponentProps<"span"> & {
-  duration?: React.CSSProperties["animationDuration"] | number;
-  easing?: React.CSSProperties["animationTimingFunction"];
   headScale?: number;
   radiusScale?: number;
 };
@@ -17,20 +15,14 @@ function clamp(value: number, min: number, max: number) {
 function CometSpinner({
   className,
   style,
-  duration = "1.7s",
-  easing = "ease",
   headScale = 0.2,
   radiusScale = 0.83,
   ...props
 }: CometSpinnerProps) {
   const safeHeadScale = clamp(headScale, 0.08, 0.35);
   const safeRadiusScale = clamp(radiusScale, 0.3, 1.1);
-  const durationValue =
-    typeof duration === "number" ? `${duration}ms` : duration;
   const cometStyle = {
     ...style,
-    "--loading-ui-comet-duration": durationValue,
-    "--loading-ui-comet-easing": easing,
     "--loading-ui-comet-head": `${(safeHeadScale * 100).toFixed(2)}cqmin`,
     "--loading-ui-comet-radius": `${(safeRadiusScale * 100).toFixed(2)}cqmin`,
   } as React.CSSProperties;
@@ -120,7 +112,7 @@ function CometSpinner({
           aria-hidden="true"
           className="absolute inset-0 rounded-full"
           style={{
-            animation: `${SHADOW_ANIMATION} var(--loading-ui-comet-duration) infinite var(--loading-ui-comet-easing), ${ROTATION_ANIMATION} var(--loading-ui-comet-duration) infinite var(--loading-ui-comet-easing)`,
+            animation: `${SHADOW_ANIMATION} var(--duration, 1.7s) infinite var(--easing, ease), ${ROTATION_ANIMATION} var(--duration, 1.7s) infinite var(--easing, ease)`,
             transform: "translateZ(0)",
           }}
         />

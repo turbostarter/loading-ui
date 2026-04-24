@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "registry/components/loading-ui/dual-arc.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nfunction DualArc({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"animate-spin rounded-full border-[5px] border-transparent border-y-current\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { DualArc };\n",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction DualArc({ className, style, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-dual-arc-spin {\n          to {\n            transform: rotate(360deg);\n          }\n        }\n      `}</style>\n      <div\n        className={cn(\n          \"rounded-full border-[5px] border-transparent border-y-current\",\n          className,\n        )}\n        style={{\n          animationName: \"loading-ui-dual-arc-spin\",\n          animationDuration: \"var(--duration, 1s)\",\n          animationTimingFunction: \"linear\",\n          animationIterationCount: \"infinite\",\n          ...style,\n        }}\n        {...props}\n      />\n    </>\n  );\n}\n\nexport { DualArc };\n",
       "type": "registry:component",
       "target": ""
     }

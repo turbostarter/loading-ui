@@ -23,7 +23,8 @@ function TwinOrbit({ className, ...props }: React.ComponentProps<"span">) {
           className="absolute inset-0 rounded-full bg-current"
           style={{
             transform: "rotate(0deg) translate(155%)",
-            animation: "loading-ui-twin-orbit-rotate 1s ease infinite",
+            animation:
+              "loading-ui-twin-orbit-rotate var(--duration, 1s) ease infinite",
           }}
         />
         <span
@@ -31,8 +32,9 @@ function TwinOrbit({ className, ...props }: React.ComponentProps<"span">) {
           className="absolute inset-0 rounded-full bg-current"
           style={{
             transform: "rotate(0deg) translate(155%)",
-            animation: "loading-ui-twin-orbit-rotate 1s ease infinite",
-            animationDelay: "0.5s",
+            animation:
+              "loading-ui-twin-orbit-rotate var(--duration, 1s) ease infinite",
+            animationDelay: "calc(var(--duration, 1s) / 2)",
           }}
         />
         <span className="sr-only">Loading</span>

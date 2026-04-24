@@ -10,6 +10,9 @@ export type TextShimmerProps = {
   className?: string;
   duration?: number;
   spread?: number;
+  baseColor?: string;
+  shimmerColor?: string;
+  style?: React.CSSProperties;
 };
 
 function TextShimmerComponent({
@@ -18,6 +21,9 @@ function TextShimmerComponent({
   className,
   duration = 2,
   spread = 2,
+  baseColor,
+  shimmerColor,
+  style,
 }: TextShimmerProps) {
   const MotionComponent = motion.create(
     Component as keyof JSX.IntrinsicElements,
@@ -31,7 +37,7 @@ function TextShimmerComponent({
     <MotionComponent
       className={cn(
         "relative inline-block bg-size-[250%_100%,auto] bg-clip-text",
-        "text-transparent [--base-color:var(--muted-foreground)] [--base-gradient-color:var(--foreground)]",
+        "[-webkit-text-fill-color:transparent]",
         "[background-repeat:no-repeat,padding-box] [--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]",
         className,
       )}
@@ -44,7 +50,11 @@ function TextShimmerComponent({
       }}
       style={
         {
+          ...style,
           "--spread": `${dynamicSpread}px`,
+          "--base-color":
+            baseColor ?? "color-mix(in oklab, currentColor 55%, transparent)",
+          "--base-gradient-color": shimmerColor ?? "currentColor",
           backgroundImage: `var(--bg), linear-gradient(var(--base-color), var(--base-color))`,
         } as React.CSSProperties
       }

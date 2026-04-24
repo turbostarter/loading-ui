@@ -3,4 +3,108 @@ title: Text blink
 description: A blinking text treatment for in-place loading copy.
 ---
 
-Coming soon.
+`TextBlink` fades a short line of copy in place. It works best for save states,
+temporary connectivity issues, live-edit indicators, and any label that should
+stay readable while still showing activity.
+
+<ComponentPreview name="text-blink-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/text-blink
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="text-blink"
+  title="components/loading-ui/text-blink.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { TextBlink } from "@/components/loading-ui/text-blink";
+```
+
+```tsx
+<TextBlink>Thinking</TextBlink>
+```
+
+## Customization
+
+`TextBlink` renders as a paragraph by default, but `as="span"` is usually the
+right choice inside buttons, badges, and other inline shadcn components.
+
+### Color
+
+The component inherits text color, so you can style it with normal foreground
+utilities.
+
+<ComponentPreview name="text-blink-color" />
+
+### Duration
+
+Set `--duration` to make the fade feel more urgent or calmer for background saves.
+
+<ComponentPreview name="text-blink-duration" />
+
+### Opacity
+
+Use `minOpacity` to decide how strongly the text fades at the midpoint.
+
+<ComponentPreview name="text-blink-opacity" />
+
+## Examples
+
+These examples keep the blinking copy short and functional. Longer sentences
+are harder to read when the full line is fading.
+
+### Button
+
+Use inline rendering so the animated label sits cleanly inside the button.
+
+<ComponentPreview name="text-blink-button" />
+
+### Badge
+
+Blinking badges work best for live or autosave states that should remain easy to
+scan.
+
+<ComponentPreview name="text-blink-badge" />
+
+### Alert
+
+Alerts are useful when the blinking title needs a short explanation below it.
+
+<ComponentPreview name="text-blink-alert" />
+
+### Tabs
+
+Tabbed views can isolate active draft or sync states without changing the rest
+of the workspace.
+
+<ComponentPreview name="text-blink-tabs" />

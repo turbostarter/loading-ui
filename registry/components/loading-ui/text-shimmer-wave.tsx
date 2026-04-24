@@ -1,7 +1,7 @@
 "use client";
 
 import { type JSX } from "react";
-import { motion, Transition } from "motion/react";
+import { motion, type Transition } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export type TextShimmerWaveProps = {
@@ -9,6 +9,8 @@ export type TextShimmerWaveProps = {
   as?: React.ElementType;
   className?: string;
   duration?: number;
+  baseColor?: string;
+  shimmerColor?: string;
   zDistance?: number;
   xDistance?: number;
   yDistance?: number;
@@ -16,6 +18,7 @@ export type TextShimmerWaveProps = {
   scaleDistance?: number;
   rotateYDistance?: number;
   transition?: Transition;
+  style?: React.CSSProperties;
 };
 
 export function TextShimmerWave({
@@ -23,6 +26,8 @@ export function TextShimmerWave({
   as: Component = "p",
   className,
   duration = 1,
+  baseColor,
+  shimmerColor,
   zDistance = 10,
   xDistance = 2,
   yDistance = -2,
@@ -30,6 +35,7 @@ export function TextShimmerWave({
   scaleDistance = 1.1,
   rotateYDistance = 10,
   transition,
+  style,
 }: TextShimmerWaveProps) {
   const MotionComponent = motion.create(
     Component as keyof JSX.IntrinsicElements,
@@ -37,12 +43,15 @@ export function TextShimmerWave({
 
   return (
     <MotionComponent
-      className={cn(
-        "relative inline-block [perspective:500px]",
-        "[--base-color:var(--muted-foreground)] [--base-gradient-color:var(--foreground)]",
-        className,
-      )}
-      style={{ color: "var(--base-color)" }}
+      className={cn("relative inline-block [perspective:500px]", className)}
+      style={
+        {
+          ...style,
+          "--base-color":
+            baseColor ?? "color-mix(in oklab, currentColor 55%, transparent)",
+          "--base-gradient-color": shimmerColor ?? "currentColor",
+        } as React.CSSProperties
+      }
     >
       {children.split("").map((char, i) => {
         const delay = (i * duration * (1 / spread)) / children.length;

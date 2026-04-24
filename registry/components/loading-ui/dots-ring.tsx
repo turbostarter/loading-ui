@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 
 type DotsRingProps = React.ComponentProps<"span"> & {
   dots?: number;
-  duration?: React.CSSProperties["animationDuration"] | number;
   dotScale?: number;
   radiusScale?: number;
 };
@@ -15,7 +14,6 @@ function DotsRing({
   className,
   style,
   dots = 8,
-  duration = "1s",
   dotScale = 0.16,
   radiusScale = 0.34,
   ...props
@@ -23,12 +21,6 @@ function DotsRing({
   const dotCount = Math.max(4, Math.floor(dots));
   const safeDotScale = clamp(dotScale, 0.2, 0.4);
   const safeRadiusScale = clamp(radiusScale, 0, 0.5 - safeDotScale / 2);
-  const durationValue =
-    typeof duration === "number" ? `${duration}ms` : duration;
-  const ringStyle = {
-    ...style,
-    "--loading-ui-dots-ring-duration": durationValue,
-  } as React.CSSProperties;
 
   return (
     <>
@@ -62,7 +54,7 @@ function DotsRing({
           "@container-[size] relative inline-flex aspect-square items-center justify-center",
           className,
         )}
-        style={ringStyle}
+        style={style}
         {...props}
       >
         <span aria-hidden="true" className="relative block size-full">
@@ -85,8 +77,8 @@ function DotsRing({
                   className="block size-full rounded-full bg-current"
                   style={{
                     animation:
-                      "loading-ui-dots-ring-pulse var(--loading-ui-dots-ring-duration) linear infinite",
-                    animationDelay: `calc(var(--loading-ui-dots-ring-duration) / ${dotCount} * ${index - dotCount})`,
+                      "loading-ui-dots-ring-pulse var(--duration, 1s) linear infinite",
+                    animationDelay: `calc(var(--duration, 1s) / ${dotCount} * ${index - dotCount})`,
                   }}
                 />
               </span>

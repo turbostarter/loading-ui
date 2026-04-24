@@ -30,8 +30,9 @@ function Wave({ className, ...props }: React.ComponentProps<"span">) {
             style={{
               width: "12.5%",
               height,
-              animation: "loading-ui-wave 1s ease-in-out infinite",
-              animationDelay: `${index * 100}ms`,
+              animation:
+                "loading-ui-wave var(--duration, 1s) ease-in-out infinite",
+              animationDelay: `calc(var(--delay, 100ms) * ${index})`,
             }}
           />
         ))}

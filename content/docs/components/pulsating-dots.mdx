@@ -3,4 +3,125 @@ title: Pulsating dots
 description: Dots with scale and opacity motion for a lively wait state.
 ---
 
-Coming soon.
+`PulsatingDots` uses soft scale and opacity changes to show ongoing work
+without implying a direction. It is a good fit for queues, imports, background
+processing, and compact UI surfaces where the state should feel alive but not
+urgent.
+
+<ComponentPreview name="pulsating-dots-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/pulsating-dots
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="pulsating-dots"
+  title="components/loading-ui/pulsating-dots.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { PulsatingDots } from "@/components/loading-ui/pulsating-dots";
+```
+
+```tsx
+<PulsatingDots className="w-16" />
+```
+
+## Customization
+
+`PulsatingDots` is a flex row where each marker grows evenly inside the
+available width. Color flows through `currentColor`, while `dots` and
+`duration` let you tune the rhythm without changing the surrounding layout.
+
+### Size
+
+Control the row width; the dots divide that space evenly and keep their square
+shape.
+
+<ComponentPreview name="pulsating-dots-size" />
+
+### Color
+
+Use inherited foreground in product surfaces, or apply text color utilities when
+the loader needs a stronger status tone.
+
+<ComponentPreview name="pulsating-dots-color" />
+
+### Duration
+
+`duration` is passed to Motion as seconds. Short cycles feel lively; longer
+cycles feel calmer.
+
+<ComponentPreview name="pulsating-dots-duration" />
+
+### Dot Count
+
+Three dots are the default, but wider queues can use four or five markers for a
+denser pulse.
+
+<ComponentPreview name="pulsating-dots-count" />
+
+## Examples
+
+These examples use the loader for soft background work: staging files, warming
+caches, queueing records, and small async hints.
+
+### Button
+
+The row is narrow enough for button labels while still showing the full pulse.
+
+<ComponentPreview name="pulsating-dots-button" />
+
+### Badge
+
+Badges work well for queue and retry states where the label still carries the
+meaning.
+
+<ComponentPreview name="pulsating-dots-badge" />
+
+### Input Group
+
+Input groups keep the feedback local to the control that is still resolving.
+
+<ComponentPreview name="pulsating-dots-input-group" />
+
+### Sheet
+
+Bottom sheets give the pulse enough breathing room for import or batch progress
+without turning it into a full-page loading state.
+
+<ComponentPreview name="pulsating-dots-sheet" />
+
+### Popover
+
+Popovers are useful for tiny background tasks where a concise hint is enough.
+
+<ComponentPreview name="pulsating-dots-popover" />

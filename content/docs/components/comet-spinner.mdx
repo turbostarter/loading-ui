@@ -52,7 +52,7 @@ import { CometSpinner } from "@/components/loading-ui/comet-spinner";
 
 ## Customization
 
-`CometSpinner` is built from layered `box-shadow` motion plus rotation, wrapped in a container query box so orbit math scales with `size-*`. Color comes from `currentColor`, and timing is driven by the **`duration`** prop (mapped to `--loading-ui-comet-duration`) rather than Tailwind’s `animation-duration` utilities.
+`CometSpinner` is built from layered `box-shadow` motion plus rotation, wrapped in a container query box so orbit math scales with `size-*`. Color comes from `currentColor`, and timing is driven by **`--duration`**.
 
 ### Size
 
@@ -68,7 +68,7 @@ Set hue with text utilities—the head and tail inherit through the foreground c
 
 ### Duration
 
-Pass `duration` as a CSS time string (for example `"1.7s"`) or a number of milliseconds. The same value paces both the tail morph and the rotation.
+Set `--duration` with a CSS time value. The same value paces both the tail morph and the rotation.
 
 <ComponentPreview name="comet-spinner-duration" />
 

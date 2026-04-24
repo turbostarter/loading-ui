@@ -49,7 +49,7 @@ import { DotsRing } from "@/components/loading-ui/dots-ring";
 
 ## Customization
 
-`DotsRing` is more configurable than most of the simpler spinners in the set. Since the component exposes props for dot count, pulse timing, dot size, and ring radius, it is a good fit when you want to tune the motion itself instead of only swapping utility classes around it.
+`DotsRing` is more configurable than most of the simpler spinners in the set. Since the component exposes props for dot count, dot size, and ring radius, and uses `--duration` for pulse timing, it is a good fit when you want to tune the motion itself instead of only swapping utility classes around it.
 
 ### Size
 
@@ -65,7 +65,7 @@ Increase or decrease the number of dots to make the motion feel denser or more m
 
 ### Duration
 
-The `duration` prop adjusts how quickly the pulse travels around the ring.
+Set `--duration` to adjust how quickly the pulse travels around the ring.
 
 <ComponentPreview name="dots-ring-duration" />
 

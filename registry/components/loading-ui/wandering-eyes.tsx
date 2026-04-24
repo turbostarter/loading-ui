@@ -4,7 +4,6 @@ const MOVE_ANIMATION = "loading-ui-wandering-eyes-move";
 const BLINK_ANIMATION = "loading-ui-wandering-eyes-blink";
 
 type WanderingEyesProps = React.ComponentProps<"span"> & {
-  duration?: React.CSSProperties["animationDuration"] | number;
   eyeScale?: number;
   gapScale?: number;
   pupilScale?: number;
@@ -19,7 +18,6 @@ function clamp(value: number, min: number, max: number) {
 function WanderingEyes({
   className,
   style,
-  duration = "10s",
   eyeScale = 0.44,
   gapScale = 0.11,
   pupilScale = 0.29,
@@ -32,11 +30,8 @@ function WanderingEyes({
   const safePupilScale = clamp(pupilScale, 0.12, 0.45);
   const safeBlinkScale = clamp(blinkScale, 0.15, 1);
   const safeTravelScale = clamp(travelScale, 0.08, 0.5);
-  const durationValue =
-    typeof duration === "number" ? `${duration}ms` : duration;
   const eyesStyle = {
     ...style,
-    "--loading-ui-wandering-eyes-duration": durationValue,
     "--loading-ui-wandering-eyes-eye": `${(safeEyeScale * 100).toFixed(2)}cqmin`,
     "--loading-ui-wandering-eyes-gap": `${(safeGapScale * 100).toFixed(2)}cqmin`,
     "--loading-ui-wandering-eyes-pupil-scale": `${safePupilScale}`,
@@ -128,7 +123,7 @@ function WanderingEyes({
                 backgroundImage:
                   "radial-gradient(circle calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-pupil-scale)), var(--pupil-color) 100%, transparent 0)",
                 backgroundRepeat: "no-repeat",
-                animation: `${MOVE_ANIMATION} var(--loading-ui-wandering-eyes-duration) infinite, ${BLINK_ANIMATION} var(--loading-ui-wandering-eyes-duration) infinite`,
+                animation: `${MOVE_ANIMATION} var(--duration, 10s) infinite, ${BLINK_ANIMATION} var(--duration, 10s) infinite`,
               }}
             />
           ))}

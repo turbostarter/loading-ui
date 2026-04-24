@@ -27,7 +27,7 @@ function Pulse({ className, ...props }: React.ComponentProps<"span">) {
           className="absolute inset-0 rounded-full border-2 border-current"
           style={{
             animation:
-              "loading-ui-thin-pulse var(--tw-animation-duration, 1.5s) ease-in-out infinite",
+              "loading-ui-thin-pulse var(--duration, 1.5s) ease-in-out infinite",
           }}
         />
         <span className="sr-only">Loading</span>

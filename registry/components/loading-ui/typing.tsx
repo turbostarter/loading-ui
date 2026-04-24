@@ -32,9 +32,8 @@ function Typing({
             aria-hidden="true"
             className="inline-block aspect-square grow rounded-full bg-current"
             style={{
-              animation:
-                "loading-ui-typing var(--tw-animation-duration, 1s) infinite",
-              animationDelay: `${index * 160}ms`,
+              animation: "loading-ui-typing var(--duration, 1s) infinite",
+              animationDelay: `calc(var(--delay, 160ms) * ${index})`,
             }}
           />
         ))}

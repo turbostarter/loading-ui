@@ -28,8 +28,8 @@ function Swirling(props: React.ComponentProps<"svg">) {
         .loading-ui-swirling-circle {
           transform-origin: center;
           animation:
-            loading-ui-swirling-dash 1.5s ease-in-out infinite alternate,
-            loading-ui-swirling-spin 2s linear infinite;
+            loading-ui-swirling-dash var(--duration, 1.5s) ease-in-out infinite alternate,
+            loading-ui-swirling-spin calc(var(--duration, 1.5s) * 1.333333) linear infinite;
         }
       `}</style>
       <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" {...props}>

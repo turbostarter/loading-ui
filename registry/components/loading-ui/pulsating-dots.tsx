@@ -6,8 +6,11 @@ import { cn } from "@/lib/utils";
 function PulsatingDots({
   className,
   dots = 3,
+  duration = 1,
   ...props
-}: React.ComponentProps<"span"> & { dots?: number }) {
+}: React.ComponentProps<"span"> & { dots?: number; duration?: number }) {
+  const dotCount = Number.isFinite(dots) ? Math.max(1, Math.floor(dots)) : 3;
+
   return (
     <span
       role="status"
@@ -15,7 +18,7 @@ function PulsatingDots({
       {...props}
     >
       <span aria-hidden="true" className="inline-flex w-full gap-[16%]">
-        {Array.from({ length: dots }, (_, index) => (
+        {Array.from({ length: dotCount }, (_, index) => (
           <motion.span
             key={index}
             className="inline-block aspect-square grow rounded-full bg-current"
@@ -24,7 +27,7 @@ function PulsatingDots({
               opacity: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: 1,
+              duration,
               ease: "easeInOut",
               repeat: Infinity,
               delay: index * 0.3,

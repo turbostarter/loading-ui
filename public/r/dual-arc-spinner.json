@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "registry/components/loading-ui/dual-arc-spinner.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nfunction DualArcSpinner({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"size-7 animate-spin rounded-full border-[3px] border-white border-t-primary border-b-primary\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { DualArcSpinner };\n",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction DualArcSpinner({\n  className,\n  style,\n  ...props\n}: React.ComponentProps<\"div\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-dual-arc-spinner-spin {\n          to {\n            transform: rotate(360deg);\n          }\n        }\n      `}</style>\n      <div\n        className={cn(\n          \"size-7 rounded-full border-[3px] border-white border-t-primary border-b-primary\",\n          className,\n        )}\n        style={{\n          animationName: \"loading-ui-dual-arc-spinner-spin\",\n          animationDuration: \"var(--duration, 1s)\",\n          animationTimingFunction: \"linear\",\n          animationIterationCount: \"infinite\",\n          ...style,\n        }}\n        {...props}\n      />\n    </>\n  );\n}\n\nexport { DualArcSpinner };\n",
       "type": "registry:component",
       "target": ""
     }

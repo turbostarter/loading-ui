@@ -147,19 +147,6 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "bobbing-dots-alert": {
-    name: "bobbing-dots-alert",
-    filePath: "registry/examples/bobbing-dots/alert.tsx",
-    component: React.lazy(async () => {
-      const mod = await import("./bobbing-dots/alert.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) =>
-            typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "bobbing-dots-alert";
-      return { default: mod.default || mod[exportName] };
-    }),
-  },
   "bobbing-dots-badge": {
     name: "bobbing-dots-badge",
     filePath: "registry/examples/bobbing-dots/badge.tsx",
@@ -1161,6 +1148,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "dots-duration": {
+    name: "dots-duration",
+    filePath: "registry/examples/dots/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dots-empty": {
     name: "dots-empty",
     filePath: "registry/examples/dots/empty.tsx",
@@ -1447,6 +1447,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "pulsating-dots-badge": {
+    name: "pulsating-dots-badge",
+    filePath: "registry/examples/pulsating-dots/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-button": {
+    name: "pulsating-dots-button",
+    filePath: "registry/examples/pulsating-dots/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-color": {
+    name: "pulsating-dots-color",
+    filePath: "registry/examples/pulsating-dots/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-count": {
+    name: "pulsating-dots-count",
+    filePath: "registry/examples/pulsating-dots/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "pulsating-dots-demo": {
     name: "pulsating-dots-demo",
     filePath: "registry/examples/pulsating-dots/demo.tsx",
@@ -1457,6 +1509,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "pulsating-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-duration": {
+    name: "pulsating-dots-duration",
+    filePath: "registry/examples/pulsating-dots/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-input-group": {
+    name: "pulsating-dots-input-group",
+    filePath: "registry/examples/pulsating-dots/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-popover": {
+    name: "pulsating-dots-popover",
+    filePath: "registry/examples/pulsating-dots/popover.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-popover";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-sheet": {
+    name: "pulsating-dots-sheet",
+    filePath: "registry/examples/pulsating-dots/sheet.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-sheet";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-size": {
+    name: "pulsating-dots-size",
+    filePath: "registry/examples/pulsating-dots/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -2513,6 +2630,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "terminal-alert": {
+    name: "terminal-alert",
+    filePath: "registry/examples/terminal/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "terminal-badge": {
+    name: "terminal-badge",
+    filePath: "registry/examples/terminal/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "terminal-button": {
+    name: "terminal-button",
+    filePath: "registry/examples/terminal/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "terminal-color": {
+    name: "terminal-color",
+    filePath: "registry/examples/terminal/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "terminal-demo": {
     name: "terminal-demo",
     filePath: "registry/examples/terminal/demo.tsx",
@@ -2523,6 +2692,97 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "terminal-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "terminal-duration": {
+    name: "terminal-duration",
+    filePath: "registry/examples/terminal/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "terminal-input-group": {
+    name: "terminal-input-group",
+    filePath: "registry/examples/terminal/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "terminal-prompt": {
+    name: "terminal-prompt",
+    filePath: "registry/examples/terminal/prompt.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal/prompt.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-prompt";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-alert": {
+    name: "text-blink-alert",
+    filePath: "registry/examples/text-blink/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-badge": {
+    name: "text-blink-badge",
+    filePath: "registry/examples/text-blink/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-button": {
+    name: "text-blink-button",
+    filePath: "registry/examples/text-blink/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-color": {
+    name: "text-blink-color",
+    filePath: "registry/examples/text-blink/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-color";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -2539,6 +2799,110 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "text-blink-duration": {
+    name: "text-blink-duration",
+    filePath: "registry/examples/text-blink/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-opacity": {
+    name: "text-blink-opacity",
+    filePath: "registry/examples/text-blink/opacity.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/opacity.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-opacity";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-tabs": {
+    name: "text-blink-tabs",
+    filePath: "registry/examples/text-blink/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-tabs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-alert": {
+    name: "text-dots-alert",
+    filePath: "registry/examples/text-dots/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-badge": {
+    name: "text-dots-badge",
+    filePath: "registry/examples/text-dots/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-button": {
+    name: "text-dots-button",
+    filePath: "registry/examples/text-dots/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-color": {
+    name: "text-dots-color",
+    filePath: "registry/examples/text-dots/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-count": {
+    name: "text-dots-count",
+    filePath: "registry/examples/text-dots/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "text-dots-demo": {
     name: "text-dots-demo",
     filePath: "registry/examples/text-dots/demo.tsx",
@@ -2549,6 +2913,84 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "text-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-duration": {
+    name: "text-dots-duration",
+    filePath: "registry/examples/text-dots/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-input-group": {
+    name: "text-dots-input-group",
+    filePath: "registry/examples/text-dots/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-alert": {
+    name: "text-shimmer-wave-alert",
+    filePath: "registry/examples/text-shimmer-wave/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-badge": {
+    name: "text-shimmer-wave-badge",
+    filePath: "registry/examples/text-shimmer-wave/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-button": {
+    name: "text-shimmer-wave-button",
+    filePath: "registry/examples/text-shimmer-wave/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-color": {
+    name: "text-shimmer-wave-color",
+    filePath: "registry/examples/text-shimmer-wave/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-color";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -2565,6 +3007,97 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "text-shimmer-wave-duration": {
+    name: "text-shimmer-wave-duration",
+    filePath: "registry/examples/text-shimmer-wave/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-motion": {
+    name: "text-shimmer-wave-motion",
+    filePath: "registry/examples/text-shimmer-wave/motion.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/motion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-motion";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-wave-tabs": {
+    name: "text-shimmer-wave-tabs",
+    filePath: "registry/examples/text-shimmer-wave/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer-wave/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-tabs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-alert": {
+    name: "text-shimmer-alert",
+    filePath: "registry/examples/text-shimmer/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-badge": {
+    name: "text-shimmer-badge",
+    filePath: "registry/examples/text-shimmer/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-button": {
+    name: "text-shimmer-button",
+    filePath: "registry/examples/text-shimmer/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-color": {
+    name: "text-shimmer-color",
+    filePath: "registry/examples/text-shimmer/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "text-shimmer-demo": {
     name: "text-shimmer-demo",
     filePath: "registry/examples/text-shimmer/demo.tsx",
@@ -2575,6 +3108,97 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "text-shimmer-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-duration": {
+    name: "text-shimmer-duration",
+    filePath: "registry/examples/text-shimmer/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-input-group": {
+    name: "text-shimmer-input-group",
+    filePath: "registry/examples/text-shimmer/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-shimmer-spread": {
+    name: "text-shimmer-spread",
+    filePath: "registry/examples/text-shimmer/spread.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-shimmer/spread.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-spread";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "triple-dot-spinner-alert": {
+    name: "triple-dot-spinner-alert",
+    filePath: "registry/examples/triple-dot-spinner/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "triple-dot-spinner-badge": {
+    name: "triple-dot-spinner-badge",
+    filePath: "registry/examples/triple-dot-spinner/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "triple-dot-spinner-button": {
+    name: "triple-dot-spinner-button",
+    filePath: "registry/examples/triple-dot-spinner/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "triple-dot-spinner-color": {
+    name: "triple-dot-spinner-color",
+    filePath: "registry/examples/triple-dot-spinner/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-color";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -2591,6 +3215,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "triple-dot-spinner-duration": {
+    name: "triple-dot-spinner-duration",
+    filePath: "registry/examples/triple-dot-spinner/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "triple-dot-spinner-size": {
+    name: "triple-dot-spinner-size",
+    filePath: "registry/examples/triple-dot-spinner/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "twin-orbit-color": {
+    name: "twin-orbit-color",
+    filePath: "registry/examples/twin-orbit/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./twin-orbit/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "twin-orbit-demo": {
     name: "twin-orbit-demo",
     filePath: "registry/examples/twin-orbit/demo.tsx",
@@ -2601,6 +3264,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "twin-orbit-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "twin-orbit-duration": {
+    name: "twin-orbit-duration",
+    filePath: "registry/examples/twin-orbit/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./twin-orbit/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "twin-orbit-size": {
+    name: "twin-orbit-size",
+    filePath: "registry/examples/twin-orbit/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./twin-orbit/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-size";
       return { default: mod.default || mod[exportName] };
     }),
   },

@@ -3,4 +3,105 @@ title: Terminal
 description: A terminal or CLI style loader for developer-facing experiences.
 ---
 
-Coming soon.
+`Terminal` renders a monospace prompt with a blinking block cursor. It is built
+for developer-facing UI: command runners, deploy logs, local agents, test jobs,
+and any surface where CLI language is already part of the product.
+
+<ComponentPreview name="terminal-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/terminal
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="terminal" title="components/loading-ui/terminal.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Terminal } from "@/components/loading-ui/terminal";
+```
+
+```tsx
+<Terminal prompt="$" />
+```
+
+## Customization
+
+`Terminal` is intentionally small: the prompt and cursor inherit text color, and
+the cursor blink can be tuned with a CSS time value.
+
+### Prompt
+
+Use the prompt that matches your command surface.
+
+<ComponentPreview name="terminal-prompt" />
+
+### Color
+
+The prompt and cursor inherit `currentColor`, so contextual foreground utilities
+are enough.
+
+<ComponentPreview name="terminal-color" />
+
+### Duration
+
+Set `--duration` to speed up or slow down the block cursor blink.
+
+<ComponentPreview name="terminal-duration" />
+
+## Examples
+
+These examples keep the component close to CLI states instead of using it as a
+generic spinner.
+
+### Button
+
+Buttons work well for command actions that are already running.
+
+<ComponentPreview name="terminal-button" />
+
+### Badge
+
+Badges can mark shell, log, or command status without taking much horizontal
+space.
+
+<ComponentPreview name="terminal-badge" />
+
+### Input Group
+
+Command inputs can use the prompt as a leading addon and text status on the
+trailing edge.
+
+<ComponentPreview name="terminal-input-group" />
+
+### Alert
+
+Alerts give command runners enough room to explain what is still happening.
+
+<ComponentPreview name="terminal-alert" />
