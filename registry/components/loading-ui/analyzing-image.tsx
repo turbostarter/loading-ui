@@ -17,7 +17,12 @@ const transition: Transition = {
 
 function AnalyzingImage({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div className={cn("relative isolate shrink-0", className)} {...props}>
+    <div
+      role="status"
+      aria-label="Analyzing image"
+      className={cn("relative isolate shrink-0", className)}
+      {...props}
+    >
       <motion.div
         initial={{
           clipPath: "inset(0% 0% 0% 0%)",
@@ -31,7 +36,7 @@ function AnalyzingImage({ className, ...props }: React.ComponentProps<"div">) {
           ],
         }}
         transition={transition}
-        className="bg-background absolute inset-0 z-10"
+        className="absolute inset-0 z-10 bg-[var(--loading-ui-analyzing-image-background,var(--background))]"
       >
         <svg
           viewBox="0 0 24 24"
@@ -133,6 +138,7 @@ function AnalyzingImage({ className, ...props }: React.ComponentProps<"div">) {
         <rect x="3" y="15" width="1" height="2" fill="currentColor" />
         <rect x="3" y="19" width="1" height="1" fill="currentColor" />
       </svg>
+      <span className="sr-only">Analyzing image</span>
     </div>
   );
 }

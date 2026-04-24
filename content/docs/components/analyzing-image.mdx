@@ -3,4 +3,106 @@ title: Analyzing image
 description: A visual placeholder for image analysis or computer-vision style loading.
 ---
 
-Coming soon.
+`AnalyzingImage` is a scanning image placeholder for vision, OCR, upload review,
+and image-understanding flows. It pairs especially well with shimmer text
+components when the surrounding copy should feel like an active analysis state.
+
+<ComponentPreview name="analyzing-image-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/analyzing-image
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="analyzing-image"
+  title="components/loading-ui/analyzing-image.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { AnalyzingImage } from "@/components/loading-ui/analyzing-image";
+```
+
+```tsx
+<AnalyzingImage className="size-16" />
+```
+
+## Customization
+
+`AnalyzingImage` scales from `size-*` utilities and inherits `currentColor`. The
+wipe mask defaults to `var(--background)`; on filled surfaces, set
+`--loading-ui-analyzing-image-background` to the surface color so the scan feels
+native to the container.
+
+### Size
+
+Use compact sizes for badges and buttons, and larger sizes for empty states or
+image-analysis panels.
+
+<ComponentPreview name="analyzing-image-size" />
+
+### Color
+
+Color comes from `currentColor`, so text utilities or inherited foreground
+colors are enough.
+
+<ComponentPreview name="analyzing-image-color" />
+
+## Examples
+
+These examples use the component where an image is being read, described, or
+processed. Pairing it with shimmer text keeps the visual and copy in the same
+analysis language.
+
+### Shimmer Text
+
+Use `TextShimmer` beside the icon when the label itself should feel active.
+
+<ComponentPreview name="analyzing-image-shimmer" />
+
+### Button
+
+Buttons can use the icon for pending vision actions. Filled variants set the
+mask background to match the button surface.
+
+<ComponentPreview name="analyzing-image-button" />
+
+### Badge
+
+Badges work well for compact OCR, vision, and analysis labels.
+
+<ComponentPreview name="analyzing-image-badge" />
+
+### Empty
+
+Empty states can combine the icon with shimmer text while an uploaded image is
+still being inspected.
+
+<ComponentPreview name="analyzing-image-empty" />

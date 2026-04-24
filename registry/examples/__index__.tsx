@@ -4,6 +4,45 @@
 import * as React from "react";
 
 export const ExamplesIndex: Record<string, Record<string, any>> = {
+  "analyzing-image-badge": {
+    name: "analyzing-image-badge",
+    filePath: "registry/examples/analyzing-image/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "analyzing-image-button": {
+    name: "analyzing-image-button",
+    filePath: "registry/examples/analyzing-image/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "analyzing-image-color": {
+    name: "analyzing-image-color",
+    filePath: "registry/examples/analyzing-image/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "analyzing-image-demo": {
     name: "analyzing-image-demo",
     filePath: "registry/examples/analyzing-image/demo.tsx",
@@ -14,6 +53,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "analyzing-image-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "analyzing-image-empty": {
+    name: "analyzing-image-empty",
+    filePath: "registry/examples/analyzing-image/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "analyzing-image-shimmer": {
+    name: "analyzing-image-shimmer",
+    filePath: "registry/examples/analyzing-image/shimmer.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image/shimmer.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-shimmer";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "analyzing-image-size": {
+    name: "analyzing-image-size",
+    filePath: "registry/examples/analyzing-image/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./analyzing-image/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
