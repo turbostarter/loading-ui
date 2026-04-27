@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { EMAIL } from "@/lib/constants";
 
 export const LINKS = [
   {
@@ -13,8 +12,8 @@ export const LINKS = [
     href: "/docs/components",
   },
   {
-    label: "Sponsor",
-    href: `mailto:${EMAIL}`,
+    label: "Sponsors",
+    href: "/sponsors",
   },
 ];
 
@@ -25,7 +24,7 @@ type LinksProps = {
 export function Links({ className }: LinksProps) {
   return (
     <ul className={cn("flex items-center gap-1", className)}>
-      {LINKS.map(link => (
+      {LINKS.map((link) => (
         <li key={link.label}>
           <Link
             href={link.href}

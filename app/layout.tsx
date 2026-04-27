@@ -1,11 +1,9 @@
 import { Analytics } from "@vercel/analytics/next";
-import { RootProvider } from "fumadocs-ui/provider/next";
 import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/common/header";
-import { ThemeProvider } from "next-themes";
 import { createMetadata } from "@/lib/metadata";
 import { fonts } from "@/lib/fonts";
+import { Providers } from "../components/providers";
 import "./global.css";
 
 export const metadata = createMetadata({
@@ -28,27 +26,10 @@ export default function Layout({ children }: LayoutProps<"/">) {
           fonts,
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          enableSystem
-          disableTransitionOnChange
-          scriptProps={
-            typeof window === "undefined"
-              ? undefined
-              : ({ type: "application/json" } as const)
-          }
-        >
-          <RootProvider
-            theme={{
-              enabled: false,
-            }}
-          >
-            <TooltipProvider delay={0}>
-              <Header />
-              {children}
-            </TooltipProvider>
-          </RootProvider>
-        </ThemeProvider>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
         <Analytics />
       </body>
     </html>
