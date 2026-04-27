@@ -1,51 +1,34 @@
 import { Ring } from "@/registry/components/loading-ui/ring";
 import { Installer } from "@/components/common/installer";
-import { Section } from "@/components/common/section";
+import {
+  HeroSection,
+  HeroSectionDescription,
+  HeroSectionTitle,
+} from "@/components/common/section";
 import { getCLICommand } from "@/lib/registry";
 import { Index } from "@/registry/__index__";
 
-import { unstable_cache as cache } from "next/cache";
-import { octokit } from "@/lib/octokit";
 import { buttonVariants } from "@/components/ui/button";
 import { GITHUB_URL } from "@/lib/constants";
 import { Icons } from "@/components/common/icons";
 import { Star } from "lucide-react";
-
-const getGitHubStars = cache(
-  async () => {
-    try {
-      const { data } = await octokit.rest.repos.get({
-        owner: "turbostarter",
-        repo: "loading-ui",
-      });
-      return data.stargazers_count;
-    } catch (error) {
-      console.error(error);
-      return 0;
-    }
-  },
-  ["github-stats"],
-  {
-    revalidate: 3600,
-  },
-);
+import { getGitHubStars } from "@/app/(home)/layout";
 
 export const Hero = () => {
   const stars = getGitHubStars();
 
   return (
-    <Section id="hero">
-      <div className="mx-auto flex flex-col items-center justify-center gap-6 text-balance">
-        <h1 className="max-w-2xl text-center text-4xl font-semibold tracking-[-0.06em]! text-balance sm:text-5xl md:text-6xl xl:text-7xl">
-          Your users deserve a{" "}
-          <Ring className="inline-block size-[0.9em] translate-x-0.5 -translate-y-0.5 animate-spin md:translate-x-1 md:-translate-y-1.5" />{" "}
-          loading state
-        </h1>
+    <HeroSection>
+      <HeroSectionTitle>
+        Your users deserve a{" "}
+        <Ring className="inline-block size-[0.9em] translate-x-0.5 -translate-y-0.5 animate-spin md:translate-x-1 md:-translate-y-1.5" />{" "}
+        loading state
+      </HeroSectionTitle>
 
-        <p className="text-muted-foreground mx-auto max-w-2xl text-center lg:text-lg xl:text-xl 2xl:text-2xl">
-          A curated collection of spinners, loaders and animations for your next
-          project. Free and open source, forever.
-        </p>
+      <HeroSectionDescription>
+        A curated collection of spinners, loaders and animations for your next
+        project. Free and open source, forever.
+      </HeroSectionDescription>
 
         <div className="mx-auto inline-flex w-fit flex-wrap items-center justify-center gap-3">
           <Installer
@@ -69,6 +52,6 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-    </Section>
+    </HeroSection>
   );
 };

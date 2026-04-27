@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { EMAIL } from "@/lib/constants";
 
 export const LINKS = [
   {
@@ -13,8 +12,8 @@ export const LINKS = [
     href: "/docs/components",
   },
   {
-    label: "Sponsor",
-    href: `mailto:${EMAIL}`,
+    label: "Sponsors",
+    href: "/sponsors",
   },
 ];
 
