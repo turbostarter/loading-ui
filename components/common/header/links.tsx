@@ -25,7 +25,7 @@ type LinksProps = {
 export function Links({ className }: LinksProps) {
   return (
     <ul className={cn("flex items-center gap-1", className)}>
-      {LINKS.map(link => (
+      {LINKS.map((link) => (
         <li key={link.label}>
           <Link
             href={link.href}
