@@ -45,8 +45,6 @@ export const Installer = ({
   const commands = Array.isArray(command) ? command : [command];
   const prefix = getCommonPrefix(commands);
   const suffixes = commands.map((c) => c.slice(prefix.length));
-  const maxCommandLength = Math.max(...commands.map((value) => value.length));
-  const maxSuffixLength = Math.max(...suffixes.map((value) => value.length));
 
   const [index, setIndex] = useState(0);
   const [copied, setCopied] = useState(false);
@@ -82,12 +80,9 @@ export const Installer = ({
   return (
     <InputGroup
       className={cn(
-        "bg-background h-9 max-w-[calc(100vw-2rem)] px-1 font-mono md:h-10",
+        "bg-background h-9 w-fit max-w-[calc(100vw-2rem)] px-1 font-mono md:h-10",
         className,
       )}
-      style={{
-        width: `${maxCommandLength + 6}ch`,
-      }}
     >
       <InputGroupAddon>
         <InputGroupText className="text-muted-foreground font-normal">
@@ -110,7 +105,6 @@ export const Installer = ({
             className="shrink-0 leading-none"
             duration={interval}
             index={index}
-            style={{ width: `${maxSuffixLength}ch` }}
             words={suffixes}
           />
         ) : (
