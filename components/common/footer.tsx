@@ -1,4 +1,5 @@
-import { TURBOSTARTER_URL, X_USERNAME } from "@/lib/constants";
+import { TURBOSTARTER_URL } from "@/components/home/sponsors/turbostarter";
+import { X_USERNAME } from "@/lib/constants";
 
 export const Footer = () => {
   return (

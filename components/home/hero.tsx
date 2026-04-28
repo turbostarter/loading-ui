@@ -8,14 +8,11 @@ import {
 import { getCLICommand } from "@/lib/registry";
 import { Index } from "@/registry/__index__";
 
-import { buttonVariants } from "@/components/ui/button";
-import { GITHUB_URL } from "@/lib/constants";
-import { Icons } from "@/components/common/icons";
-import { Star } from "lucide-react";
 import { getGitHubStars } from "@/app/(home)/layout";
+import { GitHubStars } from "./github-stars";
 
-export const Hero = () => {
-  const stars = getGitHubStars();
+export const Hero = async () => {
+  const stars = await getGitHubStars();
 
   return (
     <HeroSection>
@@ -35,21 +32,7 @@ export const Hero = () => {
           command={getCLICommand(Object.keys(Index)[0])}
           className="w-60 text-xs md:w-72"
         />
-        <a
-          className={buttonVariants({
-            className: "px-3.5 md:h-10",
-          })}
-          href={GITHUB_URL}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <span className="sr-only">Star on GitHub</span>
-          <Icons.gitHub className="size-3.5 md:size-4" />
-          <div className="border-background/25 ml-1.5 flex h-full items-center justify-center gap-1.5 border-l pl-2.5">
-            <Star className="-mt-px size-3.5 fill-current text-yellow-500 md:size-4" />
-            {stars}
-          </div>
-        </a>
+        <GitHubStars stars={stars} />
       </div>
     </HeroSection>
   );

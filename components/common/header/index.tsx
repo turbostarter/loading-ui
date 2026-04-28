@@ -3,13 +3,13 @@ import { Logo } from "@/components/common/header/logo";
 import Link from "next/link";
 
 import { Search } from "@/components/common/header/search";
-import { Turbostarter } from "@/components/common/header/turbostarter";
 import { GitHub } from "@/components/common/header/github";
 import { ThemeSwitcher } from "@/components/common/theme-switcher";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { source } from "@/lib/source";
 import { MobileNav } from "@/components/common/header/mobile-nav";
+import { TurbostarterButton } from "@/components/home/sponsors/turbostarter";
 
 export const Header = () => {
   return (
@@ -31,7 +31,7 @@ export const Header = () => {
         <div className="flex items-center md:gap-2">
           <Search className="hidden md:flex" />
           <GitHub />
-          <Turbostarter className="hidden md:flex" />
+          <TurbostarterButton className="hidden md:flex" />
           <ThemeSwitcher />
           <MobileNav
             tree={source.pageTree}

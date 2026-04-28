@@ -7,10 +7,10 @@ import { buttonVariants } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { findNeighbour } from "fumadocs-core/page-tree";
 import { DocsTableOfContents } from "@/components/docs/toc";
-import { TurbostarterCta } from "@/components/docs/turbostarter-cta";
 import { mdxComponents } from "@/components/mdx";
 import { Metadata } from "next";
 import { createMetadata } from "@/lib/metadata";
+import { TurbostarterSidebarCta } from "@/components/home/sponsors/turbostarter";
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
@@ -127,7 +127,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
             <DocsTableOfContents toc={page.data.toc} />
           </div>
         ) : null}
-        <TurbostarterCta />
+        <TurbostarterSidebarCta />
       </div>
     </main>
   );

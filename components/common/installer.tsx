@@ -10,6 +10,8 @@ import {
   InputGroupText,
 } from "@/components/ui/input-group";
 
+import { track } from "@vercel/analytics";
+
 const COPY_TIMEOUT = 2000;
 
 interface InstallerProps {
@@ -27,6 +29,7 @@ export const Installer = ({ command, className = "w-48" }: InstallerProps) => {
     setTimeout(() => {
       setCopied(false);
     }, COPY_TIMEOUT);
+    track("install_command_copied", { command });
   };
 
   const Icon = copied ? CheckIcon : CopyIcon;
