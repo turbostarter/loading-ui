@@ -43,7 +43,7 @@ export const Stats = () => {
   return (
     <Section
       id="stats"
-      className="bg-border grid grid-cols-2 gap-px p-0! md:grid-cols-2 lg:grid-cols-4"
+      className="bg-border grid grid-cols-1 gap-px p-0! md:grid-cols-2 lg:grid-cols-4"
     >
       {stats.map((stat) => (
         <div
