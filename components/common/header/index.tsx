@@ -14,7 +14,7 @@ import { TurbostarterButton } from "@/components/home/sponsors/turbostarter";
 export const Header = () => {
   return (
     <header className="bg-fd-background/80 sticky inset-x-0 top-0 z-40 h-(--header-height) border-b backdrop-blur-sm transition-colors">
-      <div className="container mx-auto flex size-full items-center justify-between px-3 md:px-4">
+      <div className="container mx-auto flex gap-2 size-full items-center justify-between px-3 md:px-4">
         <nav className="flex items-center gap-3">
           <Link
             className={cn(
@@ -28,7 +28,7 @@ export const Header = () => {
           <Links className="hidden gap-1 md:flex" />
         </nav>
 
-        <div className="flex items-center md:gap-2">
+        <div className="flex flex-auto justify-end items-center md:gap-2">
           <Search className="hidden md:flex" />
           <GitHub />
           <TurbostarterButton className="hidden md:flex" />
