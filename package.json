@@ -54,7 +54,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "oxfmt": "^0.45.0",
-    "oxlint": "1.60.0",
+    "oxlint": "1.62.0",
     "oxlint-tsgolint": "^0.21.1",
     "postcss": "^8.5.9",
     "tailwindcss": "^4.2.2",
