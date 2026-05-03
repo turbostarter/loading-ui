@@ -2,17 +2,16 @@
 
 import { Icons } from "@/components/common/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { TURBOSTARTER_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { track } from "@vercel/analytics";
-
-export const TURBOSTARTER_URL = "https://www.turbostarter.dev?ref=loading-ui";
 
 export const TurbostarterButton = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLAnchorElement>) => (
   <a
-    href={`${TURBOSTARTER_URL}?utm_source=loading-ui&utm_medium=referral`}
+    href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
     target="_blank"
     className={cn(
       "border-border text-foreground hover:bg-accent flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors",
@@ -43,7 +42,7 @@ export function TurbostarterSidebarCta({
       )}
       {...props}
     >
-      <p className="text-base leading-tight tracking-tight font-semibold text-balance underline-offset-2 group-hover:underline">
+      <p className="text-base leading-tight font-semibold tracking-tight text-balance underline-offset-2 group-hover:underline">
         Build your SaaS in days, not months. On all platforms.
       </p>
       <p className="text-muted-foreground">
@@ -57,7 +56,7 @@ export function TurbostarterSidebarCta({
         Try TurboStarter
       </Button>
       <a
-        href={`${TURBOSTARTER_URL}?utm_source=loading-ui&utm_medium=referral`}
+        href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
         target="_blank"
         className="absolute inset-0"
         onClick={() =>
@@ -79,7 +78,7 @@ export const TurboStarterMobileNavCta = ({
 }: React.ComponentProps<"a">) => {
   return (
     <a
-      href={`${TURBOSTARTER_URL}?utm_source=loading-ui&utm_medium=referral`}
+      href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
       target="_blank"
       onClick={() =>
         track("sponsor_clicked", {
@@ -88,12 +87,12 @@ export const TurboStarterMobileNavCta = ({
         })
       }
       className={cn(
-        "group bg-surface text-surface-foreground relative flex flex-col gap-2 p-5 rounded-md text-sm",
+        "group bg-surface text-surface-foreground relative flex flex-col gap-2 rounded-md p-5 text-sm",
         className,
       )}
       {...props}
     >
-      <p className="text-base leading-tight tracking-tight font-semibold text-balance underline-offset-2 group-hover:underline">
+      <p className="text-base leading-tight font-semibold tracking-tight text-balance underline-offset-2 group-hover:underline">
         Build your SaaS in days, not months. On all platforms.
       </p>
       <p className="text-muted-foreground">

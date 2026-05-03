@@ -1,5 +1,4 @@
-import { TURBOSTARTER_URL } from "@/components/home/sponsors/turbostarter";
-import { X_USERNAME } from "@/lib/constants";
+import { TURBOSTARTER_URL, X_USERNAME } from "@/lib/constants";
 
 export const Footer = () => {
   return (
@@ -7,7 +6,7 @@ export const Footer = () => {
       <p className="text-muted-foreground text-sm">
         Made with ❤️ and{" "}
         <a
-          href={`${TURBOSTARTER_URL}?utm_source=loading-ui&utm_medium=referral`}
+          href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
           target="_blank"
           rel="noreferrer"
           className="text-primary underline"

@@ -78,7 +78,7 @@ export function MobileNav({
         sideOffset={14}
       >
         <div className="flex flex-col gap-10 overflow-auto p-5">
-          <TurboStarterMobileNavCta className="-mt-2 -mb-4 -mx-2" />
+          <TurboStarterMobileNavCta className="-mx-2 -mt-2 -mb-4" />
 
           <div className="flex flex-col gap-4">
             <div className="text-muted-foreground text-sm font-medium">
@@ -100,7 +100,7 @@ export function MobileNav({
               Sections
             </div>
             <div className="flex flex-col gap-3">
-              {topLevelPages.map(item => {
+              {topLevelPages.map((item) => {
                 return (
                   <MobileLink
                     key={item.url}
@@ -120,7 +120,7 @@ export function MobileNav({
             </div>
           </div>
           <div className="flex flex-col gap-8">
-            {tree?.children?.map(group => {
+            {tree?.children?.map((group) => {
               if (EXCLUDED_SECTIONS.has(group.$id ?? "")) {
                 return null;
               }
@@ -137,7 +137,7 @@ export function MobileNav({
                     {group.name}
                   </div>
                   <div className="flex flex-col gap-3">
-                    {pages.map(item => {
+                    {pages.map((item) => {
                       if (EXCLUDED_PAGES.has(item.url)) {
                         return null;
                       }
