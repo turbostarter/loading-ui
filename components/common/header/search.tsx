@@ -14,13 +14,16 @@ export const Search = ({
 
   return (
     <Button
-      className={cn("text-muted-foreground relative max-w-52 min-w-15 w-full shrink", className)}
+      className={cn(
+        "text-muted-foreground relative w-full max-w-52 min-w-15 shrink",
+        className,
+      )}
       onClick={() => setOpenSearch(true)}
       variant="secondary"
       {...props}
     >
       <SearchIcon className="size-4" />
-      <p className="font-normal hidden lg:block">Search...</p>
+      <p className="hidden font-normal lg:block">Search...</p>
       <span className="ml-auto flex items-center gap-0.5">
         <Kbd className="bg-background border">⌘</Kbd>
         <Kbd className="bg-background border">K</Kbd>
