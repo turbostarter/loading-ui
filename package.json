@@ -18,7 +18,7 @@
     "postinstall": "fumadocs-mdx && next typegen",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "react-doctor": "bunx --bun react-doctor@0.0.38 . --offline --fail-on none",
+    "react-doctor": "bunx --bun react-doctor@0.0.39 --offline --fail-on none --yes",
     "format": "oxfmt",
     "format:fix": "oxfmt --fix",
     "build:registry": "bun registry/scripts/build.mts && bun format"
