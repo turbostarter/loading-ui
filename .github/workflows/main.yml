@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: ./.github/setup
 
       - run: bun run build
@@ -25,15 +27,24 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: ./.github/setup
 
       - run: bun run lint
+
+      - name: Run React Doctor advisory scan
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: bun run react-doctor -- --diff origin/${{ github.base_ref }} --annotations
 
   format:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: ./.github/setup
 
       - run: bun run format
