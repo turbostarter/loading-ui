@@ -1,10 +1,12 @@
-import { Examples } from "@/components/home/examples";
+import { ColorPicker } from "@/components/common/color-picker";
+import { Examples } from "@/components/home/examples/examples";
 import { Hero } from "@/components/home/hero";
 
 export default function Page(_: PageProps<"/">) {
   return (
     <>
       <Hero />
+      <ColorPicker className="border-b py-6 md:py-8 border-x container" />
       <Examples />
     </>
   );

@@ -1,15 +1,11 @@
 import Link from "next/link";
-import { Section } from "@/components/common/section";
 import { ArrowUpRight } from "lucide-react";
 import { getCLICommand, getOpenInV0Url, getRegistryItem } from "@/lib/registry";
 import { Index } from "@/registry/__index__";
 import { ExamplesIndex } from "@/registry/examples/__index__";
-import {
-  CopyComponent,
-  CopyCLICommand,
-  OpenInV0,
-} from "@/components/home/example-actions";
+import { CopyComponent, CopyCLICommand, OpenInV0 } from "./example-actions";
 import { RequestComponent } from "@/components/home/request-component";
+import { ExamplesSection } from "./examples-section";
 
 export const Examples = async () => {
   const tiles = await Promise.all(
@@ -26,8 +22,8 @@ export const Examples = async () => {
   );
 
   return (
-    <Section className="bg-border flex flex-wrap content-start items-stretch gap-px p-0!">
-      {tiles.map((tile) => {
+    <ExamplesSection>
+      {tiles.map(tile => {
         if (!tile) {
           return null;
         }
@@ -67,6 +63,6 @@ export const Examples = async () => {
       })}
 
       <RequestComponent />
-    </Section>
+    </ExamplesSection>
   );
 };

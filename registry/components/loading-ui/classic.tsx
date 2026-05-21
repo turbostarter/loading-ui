@@ -18,7 +18,7 @@ function Classic({ className, ...props }: ClassicProps) {
       `}</style>
       <span
         role="status"
-        className={cn("text-primary box-border inline-block size-5", className)}
+        className={cn("box-border inline-block size-5", className)}
         {...props}
       >
         <span
