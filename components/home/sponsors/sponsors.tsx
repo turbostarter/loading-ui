@@ -35,7 +35,7 @@ export const SponsorCard = ({
         {"lg" in sponsor.image ? (
           <sponsor.image.lg className="size-full p-8 md:p-12 lg:p-16" />
         ) : (
-          <div className="w-full px-12 h-full md:px-14 lg:px-18 flex items-center justify-center">
+          <div className="flex h-full w-full items-center justify-center px-12 md:px-14 lg:px-18">
             <ThemedImage
               light={sponsor.image.light}
               dark={sponsor.image.dark}
@@ -139,7 +139,7 @@ export const TierHeader = ({ tier }: { tier: SponsorTier }) => {
 };
 
 export const SponsorsGrid = ({ tier }: { tier: SponsorTier }) => {
-  return SPONSORS[tier].map(sponsor => (
+  return SPONSORS[tier].map((sponsor) => (
     <SponsorCard key={sponsor.id} tier={tier} sponsor={sponsor} />
   ));
 };

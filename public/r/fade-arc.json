@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fade-arc",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/fade-arc.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction FadeArc({ className, style, ...props }: React.ComponentProps<\"svg\">) {\n  const baseId = useId().replace(/:/g, \"\");\n  const leadingGradientId = `${baseId}-leading`;\n  const trailingGradientId = `${baseId}-trailing`;\n\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-fade-arc-spin {\n          to {\n            transform: rotate(360deg);\n          }\n        }\n      `}</style>\n      <svg\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n        role=\"status\"\n        className={cn(className)}\n        style={{\n          animationName: \"loading-ui-fade-arc-spin\",\n          animationDuration: \"var(--duration, 1s)\",\n          animationTimingFunction: \"linear\",\n          animationIterationCount: \"infinite\",\n          ...style,\n        }}\n        {...props}\n      >\n        <defs>\n          <linearGradient\n            id={leadingGradientId}\n            x1=\"50%\"\n            x2=\"50%\"\n            y1=\"5.271%\"\n            y2=\"91.793%\"\n          >\n            <stop offset=\"0%\" stopColor=\"currentColor\" />\n            <stop offset=\"100%\" stopColor=\"currentColor\" stopOpacity=\"0.55\" />\n          </linearGradient>\n          <linearGradient\n            id={trailingGradientId}\n            x1=\"50%\"\n            x2=\"50%\"\n            y1=\"15.24%\"\n            y2=\"87.15%\"\n          >\n            <stop offset=\"0%\" stopColor=\"currentColor\" stopOpacity=\"0\" />\n            <stop offset=\"100%\" stopColor=\"currentColor\" stopOpacity=\"0.55\" />\n          </linearGradient>\n        </defs>\n        <g fill=\"none\">\n          <path\n            d=\"M8.749.021a1.5 1.5 0 0 1 .497 2.958A7.5 7.5 0 0 0 3 10.375a7.5 7.5 0 0 0 7.5 7.5v3c-5.799 0-10.5-4.7-10.5-10.5C0 5.23 3.726.865 8.749.021\"\n            fill={`url(#${leadingGradientId})`}\n            transform=\"translate(1.5 1.625)\"\n          />\n          <path\n            d=\"M15.392 2.673a1.5 1.5 0 0 1 2.119-.115A10.48 10.48 0 0 1 21 10.375c0 5.8-4.701 10.5-10.5 10.5v-3a7.5 7.5 0 0 0 5.007-13.084a1.5 1.5 0 0 1-.115-2.118\"\n            fill={`url(#${trailingGradientId})`}\n            transform=\"translate(1.5 1.625)\"\n          />\n        </g>\n      </svg>\n    </>\n  );\n}\n\nexport { FadeArc };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

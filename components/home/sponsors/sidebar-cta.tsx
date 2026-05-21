@@ -12,13 +12,13 @@ export const SponsorsSidebarCta = () => {
   return (
     <div className="group bg-surface text-surface-foreground relative flex flex-col gap-4 border-y px-6 py-5 text-sm">
       <div className="flex items-baseline justify-between">
-        <span className="font-medium leading-tight tracking-tight">
+        <span className="leading-tight font-medium tracking-tight">
           Sponsors
         </span>
 
         <Link
           href="/sponsors"
-          className="inline-flex items-center gap-1 opacity-80 hover:opacity-100 text-primary text-xs font-medium"
+          className="text-primary inline-flex items-center gap-1 text-xs font-medium opacity-80 hover:opacity-100"
         >
           Become a sponsor
           <ExternalLink className="size-3 shrink-0 opacity-80" aria-hidden />
@@ -32,7 +32,7 @@ export const SponsorsSidebarCta = () => {
           return (
             sponsors.length > 0 && (
               <div key={tier} className="flex flex-col gap-1.5">
-                <span className="text-xs uppercase text-muted-foreground/50 font-medium tracking-wide">
+                <span className="text-muted-foreground/50 text-xs font-medium tracking-wide uppercase">
                   {title}
                 </span>
 
@@ -43,13 +43,13 @@ export const SponsorsSidebarCta = () => {
                     "grid-cols-3": tier === "silver",
                   })}
                 >
-                  {sponsors.map(sponsor => (
+                  {sponsors.map((sponsor) => (
                     <li key={sponsor.id}>
                       <a
                         href={sponsor.url}
                         target="_blank"
                         rel="noreferrer noopener"
-                        className="group/sponsor bg-background/25 h-12 flex items-center justify-center hover:bg-accent border rounded-md transition-colors"
+                        className="group/sponsor bg-background/25 hover:bg-accent flex h-12 items-center justify-center rounded-md border transition-colors"
                         onClick={() =>
                           track("sponsor_clicked", {
                             sponsor: sponsor.name,
@@ -58,9 +58,9 @@ export const SponsorsSidebarCta = () => {
                         }
                       >
                         {"sm" in sponsor.image ? (
-                          <sponsor.image.sm className="h-full py-2 px-3" />
+                          <sponsor.image.sm className="h-full px-3 py-2" />
                         ) : (
-                          <div className="w-full h-full px-4 flex items-center justify-center">
+                          <div className="flex h-full w-full items-center justify-center px-4">
                             <ThemedImage
                               light={sponsor.image.light}
                               dark={sponsor.image.dark}
@@ -81,7 +81,7 @@ export const SponsorsSidebarCta = () => {
         })}
       </div>
 
-      <p className="text-[11px] text-center text-muted-foreground">
+      <p className="text-muted-foreground text-center text-[11px]">
         45k+ users monthly · Limited spots
       </p>
     </div>

@@ -112,6 +112,17 @@
       "type": "registry:component"
     },
     {
+      "name": "fade-arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/fade-arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "concentric-ring",
       "files": [
         {

@@ -83,6 +83,16 @@ export const components = [
       },
     ],
   },
+  {
+    name: "fade-arc",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/fade-arc.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 
   {
     name: "concentric-ring",

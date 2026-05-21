@@ -18,8 +18,8 @@
     "postinstall": "fumadocs-mdx && next typegen",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "format": "oxfmt",
-    "format:fix": "oxfmt --fix",
+    "format": "oxfmt --check",
+    "format:fix": "oxfmt",
     "build:registry": "bun registry/scripts/build.mts && bun format"
   },
   "dependencies": {

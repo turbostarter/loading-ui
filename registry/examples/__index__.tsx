@@ -1499,6 +1499,136 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "fade-arc-alert": {
+    name: "fade-arc-alert",
+    filePath: "registry/examples/fade-arc/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-badge": {
+    name: "fade-arc-badge",
+    filePath: "registry/examples/fade-arc/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-button": {
+    name: "fade-arc-button",
+    filePath: "registry/examples/fade-arc/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-color": {
+    name: "fade-arc-color",
+    filePath: "registry/examples/fade-arc/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-demo": {
+    name: "fade-arc-demo",
+    filePath: "registry/examples/fade-arc/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-direction": {
+    name: "fade-arc-direction",
+    filePath: "registry/examples/fade-arc/direction.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/direction.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-direction";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-duration": {
+    name: "fade-arc-duration",
+    filePath: "registry/examples/fade-arc/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-input-group": {
+    name: "fade-arc-input-group",
+    filePath: "registry/examples/fade-arc/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-size": {
+    name: "fade-arc-size",
+    filePath: "registry/examples/fade-arc/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "fade-arc-tabs": {
+    name: "fade-arc-tabs",
+    filePath: "registry/examples/fade-arc/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./fade-arc/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-tabs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "infinity-badge": {
     name: "infinity-badge",
     filePath: "registry/examples/infinity/badge.tsx",

@@ -1,0 +1,110 @@
+---
+title: Fade arc
+description: A gradient arc spinner with a soft trailing fade for polished loading states.
+---
+
+<ComponentPreview name="fade-arc-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/fade-arc
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="fade-arc" title="components/loading-ui/fade-arc.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { FadeArc } from "@/components/loading-ui/fade-arc";
+```
+
+```tsx
+<FadeArc />
+```
+
+## Customization
+
+`FadeArc` is an SVG made from two gradient-filled arc segments. The leading edge stays solid while the tail fades out, which gives you a softer motion read than a flat stroke spinner. Most tuning happens through size, color, timing, and spin direction.
+
+### Size
+
+Use `size-*` on the SVG root for inline controls, badges, and larger empty-state placements.
+
+<ComponentPreview name="fade-arc-size" />
+
+### Color
+
+Both gradients use `currentColor`, so text and foreground utilities tint the arc and its fade in one step.
+
+<ComponentPreview name="fade-arc-color" />
+
+### Duration
+
+Set `--duration` when the loader should feel quick and responsive or slower and more backgrounded.
+
+<ComponentPreview name="fade-arc-duration" />
+
+### Direction
+
+Reverse the spin when you want the motion to match nearby controls or other rotating elements.
+
+<ComponentPreview name="fade-arc-direction" />
+
+## Examples
+
+These examples show where the softer gradient tail tends to fit best: sync work, panel refreshes, and assistant-style surfaces where the loader should feel present but not sharp.
+
+### Button
+
+In buttons, `FadeArc` reads clearly at small sizes without the harsh contrast of a single solid stroke.
+
+<ComponentPreview name="fade-arc-button" />
+
+### Badge
+
+Compact status pills benefit from the tapered tail because the motion stays visible even at `size-3.5`.
+
+<ComponentPreview name="fade-arc-badge" />
+
+### Alert
+
+For non-blocking background jobs, the fade keeps the alert calm while still showing active progress.
+
+<ComponentPreview name="fade-arc-alert" />
+
+### Input group
+
+A textarea footer is a natural place to show generation or preview work tied to the prompt above.
+
+<ComponentPreview name="fade-arc-input-group" />
+
+### Tabs
+
+Use it inside tab content when one panel is refreshing but the broader workspace stays interactive.
+
+<ComponentPreview name="fade-arc-tabs" />
