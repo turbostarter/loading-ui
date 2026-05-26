@@ -617,6 +617,31 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "diamond-spinner": {
+    name: "diamond-spinner",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/diamond-spinner.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/diamond-spinner.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "triple-dot-spinner": {
     name: "triple-dot-spinner",
     description: "",

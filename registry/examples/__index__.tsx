@@ -1122,6 +1122,84 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "diamond-spinner-alert": {
+    name: "diamond-spinner-alert",
+    filePath: "registry/examples/diamond-spinner/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./diamond-spinner/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-spinner-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "diamond-spinner-badge": {
+    name: "diamond-spinner-badge",
+    filePath: "registry/examples/diamond-spinner/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./diamond-spinner/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-spinner-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "diamond-spinner-button": {
+    name: "diamond-spinner-button",
+    filePath: "registry/examples/diamond-spinner/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./diamond-spinner/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-spinner-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "diamond-spinner-color": {
+    name: "diamond-spinner-color",
+    filePath: "registry/examples/diamond-spinner/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./diamond-spinner/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-spinner-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "diamond-spinner-demo": {
+    name: "diamond-spinner-demo",
+    filePath: "registry/examples/diamond-spinner/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./diamond-spinner/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "diamond-spinner-size": {
+    name: "diamond-spinner-size",
+    filePath: "registry/examples/diamond-spinner/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./diamond-spinner/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-spinner-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dots-ring-alert": {
     name: "dots-ring-alert",
     filePath: "registry/examples/dots-ring/alert.tsx",
