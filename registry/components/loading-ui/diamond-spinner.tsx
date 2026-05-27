@@ -1,5 +1,4 @@
-import React from "react";
-
+import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const DiamondSpinner = React.forwardRef<
@@ -16,25 +15,23 @@ const DiamondSpinner = React.forwardRef<
       aria-label="Loading"
       {...props}
     >
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-                @keyframes spin-pixel {
-                    0% { opacity: 0; }
-                    1% { opacity: 1; }
-                    100% { opacity: 0; }
-                }
-                .pixel-1 { animation: spin-pixel 0.8s ease-in-out 0s infinite; }
-                .pixel-2 { animation: spin-pixel 0.8s ease-in-out 0.1s infinite; }
-                .pixel-3 { animation: spin-pixel 0.8s ease-in-out 0.2s infinite; }
-                .pixel-4 { animation: spin-pixel 0.8s ease-in-out 0.3s infinite; }
-                .pixel-5 { animation: spin-pixel 0.8s ease-in-out 0.4s infinite; }
-                .pixel-6 { animation: spin-pixel 0.8s ease-in-out 0.5s infinite; }
-                .pixel-7 { animation: spin-pixel 0.8s ease-in-out 0.6s infinite; }
-                .pixel-8 { animation: spin-pixel 0.8s ease-in-out 0.7s infinite; }
-              `,
-        }}
-      />
+      <style>
+        {`
+            @keyframes spin-pixel {
+              0% { opacity: 0; }
+              1% { opacity: 1; }
+              100% { opacity: 0; }
+            }
+            .pixel-1 { animation: spin-pixel 0.8s ease-in-out 0s infinite; }
+            .pixel-2 { animation: spin-pixel 0.8s ease-in-out 0.1s infinite; }
+            .pixel-3 { animation: spin-pixel 0.8s ease-in-out 0.2s infinite; }
+            .pixel-4 { animation: spin-pixel 0.8s ease-in-out 0.3s infinite; }
+            .pixel-5 { animation: spin-pixel 0.8s ease-in-out 0.4s infinite; }
+            .pixel-6 { animation: spin-pixel 0.8s ease-in-out 0.5s infinite; }
+            .pixel-7 { animation: spin-pixel 0.8s ease-in-out 0.6s infinite; }
+            .pixel-8 { animation: spin-pixel 0.8s ease-in-out 0.7s infinite; }
+          `}
+      </style>
       {/* Top */}
       <rect className="pixel-1" x="8" y="0" width="4" height="4" />
       {/* Top Right */}
