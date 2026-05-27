@@ -310,6 +310,17 @@ export const components = [
     dependencies: ["motion"],
   },
   {
+    name: "morphing-infinity",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/morphing-infinity.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
+  {
     name: "wave",
     type: "registry:component",
     files: [

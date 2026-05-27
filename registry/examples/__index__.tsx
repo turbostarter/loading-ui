@@ -1746,6 +1746,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "morphing-infinity-alert": {
+    name: "morphing-infinity-alert",
+    filePath: "registry/examples/morphing-infinity/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-card": {
+    name: "morphing-infinity-card",
+    filePath: "registry/examples/morphing-infinity/card.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-card";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-compact": {
+    name: "morphing-infinity-compact",
+    filePath: "registry/examples/morphing-infinity/compact.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/compact.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-compact";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-demo": {
+    name: "morphing-infinity-demo",
+    filePath: "registry/examples/morphing-infinity/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-tabs": {
+    name: "morphing-infinity-tabs",
+    filePath: "registry/examples/morphing-infinity/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-tabs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "orbit-ring-button": {
     name: "orbit-ring-button",
     filePath: "registry/examples/orbit-ring/button.tsx",

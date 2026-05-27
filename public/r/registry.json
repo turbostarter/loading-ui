@@ -358,6 +358,18 @@
       "type": "registry:component"
     },
     {
+      "name": "morphing-infinity",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/morphing-infinity.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "wave",
       "files": [
         {

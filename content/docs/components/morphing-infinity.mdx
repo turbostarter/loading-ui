@@ -1,0 +1,95 @@
+---
+title: Morphing infinity
+description: A circle-to-infinity morph with shimmering rotating copy.
+---
+
+`MorphingInfinity` pairs a morphing line icon with a small set of animated
+status words. It is a good fit for AI replies, drafting flows, planning states,
+and any interface where the wait state should feel deliberate instead of
+generic.
+
+<ComponentPreview name="morphing-infinity-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/morphing-infinity
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="morphing-infinity"
+  title="components/loading-ui/morphing-infinity.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { MorphingInfinity } from "@/components/loading-ui/morphing-infinity";
+```
+
+```tsx
+<MorphingInfinity />
+```
+
+## Customization
+
+The component follows the source animation closely: the circle-to-infinity icon
+morph, shimmer colors, rotating words, and timing are fixed. Use `className` to
+place it inside your surface or adjust padding around the status.
+
+### Compact
+
+Tighten padding when the indicator appears inside dense assistant panels,
+toolbars, or inline status rows.
+
+<ComponentPreview name="morphing-infinity-compact" />
+
+## Examples
+
+These examples place the morphing infinity in assistant-oriented surfaces where
+an animated status needs to remain visible without becoming a full-page loader.
+
+### Alert
+
+Alerts can pair the animated status with one concise line about the work in
+progress.
+
+<ComponentPreview name="morphing-infinity-alert" />
+
+### Card
+
+Cards keep the state attached to a specific assistant workspace or processing
+panel.
+
+<ComponentPreview name="morphing-infinity-card" />
+
+### Tabs
+
+Tabs work well when generated content and supporting material resolve at
+different moments.
+
+<ComponentPreview name="morphing-infinity-tabs" />

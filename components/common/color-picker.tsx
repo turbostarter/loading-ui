@@ -71,7 +71,7 @@ export const ColorPicker = ({
   return (
     <div
       className={cn(
-        "flex gap-2 md:gap-3 items-center justify-center",
+        "flex items-center justify-center gap-2 md:gap-3",
         className,
       )}
       {...props}
@@ -80,7 +80,7 @@ export const ColorPicker = ({
         <button
           key={colorName}
           className={cn(
-            "size-6 md:size-7 lg:size-8 rounded-full cursor-pointer ring-offset-background active:translate-y-px transition-transform ring-current",
+            "ring-offset-background size-6 cursor-pointer rounded-full ring-current transition-transform active:translate-y-px md:size-7 lg:size-8",
             {
               "ring-2 ring-offset-2": color === colorName,
             },

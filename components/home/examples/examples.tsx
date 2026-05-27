@@ -23,7 +23,7 @@ export const Examples = async () => {
 
   return (
     <ExamplesSection>
-      {tiles.map(tile => {
+      {tiles.map((tile) => {
         if (!tile) {
           return null;
         }
