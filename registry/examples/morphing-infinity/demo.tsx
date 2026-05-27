@@ -1,5 +1,5 @@
 import { MorphingInfinity } from "@/registry/components/loading-ui/morphing-infinity";
 
 export function MorphingInfinityDemo() {
-  return <MorphingInfinity />;
+  return <MorphingInfinity className="size-24" />;
 }

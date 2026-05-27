@@ -1,14 +1,14 @@
 ---
-title: Diamond spinner
+title: Diamond
 description: An 8-bit diamond loader with pixel-stepped opacity for retro-flavored waiting states.
 ---
 
-`DiamondSpinner` uses eight square pixels arranged around a diamond path, each
+`Diamond` uses eight square pixels arranged around a diamond path, each
 fading in sequence. It reads especially well in game-inspired interfaces,
 compact status surfaces, and loading states that want a little more character
 than a standard ring.
 
-<ComponentPreview name="diamond-spinner-demo" />
+<ComponentPreview name="diamond-demo" />
 
 ## Installation
 
@@ -21,7 +21,7 @@ than a standard ring.
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add @loading-ui/diamond-spinner
+npx shadcn@latest add @loading-ui/diamond
 ```
 
 </TabsContent>
@@ -32,10 +32,7 @@ npx shadcn@latest add @loading-ui/diamond-spinner
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource
-  name="diamond-spinner"
-  title="components/loading-ui/diamond-spinner.tsx"
-/>
+<ComponentSource name="diamond" title="components/loading-ui/diamond.tsx" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -48,16 +45,16 @@ npx shadcn@latest add @loading-ui/diamond-spinner
 ## Usage
 
 ```tsx
-import { DiamondSpinner } from "@/components/loading-ui/diamond-spinner";
+import { Diamond } from "@/components/loading-ui/diamond";
 ```
 
 ```tsx
-<DiamondSpinner />
+<Diamond />
 ```
 
 ## Customization
 
-`DiamondSpinner` keeps the original pixel choreography intact, so the main
+`Diamond` keeps the original pixel choreography intact, so the main
 controls are its overall `size-*` footprint and the foreground color it
 inherits via `currentColor`.
 
@@ -65,14 +62,14 @@ inherits via `currentColor`.
 
 Scale the SVG directly with `size-*` utilities.
 
-<ComponentPreview name="diamond-spinner-size" />
+<ComponentPreview name="diamond-size" />
 
 ### Color
 
 Apply text color utilities when you want the pixel diamond to match the tone of
 its parent surface or status state.
 
-<ComponentPreview name="diamond-spinner-color" />
+<ComponentPreview name="diamond-color" />
 
 ## Examples
 
@@ -84,18 +81,18 @@ legible without overpowering the rest of the interface.
 Use the diamond as an inline action icon when the loading state should feel
 playful but still precise.
 
-<ComponentPreview name="diamond-spinner-button" />
+<ComponentPreview name="diamond-button" />
 
 ### Badge
 
 Status chips are a natural fit because the compact square geometry stays crisp
 at small sizes.
 
-<ComponentPreview name="diamond-spinner-badge" />
+<ComponentPreview name="diamond-badge" />
 
 ### Alert
 
-In alerts, the diamond spinner gives longer-running system work a little more
+In alerts, the diamond loader gives longer-running system work a little more
 personality while staying compact.
 
-<ComponentPreview name="diamond-spinner-alert" />
+<ComponentPreview name="diamond-alert" />

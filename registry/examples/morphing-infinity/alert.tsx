@@ -9,14 +9,12 @@ import { MorphingInfinity } from "@/registry/components/loading-ui/morphing-infi
 export default function MorphingInfinityAlert() {
   return (
     <Alert className="w-full max-w-md">
-      <AlertMedia>
-        <span className="size-2 rounded-full bg-current" />
+      <AlertMedia className="size-6">
+        <MorphingInfinity className="-mt-2 size-6" />
       </AlertMedia>
-      <AlertTitle>
-        <MorphingInfinity className="-mx-3 -my-2" />
-      </AlertTitle>
+      <AlertTitle>Generating workspace summary</AlertTitle>
       <AlertDescription>
-        Generating a structured answer from the current workspace context.
+        The assistant is reviewing context before assembling a structured reply.
       </AlertDescription>
     </Alert>
   );

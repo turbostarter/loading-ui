@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { DiamondSpinner } from "@/registry/components/loading-ui/diamond-spinner";
+import { Diamond } from "@/registry/components/loading-ui/diamond";
 
-export default function DiamondSpinnerButton() {
+export default function DiamondButton() {
   return (
     <div className="flex flex-col items-center gap-4">
       <Button size="sm">
@@ -9,7 +9,7 @@ export default function DiamondSpinnerButton() {
           data-icon="inline-start"
           className="grid size-5 place-items-center"
         >
-          <DiamondSpinner className="size-4" />
+          <Diamond className="size-4" />
         </span>
         Syncing data
       </Button>
@@ -18,7 +18,7 @@ export default function DiamondSpinnerButton() {
           data-icon="inline-start"
           className="grid size-5 place-items-center"
         >
-          <DiamondSpinner className="size-4" />
+          <Diamond className="size-4" />
         </span>
         Rendering preview
       </Button>
@@ -27,7 +27,7 @@ export default function DiamondSpinnerButton() {
           data-icon="inline-start"
           className="grid size-5 place-items-center"
         >
-          <DiamondSpinner className="size-4" />
+          <Diamond className="size-4" />
         </span>
         Loading assets
       </Button>

@@ -6,13 +6,13 @@ import {
   AlertMedia,
   AlertTitle,
 } from "@/components/ui/alert";
-import { DiamondSpinner } from "@/registry/components/loading-ui/diamond-spinner";
+import { Diamond } from "@/registry/components/loading-ui/diamond";
 
-export default function DiamondSpinnerAlert() {
+export default function DiamondAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia className="size-6">
-        <DiamondSpinner className="size-4" />
+        <Diamond className="size-4" />
       </AlertMedia>
       <AlertTitle>Processing game state</AlertTitle>
       <AlertDescription>
