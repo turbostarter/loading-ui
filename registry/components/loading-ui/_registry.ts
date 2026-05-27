@@ -258,6 +258,16 @@ export const components = [
     dependencies: ["motion"],
   },
   {
+    name: "diamond-spinner",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/diamond-spinner.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "triple-dot-spinner",
     type: "registry:component",
     files: [

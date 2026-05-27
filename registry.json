@@ -301,6 +301,17 @@
       "type": "registry:component"
     },
     {
+      "name": "diamond-spinner",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/diamond-spinner.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "triple-dot-spinner",
       "files": [
         {
