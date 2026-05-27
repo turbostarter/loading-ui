@@ -1,0 +1,101 @@
+---
+title: Diamond spinner
+description: An 8-bit diamond loader with pixel-stepped opacity for retro-flavored waiting states.
+---
+
+`DiamondSpinner` uses eight square pixels arranged around a diamond path, each
+fading in sequence. It reads especially well in game-inspired interfaces,
+compact status surfaces, and loading states that want a little more character
+than a standard ring.
+
+<ComponentPreview name="diamond-spinner-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/diamond-spinner
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="diamond-spinner"
+  title="components/loading-ui/diamond-spinner.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { DiamondSpinner } from "@/components/loading-ui/diamond-spinner";
+```
+
+```tsx
+<DiamondSpinner />
+```
+
+## Customization
+
+`DiamondSpinner` keeps the original pixel choreography intact, so the main
+controls are its overall `size-*` footprint and the foreground color it
+inherits via `currentColor`.
+
+### Size
+
+Scale the SVG directly with `size-*` utilities.
+
+<ComponentPreview name="diamond-spinner-size" />
+
+### Color
+
+Apply text color utilities when you want the pixel diamond to match the tone of
+its parent surface or status state.
+
+<ComponentPreview name="diamond-spinner-color" />
+
+## Examples
+
+These examples focus on compact UI where the retro diamond shape can stay
+legible without overpowering the rest of the interface.
+
+### Button
+
+Use the diamond as an inline action icon when the loading state should feel
+playful but still precise.
+
+<ComponentPreview name="diamond-spinner-button" />
+
+### Badge
+
+Status chips are a natural fit because the compact square geometry stays crisp
+at small sizes.
+
+<ComponentPreview name="diamond-spinner-badge" />
+
+### Alert
+
+In alerts, the diamond spinner gives longer-running system work a little more
+personality while staying compact.
+
+<ComponentPreview name="diamond-spinner-alert" />
