@@ -258,16 +258,6 @@ export const components = [
     dependencies: ["motion"],
   },
   {
-    name: "diamond-spinner",
-    type: "registry:component",
-    files: [
-      {
-        path: "components/loading-ui/diamond-spinner.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
     name: "triple-dot-spinner",
     type: "registry:component",
     files: [
@@ -320,6 +310,37 @@ export const components = [
     dependencies: ["motion"],
   },
   {
+    name: "morphing-infinity",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/morphing-infinity.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
+  {
+    name: "infinity",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/infinity.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "diamond",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/diamond.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "wave",
     type: "registry:component",
     files: [
@@ -367,16 +388,6 @@ export const components = [
     files: [
       {
         path: "components/loading-ui/terminal.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "infinity",
-    type: "registry:component",
-    files: [
-      {
-        path: "components/loading-ui/infinity.tsx",
         type: "registry:component",
       },
     ],

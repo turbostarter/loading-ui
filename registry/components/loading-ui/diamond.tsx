@@ -1,16 +1,8 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
-
-const DiamondSpinner = React.forwardRef<
-  SVGSVGElement,
-  React.ComponentProps<"svg">
->(({ className, ...props }, ref) => {
+function Diamond(props: React.ComponentProps<"svg">) {
   return (
     <svg
-      ref={ref}
       viewBox="0 0 20 20"
       fill="currentColor"
-      className={cn("size-4", className)}
       role="status"
       aria-label="Loading"
       {...props}
@@ -50,8 +42,6 @@ const DiamondSpinner = React.forwardRef<
       <rect className="pixel-8" x="4" y="4" width="4" height="4" />
     </svg>
   );
-});
+}
 
-DiamondSpinner.displayName = "DiamondSpinner";
-
-export { DiamondSpinner };
+export { Diamond };

@@ -1,19 +1,19 @@
 import { Badge } from "@/components/ui/badge";
-import { DiamondSpinner } from "@/registry/components/loading-ui/diamond-spinner";
+import { Diamond } from "@/registry/components/loading-ui/diamond";
 
-export default function DiamondSpinnerBadge() {
+export default function DiamondBadge() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-3">
       <Badge>
-        <DiamondSpinner className="size-3.5" />
+        <Diamond className="size-3.5" />
         Encoding
       </Badge>
       <Badge variant="secondary">
-        <DiamondSpinner className="size-3.5" />
+        <Diamond className="size-3.5" />
         Queued
       </Badge>
       <Badge variant="outline">
-        <DiamondSpinner className="size-3.5" />
+        <Diamond className="size-3.5" />
         Processing
       </Badge>
     </div>

@@ -1122,81 +1122,81 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "diamond-spinner-alert": {
-    name: "diamond-spinner-alert",
-    filePath: "registry/examples/diamond-spinner/alert.tsx",
+  "diamond-alert": {
+    name: "diamond-alert",
+    filePath: "registry/examples/diamond/alert.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./diamond-spinner/alert.tsx");
+      const mod = await import("./diamond/alert.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "diamond-spinner-alert";
+        ) || "diamond-alert";
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "diamond-spinner-badge": {
-    name: "diamond-spinner-badge",
-    filePath: "registry/examples/diamond-spinner/badge.tsx",
+  "diamond-badge": {
+    name: "diamond-badge",
+    filePath: "registry/examples/diamond/badge.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./diamond-spinner/badge.tsx");
+      const mod = await import("./diamond/badge.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "diamond-spinner-badge";
+        ) || "diamond-badge";
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "diamond-spinner-button": {
-    name: "diamond-spinner-button",
-    filePath: "registry/examples/diamond-spinner/button.tsx",
+  "diamond-button": {
+    name: "diamond-button",
+    filePath: "registry/examples/diamond/button.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./diamond-spinner/button.tsx");
+      const mod = await import("./diamond/button.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "diamond-spinner-button";
+        ) || "diamond-button";
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "diamond-spinner-color": {
-    name: "diamond-spinner-color",
-    filePath: "registry/examples/diamond-spinner/color.tsx",
+  "diamond-color": {
+    name: "diamond-color",
+    filePath: "registry/examples/diamond/color.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./diamond-spinner/color.tsx");
+      const mod = await import("./diamond/color.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "diamond-spinner-color";
+        ) || "diamond-color";
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "diamond-spinner-demo": {
-    name: "diamond-spinner-demo",
-    filePath: "registry/examples/diamond-spinner/demo.tsx",
+  "diamond-demo": {
+    name: "diamond-demo",
+    filePath: "registry/examples/diamond/demo.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./diamond-spinner/demo.tsx");
+      const mod = await import("./diamond/demo.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "diamond-spinner-demo";
+        ) || "diamond-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
-  "diamond-spinner-size": {
-    name: "diamond-spinner-size",
-    filePath: "registry/examples/diamond-spinner/size.tsx",
+  "diamond-size": {
+    name: "diamond-size",
+    filePath: "registry/examples/diamond/size.tsx",
     component: React.lazy(async () => {
-      const mod = await import("./diamond-spinner/size.tsx");
+      const mod = await import("./diamond/size.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
-        ) || "diamond-spinner-size";
+        ) || "diamond-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -1821,6 +1821,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "infinity-stroke-width";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-alert": {
+    name: "morphing-infinity-alert",
+    filePath: "registry/examples/morphing-infinity/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-card": {
+    name: "morphing-infinity-card",
+    filePath: "registry/examples/morphing-infinity/card.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-card";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-compact": {
+    name: "morphing-infinity-compact",
+    filePath: "registry/examples/morphing-infinity/compact.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/compact.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-compact";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-demo": {
+    name: "morphing-infinity-demo",
+    filePath: "registry/examples/morphing-infinity/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "morphing-infinity-tabs": {
+    name: "morphing-infinity-tabs",
+    filePath: "registry/examples/morphing-infinity/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./morphing-infinity/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },

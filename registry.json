@@ -301,17 +301,6 @@
       "type": "registry:component"
     },
     {
-      "name": "diamond-spinner",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/diamond-spinner.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
       "name": "triple-dot-spinner",
       "files": [
         {
@@ -369,6 +358,40 @@
       "type": "registry:component"
     },
     {
+      "name": "morphing-infinity",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/morphing-infinity.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "infinity",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/infinity.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "diamond",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/diamond.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "wave",
       "files": [
         {
@@ -418,17 +441,6 @@
       "files": [
         {
           "path": "registry/components/loading-ui/terminal.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "infinity",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/infinity.tsx",
           "type": "registry:component",
           "target": ""
         }
