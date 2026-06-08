@@ -19,7 +19,7 @@ export const SponsorCard = ({
     <a
       href={sponsor.url}
       target="_blank"
-      rel="noreferrer noopener"
+      rel="noopener"
       className="group/sponsor bg-background hover:bg-accent transition-colors"
       onClick={() =>
         track("sponsor_clicked", { sponsor: sponsor.name, source: "sponsors" })
@@ -42,7 +42,7 @@ export const SponsorCard = ({
               alt={sponsor.name}
               width={332}
               height={122}
-              className="w-full object-contain"
+              className="w-full object-cover"
             />
           </div>
         )}
@@ -139,7 +139,7 @@ export const TierHeader = ({ tier }: { tier: SponsorTier }) => {
 };
 
 export const SponsorsGrid = ({ tier }: { tier: SponsorTier }) => {
-  return SPONSORS[tier].map((sponsor) => (
+  return SPONSORS[tier].map(sponsor => (
     <SponsorCard key={sponsor.id} tier={tier} sponsor={sponsor} />
   ));
 };

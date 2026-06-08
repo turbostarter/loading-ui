@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { source } from "@/lib/source";
 import { MobileNav } from "@/components/common/header/mobile-nav";
-import { TurbostarterButton } from "@/components/home/sponsors/turbostarter";
+import { DiamondSponsorHeaderCta } from "@/components/home/sponsors/diamond";
 
 export const Header = () => {
   return (
@@ -31,7 +31,7 @@ export const Header = () => {
         <div className="flex flex-auto items-center justify-end md:gap-2">
           <Search className="hidden md:flex" />
           <GitHub />
-          <TurbostarterButton className="hidden md:flex" />
+          <DiamondSponsorHeaderCta className="hidden md:flex" />
           <ThemeSwitcher />
           <MobileNav
             tree={source.pageTree}

@@ -2,7 +2,6 @@
 
 import { Icons } from "@/components/common/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { TURBOSTARTER_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { track } from "@vercel/analytics";
 
@@ -11,7 +10,7 @@ export const TurbostarterButton = ({
   ...props
 }: React.HTMLAttributes<HTMLAnchorElement>) => (
   <a
-    href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
+    href="https://www.turbostarter.dev?utm_source=loading-ui&utm_medium=referral"
     target="_blank"
     className={cn(
       "border-border text-foreground hover:bg-accent flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors",
@@ -19,7 +18,7 @@ export const TurbostarterButton = ({
     )}
     onClick={() =>
       track("sponsor_clicked", {
-        sponsor: "turbostarter",
+        sponsor: "TurboStarter",
         source: "header",
       })
     }
@@ -56,7 +55,7 @@ export function TurbostarterSidebarCta({
         Try TurboStarter
       </Button>
       <a
-        href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
+        href="https://www.turbostarter.dev?utm_source=loading-ui&utm_medium=referral"
         target="_blank"
         className="absolute inset-0"
         onClick={() =>
@@ -78,7 +77,7 @@ export const TurboStarterMobileNavCta = ({
 }: React.ComponentProps<"a">) => {
   return (
     <a
-      href={`${TURBOSTARTER_URL}&utm_source=loading-ui&utm_medium=referral`}
+      href="https://www.turbostarter.dev?utm_source=loading-ui&utm_medium=referral"
       target="_blank"
       onClick={() =>
         track("sponsor_clicked", {

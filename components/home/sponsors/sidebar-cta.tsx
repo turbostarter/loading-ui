@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export const SponsorsSidebarCta = () => {
   return (
-    <div className="group bg-surface/50 text-surface-foreground relative flex flex-col gap-4 border-y px-6 py-5 text-sm">
+    <div className="group text-surface-foreground relative flex flex-col gap-4 border-y px-6 py-5 text-sm">
       <div className="flex items-baseline justify-between">
         <span className="leading-tight font-medium tracking-tight">
           Sponsors
@@ -43,7 +43,7 @@ export const SponsorsSidebarCta = () => {
                     "grid-cols-3": tier === "silver",
                   })}
                 >
-                  {sponsors.map((sponsor) => (
+                  {sponsors.map(sponsor => (
                     <li key={sponsor.id}>
                       <a
                         href={sponsor.url}
@@ -58,7 +58,7 @@ export const SponsorsSidebarCta = () => {
                         }
                       >
                         {"sm" in sponsor.image ? (
-                          <sponsor.image.sm className="h-full px-3 py-2" />
+                          <sponsor.image.sm className="h-full px-3 py-2 text-foreground" />
                         ) : (
                           <div className="flex h-full w-full items-center justify-center px-4">
                             <ThemedImage
