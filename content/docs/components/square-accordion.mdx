@@ -1,0 +1,84 @@
+---
+title: Square Accordion
+description: A square unicode track that pauses at each corner so the trailing blocks collapse behind the lead.
+---
+
+`SquareAccordion` follows the same square edge as `SquareGrid`, but its timeline
+holds at each corner to create an accordion-like trail collapse.
+
+<ComponentPreview name="square-accordion-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/square-accordion
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="square-accordion"
+  title="components/loading-ui/square-accordion.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { SquareAccordion } from "@/components/loading-ui/square-accordion";
+```
+
+```tsx
+<SquareAccordion />
+```
+
+## Customization
+
+Use `size`, `blocks`, and `track` for the grid shape, and tune `--duration`,
+`--delay`, and `--mask-color` for motion and surface matching.
+
+### Size
+
+Increase the grid cells and text scale for larger square loaders.
+
+<ComponentPreview name="square-accordion-size" />
+
+### Color
+
+Apply text color utilities to recolor both the track and trail.
+
+<ComponentPreview name="square-accordion-color" />
+
+### Duration
+
+Set `--duration` to change the travel-and-pause cycle.
+
+<ComponentPreview name="square-accordion-duration" />
+
+### Glyphs
+
+Swap the track and moving blocks, and set `--mask-color` for non-default
+surfaces.
+
+<ComponentPreview name="square-accordion-glyphs" />

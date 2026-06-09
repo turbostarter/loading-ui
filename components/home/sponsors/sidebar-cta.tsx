@@ -43,7 +43,7 @@ export const SponsorsSidebarCta = () => {
                     "grid-cols-3": tier === "silver",
                   })}
                 >
-                  {sponsors.map(sponsor => (
+                  {sponsors.map((sponsor) => (
                     <li key={sponsor.id}>
                       <a
                         href={sponsor.url}
@@ -58,7 +58,7 @@ export const SponsorsSidebarCta = () => {
                         }
                       >
                         {"sm" in sponsor.image ? (
-                          <sponsor.image.sm className="h-full px-3 py-2 text-foreground" />
+                          <sponsor.image.sm className="text-foreground h-full px-3 py-2" />
                         ) : (
                           <div className="flex h-full w-full items-center justify-center px-4">
                             <ThemedImage

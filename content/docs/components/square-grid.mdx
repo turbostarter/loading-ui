@@ -1,0 +1,85 @@
+---
+title: Square Grid
+description: A tracked unicode square path with a block trail orbiting the outer edge.
+---
+
+`SquareGrid` renders a monospace square track and masks the moving glyphs against
+the current surface. The grid size is configurable while the animation stays in
+`ch` units.
+
+<ComponentPreview name="square-grid-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/square-grid
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="square-grid"
+  title="components/loading-ui/square-grid.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { SquareGrid } from "@/components/loading-ui/square-grid";
+```
+
+```tsx
+<SquareGrid />
+```
+
+## Customization
+
+Use `size` for the number of cells per side, `blocks` and `track` for unicode
+characters, and `--duration`, `--delay`, or `--mask-color` for timing and
+surface matching.
+
+### Size
+
+Change both text scale and the number of grid cells.
+
+<ComponentPreview name="square-grid-size" />
+
+### Color
+
+The track and moving glyphs inherit foreground color.
+
+<ComponentPreview name="square-grid-color" />
+
+### Duration
+
+Set `--duration` for slower or faster square travel.
+
+<ComponentPreview name="square-grid-duration" />
+
+### Glyphs
+
+Use alternate glyphs and provide `--mask-color` on tinted surfaces.
+
+<ComponentPreview name="square-grid-glyphs" />

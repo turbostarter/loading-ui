@@ -1,0 +1,83 @@
+---
+title: Square Snake
+description: A four-glyph unicode snake moving around a square path without a visible track.
+---
+
+`SquareSnake` traces the square path with delayed unicode glyphs instead of a
+separate static track, which makes it useful on dense or colored surfaces.
+
+<ComponentPreview name="square-snake-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/square-snake
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="square-snake"
+  title="components/loading-ui/square-snake.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { SquareSnake } from "@/components/loading-ui/square-snake";
+```
+
+```tsx
+<SquareSnake />
+```
+
+## Customization
+
+Use `size` for the square path, `blocks` for the four moving glyphs, and
+`--duration` or `--delay` for animation timing.
+
+### Size
+
+Change the path cell count and text scale together.
+
+<ComponentPreview name="square-snake-size" />
+
+### Color
+
+The snake inherits foreground color.
+
+<ComponentPreview name="square-snake-color" />
+
+### Duration
+
+Set `--duration` to tune the loop speed.
+
+<ComponentPreview name="square-snake-duration" />
+
+### Glyphs
+
+Provide four glyphs to change the lead, trail, and final tail character.
+
+<ComponentPreview name="square-snake-glyphs" />

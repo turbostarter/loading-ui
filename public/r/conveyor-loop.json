@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "conveyor-loop",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/conveyor-loop.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nconst CONVEYOR_LOOP_BLOCKS = [\"█\", \"▓\", \"▒\"] as const;\n\ntype ConveyorLoopProps = React.ComponentProps<\"span\"> & {\n  blocks?: readonly string[];\n  track?: string;\n  trackLength?: number;\n};\n\nfunction ConveyorLoop({\n  className,\n  blocks = CONVEYOR_LOOP_BLOCKS,\n  track = \"░\",\n  trackLength = 10,\n  style,\n  ...props\n}: ConveyorLoopProps) {\n  const columns = Math.max(2, Math.floor(trackLength));\n  const glyphs = CONVEYOR_LOOP_BLOCKS.map(\n    (_, index) => blocks[index] ?? CONVEYOR_LOOP_BLOCKS[index],\n  );\n  const tailOffset = glyphs.length - 1;\n\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-conveyor-loop {\n          0% {\n            transform: translateX(var(--loader-start-x));\n          }\n\n          100% {\n            transform: translateX(var(--loader-end-x));\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\n          \"relative inline-flex h-[1em] w-[var(--loader-width)] items-center overflow-hidden font-mono text-xl leading-none text-current select-none\",\n          className,\n        )}\n        style={\n          {\n            \"--loader-width\": `${columns}ch`,\n            \"--loader-start-x\": `-${tailOffset}ch`,\n            \"--loader-end-x\": `${columns + tailOffset}ch`,\n            ...style,\n          } as React.CSSProperties\n        }\n        {...props}\n      >\n        <span\n          aria-hidden=\"true\"\n          className=\"pointer-events-none absolute inset-0 whitespace-nowrap\"\n        >\n          {track.repeat(columns)}\n        </span>\n        {glyphs.map((glyph, index) => (\n          <span\n            key={`${glyph}-${index}`}\n            aria-hidden=\"true\"\n            className={cn(\n              \"pointer-events-none absolute top-0 left-0 flex h-full w-[1ch] items-center justify-center text-center\",\n              [\"z-30\", \"z-20\", \"z-10\"][index],\n            )}\n            style={{\n              animation:\n                \"loading-ui-conveyor-loop var(--duration, 1.8s) linear infinite\",\n              animationDelay: `calc(var(--delay, 0.05s) * ${index})`,\n              backgroundColor: \"var(--mask-color, var(--background))\",\n            }}\n          >\n            {glyph}\n          </span>\n        ))}\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { ConveyorLoop };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

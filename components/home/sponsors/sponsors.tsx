@@ -139,7 +139,7 @@ export const TierHeader = ({ tier }: { tier: SponsorTier }) => {
 };
 
 export const SponsorsGrid = ({ tier }: { tier: SponsorTier }) => {
-  return SPONSORS[tier].map(sponsor => (
+  return SPONSORS[tier].map((sponsor) => (
     <SponsorCard key={sponsor.id} tier={tier} sponsor={sponsor} />
   ));
 };
