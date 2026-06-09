@@ -9,7 +9,7 @@ const STORAGE_KEY = "diamond-sponsor-id";
 function getOrPickDiamondSponsor(): Sponsor {
   const sponsors = SPONSORS.diamond;
   const stored = sessionStorage.getItem(STORAGE_KEY);
-  const existing = sponsors.find(sponsor => sponsor.id === stored);
+  const existing = sponsors.find((sponsor) => sponsor.id === stored);
 
   if (existing) {
     return existing;

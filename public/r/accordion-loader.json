@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-loader",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/accordion-loader.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nconst ACCORDION_LOADER_BLOCKS = [\"█\", \"▓\", \"▒\"] as const;\n\ntype AccordionLoaderProps = React.ComponentProps<\"span\"> & {\n  blocks?: readonly string[];\n  track?: string;\n  trackLength?: number;\n};\n\nfunction AccordionLoader({\n  className,\n  blocks = ACCORDION_LOADER_BLOCKS,\n  track = \"░\",\n  trackLength = 16,\n  style,\n  ...props\n}: AccordionLoaderProps) {\n  const columns = Math.max(2, Math.floor(trackLength));\n  const glyphs = ACCORDION_LOADER_BLOCKS.map(\n    (_, index) => blocks[index] ?? ACCORDION_LOADER_BLOCKS[index],\n  );\n\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-accordion-loader {\n          0%,\n          100% {\n            transform: translateX(0);\n          }\n\n          50% {\n            transform: translateX(var(--loader-x));\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\n          \"relative inline-flex h-[1em] w-[var(--loader-width)] items-center overflow-hidden font-mono text-xl leading-none text-current select-none\",\n          className,\n        )}\n        style={\n          {\n            \"--loader-width\": `${columns}ch`,\n            \"--loader-x\": `${columns - 1}ch`,\n            ...style,\n          } as React.CSSProperties\n        }\n        {...props}\n      >\n        <span\n          aria-hidden=\"true\"\n          className=\"pointer-events-none absolute inset-0 whitespace-nowrap\"\n        >\n          {track.repeat(columns)}\n        </span>\n        {glyphs.map((glyph, index) => (\n          <span\n            key={`${glyph}-${index}`}\n            aria-hidden=\"true\"\n            className={cn(\n              \"pointer-events-none absolute top-0 left-0 flex h-full w-[1ch] items-center justify-center text-center\",\n              [\"z-30\", \"z-20\", \"z-10\"][index],\n            )}\n            style={{\n              animation:\n                \"loading-ui-accordion-loader var(--duration, 2.8s) ease-in-out infinite\",\n              animationDelay: `calc(var(--delay, 0.04s) * ${index})`,\n              backgroundColor: \"var(--mask-color, var(--background))\",\n            }}\n          >\n            {glyph}\n          </span>\n        ))}\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { AccordionLoader };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

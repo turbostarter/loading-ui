@@ -1,0 +1,88 @@
+---
+title: Accordion Loader
+description: A bidirectional unicode block trail that stretches across a static character track.
+---
+
+`AccordionLoader` uses a monospace track, staggered block glyphs, and a
+surface-aware mask color so the moving trail cuts cleanly through the track.
+
+<ComponentPreview name="accordion-loader-demo" />
+
+Credits to [shaah1d](https://x.com/shaah1d) for creating the initial animation.
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/accordion-loader
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="accordion-loader"
+  title="components/loading-ui/accordion-loader.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { AccordionLoader } from "@/components/loading-ui/accordion-loader";
+```
+
+```tsx
+<AccordionLoader />
+```
+
+## Customization
+
+Use `trackLength` for the measured text track, `blocks` and `track` for the
+unicode glyphs, and CSS variables such as `--duration`, `--delay`, and
+`--mask-color` for motion and surface matching.
+
+### Size
+
+The loader is sized in `ch` units. Combine `trackLength` with text-size
+utilities to change both geometry and scale.
+
+<ComponentPreview name="accordion-loader-size" />
+
+### Color
+
+Foreground color controls the track and the moving block trail.
+
+<ComponentPreview name="accordion-loader-color" />
+
+### Duration
+
+Set `--duration` for faster or slower accordion motion.
+
+<ComponentPreview name="accordion-loader-duration" />
+
+### Glyphs
+
+Swap the unicode characters and set `--mask-color` when the loader sits on a
+non-default surface.
+
+<ComponentPreview name="accordion-loader-glyphs" />

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "infinity-square-snake",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/infinity-square-snake.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nconst INFINITY_SQUARE_SNAKE_BLOCKS = [\"█\", \"▓\", \"▒\", \"░\"] as const;\n\ntype InfinitySquareSnakeProps = React.ComponentProps<\"span\"> & {\n  blocks?: readonly string[];\n};\n\nfunction InfinitySquareSnake({\n  className,\n  blocks = INFINITY_SQUARE_SNAKE_BLOCKS,\n  ...props\n}: InfinitySquareSnakeProps) {\n  const glyphs = INFINITY_SQUARE_SNAKE_BLOCKS.map(\n    (_, index) => blocks[index] ?? INFINITY_SQUARE_SNAKE_BLOCKS[index],\n  );\n\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-infinity-square-snake {\n          0%,\n          100% {\n            transform: translate(4ch, 0);\n          }\n\n          12.5% {\n            transform: translate(0, 0);\n          }\n\n          25% {\n            transform: translate(0, 4ch);\n          }\n\n          37.5% {\n            transform: translate(4ch, 4ch);\n          }\n\n          50% {\n            transform: translate(4ch, 0);\n          }\n\n          62.5% {\n            transform: translate(8ch, 0);\n          }\n\n          75% {\n            transform: translate(8ch, 4ch);\n          }\n\n          87.5% {\n            transform: translate(4ch, 4ch);\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\n          \"relative inline-flex h-[5ch] w-[9ch] overflow-hidden font-mono text-xl leading-none text-current select-none\",\n          className,\n        )}\n        {...props}\n      >\n        {glyphs.map((glyph, index) => (\n          <span\n            key={`${glyph}-${index}`}\n            aria-hidden=\"true\"\n            className=\"pointer-events-none absolute top-0 left-0 flex h-[1ch] w-[1ch] items-center justify-center\"\n            style={{\n              animation:\n                \"loading-ui-infinity-square-snake var(--duration, 3.2s) linear infinite\",\n              animationDelay: `calc(var(--delay, 0.1s) * -${glyphs.length - 1 - index})`,\n            }}\n          >\n            {glyph}\n          </span>\n        ))}\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { InfinitySquareSnake };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

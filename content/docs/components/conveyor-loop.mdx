@@ -1,0 +1,86 @@
+---
+title: Conveyor Loop
+description: A one-way unicode block trail that wraps across a fixed text track.
+---
+
+`ConveyorLoop` moves a staggered block trail from left to right across a static
+unicode track, then wraps back around without reversing direction.
+
+<ComponentPreview name="conveyor-loop-demo" />
+
+Credits to [shaah1d](https://x.com/shaah1d) for creating the initial animation.
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/conveyor-loop
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="conveyor-loop"
+  title="components/loading-ui/conveyor-loop.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ConveyorLoop } from "@/components/loading-ui/conveyor-loop";
+```
+
+```tsx
+<ConveyorLoop />
+```
+
+## Customization
+
+Use `trackLength`, `blocks`, and `track` to change the rail. The motion uses
+`--duration` and `--delay`, while `--mask-color` controls how the moving glyphs
+cut through the track.
+
+### Size
+
+Adjust `trackLength` with text-size utilities for different track widths.
+
+<ComponentPreview name="conveyor-loop-size" />
+
+### Color
+
+The conveyor inherits text color.
+
+<ComponentPreview name="conveyor-loop-color" />
+
+### Duration
+
+Set `--duration` to make the conveyor faster or more deliberate.
+
+<ComponentPreview name="conveyor-loop-duration" />
+
+### Glyphs
+
+Use alternate unicode characters and set `--mask-color` for tinted surfaces.
+
+<ComponentPreview name="conveyor-loop-glyphs" />

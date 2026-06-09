@@ -1,0 +1,85 @@
+---
+title: Symmetric Wave
+description: A mirrored unicode wave that pulses inward and outward along a ten-cell track.
+---
+
+`SymmetricWave` keeps the source page's mirrored opacity timeline while exposing
+the visible block and background track glyphs as props.
+
+<ComponentPreview name="symmetric-wave-demo" />
+
+Credits to [shaah1d](https://x.com/shaah1d) for creating the initial animation.
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/symmetric-wave
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="symmetric-wave"
+  title="components/loading-ui/symmetric-wave.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { SymmetricWave } from "@/components/loading-ui/symmetric-wave";
+```
+
+```tsx
+<SymmetricWave />
+```
+
+## Customization
+
+Use `block` and `track` for the glyphs. The component inherits text color and
+accepts `--duration` for the opacity wave timing.
+
+### Size
+
+Scale the wave with text-size utilities.
+
+<ComponentPreview name="symmetric-wave-size" />
+
+### Color
+
+Color comes from `currentColor`, so text utilities are the main control.
+
+<ComponentPreview name="symmetric-wave-color" />
+
+### Duration
+
+Set `--duration` to change how quickly the mirrored wave collapses and expands.
+
+<ComponentPreview name="symmetric-wave-duration" />
+
+### Glyphs
+
+Replace the leading block and static track independently.
+
+<ComponentPreview name="symmetric-wave-glyphs" />

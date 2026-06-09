@@ -1,0 +1,85 @@
+---
+title: Infinity Track
+description: A tracked infinity loader made from monospace unicode cells and staggered block masks.
+---
+
+`InfinityTrack` combines a static unicode infinity track with staggered moving
+block masks. It is the tracked counterpart to `InfinitySquareSnake`.
+
+<ComponentPreview name="infinity-track-demo" />
+
+Credits to [shaah1d](https://x.com/shaah1d) for creating the initial animation.
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/infinity-track
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="infinity-track"
+  title="components/loading-ui/infinity-track.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { InfinityTrack } from "@/components/loading-ui/infinity-track";
+```
+
+```tsx
+<InfinityTrack />
+```
+
+## Customization
+
+Use `blocks` and `track` for unicode glyphs. The path scales with text size, and
+`--duration`, `--delay`, and `--mask-color` control motion and surface matching.
+
+### Size
+
+Scale the tracked infinity path with text-size utilities.
+
+<ComponentPreview name="infinity-track-size" />
+
+### Color
+
+The track and moving glyphs inherit text color.
+
+<ComponentPreview name="infinity-track-color" />
+
+### Duration
+
+Set `--duration` to tune the infinity loop.
+
+<ComponentPreview name="infinity-track-duration" />
+
+### Glyphs
+
+Swap glyphs and set `--mask-color` when the loader sits on a tinted surface.
+
+<ComponentPreview name="infinity-track-glyphs" />

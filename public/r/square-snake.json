@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "square-snake",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/square-snake.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nconst SQUARE_SNAKE_BLOCKS = [\"█\", \"▓\", \"▒\", \"░\"] as const;\n\ntype SquareSnakeProps = React.ComponentProps<\"span\"> & {\n  blocks?: readonly string[];\n  size?: number;\n};\n\nfunction SquareSnake({\n  className,\n  blocks = SQUARE_SNAKE_BLOCKS,\n  size = 5,\n  style,\n  ...props\n}: SquareSnakeProps) {\n  const cells = Math.max(2, Math.floor(size));\n  const glyphs = SQUARE_SNAKE_BLOCKS.map(\n    (_, index) => blocks[index] ?? SQUARE_SNAKE_BLOCKS[index],\n  );\n\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-square-snake {\n          0%,\n          100% {\n            transform: translate(0, 0);\n          }\n\n          25% {\n            transform: translate(var(--loader-x), 0);\n          }\n\n          50% {\n            transform: translate(var(--loader-x), var(--loader-y));\n          }\n\n          75% {\n            transform: translate(0, var(--loader-y));\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\n          \"relative inline-flex h-[var(--loader-size)] w-[var(--loader-size)] overflow-hidden font-mono text-xl leading-none text-current select-none\",\n          className,\n        )}\n        style={\n          {\n            \"--loader-size\": `${cells}ch`,\n            \"--loader-x\": `${cells - 1}ch`,\n            \"--loader-y\": `${cells - 1}ch`,\n            ...style,\n          } as React.CSSProperties\n        }\n        {...props}\n      >\n        {glyphs.map((glyph, index) => (\n          <span\n            key={`${glyph}-${index}`}\n            aria-hidden=\"true\"\n            className=\"pointer-events-none absolute top-0 left-0 flex h-[1ch] w-[1ch] items-center justify-center\"\n            style={{\n              animation:\n                \"loading-ui-square-snake var(--duration, 2s) linear infinite\",\n              animationDelay: `calc(var(--delay, 0.125s) * -${glyphs.length - 1 - index})`,\n            }}\n          >\n            {glyph}\n          </span>\n        ))}\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { SquareSnake };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

@@ -4,6 +4,71 @@
 import * as React from "react";
 
 export const ExamplesIndex: Record<string, Record<string, any>> = {
+  "accordion-loader-color": {
+    name: "accordion-loader-color",
+    filePath: "registry/examples/accordion-loader/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./accordion-loader/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "accordion-loader-demo": {
+    name: "accordion-loader-demo",
+    filePath: "registry/examples/accordion-loader/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./accordion-loader/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "accordion-loader-duration": {
+    name: "accordion-loader-duration",
+    filePath: "registry/examples/accordion-loader/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./accordion-loader/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "accordion-loader-glyphs": {
+    name: "accordion-loader-glyphs",
+    filePath: "registry/examples/accordion-loader/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./accordion-loader/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "accordion-loader-size": {
+    name: "accordion-loader-size",
+    filePath: "registry/examples/accordion-loader/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./accordion-loader/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "analyzing-image-badge": {
     name: "analyzing-image-badge",
     filePath: "registry/examples/analyzing-image/badge.tsx",
@@ -1018,6 +1083,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "conveyor-loop-color": {
+    name: "conveyor-loop-color",
+    filePath: "registry/examples/conveyor-loop/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./conveyor-loop/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "conveyor-loop-demo": {
+    name: "conveyor-loop-demo",
+    filePath: "registry/examples/conveyor-loop/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./conveyor-loop/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "conveyor-loop-duration": {
+    name: "conveyor-loop-duration",
+    filePath: "registry/examples/conveyor-loop/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./conveyor-loop/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "conveyor-loop-glyphs": {
+    name: "conveyor-loop-glyphs",
+    filePath: "registry/examples/conveyor-loop/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./conveyor-loop/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "conveyor-loop-size": {
+    name: "conveyor-loop-size",
+    filePath: "registry/examples/conveyor-loop/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./conveyor-loop/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dash-ring-alert": {
     name: "dash-ring-alert",
     filePath: "registry/examples/dash-ring/alert.tsx",
@@ -1704,6 +1834,136 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "fade-arc-tabs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-square-snake-color": {
+    name: "infinity-square-snake-color",
+    filePath: "registry/examples/infinity-square-snake/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-square-snake/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-square-snake-demo": {
+    name: "infinity-square-snake-demo",
+    filePath: "registry/examples/infinity-square-snake/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-square-snake/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-square-snake-duration": {
+    name: "infinity-square-snake-duration",
+    filePath: "registry/examples/infinity-square-snake/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-square-snake/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-square-snake-glyphs": {
+    name: "infinity-square-snake-glyphs",
+    filePath: "registry/examples/infinity-square-snake/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-square-snake/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-square-snake-size": {
+    name: "infinity-square-snake-size",
+    filePath: "registry/examples/infinity-square-snake/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-square-snake/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-track-color": {
+    name: "infinity-track-color",
+    filePath: "registry/examples/infinity-track/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-track/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-track-demo": {
+    name: "infinity-track-demo",
+    filePath: "registry/examples/infinity-track/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-track/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-track-duration": {
+    name: "infinity-track-duration",
+    filePath: "registry/examples/infinity-track/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-track/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-track-glyphs": {
+    name: "infinity-track-glyphs",
+    filePath: "registry/examples/infinity-track/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-track/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-track-size": {
+    name: "infinity-track-size",
+    filePath: "registry/examples/infinity-track/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-track/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -3150,6 +3410,201 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "square-accordion-color": {
+    name: "square-accordion-color",
+    filePath: "registry/examples/square-accordion/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-accordion/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-accordion-demo": {
+    name: "square-accordion-demo",
+    filePath: "registry/examples/square-accordion/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-accordion/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-accordion-duration": {
+    name: "square-accordion-duration",
+    filePath: "registry/examples/square-accordion/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-accordion/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-accordion-glyphs": {
+    name: "square-accordion-glyphs",
+    filePath: "registry/examples/square-accordion/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-accordion/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-accordion-size": {
+    name: "square-accordion-size",
+    filePath: "registry/examples/square-accordion/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-accordion/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-grid-color": {
+    name: "square-grid-color",
+    filePath: "registry/examples/square-grid/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-grid/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-grid-demo": {
+    name: "square-grid-demo",
+    filePath: "registry/examples/square-grid/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-grid/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-grid-duration": {
+    name: "square-grid-duration",
+    filePath: "registry/examples/square-grid/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-grid/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-grid-glyphs": {
+    name: "square-grid-glyphs",
+    filePath: "registry/examples/square-grid/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-grid/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-grid-size": {
+    name: "square-grid-size",
+    filePath: "registry/examples/square-grid/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-grid/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-snake-color": {
+    name: "square-snake-color",
+    filePath: "registry/examples/square-snake/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-snake/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-snake-demo": {
+    name: "square-snake-demo",
+    filePath: "registry/examples/square-snake/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-snake/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-snake-duration": {
+    name: "square-snake-duration",
+    filePath: "registry/examples/square-snake/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-snake/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-snake-glyphs": {
+    name: "square-snake-glyphs",
+    filePath: "registry/examples/square-snake/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-snake/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "square-snake-size": {
+    name: "square-snake-size",
+    filePath: "registry/examples/square-snake/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./square-snake/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "swirling-alert": {
     name: "swirling-alert",
     filePath: "registry/examples/swirling/alert.tsx",
@@ -3264,6 +3719,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "swirling-stroke-width";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "symmetric-wave-color": {
+    name: "symmetric-wave-color",
+    filePath: "registry/examples/symmetric-wave/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./symmetric-wave/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "symmetric-wave-demo": {
+    name: "symmetric-wave-demo",
+    filePath: "registry/examples/symmetric-wave/demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./symmetric-wave/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "symmetric-wave-duration": {
+    name: "symmetric-wave-duration",
+    filePath: "registry/examples/symmetric-wave/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./symmetric-wave/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "symmetric-wave-glyphs": {
+    name: "symmetric-wave-glyphs",
+    filePath: "registry/examples/symmetric-wave/glyphs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./symmetric-wave/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-glyphs";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "symmetric-wave-size": {
+    name: "symmetric-wave-size",
+    filePath: "registry/examples/symmetric-wave/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./symmetric-wave/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-size";
       return { default: mod.default || mod[exportName] };
     }),
   },

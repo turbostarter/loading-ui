@@ -1,0 +1,85 @@
+---
+title: Infinity Square Snake
+description: A unicode snake tracing two joined square loops in an infinity path.
+---
+
+`InfinitySquareSnake` moves four staggered unicode glyphs through two joined
+square loops. It keeps the path fixed and scales cleanly with font size.
+
+<ComponentPreview name="infinity-square-snake-demo" />
+
+Credits to [shaah1d](https://x.com/shaah1d) for creating the initial animation.
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/infinity-square-snake
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="infinity-square-snake"
+  title="components/loading-ui/infinity-square-snake.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { InfinitySquareSnake } from "@/components/loading-ui/infinity-square-snake";
+```
+
+```tsx
+<InfinitySquareSnake />
+```
+
+## Customization
+
+Use `blocks` for the four unicode trail glyphs. The path scales with text size,
+and timing is controlled with `--duration` and `--delay`.
+
+### Size
+
+Scale the fixed infinity path with text-size utilities.
+
+<ComponentPreview name="infinity-square-snake-size" />
+
+### Color
+
+Apply text color utilities to the root.
+
+<ComponentPreview name="infinity-square-snake-color" />
+
+### Duration
+
+Set `--duration` for the two-loop travel speed.
+
+<ComponentPreview name="infinity-square-snake-duration" />
+
+### Glyphs
+
+Provide four glyphs to customize the lead and trailing cells.
+
+<ComponentPreview name="infinity-square-snake-glyphs" />
