@@ -200,94 +200,6 @@
       "type": "registry:component"
     },
     {
-      "name": "accordion-loader",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/accordion-loader.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "symmetric-wave",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/symmetric-wave.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "square-grid",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/square-grid.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "square-accordion",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/square-accordion.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "conveyor-loop",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/conveyor-loop.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "square-snake",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/square-snake.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "infinity-square-snake",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/infinity-square-snake.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "infinity-track",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/infinity-track.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
       "name": "pulse",
       "files": [
         {
@@ -462,6 +374,94 @@
       "files": [
         {
           "path": "registry/components/loading-ui/infinity.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "accordion-loader",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/accordion-loader.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "symmetric-wave",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/symmetric-wave.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "square-grid",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/square-grid.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "square-accordion",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/square-accordion.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "conveyor-loop",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/conveyor-loop.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "square-snake",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/square-snake.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "infinity-square-snake",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/infinity-square-snake.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "infinity-track",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/infinity-track.tsx",
           "type": "registry:component",
           "target": ""
         }
