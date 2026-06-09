@@ -1,4 +1,4 @@
-<img alt="Loading UI" src="/public/images/banner.png" width="100%">
+<img alt="Loading UI" src="public/images/banner.png" width="100%">
 <h3 align="center">Loading UI</h3>
 <p align="center">
     Spinners, loaders and loading animations for modern web apps.
@@ -26,7 +26,7 @@ Have questions, comments or feedback? [Join our Discord](https://discord.gg/KjpK
 ## Authors
 
 <a href="https://github.com/turbostarter/loading-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=turbostarter/loading-ui" />
+  <img alt="Loading UI contributors" src="https://contrib.rocks/image?repo=turbostarter/loading-ui" />
 </a>
 
 ## Star History
