@@ -216,7 +216,10 @@ html > body[data-scroll-locked] {
   margin-inline: auto;
   padding-inline: 1rem;
   max-width: 1400px;
-  border-inline: 1px solid var(--border);
+
+  @media (min-width: 1400px) {
+    border-inline: 1px solid var(--border);
+  }
 }
 
 @layer components {

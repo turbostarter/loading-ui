@@ -2,7 +2,7 @@ import { X_USERNAME } from "@/lib/constants";
 
 export const Footer = () => {
   return (
-    <footer className="container border-x py-4 text-center md:py-6">
+    <footer className="container @[1400px]:border-x py-4 text-center md:py-6">
       <p className="text-muted-foreground text-sm">
         Made with ❤️ and{" "}
         <a

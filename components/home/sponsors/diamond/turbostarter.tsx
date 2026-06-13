@@ -45,7 +45,7 @@ export function TurbostarterSidebarCta({
         Build your SaaS in days, not months. On all platforms.
       </p>
       <p className="text-muted-foreground">
-        Trusted by 280+ developers and founders.
+        Trusted by 320+ developers and founders.
       </p>
       <p className="text-muted-foreground">
         Get web, mobile and extension setup in minutes, so you can focus on your
@@ -95,7 +95,7 @@ export const TurboStarterMobileNavCta = ({
         Build your SaaS in days, not months. On all platforms.
       </p>
       <p className="text-muted-foreground">
-        Trusted by 280+ developers and founders.
+        Trusted by 320+ developers and founders.
       </p>
       <div
         className={cn(buttonVariants({ variant: "outline" }), "mt-2 w-full")}
