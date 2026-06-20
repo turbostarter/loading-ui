@@ -6,27 +6,49 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { RegistryItem } from "@/registry/schema";
 import { cn } from "@/lib/utils";
 import { Terminal } from "lucide-react";
 import { track } from "@vercel/analytics";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/common/icons";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { Button } from "@/components/ui/button";
+import { Check, Copy } from "lucide-react";
 
-export const CopyComponent = ({ item }: { item: RegistryItem }) => {
+async function fetchRegistrySource(name: string) {
+  const response = await fetch(`/r/${name}.json`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch registry item: ${name}`);
+  }
+
+  const data = (await response.json()) as {
+    files?: Array<{ content?: string }>;
+  };
+
+  return data.files?.[0]?.content ?? "";
+}
+
+export const CopyComponent = ({ name }: { name: string }) => {
+  const { isCopied, copyToClipboard } = useCopyToClipboard();
+
   return (
     <Tooltip>
       <TooltipTrigger
         render={
-          <CopyButton
+          <Button
             variant="secondary"
             size="icon"
-            value={item?.files?.[0]?.content ?? ""}
             className="bg-secondary static size-9"
-            onClick={() =>
-              track("component_source_copied", { name: item.name })
-            }
-          />
+            aria-label="Copy component"
+            onClick={async () => {
+              const content = await fetchRegistrySource(name);
+              await copyToClipboard(content);
+              track("component_source_copied", { name });
+            }}
+          >
+            <span className="sr-only">Copy component</span>
+            {isCopied ? <Check /> : <Copy />}
+          </Button>
         }
       />
       <TooltipContent sideOffset={8}>Copy component</TooltipContent>
@@ -35,10 +57,10 @@ export const CopyComponent = ({ item }: { item: RegistryItem }) => {
 };
 
 export const CopyCLICommand = ({
-  item,
+  name,
   command,
 }: {
-  item: RegistryItem;
+  name: string;
   command: string;
 }) => {
   return (
@@ -51,7 +73,7 @@ export const CopyCLICommand = ({
             value={command}
             className="bg-secondary static size-9"
             icon={<Terminal />}
-            onClick={() => track("cli_command_copied", { name: item.name })}
+            onClick={() => track("cli_command_copied", { name })}
           />
         }
       />
@@ -60,13 +82,7 @@ export const CopyCLICommand = ({
   );
 };
 
-export const OpenInV0 = ({
-  item,
-  href,
-}: {
-  item: RegistryItem;
-  href: string;
-}) => {
+export const OpenInV0 = ({ name, href }: { name: string; href: string }) => {
   return (
     <Tooltip>
       <TooltipTrigger
@@ -75,7 +91,7 @@ export const OpenInV0 = ({
             href={href}
             target="_blank"
             rel="noreferrer noopener"
-            aria-label={`Open ${item.name} in v0`}
+            aria-label={`Open ${name} in v0`}
             className={cn(
               buttonVariants({
                 variant: "secondary",
@@ -83,7 +99,7 @@ export const OpenInV0 = ({
               }),
               "static",
             )}
-            onClick={() => track("open_in_v0", { name: item.name })}
+            onClick={() => track("open_in_v0", { name })}
           >
             <Icons.v0 className="size-4" />
           </a>

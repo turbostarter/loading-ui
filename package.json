@@ -12,10 +12,12 @@
     "url": "git+https://github.com/turbostarter/loading-ui.git"
   },
   "scripts": {
-    "build": "next build",
+    "build": "bun run build:colors && next build",
+    "build:colors": "bun scripts/build-colors.mts",
+    "predev": "bun run build:colors",
     "dev": "next dev",
     "start": "next start",
-    "postinstall": "fumadocs-mdx && next typegen",
+    "postinstall": "fumadocs-mdx && next typegen && bun run build:colors",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "format": "oxfmt --check",
@@ -38,7 +40,7 @@
     "lru-cache": "^11.3.5",
     "lucide-react": "^1.8.0",
     "motion": "^12.38.0",
-    "next": "16.2.7",
+    "next": "16.2.9",
     "next-themes": "^0.4.6",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",

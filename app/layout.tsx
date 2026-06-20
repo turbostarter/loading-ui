@@ -1,9 +1,10 @@
-import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/common/header";
 import { createMetadata } from "@/lib/metadata";
 import { fonts } from "@/lib/fonts";
+import { source } from "@/lib/source";
 import { Providers } from "../components/providers";
+import "./colors.css";
 import "./global.css";
 
 export const metadata = createMetadata({
@@ -27,10 +28,9 @@ export default function Layout({ children }: LayoutProps<"/">) {
         )}
       >
         <Providers>
-          <Header />
+          <Header tree={source.pageTree} />
           {children}
         </Providers>
-        <Analytics />
       </body>
     </html>
   );

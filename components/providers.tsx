@@ -1,10 +1,16 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClientProvider } from "@/lib/query/client";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
+
+const Analytics = dynamic(
+  () => import("@vercel/analytics/next").then((mod) => mod.Analytics),
+  { ssr: false },
+);
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
@@ -26,6 +32,7 @@ export function Providers({ children }: { children: ReactNode }) {
         >
           <TooltipProvider delay={0}>{children}</TooltipProvider>
         </RootProvider>
+        <Analytics />
       </ThemeProvider>
     </QueryClientProvider>
   );

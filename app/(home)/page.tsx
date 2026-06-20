@@ -6,7 +6,7 @@ export default function Page(_: PageProps<"/">) {
   return (
     <>
       <Hero />
-      <ColorPicker className="container @[1400px]:border-x border-b py-6 md:py-8" />
+      <ColorPicker className="container border-b py-6 md:py-8 @[1400px]:border-x" />
       <Examples />
     </>
   );
