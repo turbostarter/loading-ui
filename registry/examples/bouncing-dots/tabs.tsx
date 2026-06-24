@@ -15,7 +15,7 @@ export default function BouncingDotsTabs() {
             <div className="text-center">
               <p className="text-sm font-medium">Ingest still stretching</p>
               <p className="text-muted-foreground mt-1 text-xs">
-                Switch tabs freely—the animation loops until the stream closes.
+                Switch tabs freely; the animation loops until the stream closes.
               </p>
             </div>
           </div>

@@ -18,7 +18,7 @@ export default function RippleEmpty() {
         </EmptyMedia>
         <EmptyTitle>Widening the search</EmptyTitle>
         <EmptyDescription>
-          Each ring is a soft ping into your data—great when you want motion
+          Each ring is a soft ping into your data, great when you want motion
           that feels expansive rather than frantic.
         </EmptyDescription>
       </EmptyHeader>

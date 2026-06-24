@@ -14,7 +14,7 @@ export default function PulseDotTabs() {
           <span>
             Same single-dot idiom you see in{" "}
             <span className="text-foreground font-medium">ChatGPT</span> while a
-            response is generating—minimal chrome, clear “still working” cue.
+            response is generating: minimal chrome, clear “still working” cue.
           </span>
         </div>
       </TabsContent>

@@ -16,7 +16,7 @@ export default function CometSpinnerAlert() {
       </AlertMedia>
       <AlertTitle>Large upload entering the fast lane</AlertTitle>
       <AlertDescription>
-        The comet metaphor fits when throughput suddenly jumps—users see motion
+        The comet metaphor fits when throughput suddenly jumps; users see motion
         that feels directional, not stuck in place.
       </AlertDescription>
       <AlertAction>

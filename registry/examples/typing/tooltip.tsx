@@ -17,7 +17,7 @@ export default function TypingTooltip() {
         <TooltipContent className="flex max-w-xs items-center gap-2">
           <Typing className="w-8" />
           <span>
-            One or more editors are active in this document—the wave keeps
+            One or more editors are active in this document; the wave keeps
             moving until they pause.
           </span>
         </TooltipContent>

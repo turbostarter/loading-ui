@@ -1,10 +1,10 @@
 ---
 title: Morphing infinity
-description: A circle-to-infinity morph with shimmering rotating copy.
+description: An animated SVG that morphs between circle and infinity shapes.
 ---
 
-`MorphingInfinity` pairs a morphing line icon with a small set of animated
-status words. It is a good fit for AI replies, drafting flows, planning states,
+`MorphingInfinity` is an animated line icon that cycles through circle and
+infinity forms. It is a good fit for AI replies, drafting flows, planning states,
 and any interface where the wait state should feel deliberate instead of
 generic.
 
@@ -57,13 +57,13 @@ import { MorphingInfinity } from "@/components/loading-ui/morphing-infinity";
 
 ## Customization
 
-The component follows the source animation closely: the circle-to-infinity icon
-morph, shimmer colors, rotating words, and timing are fixed. Use `className` to
-place it inside your surface or adjust padding around the status.
+`MorphingInfinity` is an SVG with a morphing path stroke. Use `className` and
+`size-*` utilities to scale it inline, and inherit `currentColor` from the
+surrounding text or foreground utilities.
 
 ### Compact
 
-Tighten padding when the indicator appears inside dense assistant panels,
+Use a smaller `size-*` when the icon appears inside dense assistant panels,
 toolbars, or inline status rows.
 
 <ComponentPreview name="morphing-infinity-compact" />
@@ -71,12 +71,12 @@ toolbars, or inline status rows.
 ## Examples
 
 These examples place the morphing infinity in assistant-oriented surfaces where
-an animated status needs to remain visible without becoming a full-page loader.
+a compact loading indicator needs to remain visible without becoming a full-page
+loader.
 
 ### Alert
 
-Alerts can pair the animated status with one concise line about the work in
-progress.
+Alerts can pair the icon with one concise line about the work in progress.
 
 <ComponentPreview name="morphing-infinity-alert" />
 

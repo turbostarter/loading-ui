@@ -17,7 +17,7 @@ export default function QuarterRingTooltip() {
         <TooltipContent className="max-w-xs gap-2">
           <QuarterRing className="size-3.5 shrink-0" />
           <span>
-            Recomputing savings from the last hour of usage—numbers update as
+            Recomputing savings from the last hour of usage; numbers update as
             soon as the partial window closes.
           </span>
         </TooltipContent>

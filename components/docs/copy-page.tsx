@@ -40,7 +40,7 @@ const menuItems = {
   ),
   v0: (url: string) => (
     <a
-      href={getPromptUrl("https://v0.dev", url)}
+      href={getPromptUrl("https://v0.app", url)}
       target="_blank"
       rel="noopener noreferrer"
     >

@@ -17,14 +17,14 @@ export default function TypingAccordion() {
           <span className="flex flex-col gap-0.5 text-left">
             <span>Collaborators are typing</span>
             <span className="text-muted-foreground text-xs font-normal">
-              Vertical motion reads like keystrokes—expand for participant list.
+              Vertical motion reads like keystrokes. Expand for participant list.
             </span>
           </span>
         </AccordionTrigger>
         <AccordionContent>
           <ul className="text-muted-foreground list-inside list-disc space-y-1 text-sm">
-            <li>Jamie — product brief</li>
-            <li>Avery — legal review</li>
+            <li>Jamie - product brief</li>
+            <li>Avery - legal review</li>
           </ul>
         </AccordionContent>
       </AccordionItem>

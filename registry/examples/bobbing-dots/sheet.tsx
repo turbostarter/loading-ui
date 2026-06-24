@@ -19,14 +19,14 @@ export default function BobbingDotsSheet() {
         <SheetHeader className="border-b pb-4">
           <SheetTitle>Staging whimsy</SheetTitle>
           <SheetDescription>
-            Sheets give you room to explain why the UI is bouncing—great for
+            Sheets give you room to explain why the UI is bouncing, great for
             onboarding or creative tools.
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8">
           <BobbingDots className="w-16" duration={0.85} />
           <p className="text-muted-foreground max-w-xs text-center text-sm">
-            The dots float in place while we load your preview clip—no harsh
+            The dots float in place while we load your preview clip; no harsh
             cuts, just a gentle rhythm.
           </p>
         </div>

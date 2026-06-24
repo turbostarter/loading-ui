@@ -19,7 +19,7 @@ export default function PulseCollapsible() {
           <div className="space-y-1">
             <div className="font-medium">Background polish in progress</div>
             <p className="text-muted-foreground text-sm">
-              The pulse stays soft so it does not read as an error—more like a
+              The pulse stays soft so it does not read as an error, more like a
               live cushion until the panel is ready.
             </p>
           </div>

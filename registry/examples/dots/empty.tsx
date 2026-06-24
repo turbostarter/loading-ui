@@ -19,7 +19,7 @@ export default function DotsEmpty() {
         <EmptyTitle>No messages yet</EmptyTitle>
         <EmptyDescription>
           When the first participant starts typing, swap this empty state for a
-          slim row—the dots read instantly as “someone is composing.”
+          slim row; the dots read instantly as “someone is composing.”
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>

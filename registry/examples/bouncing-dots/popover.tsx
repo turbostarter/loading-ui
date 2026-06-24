@@ -19,7 +19,7 @@ export default function BouncingDotsPopover() {
         <PopoverHeader className="gap-1">
           <PopoverTitle className="text-base">Hold tight</PopoverTitle>
           <PopoverDescription>
-            Popovers excel at tiny async hints—pair with one action or none.
+            Popovers excel at tiny async hints. Pair with one action or none.
           </PopoverDescription>
         </PopoverHeader>
         <div className="flex justify-center py-2">

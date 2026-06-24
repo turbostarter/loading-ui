@@ -16,7 +16,7 @@ export default function BouncingDotsAlert() {
       </AlertMedia>
       <AlertTitle>Queue is decompressing</AlertTitle>
       <AlertDescription>
-        Scale-and-opacity beats pair naturally with “almost ready” messaging—
+        Scale-and-opacity beats pair naturally with “almost ready” messaging:
         softer than a hard spinner, more kinetic than blinking alone.
       </AlertDescription>
       <AlertAction>

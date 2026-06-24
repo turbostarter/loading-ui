@@ -9,7 +9,7 @@ export const SPONSORS = {
     {
       id: "turbostarter",
       name: "TurboStarter",
-      url: "https://turbostarter.dev",
+      url: "https://www.turbostarter.dev",
       image: {
         lg: (props: React.ComponentProps<"svg">) => (
           <svg
@@ -117,7 +117,7 @@ export const SPONSORS = {
     {
       id: "rankgrow",
       name: "RankGrow",
-      url: "https://rankgrow.io",
+      url: "https://www.rankgrow.io",
       image: {
         lg: (props: React.ComponentProps<"svg">) => (
           <svg
@@ -184,7 +184,7 @@ export const SPONSORS = {
     {
       id: "boopy",
       name: "Boopy",
-      url: "https://boopy.ai",
+      url: "https://www.boopy.ai",
       image: {
         light: "/images/sponsors/boopy/light.png",
         dark: "/images/sponsors/boopy/dark.png",

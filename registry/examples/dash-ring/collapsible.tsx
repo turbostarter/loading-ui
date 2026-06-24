@@ -19,7 +19,7 @@ export default function DashRingCollapsible() {
           <div className="space-y-1">
             <div className="font-medium">Buffering the next chunk</div>
             <p className="text-muted-foreground text-sm">
-              Dash length eases in and out as tokens arrive—expand for raw
+              Dash length eases in and out as tokens arrive. Expand for raw
               diagnostics.
             </p>
           </div>

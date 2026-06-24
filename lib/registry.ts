@@ -171,7 +171,7 @@ function fixFilePaths(files: RegistryItem["files"]) {
   const firstFilePath = files[0].path;
   const firstFilePathDir = path.dirname(firstFilePath);
 
-  return files.map((file) => {
+  return files.map(file => {
     return {
       ...file,
       path: path.relative(firstFilePathDir, file.path),
@@ -225,7 +225,7 @@ export function getRegistryItemUrl(name: string) {
 }
 
 export function getOpenInV0Url(name: string) {
-  const url = new URL("https://v0.dev/chat/api/open");
+  const url = new URL("https://v0.app/chat/api/open");
 
   url.searchParams.set("url", getRegistryItemUrl(name));
 

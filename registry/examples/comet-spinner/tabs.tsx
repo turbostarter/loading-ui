@@ -15,7 +15,7 @@ export default function CometSpinnerTabs() {
             <div className="space-y-1">
               <div className="font-medium">Burst upload active</div>
               <p className="text-muted-foreground text-sm">
-                Throughput is spiking while the tail catches up to the head—
+                Throughput is spiking while the tail catches up to the head;
                 other tabs stay usable.
               </p>
             </div>

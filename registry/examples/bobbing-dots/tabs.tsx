@@ -15,7 +15,7 @@ export default function BobbingDotsTabs() {
             <div className="space-y-1 text-center">
               <p className="text-sm font-medium">Rendering motion study</p>
               <p className="text-muted-foreground text-xs">
-                Tab away—the bounce keeps looping so the panel feels alive.
+                Tab away; the bounce keeps looping so the panel feels alive.
               </p>
             </div>
           </div>
