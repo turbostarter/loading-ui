@@ -180,17 +180,7 @@ export const SPONSORS = {
       },
     },
   ],
-  gold: [
-    {
-      id: "boopy",
-      name: "Boopy",
-      url: "https://www.boopy.ai",
-      image: {
-        light: "/images/sponsors/boopy/light.png",
-        dark: "/images/sponsors/boopy/dark.png",
-      },
-    },
-  ],
+  gold: [],
   silver: [],
 };
 
