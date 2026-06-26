@@ -4,7 +4,30 @@ export const MAX = {
   silver: 4,
 };
 
-export const SPONSORS = {
+type SvgSponsorImage = {
+  lg: (props: React.ComponentProps<"svg">) => React.JSX.Element;
+  sm: (props: React.ComponentProps<"svg">) => React.JSX.Element;
+};
+
+type ThemedSponsorImage = {
+  light: string;
+  dark: string;
+};
+
+export type Sponsor = {
+  id: string;
+  name: string;
+  url: string;
+  image: SvgSponsorImage | ThemedSponsorImage;
+};
+
+type SponsorsByTier = {
+  diamond: Sponsor[];
+  gold: Sponsor[];
+  silver: Sponsor[];
+};
+
+export const SPONSORS: SponsorsByTier = {
   diamond: [
     {
       id: "turbostarter",
@@ -185,4 +208,3 @@ export const SPONSORS = {
 };
 
 export type SponsorTier = keyof typeof SPONSORS;
-export type Sponsor = (typeof SPONSORS)[SponsorTier][number];

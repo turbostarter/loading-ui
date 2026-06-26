@@ -6,10 +6,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 import { Terminal } from "lucide-react";
 import { track } from "@vercel/analytics";
-import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/common/icons";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { Button } from "@/components/ui/button";
@@ -87,22 +85,19 @@ export const OpenInV0 = ({ name, href }: { name: string; href: string }) => {
     <Tooltip>
       <TooltipTrigger
         render={
-          <a
-            href={href}
-            target="_blank"
-            rel="noreferrer noopener"
+          <Button
+            type="button"
+            variant="secondary"
+            size="icon"
+            className="static"
             aria-label={`Open ${name} in v0`}
-            className={cn(
-              buttonVariants({
-                variant: "secondary",
-                size: "icon",
-              }),
-              "static",
-            )}
-            onClick={() => track("open_in_v0", { name })}
+            onClick={() => {
+              track("open_in_v0", { name });
+              window.open(href, "_blank", "noopener,noreferrer");
+            }}
           >
             <Icons.v0 className="size-4" />
-          </a>
+          </Button>
         }
       />
       <TooltipContent sideOffset={8}>Open in v0</TooltipContent>
