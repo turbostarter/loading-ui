@@ -11,3 +11,12 @@ if (existing !== content) {
   await fs.writeFile(outputPath, content);
   console.log(`Wrote ${path.relative(process.cwd(), outputPath)}`);
 }
+
+const format = Bun.spawnSync(["bunx", "oxfmt", outputPath], {
+  stdout: "inherit",
+  stderr: "inherit",
+});
+
+if (format.exitCode !== 0) {
+  process.exit(format.exitCode ?? 1);
+}
