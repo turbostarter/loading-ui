@@ -17,7 +17,8 @@ export default function TypingAccordion() {
           <span className="flex flex-col gap-0.5 text-left">
             <span>Collaborators are typing</span>
             <span className="text-muted-foreground text-xs font-normal">
-              Vertical motion reads like keystrokes. Expand for participant list.
+              Vertical motion reads like keystrokes. Expand for participant
+              list.
             </span>
           </span>
         </AccordionTrigger>
