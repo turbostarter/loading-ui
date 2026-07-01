@@ -22,7 +22,7 @@ export const Search = ({
       variant="secondary"
       {...props}
     >
-      <SearchIcon className="size-4 text-muted-foreground" />
+      <SearchIcon className="text-muted-foreground size-4" />
       <p className="hidden font-normal lg:block">Search...</p>
       <span className="ml-auto flex items-center gap-0.5">
         <Kbd className="bg-background border">⌘</Kbd>
