@@ -58,11 +58,12 @@
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "oxfmt": "^0.47.0",
     "oxlint": "1.68.0",
     "oxlint-tsgolint": "^0.22.1",
     "postcss": "^8.5.9",
     "tailwindcss": "^4.3.2",
-    "typescript": "^6.0.2"
+    "typescript": "7.0.2"
   }
 }
