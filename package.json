@@ -63,6 +63,7 @@
     "oxlint-tsgolint": "^0.22.1",
     "postcss": "^8.5.9",
     "tailwindcss": "^4.3.2",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "typescript-7": "npm:typescript@7.0.2"
   }
 }
