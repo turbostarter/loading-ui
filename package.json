@@ -54,11 +54,11 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
-    "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "@types/mdx": "^2.0.13",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "oxfmt": "^0.47.0",
     "oxlint": "1.68.0",
     "oxlint-tsgolint": "^0.22.1",
