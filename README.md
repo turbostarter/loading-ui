@@ -29,10 +29,6 @@ Have questions, comments or feedback? [Join our Discord](https://discord.gg/KjpK
   <img alt="Loading UI contributors" src="https://contrib.rocks/image?repo=turbostarter/loading-ui" />
 </a>
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=turbostarter/loading-ui&type=Date)](https://www.star-history.com/#turbostarter/loading-ui&Date)
-
 ## License
 
 Licensed under the [MIT license](https://github.com/turbostarter/loading-ui/blob/main/LICENSE.md).
