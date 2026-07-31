@@ -26,7 +26,7 @@ Help me understand how to use it. Be ready to explain concepts, give examples, o
 
 const menuItems = {
   markdown: (url: string) => (
-    <a href={`${url}.md`} target="_blank" rel="noopener noreferrer">
+    <a href={url} target="_blank" rel="noopener noreferrer">
       <svg strokeLinejoin="round" viewBox="0 0 22 16">
         <path
           fillRule="evenodd"

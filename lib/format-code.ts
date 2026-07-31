@@ -54,9 +54,9 @@ export async function formatCode(code: string) {
     });
 
     const transformers: DisplayTransformer[] = [
-      transformIcons as DisplayTransformer,
-      transformMenu as DisplayTransformer,
-      transformRender as DisplayTransformer,
+      transformIcons,
+      transformMenu,
+      transformRender,
     ];
 
     await Promise.all(
