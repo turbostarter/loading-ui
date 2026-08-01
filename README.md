@@ -8,7 +8,7 @@
   <a href="https://twitter.com/turbostarter_"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/turbostarter_"></a>
   <a href="https://github.com/turbostarter/loading-ui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
   <a href="https://discord.gg/KjpK2uk3JP"><img alt="Discord" src="https://img.shields.io/discord/1151315619246002176"></a>
-  
+
 </div>
 
 ## Documentation
