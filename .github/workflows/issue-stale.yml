@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository_owner == 'turbostarter'
     steps:
-      - uses: actions/stale@v10
+      - uses: actions/stale@v11
         id: issue-stale
         name: "Mark stale issues, close stale issues"
         with:
