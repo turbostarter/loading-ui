@@ -33,7 +33,7 @@
     "clsx": "^2.1.1",
     "envin": "^1.2.0",
     "fumadocs-core": "16.14.0",
-    "fumadocs-mdx": "15.2.1",
+    "fumadocs-mdx": "15.4.0",
     "fumadocs-ui": "16.14.0",
     "geist": "^1.7.2",
     "jotai": "^2.20.2",
