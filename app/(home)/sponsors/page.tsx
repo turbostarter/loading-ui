@@ -23,7 +23,7 @@ export const metadata = createMetadata({
   description: DESCRIPTION,
 });
 
-export default function Page(_: PageProps<"/sponsors">) {
+export default function Page() {
   return (
     <>
       <HeroSection>
