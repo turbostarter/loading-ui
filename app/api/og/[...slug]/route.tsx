@@ -1,11 +1,7 @@
 import { readFileSync } from "node:fs";
 import { notFound } from "next/navigation";
-import { ImageResponse } from "next/og";
 import { source } from "@/lib/source";
 import { Icons } from "@/components/common/icons";
-
-const font = readFileSync("./app/api/og/[...slug]/Geist-Regular.ttf");
-const fontBold = readFileSync("./app/api/og/[...slug]/Geist-Bold.ttf");
 
 export async function GET(
   _req: Request,
@@ -17,6 +13,9 @@ export async function GET(
 
   const title = page.data.title;
   const description = page.data.description;
+  const { ImageResponse } = await import("next/og");
+  const font = readFileSync("./app/api/og/[...slug]/Geist-Regular.ttf");
+  const fontBold = readFileSync("./app/api/og/[...slug]/Geist-Bold.ttf");
 
   return new ImageResponse(
     <div tw="flex h-full w-full bg-black text-white">

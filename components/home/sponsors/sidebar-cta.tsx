@@ -4,7 +4,7 @@ import { ThemedImage } from "@/components/common/themed-image";
 import { TIER_TITLES } from "@/components/home/sponsors/sponsors";
 import { SPONSORS, SponsorTier } from "@/lib/sponsors";
 import { cn } from "@/lib/utils";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 

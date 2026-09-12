@@ -49,6 +49,13 @@ Loading UI is a Next.js project with a component registry and docs site.
    bun run dev
    ```
 
+   To preview a production build in the Cloudflare Workers runtime:
+
+   ```sh
+   cp .dev.vars.example .dev.vars
+   bun run preview
+   ```
+
 ## Making changes
 
 - Keep changes focused. Small, reviewable pull requests get merged faster.

@@ -29,6 +29,4 @@ export function createMetadata(override: Metadata): Metadata {
 export const baseUrl =
   env.NODE_ENV === "development"
     ? new URL("http://localhost:3000")
-    : new URL(
-        `https://${env.VERCEL_PROJECT_PRODUCTION_URL ?? "loading-ui.com"}`,
-      );
+    : new URL(env.NEXT_PUBLIC_SITE_URL ?? "https://loading-ui.com");

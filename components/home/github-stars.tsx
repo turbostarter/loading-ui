@@ -4,7 +4,7 @@ import { Icons } from "@/components/common/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { GITHUB_URL } from "@/lib/constants";
 import { Star } from "lucide-react";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 
 export const GitHubStars = ({ stars }: { stars: number }) => {
   return (

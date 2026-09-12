@@ -2,7 +2,7 @@
 
 import { buttonVariants } from "@/components/ui/button";
 import { GITHUB_URL } from "@/lib/constants";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import Link from "next/link";
 
 export const RequestComponent = () => {

@@ -18,6 +18,10 @@
     "dev": "next dev",
     "start": "next start",
     "postinstall": "fumadocs-mdx && next typegen && bun run build:colors",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "format": "oxfmt --check",
@@ -27,8 +31,8 @@
   "dependencies": {
     "@base-ui/react": "^1.6.0",
     "@octokit/rest": "^22.0.1",
+    "@opennextjs/cloudflare": "^1.20.6",
     "@tanstack/react-query": "^5.101.4",
-    "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "envin": "^1.2.0",
@@ -63,6 +67,7 @@
     "oxlint-tsgolint": "7.0.2001",
     "postcss": "^8.5.9",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "wrangler": "^4.131.1"
   }
 }

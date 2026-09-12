@@ -1,0 +1,47 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "loading-ui",
+  "main": ".open-next/worker.js",
+  // Keep in sync with the current Workers runtime: https://developers.cloudflare.com/workers/configuration/compatibility-dates/
+  "compatibility_date": "2026-09-12",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://loading-ui.com",
+  },
+  "services": [
+    {
+      // Required for OpenNext ISR / data cache revalidation.
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "loading-ui",
+    },
+  ],
+  "r2_buckets": [
+    {
+      // Create this bucket before the first production deploy:
+      //   bunx wrangler r2 bucket create loading-ui-opennext-cache
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "loading-ui-opennext-cache",
+    },
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "NEXT_CACHE_DO_QUEUE",
+        "class_name": "DOQueueHandler",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["DOQueueHandler"],
+    },
+  ],
+}

@@ -1,6 +1,9 @@
 import { Octokit } from "@octokit/rest";
+import env from "@/env.config";
 
-export const octokit: Octokit = new Octokit();
+export const octokit: Octokit = new Octokit({
+  auth: env.GITHUB_TOKEN,
+});
 
 export const getStars = async () => {
   try {

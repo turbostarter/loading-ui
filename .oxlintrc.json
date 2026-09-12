@@ -29,7 +29,7 @@
     "no-unsafe-type-assertion": "off",
     "no-unassigned-import": "off"
   },
-  "ignorePatterns": ["node_modules/", "dist/"],
+  "ignorePatterns": ["node_modules/", "dist/", ".open-next/", ".wrangler/"],
   "options": {
     "typeAware": true,
     "typeCheck": true

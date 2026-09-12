@@ -7,9 +7,12 @@
 # test & build
 /coverage
 /.next/
+/.open-next/
+/.wrangler/
 /out/
 /build
 *.tsbuildinfo
+cloudflare-env.d.ts
 
 # misc
 .DS_Store
@@ -22,5 +25,6 @@ yarn-error.log*
 
 # others
 .env*.local
+.dev.vars
 .vercel
 next-env.d.ts
