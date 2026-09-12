@@ -10,6 +10,15 @@ const config = {
     // Skip `/_next/image` so the Worker can run without a Cloudflare Images binding.
     unoptimized: true,
   },
+  // Keep MDX sources, registry files, and OG fonts in the Worker bundle for
+  // cache misses. Workers only expose a virtual FS of bundled files.
+  outputFileTracingIncludes: {
+    "/*": [
+      "./content/docs/**/*",
+      "./registry/**/*",
+      "./app/api/og/[...slug]/*.ttf",
+    ],
+  },
   experimental: {
     optimizePackageImports: [
       "lucide-react",

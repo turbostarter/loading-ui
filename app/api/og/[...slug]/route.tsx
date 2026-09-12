@@ -3,6 +3,13 @@ import { notFound } from "next/navigation";
 import { source } from "@/lib/source";
 import { Icons } from "@/components/common/icons";
 
+function loadOgFonts() {
+  return {
+    regular: readFileSync("./app/api/og/[...slug]/Geist-Regular.ttf"),
+    bold: readFileSync("./app/api/og/[...slug]/Geist-Bold.ttf"),
+  };
+}
+
 export async function GET(
   _req: Request,
   { params }: { params: Promise<{ slug: string[] }> },
@@ -14,8 +21,7 @@ export async function GET(
   const title = page.data.title;
   const description = page.data.description;
   const { ImageResponse } = await import("next/og");
-  const font = readFileSync("./app/api/og/[...slug]/Geist-Regular.ttf");
-  const fontBold = readFileSync("./app/api/og/[...slug]/Geist-Bold.ttf");
+  const { regular: font, bold: fontBold } = loadOgFonts();
 
   return new ImageResponse(
     <div tw="flex h-full w-full bg-black text-white">

@@ -41,7 +41,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
                 <div className="docs-nav flex items-center gap-2">
                   <div className="hidden sm:block">
                     <DocsCopyPage
-                      page={await page.data.getText("raw")}
+                      page={await page.data.getText("processed")}
                       url={markdownUrl}
                     />
                   </div>
