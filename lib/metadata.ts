@@ -1,17 +1,12 @@
-import env from "../env.config";
-
 export const SITE_NAME = "Loading UI";
 export const SITE_DESCRIPTION =
   "Free and open source CSS and React loaders, spinners, and animations to create polished, accessible loading states for modern web apps.";
 export const DEFAULT_TITLE =
   "Loading UI - spinners, loaders, and loading animations for the web";
 
-export const baseUrl =
-  env.NODE_ENV === "development"
-    ? new URL("http://localhost:3000")
-    : new URL(
-        `https://${env.VERCEL_PROJECT_PRODUCTION_URL ?? "loading-ui.com"}`,
-      );
+export const baseUrl = new URL(
+  import.meta.env.DEV ? "http://localhost:3000" : "https://loading-ui.com",
+);
 
 export type HeadMeta = {
   title?: string;
