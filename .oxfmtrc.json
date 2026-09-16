@@ -9,5 +9,12 @@
     "functions": ["cn", "cva"],
     "preserveWhitespace": true
   },
-  "ignorePatterns": ["node_modules/", "dist/"]
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    ".output/",
+    ".nitro/",
+    ".tanstack/",
+    "src/routeTree.gen.ts"
+  ]
 }

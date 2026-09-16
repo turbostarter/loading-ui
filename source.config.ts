@@ -1,22 +1,7 @@
-import { defineConfig, defineDocs } from "fumadocs-mdx/config";
-import { metaSchema, pageSchema } from "fumadocs-core/source/schema";
-
+import { defineConfig } from "fumadocs-mdx/config";
 import { rehypePrettyCode } from "rehype-pretty-code";
 
 import { transformers } from "./lib/highlight-code";
-
-export const docs = defineDocs({
-  dir: "content/docs",
-  docs: {
-    schema: pageSchema,
-    postprocess: {
-      includeProcessedMarkdown: true,
-    },
-  },
-  meta: {
-    schema: metaSchema,
-  },
-});
 
 export default defineConfig({
   mdxOptions: {

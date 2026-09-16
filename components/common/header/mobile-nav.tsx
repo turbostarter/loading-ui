@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Link, { type LinkProps } from "next/link";
+import { Link } from "@/components/common/link";
 
 import { PAGES_NEW } from "@/lib/docs";
 import { getPagesFromFolder } from "@/lib/page-tree";
@@ -173,10 +173,8 @@ function MobileLink({
   className,
   children,
   ...props
-}: LinkProps & {
+}: React.ComponentProps<typeof Link> & {
   onOpenChange?: (open: boolean) => void;
-  children: React.ReactNode;
-  className?: string;
 }) {
   return (
     <Link

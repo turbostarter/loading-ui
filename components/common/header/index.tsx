@@ -1,31 +1,16 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { LINKS, Links } from "@/components/common/header/links";
 import { Logo } from "@/components/common/header/logo";
-import Link from "next/link";
+import { Link } from "@/components/common/link";
 import { GitHub } from "@/components/common/header/github";
 import { ThemeSwitcher } from "@/components/common/theme-switcher";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import type { source } from "@/lib/source";
 import { DiamondSponsorHeaderCta } from "@/components/home/sponsors/diamond";
-
-const Search = dynamic(
-  () =>
-    import("@/components/common/header/search").then((mod) => ({
-      default: mod.Search,
-    })),
-  { ssr: false },
-);
-
-const MobileNav = dynamic(
-  () =>
-    import("@/components/common/header/mobile-nav").then((mod) => ({
-      default: mod.MobileNav,
-    })),
-  { ssr: false },
-);
+import { Search } from "@/components/common/header/search";
+import { MobileNav } from "@/components/common/header/mobile-nav";
 
 export const Header = ({ tree }: { tree: typeof source.pageTree }) => {
   return (

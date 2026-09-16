@@ -6,7 +6,7 @@ import { SPONSORS, SponsorTier } from "@/lib/sponsors";
 import { cn } from "@/lib/utils";
 import { track } from "@vercel/analytics";
 import { ExternalLink } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/components/common/link";
 
 export const SponsorsSidebarCta = () => {
   return (

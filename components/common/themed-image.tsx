@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import { preload } from "react-dom";
 
 import type { ComponentProps } from "react";
@@ -10,7 +9,7 @@ export const ThemedImage = ({
   light,
   dark,
   ...props
-}: Omit<ComponentProps<typeof Image>, "src"> & {
+}: Omit<ComponentProps<"img">, "src"> & {
   light: string;
   dark: string;
 }) => {
@@ -19,5 +18,5 @@ export const ThemedImage = ({
 
   const { resolvedTheme } = useTheme();
 
-  return <Image src={resolvedTheme === "dark" ? dark : light} {...props} />;
+  return <img src={resolvedTheme === "dark" ? dark : light} {...props} />;
 };

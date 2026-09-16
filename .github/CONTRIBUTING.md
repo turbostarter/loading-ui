@@ -4,7 +4,7 @@ Thanks for your interest in contributing. Before opening a pull request, please 
 
 ## About this repository
 
-Loading UI is a Next.js project with a component registry and docs site.
+Loading UI is a TanStack Start project with a component registry and docs site.
 
 - We use [Bun](https://bun.sh) for package management and scripts.
 - We use [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for linting.
@@ -15,7 +15,8 @@ Loading UI is a Next.js project with a component registry and docs site.
 
 | Path          | Description                                             |
 | ------------- | ------------------------------------------------------- |
-| `app/`        | App Router routes, docs pages, and API routes.          |
+| `src/routes/` | TanStack Start routes, docs pages, and server routes.   |
+| `src/styles/` | Global CSS and generated color tokens.                  |
 | `components/` | Shared site UI and reusable React components.           |
 | `content/`    | MDX content for the documentation site.                 |
 | `registry/`   | Registry source files and registry build scripts.       |

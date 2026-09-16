@@ -1,3 +1,4 @@
+import { createServerFn } from "@tanstack/react-start";
 import * as React from "react";
 
 import { formatCode } from "@/lib/format-code";
@@ -9,7 +10,54 @@ import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wra
 import { CopyButton } from "@/components/common/copy-button";
 import { getIconForLanguageExtension } from "@/components/common/icons";
 
-export async function ComponentSource({
+type SourceInput = {
+  name?: string;
+  src?: string;
+  title?: string;
+  language?: string;
+  maxLines?: number;
+};
+
+const getComponentSource = createServerFn({ method: "GET" })
+  .validator((input: SourceInput) => input)
+  .handler(async ({ data }) => {
+    if (!data.name && !data.src) {
+      return null;
+    }
+
+    let code: string | undefined;
+
+    if (data.name) {
+      const item =
+        (await getDemoItem(data.name)) ?? (await getRegistryItem(data.name));
+      code = item?.files?.[0]?.content;
+    }
+
+    if (data.src) {
+      code = await readFileFromRoot(data.src);
+    }
+
+    if (!code) {
+      return null;
+    }
+
+    code = await formatCode(code);
+
+    if (data.maxLines) {
+      code = code.split("\n").slice(0, data.maxLines).join("\n");
+    }
+
+    const lang = data.language ?? data.title?.split(".").pop() ?? "tsx";
+
+    return {
+      code,
+      highlightedCode: await highlightCode(code, lang),
+      language: lang,
+      title: data.title,
+    };
+  });
+
+export function ComponentSource({
   name,
   src,
   title,
@@ -25,42 +73,24 @@ export async function ComponentSource({
   collapsible?: boolean;
   maxLines?: number;
 }) {
-  if (!name && !src) {
+  const data = React.use(
+    getComponentSource({
+      data: { name, src, title, language, maxLines },
+    }),
+  );
+
+  if (!data) {
     return null;
   }
-
-  let code: string | undefined;
-
-  if (name) {
-    const item = (await getDemoItem(name)) ?? (await getRegistryItem(name));
-    code = item?.files?.[0]?.content;
-  }
-
-  if (src) {
-    code = await readFileFromRoot(src);
-  }
-
-  if (!code) {
-    return null;
-  }
-
-  code = await formatCode(code);
-
-  if (maxLines) {
-    code = code.split("\n").slice(0, maxLines).join("\n");
-  }
-
-  const lang = language ?? title?.split(".").pop() ?? "tsx";
-  const highlightedCode = await highlightCode(code, lang);
 
   if (!collapsible) {
     return (
       <div className={cn("relative", className)}>
         <ComponentCode
-          code={code}
-          highlightedCode={highlightedCode}
-          language={lang}
-          title={title}
+          code={data.code}
+          highlightedCode={data.highlightedCode}
+          language={data.language}
+          title={data.title}
         />
       </div>
     );
@@ -69,10 +99,10 @@ export async function ComponentSource({
   return (
     <CodeCollapsibleWrapper className={className}>
       <ComponentCode
-        code={code}
-        highlightedCode={highlightedCode}
-        language={lang}
-        title={title}
+        code={data.code}
+        highlightedCode={data.highlightedCode}
+        language={data.language}
+        title={data.title}
       />
     </CodeCollapsibleWrapper>
   );

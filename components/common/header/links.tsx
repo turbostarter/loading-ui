@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/components/common/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 

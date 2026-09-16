@@ -3,10 +3,13 @@
 
 # generated content
 .source
+.tanstack
 
 # test & build
 /coverage
 /.next/
+/.output/
+/.nitro/
 /out/
 /build
 *.tsbuildinfo

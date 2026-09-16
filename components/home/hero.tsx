@@ -7,13 +7,9 @@ import {
 } from "@/components/common/section";
 import { getCLICommand } from "@/lib/registry";
 import { Index } from "@/registry/__index__";
-
-import { getGitHubStars } from "@/app/(home)/layout";
 import { GitHubStars } from "./github-stars";
 
-export const Hero = async () => {
-  const stars = await getGitHubStars();
-
+export const Hero = ({ stars }: { stars: number }) => {
   return (
     <HeroSection>
       <HeroSectionTitle>

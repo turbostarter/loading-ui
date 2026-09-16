@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/components/common/link";
 import { ArrowUpRight } from "lucide-react";
 import { getCLICommand, getOpenInV0Url } from "@/lib/registry";
 import { CopyComponent, CopyCLICommand, OpenInV0 } from "./example-actions";

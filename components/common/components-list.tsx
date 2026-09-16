@@ -1,14 +1,12 @@
-import Link from "next/link";
-
+import { Link } from "@/components/common/link";
+import { usePageTree } from "@/components/docs/tree-context";
 import { PAGES_NEW } from "@/lib/docs";
 import { getPagesFromFolder, type PageTreeFolder } from "@/lib/page-tree";
-import { source } from "@/lib/source";
 
 export function ComponentsList() {
+  const tree = usePageTree();
   const list = getPagesFromFolder(
-    source.pageTree.children.find(
-      (page) => page.$id === "components",
-    ) as PageTreeFolder,
+    tree.children.find((page) => page.$id === "components") as PageTreeFolder,
   );
 
   return (

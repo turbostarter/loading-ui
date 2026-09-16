@@ -3,14 +3,14 @@
 import { TrendingDown, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/common/section";
-import { getStars } from "@/lib/octokit";
+import { getGitHubStarsFn } from "@/lib/server";
 import { useQuery } from "@tanstack/react-query";
 import { Badge } from "@/components/ui/badge";
 
 const useStats = () => {
   const stars = useQuery({
     queryKey: ["github-stars"],
-    queryFn: getStars,
+    queryFn: () => getGitHubStarsFn(),
   });
 
   return [

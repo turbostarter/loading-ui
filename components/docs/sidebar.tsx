@@ -12,9 +12,10 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import Link from "next/link";
+import { useRouterState } from "@tanstack/react-router";
+
+import { Link } from "@/components/common/link";
 import { PAGES_NEW } from "@/lib/docs";
-import { usePathname } from "next/navigation";
 
 const EXCLUDED_SECTIONS = new Set<string>([]);
 const EXCLUDED_PAGES = new Set<string>([]);
@@ -23,7 +24,9 @@ export function DocsSidebar({
   tree,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { tree: typeof source.pageTree }) {
-  const pathname = usePathname();
+  const pathname = useRouterState({
+    select: (state) => state.location.pathname,
+  });
   const topLevelPages = tree.children.filter(
     (
       item,

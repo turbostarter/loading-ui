@@ -1,30 +1,17 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClientProvider } from "@/lib/query/client";
-import { RootProvider } from "fumadocs-ui/provider/next";
+import { Analytics } from "@vercel/analytics/react";
+import { RootProvider } from "fumadocs-ui/provider/tanstack";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 
-const Analytics = dynamic(
-  () => import("@vercel/analytics/next").then((mod) => mod.Analytics),
-  { ssr: false },
-);
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClientProvider } from "@/lib/query/client";
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider>
-      <ThemeProvider
-        attribute="class"
-        enableSystem
-        disableTransitionOnChange
-        scriptProps={
-          typeof window === "undefined"
-            ? undefined
-            : ({ type: "application/json" } as const)
-        }
-      >
+      <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
         <RootProvider
           theme={{
             enabled: false,

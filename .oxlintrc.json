@@ -27,9 +27,17 @@
   },
   "rules": {
     "no-unsafe-type-assertion": "off",
-    "no-unassigned-import": "off"
+    "no-unassigned-import": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_splat"] }]
   },
-  "ignorePatterns": ["node_modules/", "dist/"],
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    ".output/",
+    ".nitro/",
+    ".tanstack/",
+    "src/routeTree.gen.ts"
+  ],
   "options": {
     "typeAware": true,
     "typeCheck": true

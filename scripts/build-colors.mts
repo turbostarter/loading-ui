@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { generateColorsCss } from "../lib/colors.ts";
 
-const outputPath = path.join(process.cwd(), "app/colors.css");
+const outputPath = path.join(process.cwd(), "src/styles/colors.css");
 
 const content = generateColorsCss();
 const existing = await fs.readFile(outputPath, "utf8").catch(() => null);
