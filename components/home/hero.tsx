@@ -5,7 +5,7 @@ import {
   HeroSectionDescription,
   HeroSectionTitle,
 } from "@/components/common/section";
-import { getCLICommand } from "@/lib/registry";
+import { getCLICommand } from "@/lib/registry-meta";
 import { Index } from "@/registry/__index__";
 import { GitHubStars } from "./github-stars";
 

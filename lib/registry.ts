@@ -1,6 +1,4 @@
 import { readFileFromRoot } from "@/lib/read-file";
-import { Index } from "@/registry/__index__";
-import { ExamplesIndex } from "@/registry/examples/__index__";
 import {
   registryItemSchema,
   type RegistryItem,
@@ -9,7 +7,16 @@ import {
 import { LRUCache } from "lru-cache";
 import path from "path";
 import { promises as fs } from "fs";
-import { registry } from "@/registry/registry";
+
+export { getDemoComponent, getRegistryComponent } from "@/lib/registry-client";
+export {
+  getCLICommand,
+  getOpenInV0Url,
+  getRegistryItemUrl,
+} from "@/lib/registry-meta";
+
+import { Index } from "@/registry/__index__";
+import { ExamplesIndex } from "@/registry/examples/__index__";
 
 // LRU cache for cross-request caching of registry items.
 // File reads are I/O-bound, so caching improves dev server performance.
@@ -18,21 +25,8 @@ const registryCache = new LRUCache<string, any>({
   ttl: 1000 * 60 * 5, // 5 minutes (shorter for dev to pick up changes).
 });
 
-export function getDemoComponent(name: string) {
-  return ExamplesIndex[name]?.component;
-}
-
 function getRegistryEntry(name: string) {
   return Index[name];
-}
-
-export function getRegistryComponent(name: string) {
-  const demoComponent = getDemoComponent(name);
-  if (demoComponent) {
-    return demoComponent;
-  }
-
-  return getRegistryEntry(name)?.component;
 }
 
 export async function getDemoItem(name: string) {
@@ -214,20 +208,4 @@ export function fixImport(content: string) {
   };
 
   return content.replace(regex, replacement);
-}
-
-export function getCLICommand(name: string) {
-  return `npx shadcn add ${registry.name}/${name}`;
-}
-
-export function getRegistryItemUrl(name: string) {
-  return new URL(`/r/${name}.json`, registry.homepage).toString();
-}
-
-export function getOpenInV0Url(name: string) {
-  const url = new URL("https://v0.app/chat/api/open");
-
-  url.searchParams.set("url", getRegistryItemUrl(name));
-
-  return url.toString();
 }

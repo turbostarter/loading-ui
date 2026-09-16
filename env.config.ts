@@ -5,6 +5,6 @@ import * as z from "zod";
 export default defineEnv({
   extends: [vercel],
   shared: {
-    NODE_ENV: z.enum(["development", "production"]).default("production"),
+    NODE_ENV: z.enum(["development", "production"]).default("development"),
   },
 });

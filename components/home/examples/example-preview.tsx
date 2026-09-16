@@ -20,7 +20,9 @@ export function ExamplePreview({ name }: { name: string }) {
           observer?.disconnect();
 
           void (async () => {
-            const mod = await import(`@/registry/examples/${name}/demo.tsx`);
+            const mod = await import(
+              `../../../registry/examples/${name}/demo.tsx`
+            );
             const component = Object.values(mod).find(
               (value) => typeof value === "function",
             ) as ComponentType | undefined;

@@ -4,7 +4,6 @@ import react from "@vitejs/plugin-react";
 import { fumadocsMdx } from "fumadocs-mdx/vite";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
-import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   server: {
@@ -14,9 +13,6 @@ export default defineConfig({
     external: ["ts-morph", "@ts-morph/common", "shadcn"],
   },
   plugins: [
-    tsConfigPaths({
-      projects: ["./tsconfig.json"],
-    }),
     fumadocsMdx(),
     tailwindcss(),
     tanstackStart({

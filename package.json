@@ -69,7 +69,6 @@
     "oxlint-tsgolint": "7.0.2001",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.2",
-    "vite": "^8",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite": "^8"
   }
 }
