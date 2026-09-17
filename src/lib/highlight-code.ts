@@ -1,7 +1,26 @@
-import { createHash } from "crypto";
+import { createHash } from "node:crypto";
 import { LRUCache } from "lru-cache";
-import { codeToHtml } from "shiki";
-import type { ShikiTransformer } from "shiki";
+import {
+  createHighlighter,
+  createJavaScriptRegexEngine,
+  type ShikiTransformer,
+} from "shiki";
+
+const highlighterPromise = createHighlighter({
+  langs: [
+    "tsx",
+    "ts",
+    "jsx",
+    "javascript",
+    "typescript",
+    "bash",
+    "json",
+    "css",
+    "html",
+  ],
+  themes: ["github-dark", "github-light"],
+  engine: createJavaScriptRegexEngine({ forgiving: true }),
+});
 
 // LRU cache for cross-request caching of highlighted code.
 // Shiki highlighting is CPU-intensive and deterministic, so caching is safe.
@@ -75,7 +94,13 @@ export async function highlightCode(code: string, language: string = "tsx") {
     return cached;
   }
 
-  const html = await codeToHtml(code, {
+  const highlighter = await highlighterPromise;
+  const loaded = highlighter.getLoadedLanguages();
+  if (!loaded.includes(language)) {
+    await highlighter.loadLanguage(language as never);
+  }
+
+  const html = highlighter.codeToHtml(code, {
     lang: language,
     themes: {
       dark: "github-dark",

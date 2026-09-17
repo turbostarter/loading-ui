@@ -19,7 +19,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mts"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.d.ts"],
   "exclude": [
     "node_modules",
     ".output",

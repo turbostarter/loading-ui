@@ -1,13 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "workers-og";
 
 import geistBold from "@/assets/fonts/Geist-Bold.ttf?inline";
 import geistRegular from "@/assets/fonts/Geist-Regular.ttf?inline";
 import { Icons } from "@/components/common/icons";
 import { source } from "@/lib/source";
 
-const font = Buffer.from(geistRegular.split(",", 2)[1], "base64");
-const fontBold = Buffer.from(geistBold.split(",", 2)[1], "base64");
+function inlineFontToArrayBuffer(dataUrl: string) {
+  const base64 = dataUrl.split(",", 2)[1] ?? "";
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+
+  for (let i = 0; i < binary.length; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+
+  return bytes.buffer;
+}
+
+const font = inlineFontToArrayBuffer(geistRegular);
+const fontBold = inlineFontToArrayBuffer(geistBold);
 
 export const Route = createFileRoute("/api/og/$")({
   server: {
