@@ -1,16 +1,16 @@
 "use client";
 
 import { RootProvider } from "fumadocs-ui/provider/tanstack";
-import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClientProvider } from "@/lib/query/client";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider>
-      <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+      <ThemeProvider defaultTheme="system" storageKey="theme">
         <RootProvider
           theme={{
             enabled: false,
