@@ -7,10 +7,9 @@ import { Link } from "@/components/common/link";
 import { mdxComponents } from "@/components/mdx";
 import { SponsorsSidebarCta } from "@/components/home/sponsors/sidebar-cta";
 import { buttonVariants } from "@/components/ui/button";
+import type { DocsPageData } from "@/lib/server";
 import { docs } from "@/lib/source";
 import { cn } from "@/lib/utils";
-
-type Neighbour = { url: string; name: React.ReactNode } | null;
 
 export function DocsPageView({
   path,
@@ -19,14 +18,10 @@ export function DocsPageView({
   markdownUrl,
   raw,
   neighbours,
-}: {
-  path: string;
-  title: string;
-  description?: string;
-  markdownUrl: string;
-  raw: string;
-  neighbours: { previous: Neighbour; next: Neighbour };
-}) {
+}: Pick<
+  DocsPageData,
+  "path" | "title" | "description" | "markdownUrl" | "raw" | "neighbours"
+>) {
   const page = docs.getPage(path);
   if (!page) {
     throw new Error(`unknown page: ${path}`);

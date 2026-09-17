@@ -3,8 +3,8 @@ import { Suspense } from "react";
 
 import { DocsPageView } from "@/components/docs/docs-page";
 import { createMetadata } from "@/lib/metadata";
-import { docs } from "@/lib/source";
 import { getDocsPage } from "@/lib/server";
+import { docs, source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/$")({
   loader: async ({ params }) => {
@@ -13,23 +13,33 @@ export const Route = createFileRoute("/docs/$")({
     if (!data) {
       throw notFound();
     }
+
     await docs.getPage(data.path)?.preload();
+
     return data;
   },
-  head: ({ loaderData }) =>
-    loaderData
-      ? createMetadata({
-          title: loaderData.title,
-          description: loaderData.description,
-          alternates: { canonical: loaderData.url },
-          openGraph: {
-            url: loaderData.url,
-            images: [
-              ["/api/og", ...loaderData.slugs, "image.png"].join("/"),
-            ],
-          },
-        })
-      : {},
+  head: ({ params }) => {
+    const slugs = params._splat?.split("/").filter(Boolean) ?? [];
+    const page = source.getPage(slugs);
+    if (!page) {
+      return {};
+    }
+
+    const image = ["/api/og", ...page.slugs, "image.png"].join("/");
+
+    return createMetadata({
+      title: page.data.title,
+      description: page.data.description,
+      alternates: { canonical: page.url },
+      openGraph: {
+        url: page.url,
+        images: [image],
+      },
+      twitter: {
+        images: [image],
+      },
+    })();
+  },
   component: DocsSplatPage,
 });
 
@@ -38,14 +48,7 @@ function DocsSplatPage() {
 
   return (
     <Suspense>
-      <DocsPageView
-        path={data.path}
-        title={data.title}
-        description={data.description}
-        markdownUrl={data.markdownUrl}
-        raw={data.raw}
-        neighbours={data.neighbours}
-      />
+      <DocsPageView {...data} />
     </Suspense>
   );
 }
