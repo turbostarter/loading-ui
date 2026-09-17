@@ -10,9 +10,12 @@
 /.next/
 /.output/
 /.nitro/
+/.wrangler/
+/dist/
 /out/
 /build
 *.tsbuildinfo
+worker-configuration.d.ts
 
 # misc
 .DS_Store
@@ -25,5 +28,6 @@ yarn-error.log*
 
 # others
 .env*.local
+.dev.vars
 .vercel
 next-env.d.ts

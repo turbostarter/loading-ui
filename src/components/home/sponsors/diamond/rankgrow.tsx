@@ -3,7 +3,7 @@
 import { Icons } from "@/components/common/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 
 const RANKGROW_URL =
   "https://www.rankgrow.io?utm_source=loading-ui&utm_medium=referral";

@@ -1,6 +1,5 @@
 "use client";
 
-import { Analytics } from "@vercel/analytics/react";
 import { RootProvider } from "fumadocs-ui/provider/tanstack";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
@@ -19,7 +18,6 @@ export function Providers({ children }: { children: ReactNode }) {
         >
           <TooltipProvider delay={0}>{children}</TooltipProvider>
         </RootProvider>
-        <Analytics />
       </ThemeProvider>
     </QueryClientProvider>
   );

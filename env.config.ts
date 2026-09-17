@@ -1,10 +1,24 @@
 import { defineEnv } from "envin";
-import { vercel } from "envin/presets/zod";
 import * as z from "zod";
 
+const optionalUrl = z.preprocess(
+  (value) =>
+    typeof value === "string" && value.trim() === "" ? undefined : value,
+  z.url().optional(),
+);
+
+const optionalString = z.preprocess(
+  (value) =>
+    typeof value === "string" && value.trim() === "" ? undefined : value,
+  z.string().optional(),
+);
+
 export default defineEnv({
-  extends: [vercel],
   shared: {
     NODE_ENV: z.enum(["development", "production"]).default("development"),
+    SITE_URL: optionalUrl,
+  },
+  server: {
+    GITHUB_TOKEN: optionalString,
   },
 });

@@ -57,8 +57,8 @@ export function getBaseUrl() {
     return new URL("http://localhost:3000");
   }
 
-  if (typeof window === "undefined") {
-    return new URL(`https://${env.VERCEL_URL ?? PRODUCTION_HOST}`);
+  if (env.SITE_URL) {
+    return new URL(env.SITE_URL);
   }
 
   return new URL(`https://${PRODUCTION_HOST}`);

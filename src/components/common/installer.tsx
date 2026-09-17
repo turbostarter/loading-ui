@@ -10,7 +10,7 @@ import {
   InputGroupText,
 } from "@/components/ui/input-group";
 
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 
 const COPY_TIMEOUT = 2000;
 

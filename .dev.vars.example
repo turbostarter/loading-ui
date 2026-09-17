@@ -1,0 +1,4 @@
+# Copy to `.dev.vars` for local `vite dev` / `vite preview`.
+# GITHUB_TOKEN is optional; it raises GitHub API rate limits for star counts.
+GITHUB_TOKEN=
+SITE_URL=http://localhost:3000
