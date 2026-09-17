@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Suspense } from "react";
 
-import { DocsPageView } from "@/components/docs/docs-page";
+import { DocsPageContent } from "@/components/docs/docs-page";
 import { createMetadata } from "@/lib/metadata";
 import { getDocsPage } from "@/lib/server";
 import { docs, source } from "@/lib/source";
@@ -46,7 +46,7 @@ function DocsIndexPage() {
 
   return (
     <Suspense>
-      <DocsPageView {...data} />
+      <DocsPageContent {...data} />
     </Suspense>
   );
 }
