@@ -9,7 +9,6 @@ import type { ReactNode } from "react";
 import { Header } from "@/components/common/header";
 import { PageTreeProvider, usePageTree } from "@/components/docs/tree-context";
 import { Providers } from "@/components/providers";
-import { ThemeProvider } from "@/components/theme-provider";
 import { fonts } from "@/lib/fonts";
 import { defaultMetadata } from "@/lib/metadata";
 import { getSerializedPageTree } from "@/lib/server";
@@ -75,9 +74,7 @@ function RootDocument({ children }: { children: ReactNode }) {
           fonts,
         )}
       >
-        <ThemeProvider defaultTheme="system" storageKey="theme">
-          {children}
-        </ThemeProvider>
+        {children}
         <Scripts />
       </body>
     </html>
