@@ -18,6 +18,39 @@ export {
 import { Index } from "@/registry/__index__";
 import { ExamplesIndex } from "@/registry/examples/__index__";
 
+const registryJsonFiles = import.meta.glob("../../../public/r/*.json", {
+  import: "default",
+});
+
+const exampleSourceFiles = import.meta.glob(
+  "../../registry/examples/**/*.{tsx,ts}",
+  { query: "?raw", import: "default" },
+);
+
+function demoFileGlobKey(filePath: string) {
+  return filePath.replace(/^src\//, "../../");
+}
+
+async function readRegistryFromPublic(name: string) {
+  const load = registryJsonFiles[`../../../public/r/${name}.json`];
+  if (!load) {
+    return null;
+  }
+
+  const data = await load();
+  const parsed = registryItemSchema.safeParse(data);
+  return parsed.success ? parsed.data : null;
+}
+
+async function readDemoSource(filePath: string) {
+  const load = exampleSourceFiles[demoFileGlobKey(filePath)];
+  if (load) {
+    return load();
+  }
+
+  return readFileFromRoot(filePath);
+}
+
 // LRU cache for cross-request caching of registry items.
 // File reads are I/O-bound, so caching improves dev server performance.
 const registryCache = new LRUCache<string, any>({
@@ -35,7 +68,7 @@ export async function getDemoItem(name: string) {
     return null;
   }
 
-  const content = await readFileFromRoot(demo.filePath);
+  const content = await readDemoSource(demo.filePath);
 
   return {
     name: demo.name,
@@ -56,6 +89,12 @@ export async function getRegistryItem(name: string) {
   // Check cache first.
   if (registryCache.has(cacheKey)) {
     return registryCache.get(cacheKey);
+  }
+
+  const fromPublic = await readRegistryFromPublic(name);
+  if (fromPublic) {
+    registryCache.set(cacheKey, fromPublic);
+    return fromPublic;
   }
 
   const item = getRegistryEntry(name);

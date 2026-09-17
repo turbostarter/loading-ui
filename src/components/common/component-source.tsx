@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wrapper";
 import { CopyButton } from "@/components/common/copy-button";
@@ -22,11 +23,11 @@ export function ComponentSource({
   collapsible?: boolean;
   maxLines?: number;
 }) {
-  const data = React.use(
-    getComponentSource({
-      data: { name, src, title, language, maxLines },
-    }),
-  );
+  const input = { name, src, title, language, maxLines };
+  const { data } = useSuspenseQuery({
+    queryKey: ["component-source", input],
+    queryFn: () => getComponentSource({ data: input }),
+  });
 
   if (!data) {
     return null;

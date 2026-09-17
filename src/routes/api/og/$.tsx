@@ -1,17 +1,13 @@
-import { readFileSync } from "node:fs";
-import path from "node:path";
 import { createFileRoute } from "@tanstack/react-router";
 import { ImageResponse } from "@vercel/og";
 
+import geistBold from "@/assets/fonts/Geist-Bold.ttf?inline";
+import geistRegular from "@/assets/fonts/Geist-Regular.ttf?inline";
 import { Icons } from "@/components/common/icons";
 import { source } from "@/lib/source";
 
-const font = readFileSync(
-  path.join(process.cwd(), "src/assets/fonts/Geist-Regular.ttf"),
-);
-const fontBold = readFileSync(
-  path.join(process.cwd(), "src/assets/fonts/Geist-Bold.ttf"),
-);
+const font = Buffer.from(geistRegular.split(",", 2)[1], "base64");
+const fontBold = Buffer.from(geistBold.split(",", 2)[1], "base64");
 
 export const Route = createFileRoute("/api/og/$")({
   server: {
