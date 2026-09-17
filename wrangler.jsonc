@@ -13,10 +13,13 @@
   "vars": {
     "NODE_ENV": "production",
     "SITE_URL": "https://loading-ui.com",
+    "VITE_POSTHOG_PROJECT_TOKEN": "phc_L5JfVUDLqndka7zpFtvmXCLjlGCDCvgqVnOwHUEnPpI",
+    "VITE_POSTHOG_HOST": "/ingest",
+    "POSTHOG_HOST": "https://us.i.posthog.com",
   },
   "assets": {
     "binding": "ASSETS",
-    "run_worker_first": ["/docs", "/docs/*", "/api/*"],
+    "run_worker_first": ["/docs", "/docs/*", "/api/*", "/ingest", "/ingest/*"],
   },
   "routes": [{ "pattern": "loading-ui.com", "custom_domain": true }],
 }

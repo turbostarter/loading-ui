@@ -1,20 +1,11 @@
-type TrackProperties = Record<string, string | number | boolean | undefined>;
+import { posthog } from "posthog-js";
 
-declare global {
-  interface Window {
-    zaraz?: {
-      track: (
-        eventName: string,
-        properties?: TrackProperties,
-      ) => void | Promise<void>;
-    };
-  }
-}
+type TrackProperties = Record<string, string | number | boolean | undefined>;
 
 export function track(eventName: string, properties?: TrackProperties) {
   if (typeof window === "undefined") {
     return;
   }
 
-  void window.zaraz?.track(eventName, properties);
+  posthog.capture(eventName, properties);
 }
