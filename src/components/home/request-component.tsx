@@ -2,7 +2,7 @@
 
 import { buttonVariants } from "@/components/ui/button";
 import { GITHUB_URL } from "@/lib/constants";
-import { track } from "@/lib/analytics";
+import { track } from "@/lib/analytics/client";
 import { Link } from "@/components/common/link";
 
 export const RequestComponent = () => {

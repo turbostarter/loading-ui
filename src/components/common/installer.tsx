@@ -10,7 +10,7 @@ import {
   InputGroupText,
 } from "@/components/ui/input-group";
 
-import { track } from "@/lib/analytics";
+import { track } from "@/lib/analytics/client";
 
 const COPY_TIMEOUT = 2000;
 

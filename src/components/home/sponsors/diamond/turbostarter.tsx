@@ -3,7 +3,7 @@
 import { Icons } from "@/components/common/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { track } from "@/lib/analytics";
+import { track } from "@/lib/analytics/client";
 
 export const TurbostarterButton = ({
   className,

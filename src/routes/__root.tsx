@@ -8,7 +8,6 @@ import type { ReactNode } from "react";
 
 import { Header } from "@/components/common/header";
 import { PageTreeProvider, usePageTree } from "@/components/docs/tree-context";
-import { PostHogProvider } from "@/components/posthog-provider";
 import { Providers } from "@/components/providers";
 import { fonts } from "@/lib/fonts";
 import { defaultMetadata } from "@/lib/metadata";
@@ -75,7 +74,7 @@ function RootDocument({ children }: { children: ReactNode }) {
           fonts,
         )}
       >
-        <PostHogProvider>{children}</PostHogProvider>
+        {children}
         <Scripts />
       </body>
     </html>

@@ -4,7 +4,7 @@ import { MAX, Sponsor, SPONSORS, SponsorTier } from "@/lib/sponsors";
 import { buttonVariants } from "@/components/ui/button";
 import { EMAIL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { track } from "@/lib/analytics";
+import { track } from "@/lib/analytics/client";
 import { ArrowUpRight, Gem, Crown, Medal, Megaphone } from "lucide-react";
 import { ThemedImage } from "@/components/common/themed-image";
 

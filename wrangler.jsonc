@@ -13,7 +13,7 @@
   "vars": {
     "NODE_ENV": "production",
     "SITE_URL": "https://loading-ui.com",
-    "VITE_POSTHOG_PROJECT_TOKEN": "phc_L5JfVUDLqndka7zpFtvmXCLjlGCDCvgqVnOwHUEnPpI",
+    "VITE_POSTHOG_PROJECT_TOKEN": "phc_opgUNJSt8ZRrhtAPECbTwWvqAGuxntWQCEdj3C3ztvzz",
     "VITE_POSTHOG_HOST": "https://eu.i.posthog.com",
   },
   "assets": {
