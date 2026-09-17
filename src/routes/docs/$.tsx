@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Suspense } from "react";
 
 import { DocsPageView } from "@/components/docs/docs-page";
-import { createHead, pageTitle } from "@/lib/metadata";
+import { createMetadata } from "@/lib/metadata";
 import { docs } from "@/lib/source";
 import { getDocsPage } from "@/lib/server";
 
@@ -18,11 +18,16 @@ export const Route = createFileRoute("/docs/$")({
   },
   head: ({ loaderData }) =>
     loaderData
-      ? createHead({
-          title: pageTitle(loaderData.title),
+      ? createMetadata({
+          title: loaderData.title,
           description: loaderData.description,
-          canonical: loaderData.url,
-          image: ["/api/og", ...loaderData.slugs, "image.png"].join("/"),
+          alternates: { canonical: loaderData.url },
+          openGraph: {
+            url: loaderData.url,
+            images: [
+              ["/api/og", ...loaderData.slugs, "image.png"].join("/"),
+            ],
+          },
         })
       : {},
   component: DocsSplatPage,

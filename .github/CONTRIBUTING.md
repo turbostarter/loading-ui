@@ -13,14 +13,15 @@ Loading UI is a TanStack Start project with a component registry and docs site.
 
 ## Repository structure
 
-| Path          | Description                                             |
-| ------------- | ------------------------------------------------------- |
-| `src/routes/` | TanStack Start routes, docs pages, and server routes.   |
-| `src/styles/` | Global CSS and generated color tokens.                  |
-| `components/` | Shared site UI and reusable React components.           |
-| `content/`    | MDX content for the documentation site.                 |
-| `registry/`   | Registry source files and registry build scripts.       |
-| `public/r/`   | Generated registry artifacts consumed by the installer. |
+| Path                 | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| `src/routes/`        | TanStack Start routes, docs pages, and server routes.   |
+| `src/components/`    | Shared site UI and reusable React components.           |
+| `src/content/docs/`  | MDX content for the documentation site.                 |
+| `src/registry/`      | Registry source files and registry build scripts.       |
+| `src/lib/`           | Shared utilities, server functions, and registry helpers. |
+| `src/assets/styles/` | Global CSS and generated color tokens.                  |
+| `public/r/`          | Generated registry artifacts consumed by the installer. |
 
 ## Getting started
 

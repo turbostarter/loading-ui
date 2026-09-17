@@ -3,12 +3,14 @@ import { createFileRoute, getRouteApi } from "@tanstack/react-router";
 import { ColorPicker } from "@/components/common/color-picker";
 import { Examples } from "@/components/home/examples/examples";
 import { Hero } from "@/components/home/hero";
-import { createHead } from "@/lib/metadata";
+import { createMetadata } from "@/lib/metadata";
 
 const homeRoute = getRouteApi("/_home");
 
 export const Route = createFileRoute("/_home/")({
-  head: () => createHead({ canonical: "/" }),
+  head: createMetadata({
+    alternates: { canonical: "/" },
+  }),
   component: HomePage,
 });
 

@@ -13,7 +13,7 @@ import {
   TierHeader,
 } from "@/components/home/sponsors/sponsors";
 import { Stats } from "@/components/home/sponsors/stats";
-import { createHead, pageTitle } from "@/lib/metadata";
+import { createMetadata } from "@/lib/metadata";
 import { MAX, SPONSORS } from "@/lib/sponsors";
 
 const TITLE = "Sponsors";
@@ -21,12 +21,11 @@ const DESCRIPTION =
   "Power the fastest growing UI library. Your support keeps Loading UI free and open-source for developers everywhere.";
 
 export const Route = createFileRoute("/_home/sponsors")({
-  head: () =>
-    createHead({
-      title: pageTitle(TITLE),
-      description: DESCRIPTION,
-      canonical: "/sponsors",
-    }),
+  head: createMetadata({
+    title: TITLE,
+    description: DESCRIPTION,
+    alternates: { canonical: "/sponsors" },
+  }),
   component: SponsorsPage,
 });
 

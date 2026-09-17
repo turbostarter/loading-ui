@@ -10,32 +10,34 @@ import { Header } from "@/components/common/header";
 import { PageTreeProvider, usePageTree } from "@/components/docs/tree-context";
 import { Providers } from "@/components/providers";
 import { fonts } from "@/lib/fonts";
-import { createHead } from "@/lib/metadata";
+import { defaultMetadata } from "@/lib/metadata";
 import { getSerializedPageTree } from "@/lib/server";
 import { cn } from "@/lib/utils";
 import "@/assets/styles/colors.css";
 import "@/assets/styles/global.css";
 
-const defaultHead = createHead();
-
 export const Route = createRootRoute({
   loader: () => getSerializedPageTree(),
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      ...defaultHead.meta,
-    ],
-    links: [
-      { rel: "icon", href: "/favicon.ico" },
-      { rel: "icon", type: "image/svg+xml", href: "/icon.svg" },
-      { rel: "apple-touch-icon", href: "/apple-icon.png" },
-      ...defaultHead.links,
-    ],
-  }),
+  head: () => {
+    const seo = defaultMetadata();
+
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+        ...seo.meta,
+      ],
+      links: [
+        { rel: "icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/svg+xml", href: "/icon.svg" },
+        { rel: "apple-touch-icon", href: "/apple-icon.png" },
+        ...(seo.links ?? []),
+      ],
+    };
+  },
   component: RootComponent,
 });
 
