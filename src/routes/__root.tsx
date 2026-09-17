@@ -13,8 +13,8 @@ import { fonts } from "@/lib/fonts";
 import { createHead } from "@/lib/metadata";
 import { getSerializedPageTree } from "@/lib/server";
 import { cn } from "@/lib/utils";
-import "@/src/styles/colors.css";
-import "@/src/styles/global.css";
+import "@/assets/styles/colors.css";
+import "@/assets/styles/global.css";
 
 const defaultHead = createHead();
 

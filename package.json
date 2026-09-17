@@ -14,7 +14,7 @@
   "type": "module",
   "scripts": {
     "build": "bun run build:colors && vite build",
-    "build:colors": "bun scripts/build-colors.mts",
+    "build:colors": "bun src/scripts/build-colors.mts",
     "predev": "bun run build:colors",
     "dev": "vite dev",
     "start": "vite preview",
@@ -23,7 +23,7 @@
     "lint:fix": "oxlint --fix",
     "format": "oxfmt --check",
     "format:fix": "oxfmt",
-    "build:registry": "bun registry/scripts/build.mts && bun format:fix"
+    "build:registry": "bun src/registry/scripts/build.mts && bun format:fix"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

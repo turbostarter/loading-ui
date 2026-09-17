@@ -3,7 +3,7 @@ import * as React from "react";
 import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wrapper";
 import { CopyButton } from "@/components/common/copy-button";
 import { getIconForLanguageExtension } from "@/components/common/icons";
-import { getComponentSource } from "@/lib/component-source.server";
+import { getComponentSource } from "@/lib/get-component-source";
 import { cn } from "@/lib/utils";
 
 export function ComponentSource({

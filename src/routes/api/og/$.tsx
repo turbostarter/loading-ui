@@ -7,10 +7,10 @@ import { Icons } from "@/components/common/icons";
 import { source } from "@/lib/source";
 
 const font = readFileSync(
-  path.join(process.cwd(), "src/fonts/Geist-Regular.ttf"),
+  path.join(process.cwd(), "src/assets/fonts/Geist-Regular.ttf"),
 );
 const fontBold = readFileSync(
-  path.join(process.cwd(), "src/fonts/Geist-Bold.ttf"),
+  path.join(process.cwd(), "src/assets/fonts/Geist-Bold.ttf"),
 );
 
 export const Route = createFileRoute("/api/og/$")({

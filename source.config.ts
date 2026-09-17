@@ -1,7 +1,7 @@
 import { defineConfig } from "fumadocs-mdx/config";
 import { rehypePrettyCode } from "rehype-pretty-code";
 
-import { transformers } from "./lib/highlight-code";
+import { transformers } from "./src/lib/highlight-code";
 
 export default defineConfig({
   mdxOptions: {

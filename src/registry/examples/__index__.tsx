@@ -6,7 +6,7 @@ import * as React from "react";
 export const ExamplesIndex: Record<string, Record<string, any>> = {
   "accordion-loader-color": {
     name: "accordion-loader-color",
-    filePath: "registry/examples/accordion-loader/color.tsx",
+    filePath: "src/registry/examples/accordion-loader/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/color.tsx");
       const exportName =
@@ -19,7 +19,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "accordion-loader-demo": {
     name: "accordion-loader-demo",
-    filePath: "registry/examples/accordion-loader/demo.tsx",
+    filePath: "src/registry/examples/accordion-loader/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/demo.tsx");
       const exportName =
@@ -32,7 +32,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "accordion-loader-duration": {
     name: "accordion-loader-duration",
-    filePath: "registry/examples/accordion-loader/duration.tsx",
+    filePath: "src/registry/examples/accordion-loader/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/duration.tsx");
       const exportName =
@@ -45,7 +45,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "accordion-loader-glyphs": {
     name: "accordion-loader-glyphs",
-    filePath: "registry/examples/accordion-loader/glyphs.tsx",
+    filePath: "src/registry/examples/accordion-loader/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/glyphs.tsx");
       const exportName =
@@ -58,7 +58,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "accordion-loader-size": {
     name: "accordion-loader-size",
-    filePath: "registry/examples/accordion-loader/size.tsx",
+    filePath: "src/registry/examples/accordion-loader/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/size.tsx");
       const exportName =
@@ -71,7 +71,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-badge": {
     name: "analyzing-image-badge",
-    filePath: "registry/examples/analyzing-image/badge.tsx",
+    filePath: "src/registry/examples/analyzing-image/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/badge.tsx");
       const exportName =
@@ -84,7 +84,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-button": {
     name: "analyzing-image-button",
-    filePath: "registry/examples/analyzing-image/button.tsx",
+    filePath: "src/registry/examples/analyzing-image/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/button.tsx");
       const exportName =
@@ -97,7 +97,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-color": {
     name: "analyzing-image-color",
-    filePath: "registry/examples/analyzing-image/color.tsx",
+    filePath: "src/registry/examples/analyzing-image/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/color.tsx");
       const exportName =
@@ -110,7 +110,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-demo": {
     name: "analyzing-image-demo",
-    filePath: "registry/examples/analyzing-image/demo.tsx",
+    filePath: "src/registry/examples/analyzing-image/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/demo.tsx");
       const exportName =
@@ -123,7 +123,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-empty": {
     name: "analyzing-image-empty",
-    filePath: "registry/examples/analyzing-image/empty.tsx",
+    filePath: "src/registry/examples/analyzing-image/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/empty.tsx");
       const exportName =
@@ -136,7 +136,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-shimmer": {
     name: "analyzing-image-shimmer",
-    filePath: "registry/examples/analyzing-image/shimmer.tsx",
+    filePath: "src/registry/examples/analyzing-image/shimmer.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/shimmer.tsx");
       const exportName =
@@ -149,7 +149,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "analyzing-image-size": {
     name: "analyzing-image-size",
-    filePath: "registry/examples/analyzing-image/size.tsx",
+    filePath: "src/registry/examples/analyzing-image/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/size.tsx");
       const exportName =
@@ -162,7 +162,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-badge": {
     name: "arc-badge",
-    filePath: "registry/examples/arc/badge.tsx",
+    filePath: "src/registry/examples/arc/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/badge.tsx");
       const exportName =
@@ -175,7 +175,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-border-width": {
     name: "arc-border-width",
-    filePath: "registry/examples/arc/border-width.tsx",
+    filePath: "src/registry/examples/arc/border-width.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/border-width.tsx");
       const exportName =
@@ -188,7 +188,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-button": {
     name: "arc-button",
-    filePath: "registry/examples/arc/button.tsx",
+    filePath: "src/registry/examples/arc/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/button.tsx");
       const exportName =
@@ -201,7 +201,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-color": {
     name: "arc-color",
-    filePath: "registry/examples/arc/color.tsx",
+    filePath: "src/registry/examples/arc/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/color.tsx");
       const exportName =
@@ -214,7 +214,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-demo": {
     name: "arc-demo",
-    filePath: "registry/examples/arc/demo.tsx",
+    filePath: "src/registry/examples/arc/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/demo.tsx");
       const exportName =
@@ -227,7 +227,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-duration": {
     name: "arc-duration",
-    filePath: "registry/examples/arc/duration.tsx",
+    filePath: "src/registry/examples/arc/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/duration.tsx");
       const exportName =
@@ -240,7 +240,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-empty": {
     name: "arc-empty",
-    filePath: "registry/examples/arc/empty.tsx",
+    filePath: "src/registry/examples/arc/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/empty.tsx");
       const exportName =
@@ -253,7 +253,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-size": {
     name: "arc-size",
-    filePath: "registry/examples/arc/size.tsx",
+    filePath: "src/registry/examples/arc/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/size.tsx");
       const exportName =
@@ -266,7 +266,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "arc-tabs": {
     name: "arc-tabs",
-    filePath: "registry/examples/arc/tabs.tsx",
+    filePath: "src/registry/examples/arc/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./arc/tabs.tsx");
       const exportName =
@@ -279,7 +279,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-badge": {
     name: "bars-badge",
-    filePath: "registry/examples/bars/badge.tsx",
+    filePath: "src/registry/examples/bars/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/badge.tsx");
       const exportName =
@@ -292,7 +292,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-button": {
     name: "bars-button",
-    filePath: "registry/examples/bars/button.tsx",
+    filePath: "src/registry/examples/bars/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/button.tsx");
       const exportName =
@@ -305,7 +305,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-color": {
     name: "bars-color",
-    filePath: "registry/examples/bars/color.tsx",
+    filePath: "src/registry/examples/bars/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/color.tsx");
       const exportName =
@@ -318,7 +318,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-count": {
     name: "bars-count",
-    filePath: "registry/examples/bars/count.tsx",
+    filePath: "src/registry/examples/bars/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/count.tsx");
       const exportName =
@@ -331,7 +331,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-demo": {
     name: "bars-demo",
-    filePath: "registry/examples/bars/demo.tsx",
+    filePath: "src/registry/examples/bars/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/demo.tsx");
       const exportName =
@@ -344,7 +344,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-duration": {
     name: "bars-duration",
-    filePath: "registry/examples/bars/duration.tsx",
+    filePath: "src/registry/examples/bars/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/duration.tsx");
       const exportName =
@@ -357,7 +357,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-input-group": {
     name: "bars-input-group",
-    filePath: "registry/examples/bars/input-group.tsx",
+    filePath: "src/registry/examples/bars/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/input-group.tsx");
       const exportName =
@@ -370,7 +370,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-size": {
     name: "bars-size",
-    filePath: "registry/examples/bars/size.tsx",
+    filePath: "src/registry/examples/bars/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/size.tsx");
       const exportName =
@@ -383,7 +383,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bars-stagger": {
     name: "bars-stagger",
-    filePath: "registry/examples/bars/stagger.tsx",
+    filePath: "src/registry/examples/bars/stagger.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bars/stagger.tsx");
       const exportName =
@@ -396,7 +396,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-badge": {
     name: "bobbing-dots-badge",
-    filePath: "registry/examples/bobbing-dots/badge.tsx",
+    filePath: "src/registry/examples/bobbing-dots/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/badge.tsx");
       const exportName =
@@ -409,7 +409,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-button": {
     name: "bobbing-dots-button",
-    filePath: "registry/examples/bobbing-dots/button.tsx",
+    filePath: "src/registry/examples/bobbing-dots/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/button.tsx");
       const exportName =
@@ -422,7 +422,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-color": {
     name: "bobbing-dots-color",
-    filePath: "registry/examples/bobbing-dots/color.tsx",
+    filePath: "src/registry/examples/bobbing-dots/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/color.tsx");
       const exportName =
@@ -435,7 +435,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-count": {
     name: "bobbing-dots-count",
-    filePath: "registry/examples/bobbing-dots/count.tsx",
+    filePath: "src/registry/examples/bobbing-dots/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/count.tsx");
       const exportName =
@@ -448,7 +448,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-demo": {
     name: "bobbing-dots-demo",
-    filePath: "registry/examples/bobbing-dots/demo.tsx",
+    filePath: "src/registry/examples/bobbing-dots/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/demo.tsx");
       const exportName =
@@ -461,7 +461,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-duration": {
     name: "bobbing-dots-duration",
-    filePath: "registry/examples/bobbing-dots/duration.tsx",
+    filePath: "src/registry/examples/bobbing-dots/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/duration.tsx");
       const exportName =
@@ -474,7 +474,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-popover": {
     name: "bobbing-dots-popover",
-    filePath: "registry/examples/bobbing-dots/popover.tsx",
+    filePath: "src/registry/examples/bobbing-dots/popover.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/popover.tsx");
       const exportName =
@@ -487,7 +487,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-sheet": {
     name: "bobbing-dots-sheet",
-    filePath: "registry/examples/bobbing-dots/sheet.tsx",
+    filePath: "src/registry/examples/bobbing-dots/sheet.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/sheet.tsx");
       const exportName =
@@ -500,7 +500,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-size": {
     name: "bobbing-dots-size",
-    filePath: "registry/examples/bobbing-dots/size.tsx",
+    filePath: "src/registry/examples/bobbing-dots/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/size.tsx");
       const exportName =
@@ -513,7 +513,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bobbing-dots-tabs": {
     name: "bobbing-dots-tabs",
-    filePath: "registry/examples/bobbing-dots/tabs.tsx",
+    filePath: "src/registry/examples/bobbing-dots/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/tabs.tsx");
       const exportName =
@@ -526,7 +526,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-alert": {
     name: "bouncing-dots-alert",
-    filePath: "registry/examples/bouncing-dots/alert.tsx",
+    filePath: "src/registry/examples/bouncing-dots/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/alert.tsx");
       const exportName =
@@ -539,7 +539,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-badge": {
     name: "bouncing-dots-badge",
-    filePath: "registry/examples/bouncing-dots/badge.tsx",
+    filePath: "src/registry/examples/bouncing-dots/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/badge.tsx");
       const exportName =
@@ -552,7 +552,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-button": {
     name: "bouncing-dots-button",
-    filePath: "registry/examples/bouncing-dots/button.tsx",
+    filePath: "src/registry/examples/bouncing-dots/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/button.tsx");
       const exportName =
@@ -565,7 +565,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-color": {
     name: "bouncing-dots-color",
-    filePath: "registry/examples/bouncing-dots/color.tsx",
+    filePath: "src/registry/examples/bouncing-dots/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/color.tsx");
       const exportName =
@@ -578,7 +578,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-count": {
     name: "bouncing-dots-count",
-    filePath: "registry/examples/bouncing-dots/count.tsx",
+    filePath: "src/registry/examples/bouncing-dots/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/count.tsx");
       const exportName =
@@ -591,7 +591,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-demo": {
     name: "bouncing-dots-demo",
-    filePath: "registry/examples/bouncing-dots/demo.tsx",
+    filePath: "src/registry/examples/bouncing-dots/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/demo.tsx");
       const exportName =
@@ -604,7 +604,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-duration": {
     name: "bouncing-dots-duration",
-    filePath: "registry/examples/bouncing-dots/duration.tsx",
+    filePath: "src/registry/examples/bouncing-dots/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/duration.tsx");
       const exportName =
@@ -617,7 +617,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-popover": {
     name: "bouncing-dots-popover",
-    filePath: "registry/examples/bouncing-dots/popover.tsx",
+    filePath: "src/registry/examples/bouncing-dots/popover.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/popover.tsx");
       const exportName =
@@ -630,7 +630,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-sheet": {
     name: "bouncing-dots-sheet",
-    filePath: "registry/examples/bouncing-dots/sheet.tsx",
+    filePath: "src/registry/examples/bouncing-dots/sheet.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/sheet.tsx");
       const exportName =
@@ -643,7 +643,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-size": {
     name: "bouncing-dots-size",
-    filePath: "registry/examples/bouncing-dots/size.tsx",
+    filePath: "src/registry/examples/bouncing-dots/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/size.tsx");
       const exportName =
@@ -656,7 +656,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "bouncing-dots-tabs": {
     name: "bouncing-dots-tabs",
-    filePath: "registry/examples/bouncing-dots/tabs.tsx",
+    filePath: "src/registry/examples/bouncing-dots/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/tabs.tsx");
       const exportName =
@@ -669,7 +669,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "classic-button": {
     name: "classic-button",
-    filePath: "registry/examples/classic/button.tsx",
+    filePath: "src/registry/examples/classic/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./classic/button.tsx");
       const exportName =
@@ -682,7 +682,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "classic-color": {
     name: "classic-color",
-    filePath: "registry/examples/classic/color.tsx",
+    filePath: "src/registry/examples/classic/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./classic/color.tsx");
       const exportName =
@@ -695,7 +695,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "classic-demo": {
     name: "classic-demo",
-    filePath: "registry/examples/classic/demo.tsx",
+    filePath: "src/registry/examples/classic/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./classic/demo.tsx");
       const exportName =
@@ -708,7 +708,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "classic-input-group": {
     name: "classic-input-group",
-    filePath: "registry/examples/classic/input-group.tsx",
+    filePath: "src/registry/examples/classic/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./classic/input-group.tsx");
       const exportName =
@@ -721,7 +721,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "classic-size": {
     name: "classic-size",
-    filePath: "registry/examples/classic/size.tsx",
+    filePath: "src/registry/examples/classic/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./classic/size.tsx");
       const exportName =
@@ -734,7 +734,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-alert": {
     name: "clock-ring-alert",
-    filePath: "registry/examples/clock-ring/alert.tsx",
+    filePath: "src/registry/examples/clock-ring/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/alert.tsx");
       const exportName =
@@ -747,7 +747,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-button": {
     name: "clock-ring-button",
-    filePath: "registry/examples/clock-ring/button.tsx",
+    filePath: "src/registry/examples/clock-ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/button.tsx");
       const exportName =
@@ -760,7 +760,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-color": {
     name: "clock-ring-color",
-    filePath: "registry/examples/clock-ring/color.tsx",
+    filePath: "src/registry/examples/clock-ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/color.tsx");
       const exportName =
@@ -773,7 +773,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-demo": {
     name: "clock-ring-demo",
-    filePath: "registry/examples/clock-ring/demo.tsx",
+    filePath: "src/registry/examples/clock-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/demo.tsx");
       const exportName =
@@ -786,7 +786,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-duration": {
     name: "clock-ring-duration",
-    filePath: "registry/examples/clock-ring/duration.tsx",
+    filePath: "src/registry/examples/clock-ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/duration.tsx");
       const exportName =
@@ -799,7 +799,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-input-group": {
     name: "clock-ring-input-group",
-    filePath: "registry/examples/clock-ring/input-group.tsx",
+    filePath: "src/registry/examples/clock-ring/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/input-group.tsx");
       const exportName =
@@ -812,7 +812,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-popover": {
     name: "clock-ring-popover",
-    filePath: "registry/examples/clock-ring/popover.tsx",
+    filePath: "src/registry/examples/clock-ring/popover.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/popover.tsx");
       const exportName =
@@ -825,7 +825,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-ring-weight": {
     name: "clock-ring-ring-weight",
-    filePath: "registry/examples/clock-ring/ring-weight.tsx",
+    filePath: "src/registry/examples/clock-ring/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/ring-weight.tsx");
       const exportName =
@@ -838,7 +838,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "clock-ring-size": {
     name: "clock-ring-size",
-    filePath: "registry/examples/clock-ring/size.tsx",
+    filePath: "src/registry/examples/clock-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/size.tsx");
       const exportName =
@@ -851,7 +851,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-alert": {
     name: "comet-spinner-alert",
-    filePath: "registry/examples/comet-spinner/alert.tsx",
+    filePath: "src/registry/examples/comet-spinner/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/alert.tsx");
       const exportName =
@@ -864,7 +864,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-badge": {
     name: "comet-spinner-badge",
-    filePath: "registry/examples/comet-spinner/badge.tsx",
+    filePath: "src/registry/examples/comet-spinner/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/badge.tsx");
       const exportName =
@@ -877,7 +877,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-button": {
     name: "comet-spinner-button",
-    filePath: "registry/examples/comet-spinner/button.tsx",
+    filePath: "src/registry/examples/comet-spinner/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/button.tsx");
       const exportName =
@@ -890,7 +890,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-color": {
     name: "comet-spinner-color",
-    filePath: "registry/examples/comet-spinner/color.tsx",
+    filePath: "src/registry/examples/comet-spinner/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/color.tsx");
       const exportName =
@@ -903,7 +903,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-demo": {
     name: "comet-spinner-demo",
-    filePath: "registry/examples/comet-spinner/demo.tsx",
+    filePath: "src/registry/examples/comet-spinner/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/demo.tsx");
       const exportName =
@@ -916,7 +916,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-duration": {
     name: "comet-spinner-duration",
-    filePath: "registry/examples/comet-spinner/duration.tsx",
+    filePath: "src/registry/examples/comet-spinner/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/duration.tsx");
       const exportName =
@@ -929,7 +929,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-geometry": {
     name: "comet-spinner-geometry",
-    filePath: "registry/examples/comet-spinner/geometry.tsx",
+    filePath: "src/registry/examples/comet-spinner/geometry.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/geometry.tsx");
       const exportName =
@@ -942,7 +942,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-size": {
     name: "comet-spinner-size",
-    filePath: "registry/examples/comet-spinner/size.tsx",
+    filePath: "src/registry/examples/comet-spinner/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/size.tsx");
       const exportName =
@@ -955,7 +955,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "comet-spinner-tabs": {
     name: "comet-spinner-tabs",
-    filePath: "registry/examples/comet-spinner/tabs.tsx",
+    filePath: "src/registry/examples/comet-spinner/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/tabs.tsx");
       const exportName =
@@ -968,7 +968,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-alert": {
     name: "concentric-ring-alert",
-    filePath: "registry/examples/concentric-ring/alert.tsx",
+    filePath: "src/registry/examples/concentric-ring/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/alert.tsx");
       const exportName =
@@ -981,7 +981,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-badge": {
     name: "concentric-ring-badge",
-    filePath: "registry/examples/concentric-ring/badge.tsx",
+    filePath: "src/registry/examples/concentric-ring/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/badge.tsx");
       const exportName =
@@ -994,7 +994,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-button": {
     name: "concentric-ring-button",
-    filePath: "registry/examples/concentric-ring/button.tsx",
+    filePath: "src/registry/examples/concentric-ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/button.tsx");
       const exportName =
@@ -1007,7 +1007,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-collapsible": {
     name: "concentric-ring-collapsible",
-    filePath: "registry/examples/concentric-ring/collapsible.tsx",
+    filePath: "src/registry/examples/concentric-ring/collapsible.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/collapsible.tsx");
       const exportName =
@@ -1020,7 +1020,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-color": {
     name: "concentric-ring-color",
-    filePath: "registry/examples/concentric-ring/color.tsx",
+    filePath: "src/registry/examples/concentric-ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/color.tsx");
       const exportName =
@@ -1033,7 +1033,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-demo": {
     name: "concentric-ring-demo",
-    filePath: "registry/examples/concentric-ring/demo.tsx",
+    filePath: "src/registry/examples/concentric-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/demo.tsx");
       const exportName =
@@ -1046,7 +1046,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-duration": {
     name: "concentric-ring-duration",
-    filePath: "registry/examples/concentric-ring/duration.tsx",
+    filePath: "src/registry/examples/concentric-ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/duration.tsx");
       const exportName =
@@ -1059,7 +1059,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-ring-weight": {
     name: "concentric-ring-ring-weight",
-    filePath: "registry/examples/concentric-ring/ring-weight.tsx",
+    filePath: "src/registry/examples/concentric-ring/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/ring-weight.tsx");
       const exportName =
@@ -1072,7 +1072,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "concentric-ring-size": {
     name: "concentric-ring-size",
-    filePath: "registry/examples/concentric-ring/size.tsx",
+    filePath: "src/registry/examples/concentric-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/size.tsx");
       const exportName =
@@ -1085,7 +1085,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "conveyor-loop-color": {
     name: "conveyor-loop-color",
-    filePath: "registry/examples/conveyor-loop/color.tsx",
+    filePath: "src/registry/examples/conveyor-loop/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/color.tsx");
       const exportName =
@@ -1098,7 +1098,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "conveyor-loop-demo": {
     name: "conveyor-loop-demo",
-    filePath: "registry/examples/conveyor-loop/demo.tsx",
+    filePath: "src/registry/examples/conveyor-loop/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/demo.tsx");
       const exportName =
@@ -1111,7 +1111,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "conveyor-loop-duration": {
     name: "conveyor-loop-duration",
-    filePath: "registry/examples/conveyor-loop/duration.tsx",
+    filePath: "src/registry/examples/conveyor-loop/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/duration.tsx");
       const exportName =
@@ -1124,7 +1124,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "conveyor-loop-glyphs": {
     name: "conveyor-loop-glyphs",
-    filePath: "registry/examples/conveyor-loop/glyphs.tsx",
+    filePath: "src/registry/examples/conveyor-loop/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/glyphs.tsx");
       const exportName =
@@ -1137,7 +1137,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "conveyor-loop-size": {
     name: "conveyor-loop-size",
-    filePath: "registry/examples/conveyor-loop/size.tsx",
+    filePath: "src/registry/examples/conveyor-loop/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/size.tsx");
       const exportName =
@@ -1150,7 +1150,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-alert": {
     name: "dash-ring-alert",
-    filePath: "registry/examples/dash-ring/alert.tsx",
+    filePath: "src/registry/examples/dash-ring/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/alert.tsx");
       const exportName =
@@ -1163,7 +1163,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-button": {
     name: "dash-ring-button",
-    filePath: "registry/examples/dash-ring/button.tsx",
+    filePath: "src/registry/examples/dash-ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/button.tsx");
       const exportName =
@@ -1176,7 +1176,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-collapsible": {
     name: "dash-ring-collapsible",
-    filePath: "registry/examples/dash-ring/collapsible.tsx",
+    filePath: "src/registry/examples/dash-ring/collapsible.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/collapsible.tsx");
       const exportName =
@@ -1189,7 +1189,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-color": {
     name: "dash-ring-color",
-    filePath: "registry/examples/dash-ring/color.tsx",
+    filePath: "src/registry/examples/dash-ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/color.tsx");
       const exportName =
@@ -1202,7 +1202,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-demo": {
     name: "dash-ring-demo",
-    filePath: "registry/examples/dash-ring/demo.tsx",
+    filePath: "src/registry/examples/dash-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/demo.tsx");
       const exportName =
@@ -1215,7 +1215,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-input-group": {
     name: "dash-ring-input-group",
-    filePath: "registry/examples/dash-ring/input-group.tsx",
+    filePath: "src/registry/examples/dash-ring/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/input-group.tsx");
       const exportName =
@@ -1228,7 +1228,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-ring-weight": {
     name: "dash-ring-ring-weight",
-    filePath: "registry/examples/dash-ring/ring-weight.tsx",
+    filePath: "src/registry/examples/dash-ring/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/ring-weight.tsx");
       const exportName =
@@ -1241,7 +1241,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dash-ring-size": {
     name: "dash-ring-size",
-    filePath: "registry/examples/dash-ring/size.tsx",
+    filePath: "src/registry/examples/dash-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/size.tsx");
       const exportName =
@@ -1254,7 +1254,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "diamond-alert": {
     name: "diamond-alert",
-    filePath: "registry/examples/diamond/alert.tsx",
+    filePath: "src/registry/examples/diamond/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./diamond/alert.tsx");
       const exportName =
@@ -1267,7 +1267,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "diamond-badge": {
     name: "diamond-badge",
-    filePath: "registry/examples/diamond/badge.tsx",
+    filePath: "src/registry/examples/diamond/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./diamond/badge.tsx");
       const exportName =
@@ -1280,7 +1280,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "diamond-button": {
     name: "diamond-button",
-    filePath: "registry/examples/diamond/button.tsx",
+    filePath: "src/registry/examples/diamond/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./diamond/button.tsx");
       const exportName =
@@ -1293,7 +1293,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "diamond-color": {
     name: "diamond-color",
-    filePath: "registry/examples/diamond/color.tsx",
+    filePath: "src/registry/examples/diamond/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./diamond/color.tsx");
       const exportName =
@@ -1306,7 +1306,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "diamond-demo": {
     name: "diamond-demo",
-    filePath: "registry/examples/diamond/demo.tsx",
+    filePath: "src/registry/examples/diamond/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./diamond/demo.tsx");
       const exportName =
@@ -1319,7 +1319,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "diamond-size": {
     name: "diamond-size",
-    filePath: "registry/examples/diamond/size.tsx",
+    filePath: "src/registry/examples/diamond/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./diamond/size.tsx");
       const exportName =
@@ -1332,7 +1332,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-alert": {
     name: "dots-ring-alert",
-    filePath: "registry/examples/dots-ring/alert.tsx",
+    filePath: "src/registry/examples/dots-ring/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/alert.tsx");
       const exportName =
@@ -1345,7 +1345,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-badge": {
     name: "dots-ring-badge",
-    filePath: "registry/examples/dots-ring/badge.tsx",
+    filePath: "src/registry/examples/dots-ring/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/badge.tsx");
       const exportName =
@@ -1358,7 +1358,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-demo": {
     name: "dots-ring-demo",
-    filePath: "registry/examples/dots-ring/demo.tsx",
+    filePath: "src/registry/examples/dots-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/demo.tsx");
       const exportName =
@@ -1371,7 +1371,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-dot-scale": {
     name: "dots-ring-dot-scale",
-    filePath: "registry/examples/dots-ring/dot-scale.tsx",
+    filePath: "src/registry/examples/dots-ring/dot-scale.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/dot-scale.tsx");
       const exportName =
@@ -1384,7 +1384,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-dots": {
     name: "dots-ring-dots",
-    filePath: "registry/examples/dots-ring/dots.tsx",
+    filePath: "src/registry/examples/dots-ring/dots.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/dots.tsx");
       const exportName =
@@ -1397,7 +1397,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-duration": {
     name: "dots-ring-duration",
-    filePath: "registry/examples/dots-ring/duration.tsx",
+    filePath: "src/registry/examples/dots-ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/duration.tsx");
       const exportName =
@@ -1410,7 +1410,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-input-group": {
     name: "dots-ring-input-group",
-    filePath: "registry/examples/dots-ring/input-group.tsx",
+    filePath: "src/registry/examples/dots-ring/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/input-group.tsx");
       const exportName =
@@ -1423,7 +1423,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-radius-scale": {
     name: "dots-ring-radius-scale",
-    filePath: "registry/examples/dots-ring/radius-scale.tsx",
+    filePath: "src/registry/examples/dots-ring/radius-scale.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/radius-scale.tsx");
       const exportName =
@@ -1436,7 +1436,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-size": {
     name: "dots-ring-size",
-    filePath: "registry/examples/dots-ring/size.tsx",
+    filePath: "src/registry/examples/dots-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/size.tsx");
       const exportName =
@@ -1449,7 +1449,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-ring-tabs": {
     name: "dots-ring-tabs",
-    filePath: "registry/examples/dots-ring/tabs.tsx",
+    filePath: "src/registry/examples/dots-ring/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/tabs.tsx");
       const exportName =
@@ -1462,7 +1462,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-accordion": {
     name: "dots-accordion",
-    filePath: "registry/examples/dots/accordion.tsx",
+    filePath: "src/registry/examples/dots/accordion.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/accordion.tsx");
       const exportName =
@@ -1475,7 +1475,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-badge": {
     name: "dots-badge",
-    filePath: "registry/examples/dots/badge.tsx",
+    filePath: "src/registry/examples/dots/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/badge.tsx");
       const exportName =
@@ -1488,7 +1488,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-button": {
     name: "dots-button",
-    filePath: "registry/examples/dots/button.tsx",
+    filePath: "src/registry/examples/dots/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/button.tsx");
       const exportName =
@@ -1501,7 +1501,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-color": {
     name: "dots-color",
-    filePath: "registry/examples/dots/color.tsx",
+    filePath: "src/registry/examples/dots/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/color.tsx");
       const exportName =
@@ -1514,7 +1514,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-count": {
     name: "dots-count",
-    filePath: "registry/examples/dots/count.tsx",
+    filePath: "src/registry/examples/dots/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/count.tsx");
       const exportName =
@@ -1527,7 +1527,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-demo": {
     name: "dots-demo",
-    filePath: "registry/examples/dots/demo.tsx",
+    filePath: "src/registry/examples/dots/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/demo.tsx");
       const exportName =
@@ -1540,7 +1540,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-duration": {
     name: "dots-duration",
-    filePath: "registry/examples/dots/duration.tsx",
+    filePath: "src/registry/examples/dots/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/duration.tsx");
       const exportName =
@@ -1553,7 +1553,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-empty": {
     name: "dots-empty",
-    filePath: "registry/examples/dots/empty.tsx",
+    filePath: "src/registry/examples/dots/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/empty.tsx");
       const exportName =
@@ -1566,7 +1566,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-input-group": {
     name: "dots-input-group",
-    filePath: "registry/examples/dots/input-group.tsx",
+    filePath: "src/registry/examples/dots/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/input-group.tsx");
       const exportName =
@@ -1579,7 +1579,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dots-size": {
     name: "dots-size",
-    filePath: "registry/examples/dots/size.tsx",
+    filePath: "src/registry/examples/dots/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dots/size.tsx");
       const exportName =
@@ -1592,7 +1592,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-alert": {
     name: "dual-arc-alert",
-    filePath: "registry/examples/dual-arc/alert.tsx",
+    filePath: "src/registry/examples/dual-arc/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/alert.tsx");
       const exportName =
@@ -1605,7 +1605,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-badge": {
     name: "dual-arc-badge",
-    filePath: "registry/examples/dual-arc/badge.tsx",
+    filePath: "src/registry/examples/dual-arc/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/badge.tsx");
       const exportName =
@@ -1618,7 +1618,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-border-width": {
     name: "dual-arc-border-width",
-    filePath: "registry/examples/dual-arc/border-width.tsx",
+    filePath: "src/registry/examples/dual-arc/border-width.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/border-width.tsx");
       const exportName =
@@ -1631,7 +1631,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-color": {
     name: "dual-arc-color",
-    filePath: "registry/examples/dual-arc/color.tsx",
+    filePath: "src/registry/examples/dual-arc/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/color.tsx");
       const exportName =
@@ -1644,7 +1644,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-demo": {
     name: "dual-arc-demo",
-    filePath: "registry/examples/dual-arc/demo.tsx",
+    filePath: "src/registry/examples/dual-arc/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/demo.tsx");
       const exportName =
@@ -1657,7 +1657,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-duration": {
     name: "dual-arc-duration",
-    filePath: "registry/examples/dual-arc/duration.tsx",
+    filePath: "src/registry/examples/dual-arc/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/duration.tsx");
       const exportName =
@@ -1670,7 +1670,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-input-group": {
     name: "dual-arc-input-group",
-    filePath: "registry/examples/dual-arc/input-group.tsx",
+    filePath: "src/registry/examples/dual-arc/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/input-group.tsx");
       const exportName =
@@ -1683,7 +1683,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-size": {
     name: "dual-arc-size",
-    filePath: "registry/examples/dual-arc/size.tsx",
+    filePath: "src/registry/examples/dual-arc/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/size.tsx");
       const exportName =
@@ -1696,7 +1696,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "dual-arc-tabs": {
     name: "dual-arc-tabs",
-    filePath: "registry/examples/dual-arc/tabs.tsx",
+    filePath: "src/registry/examples/dual-arc/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/tabs.tsx");
       const exportName =
@@ -1709,7 +1709,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-alert": {
     name: "fade-arc-alert",
-    filePath: "registry/examples/fade-arc/alert.tsx",
+    filePath: "src/registry/examples/fade-arc/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/alert.tsx");
       const exportName =
@@ -1722,7 +1722,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-badge": {
     name: "fade-arc-badge",
-    filePath: "registry/examples/fade-arc/badge.tsx",
+    filePath: "src/registry/examples/fade-arc/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/badge.tsx");
       const exportName =
@@ -1735,7 +1735,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-button": {
     name: "fade-arc-button",
-    filePath: "registry/examples/fade-arc/button.tsx",
+    filePath: "src/registry/examples/fade-arc/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/button.tsx");
       const exportName =
@@ -1748,7 +1748,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-color": {
     name: "fade-arc-color",
-    filePath: "registry/examples/fade-arc/color.tsx",
+    filePath: "src/registry/examples/fade-arc/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/color.tsx");
       const exportName =
@@ -1761,7 +1761,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-demo": {
     name: "fade-arc-demo",
-    filePath: "registry/examples/fade-arc/demo.tsx",
+    filePath: "src/registry/examples/fade-arc/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/demo.tsx");
       const exportName =
@@ -1774,7 +1774,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-direction": {
     name: "fade-arc-direction",
-    filePath: "registry/examples/fade-arc/direction.tsx",
+    filePath: "src/registry/examples/fade-arc/direction.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/direction.tsx");
       const exportName =
@@ -1787,7 +1787,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-duration": {
     name: "fade-arc-duration",
-    filePath: "registry/examples/fade-arc/duration.tsx",
+    filePath: "src/registry/examples/fade-arc/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/duration.tsx");
       const exportName =
@@ -1800,7 +1800,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-input-group": {
     name: "fade-arc-input-group",
-    filePath: "registry/examples/fade-arc/input-group.tsx",
+    filePath: "src/registry/examples/fade-arc/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/input-group.tsx");
       const exportName =
@@ -1813,7 +1813,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-size": {
     name: "fade-arc-size",
-    filePath: "registry/examples/fade-arc/size.tsx",
+    filePath: "src/registry/examples/fade-arc/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/size.tsx");
       const exportName =
@@ -1826,7 +1826,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "fade-arc-tabs": {
     name: "fade-arc-tabs",
-    filePath: "registry/examples/fade-arc/tabs.tsx",
+    filePath: "src/registry/examples/fade-arc/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/tabs.tsx");
       const exportName =
@@ -1839,7 +1839,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-square-snake-color": {
     name: "infinity-square-snake-color",
-    filePath: "registry/examples/infinity-square-snake/color.tsx",
+    filePath: "src/registry/examples/infinity-square-snake/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/color.tsx");
       const exportName =
@@ -1852,7 +1852,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-square-snake-demo": {
     name: "infinity-square-snake-demo",
-    filePath: "registry/examples/infinity-square-snake/demo.tsx",
+    filePath: "src/registry/examples/infinity-square-snake/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/demo.tsx");
       const exportName =
@@ -1865,7 +1865,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-square-snake-duration": {
     name: "infinity-square-snake-duration",
-    filePath: "registry/examples/infinity-square-snake/duration.tsx",
+    filePath: "src/registry/examples/infinity-square-snake/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/duration.tsx");
       const exportName =
@@ -1878,7 +1878,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-square-snake-glyphs": {
     name: "infinity-square-snake-glyphs",
-    filePath: "registry/examples/infinity-square-snake/glyphs.tsx",
+    filePath: "src/registry/examples/infinity-square-snake/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/glyphs.tsx");
       const exportName =
@@ -1891,7 +1891,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-square-snake-size": {
     name: "infinity-square-snake-size",
-    filePath: "registry/examples/infinity-square-snake/size.tsx",
+    filePath: "src/registry/examples/infinity-square-snake/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/size.tsx");
       const exportName =
@@ -1904,7 +1904,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-track-color": {
     name: "infinity-track-color",
-    filePath: "registry/examples/infinity-track/color.tsx",
+    filePath: "src/registry/examples/infinity-track/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/color.tsx");
       const exportName =
@@ -1917,7 +1917,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-track-demo": {
     name: "infinity-track-demo",
-    filePath: "registry/examples/infinity-track/demo.tsx",
+    filePath: "src/registry/examples/infinity-track/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/demo.tsx");
       const exportName =
@@ -1930,7 +1930,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-track-duration": {
     name: "infinity-track-duration",
-    filePath: "registry/examples/infinity-track/duration.tsx",
+    filePath: "src/registry/examples/infinity-track/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/duration.tsx");
       const exportName =
@@ -1943,7 +1943,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-track-glyphs": {
     name: "infinity-track-glyphs",
-    filePath: "registry/examples/infinity-track/glyphs.tsx",
+    filePath: "src/registry/examples/infinity-track/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/glyphs.tsx");
       const exportName =
@@ -1956,7 +1956,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-track-size": {
     name: "infinity-track-size",
-    filePath: "registry/examples/infinity-track/size.tsx",
+    filePath: "src/registry/examples/infinity-track/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/size.tsx");
       const exportName =
@@ -1969,7 +1969,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-badge": {
     name: "infinity-badge",
-    filePath: "registry/examples/infinity/badge.tsx",
+    filePath: "src/registry/examples/infinity/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/badge.tsx");
       const exportName =
@@ -1982,7 +1982,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-button": {
     name: "infinity-button",
-    filePath: "registry/examples/infinity/button.tsx",
+    filePath: "src/registry/examples/infinity/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/button.tsx");
       const exportName =
@@ -1995,7 +1995,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-card": {
     name: "infinity-card",
-    filePath: "registry/examples/infinity/card.tsx",
+    filePath: "src/registry/examples/infinity/card.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/card.tsx");
       const exportName =
@@ -2008,7 +2008,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-color": {
     name: "infinity-color",
-    filePath: "registry/examples/infinity/color.tsx",
+    filePath: "src/registry/examples/infinity/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/color.tsx");
       const exportName =
@@ -2021,7 +2021,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-demo": {
     name: "infinity-demo",
-    filePath: "registry/examples/infinity/demo.tsx",
+    filePath: "src/registry/examples/infinity/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/demo.tsx");
       const exportName =
@@ -2034,7 +2034,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-duration": {
     name: "infinity-duration",
-    filePath: "registry/examples/infinity/duration.tsx",
+    filePath: "src/registry/examples/infinity/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/duration.tsx");
       const exportName =
@@ -2047,7 +2047,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-empty": {
     name: "infinity-empty",
-    filePath: "registry/examples/infinity/empty.tsx",
+    filePath: "src/registry/examples/infinity/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/empty.tsx");
       const exportName =
@@ -2060,7 +2060,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-size": {
     name: "infinity-size",
-    filePath: "registry/examples/infinity/size.tsx",
+    filePath: "src/registry/examples/infinity/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/size.tsx");
       const exportName =
@@ -2073,7 +2073,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "infinity-stroke-width": {
     name: "infinity-stroke-width",
-    filePath: "registry/examples/infinity/stroke-width.tsx",
+    filePath: "src/registry/examples/infinity/stroke-width.tsx",
     component: React.lazy(async () => {
       const mod = await import("./infinity/stroke-width.tsx");
       const exportName =
@@ -2086,7 +2086,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "morphing-infinity-alert": {
     name: "morphing-infinity-alert",
-    filePath: "registry/examples/morphing-infinity/alert.tsx",
+    filePath: "src/registry/examples/morphing-infinity/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/alert.tsx");
       const exportName =
@@ -2099,7 +2099,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "morphing-infinity-card": {
     name: "morphing-infinity-card",
-    filePath: "registry/examples/morphing-infinity/card.tsx",
+    filePath: "src/registry/examples/morphing-infinity/card.tsx",
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/card.tsx");
       const exportName =
@@ -2112,7 +2112,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "morphing-infinity-compact": {
     name: "morphing-infinity-compact",
-    filePath: "registry/examples/morphing-infinity/compact.tsx",
+    filePath: "src/registry/examples/morphing-infinity/compact.tsx",
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/compact.tsx");
       const exportName =
@@ -2125,7 +2125,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "morphing-infinity-demo": {
     name: "morphing-infinity-demo",
-    filePath: "registry/examples/morphing-infinity/demo.tsx",
+    filePath: "src/registry/examples/morphing-infinity/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/demo.tsx");
       const exportName =
@@ -2138,7 +2138,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "morphing-infinity-tabs": {
     name: "morphing-infinity-tabs",
-    filePath: "registry/examples/morphing-infinity/tabs.tsx",
+    filePath: "src/registry/examples/morphing-infinity/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/tabs.tsx");
       const exportName =
@@ -2151,7 +2151,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-button": {
     name: "orbit-ring-button",
-    filePath: "registry/examples/orbit-ring/button.tsx",
+    filePath: "src/registry/examples/orbit-ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/button.tsx");
       const exportName =
@@ -2164,7 +2164,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-color": {
     name: "orbit-ring-color",
-    filePath: "registry/examples/orbit-ring/color.tsx",
+    filePath: "src/registry/examples/orbit-ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/color.tsx");
       const exportName =
@@ -2177,7 +2177,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-demo": {
     name: "orbit-ring-demo",
-    filePath: "registry/examples/orbit-ring/demo.tsx",
+    filePath: "src/registry/examples/orbit-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/demo.tsx");
       const exportName =
@@ -2190,7 +2190,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-duration": {
     name: "orbit-ring-duration",
-    filePath: "registry/examples/orbit-ring/duration.tsx",
+    filePath: "src/registry/examples/orbit-ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/duration.tsx");
       const exportName =
@@ -2203,7 +2203,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-empty": {
     name: "orbit-ring-empty",
-    filePath: "registry/examples/orbit-ring/empty.tsx",
+    filePath: "src/registry/examples/orbit-ring/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/empty.tsx");
       const exportName =
@@ -2216,7 +2216,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-input-group": {
     name: "orbit-ring-input-group",
-    filePath: "registry/examples/orbit-ring/input-group.tsx",
+    filePath: "src/registry/examples/orbit-ring/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/input-group.tsx");
       const exportName =
@@ -2229,7 +2229,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-ring-weight": {
     name: "orbit-ring-ring-weight",
-    filePath: "registry/examples/orbit-ring/ring-weight.tsx",
+    filePath: "src/registry/examples/orbit-ring/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/ring-weight.tsx");
       const exportName =
@@ -2242,7 +2242,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-size": {
     name: "orbit-ring-size",
-    filePath: "registry/examples/orbit-ring/size.tsx",
+    filePath: "src/registry/examples/orbit-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/size.tsx");
       const exportName =
@@ -2255,7 +2255,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "orbit-ring-tabs": {
     name: "orbit-ring-tabs",
-    filePath: "registry/examples/orbit-ring/tabs.tsx",
+    filePath: "src/registry/examples/orbit-ring/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/tabs.tsx");
       const exportName =
@@ -2268,7 +2268,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-badge": {
     name: "pulsating-dots-badge",
-    filePath: "registry/examples/pulsating-dots/badge.tsx",
+    filePath: "src/registry/examples/pulsating-dots/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/badge.tsx");
       const exportName =
@@ -2281,7 +2281,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-button": {
     name: "pulsating-dots-button",
-    filePath: "registry/examples/pulsating-dots/button.tsx",
+    filePath: "src/registry/examples/pulsating-dots/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/button.tsx");
       const exportName =
@@ -2294,7 +2294,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-color": {
     name: "pulsating-dots-color",
-    filePath: "registry/examples/pulsating-dots/color.tsx",
+    filePath: "src/registry/examples/pulsating-dots/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/color.tsx");
       const exportName =
@@ -2307,7 +2307,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-count": {
     name: "pulsating-dots-count",
-    filePath: "registry/examples/pulsating-dots/count.tsx",
+    filePath: "src/registry/examples/pulsating-dots/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/count.tsx");
       const exportName =
@@ -2320,7 +2320,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-demo": {
     name: "pulsating-dots-demo",
-    filePath: "registry/examples/pulsating-dots/demo.tsx",
+    filePath: "src/registry/examples/pulsating-dots/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/demo.tsx");
       const exportName =
@@ -2333,7 +2333,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-duration": {
     name: "pulsating-dots-duration",
-    filePath: "registry/examples/pulsating-dots/duration.tsx",
+    filePath: "src/registry/examples/pulsating-dots/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/duration.tsx");
       const exportName =
@@ -2346,7 +2346,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-input-group": {
     name: "pulsating-dots-input-group",
-    filePath: "registry/examples/pulsating-dots/input-group.tsx",
+    filePath: "src/registry/examples/pulsating-dots/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/input-group.tsx");
       const exportName =
@@ -2359,7 +2359,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-popover": {
     name: "pulsating-dots-popover",
-    filePath: "registry/examples/pulsating-dots/popover.tsx",
+    filePath: "src/registry/examples/pulsating-dots/popover.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/popover.tsx");
       const exportName =
@@ -2372,7 +2372,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-sheet": {
     name: "pulsating-dots-sheet",
-    filePath: "registry/examples/pulsating-dots/sheet.tsx",
+    filePath: "src/registry/examples/pulsating-dots/sheet.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/sheet.tsx");
       const exportName =
@@ -2385,7 +2385,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulsating-dots-size": {
     name: "pulsating-dots-size",
-    filePath: "registry/examples/pulsating-dots/size.tsx",
+    filePath: "src/registry/examples/pulsating-dots/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/size.tsx");
       const exportName =
@@ -2398,7 +2398,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-badge": {
     name: "pulse-dot-badge",
-    filePath: "registry/examples/pulse-dot/badge.tsx",
+    filePath: "src/registry/examples/pulse-dot/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/badge.tsx");
       const exportName =
@@ -2411,7 +2411,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-button": {
     name: "pulse-dot-button",
-    filePath: "registry/examples/pulse-dot/button.tsx",
+    filePath: "src/registry/examples/pulse-dot/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/button.tsx");
       const exportName =
@@ -2424,7 +2424,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-color": {
     name: "pulse-dot-color",
-    filePath: "registry/examples/pulse-dot/color.tsx",
+    filePath: "src/registry/examples/pulse-dot/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/color.tsx");
       const exportName =
@@ -2437,7 +2437,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-demo": {
     name: "pulse-dot-demo",
-    filePath: "registry/examples/pulse-dot/demo.tsx",
+    filePath: "src/registry/examples/pulse-dot/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/demo.tsx");
       const exportName =
@@ -2450,7 +2450,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-duration": {
     name: "pulse-dot-duration",
-    filePath: "registry/examples/pulse-dot/duration.tsx",
+    filePath: "src/registry/examples/pulse-dot/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/duration.tsx");
       const exportName =
@@ -2463,7 +2463,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-input-group": {
     name: "pulse-dot-input-group",
-    filePath: "registry/examples/pulse-dot/input-group.tsx",
+    filePath: "src/registry/examples/pulse-dot/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/input-group.tsx");
       const exportName =
@@ -2476,7 +2476,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-size": {
     name: "pulse-dot-size",
-    filePath: "registry/examples/pulse-dot/size.tsx",
+    filePath: "src/registry/examples/pulse-dot/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/size.tsx");
       const exportName =
@@ -2489,7 +2489,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-dot-tabs": {
     name: "pulse-dot-tabs",
-    filePath: "registry/examples/pulse-dot/tabs.tsx",
+    filePath: "src/registry/examples/pulse-dot/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/tabs.tsx");
       const exportName =
@@ -2502,7 +2502,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-badge": {
     name: "pulse-badge",
-    filePath: "registry/examples/pulse/badge.tsx",
+    filePath: "src/registry/examples/pulse/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/badge.tsx");
       const exportName =
@@ -2515,7 +2515,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-button": {
     name: "pulse-button",
-    filePath: "registry/examples/pulse/button.tsx",
+    filePath: "src/registry/examples/pulse/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/button.tsx");
       const exportName =
@@ -2528,7 +2528,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-collapsible": {
     name: "pulse-collapsible",
-    filePath: "registry/examples/pulse/collapsible.tsx",
+    filePath: "src/registry/examples/pulse/collapsible.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/collapsible.tsx");
       const exportName =
@@ -2541,7 +2541,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-color": {
     name: "pulse-color",
-    filePath: "registry/examples/pulse/color.tsx",
+    filePath: "src/registry/examples/pulse/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/color.tsx");
       const exportName =
@@ -2554,7 +2554,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-demo": {
     name: "pulse-demo",
-    filePath: "registry/examples/pulse/demo.tsx",
+    filePath: "src/registry/examples/pulse/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/demo.tsx");
       const exportName =
@@ -2567,7 +2567,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-duration": {
     name: "pulse-duration",
-    filePath: "registry/examples/pulse/duration.tsx",
+    filePath: "src/registry/examples/pulse/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/duration.tsx");
       const exportName =
@@ -2580,7 +2580,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-ring-weight": {
     name: "pulse-ring-weight",
-    filePath: "registry/examples/pulse/ring-weight.tsx",
+    filePath: "src/registry/examples/pulse/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/ring-weight.tsx");
       const exportName =
@@ -2593,7 +2593,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-size": {
     name: "pulse-size",
-    filePath: "registry/examples/pulse/size.tsx",
+    filePath: "src/registry/examples/pulse/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/size.tsx");
       const exportName =
@@ -2606,7 +2606,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "pulse-tooltip": {
     name: "pulse-tooltip",
-    filePath: "registry/examples/pulse/tooltip.tsx",
+    filePath: "src/registry/examples/pulse/tooltip.tsx",
     component: React.lazy(async () => {
       const mod = await import("./pulse/tooltip.tsx");
       const exportName =
@@ -2619,7 +2619,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-badge": {
     name: "quarter-ring-badge",
-    filePath: "registry/examples/quarter-ring/badge.tsx",
+    filePath: "src/registry/examples/quarter-ring/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/badge.tsx");
       const exportName =
@@ -2632,7 +2632,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-button": {
     name: "quarter-ring-button",
-    filePath: "registry/examples/quarter-ring/button.tsx",
+    filePath: "src/registry/examples/quarter-ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/button.tsx");
       const exportName =
@@ -2645,7 +2645,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-color": {
     name: "quarter-ring-color",
-    filePath: "registry/examples/quarter-ring/color.tsx",
+    filePath: "src/registry/examples/quarter-ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/color.tsx");
       const exportName =
@@ -2658,7 +2658,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-demo": {
     name: "quarter-ring-demo",
-    filePath: "registry/examples/quarter-ring/demo.tsx",
+    filePath: "src/registry/examples/quarter-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/demo.tsx");
       const exportName =
@@ -2671,7 +2671,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-duration": {
     name: "quarter-ring-duration",
-    filePath: "registry/examples/quarter-ring/duration.tsx",
+    filePath: "src/registry/examples/quarter-ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/duration.tsx");
       const exportName =
@@ -2684,7 +2684,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-empty": {
     name: "quarter-ring-empty",
-    filePath: "registry/examples/quarter-ring/empty.tsx",
+    filePath: "src/registry/examples/quarter-ring/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/empty.tsx");
       const exportName =
@@ -2697,7 +2697,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-ring-weight": {
     name: "quarter-ring-ring-weight",
-    filePath: "registry/examples/quarter-ring/ring-weight.tsx",
+    filePath: "src/registry/examples/quarter-ring/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/ring-weight.tsx");
       const exportName =
@@ -2710,7 +2710,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-size": {
     name: "quarter-ring-size",
-    filePath: "registry/examples/quarter-ring/size.tsx",
+    filePath: "src/registry/examples/quarter-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/size.tsx");
       const exportName =
@@ -2723,7 +2723,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "quarter-ring-tooltip": {
     name: "quarter-ring-tooltip",
-    filePath: "registry/examples/quarter-ring/tooltip.tsx",
+    filePath: "src/registry/examples/quarter-ring/tooltip.tsx",
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/tooltip.tsx");
       const exportName =
@@ -2736,7 +2736,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-badge": {
     name: "ring-badge",
-    filePath: "registry/examples/ring/badge.tsx",
+    filePath: "src/registry/examples/ring/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/badge.tsx");
       const exportName =
@@ -2749,7 +2749,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-button": {
     name: "ring-button",
-    filePath: "registry/examples/ring/button.tsx",
+    filePath: "src/registry/examples/ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/button.tsx");
       const exportName =
@@ -2762,7 +2762,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-color": {
     name: "ring-color",
-    filePath: "registry/examples/ring/color.tsx",
+    filePath: "src/registry/examples/ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/color.tsx");
       const exportName =
@@ -2775,7 +2775,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-demo": {
     name: "ring-demo",
-    filePath: "registry/examples/ring/demo.tsx",
+    filePath: "src/registry/examples/ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/demo.tsx");
       const exportName =
@@ -2788,7 +2788,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-direction": {
     name: "ring-direction",
-    filePath: "registry/examples/ring/direction.tsx",
+    filePath: "src/registry/examples/ring/direction.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/direction.tsx");
       const exportName =
@@ -2801,7 +2801,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-duration": {
     name: "ring-duration",
-    filePath: "registry/examples/ring/duration.tsx",
+    filePath: "src/registry/examples/ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/duration.tsx");
       const exportName =
@@ -2814,7 +2814,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-empty": {
     name: "ring-empty",
-    filePath: "registry/examples/ring/empty.tsx",
+    filePath: "src/registry/examples/ring/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/empty.tsx");
       const exportName =
@@ -2827,7 +2827,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-input-group": {
     name: "ring-input-group",
-    filePath: "registry/examples/ring/input-group.tsx",
+    filePath: "src/registry/examples/ring/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/input-group.tsx");
       const exportName =
@@ -2840,7 +2840,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-size": {
     name: "ring-size",
-    filePath: "registry/examples/ring/size.tsx",
+    filePath: "src/registry/examples/ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/size.tsx");
       const exportName =
@@ -2853,7 +2853,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ring-stroke-width": {
     name: "ring-stroke-width",
-    filePath: "registry/examples/ring/stroke-width.tsx",
+    filePath: "src/registry/examples/ring/stroke-width.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ring/stroke-width.tsx");
       const exportName =
@@ -2866,7 +2866,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-alert": {
     name: "ripple-alert",
-    filePath: "registry/examples/ripple/alert.tsx",
+    filePath: "src/registry/examples/ripple/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/alert.tsx");
       const exportName =
@@ -2879,7 +2879,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-badge": {
     name: "ripple-badge",
-    filePath: "registry/examples/ripple/badge.tsx",
+    filePath: "src/registry/examples/ripple/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/badge.tsx");
       const exportName =
@@ -2892,7 +2892,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-button": {
     name: "ripple-button",
-    filePath: "registry/examples/ripple/button.tsx",
+    filePath: "src/registry/examples/ripple/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/button.tsx");
       const exportName =
@@ -2905,7 +2905,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-color": {
     name: "ripple-color",
-    filePath: "registry/examples/ripple/color.tsx",
+    filePath: "src/registry/examples/ripple/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/color.tsx");
       const exportName =
@@ -2918,7 +2918,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-demo": {
     name: "ripple-demo",
-    filePath: "registry/examples/ripple/demo.tsx",
+    filePath: "src/registry/examples/ripple/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/demo.tsx");
       const exportName =
@@ -2931,7 +2931,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-empty": {
     name: "ripple-empty",
-    filePath: "registry/examples/ripple/empty.tsx",
+    filePath: "src/registry/examples/ripple/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/empty.tsx");
       const exportName =
@@ -2944,7 +2944,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-ring-weight": {
     name: "ripple-ring-weight",
-    filePath: "registry/examples/ripple/ring-weight.tsx",
+    filePath: "src/registry/examples/ripple/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/ring-weight.tsx");
       const exportName =
@@ -2957,7 +2957,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "ripple-size": {
     name: "ripple-size",
-    filePath: "registry/examples/ripple/size.tsx",
+    filePath: "src/registry/examples/ripple/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./ripple/size.tsx");
       const exportName =
@@ -2970,7 +2970,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-accordion": {
     name: "satellite-ring-accordion",
-    filePath: "registry/examples/satellite-ring/accordion.tsx",
+    filePath: "src/registry/examples/satellite-ring/accordion.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/accordion.tsx");
       const exportName =
@@ -2983,7 +2983,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-badge": {
     name: "satellite-ring-badge",
-    filePath: "registry/examples/satellite-ring/badge.tsx",
+    filePath: "src/registry/examples/satellite-ring/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/badge.tsx");
       const exportName =
@@ -2996,7 +2996,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-button": {
     name: "satellite-ring-button",
-    filePath: "registry/examples/satellite-ring/button.tsx",
+    filePath: "src/registry/examples/satellite-ring/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/button.tsx");
       const exportName =
@@ -3009,7 +3009,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-color": {
     name: "satellite-ring-color",
-    filePath: "registry/examples/satellite-ring/color.tsx",
+    filePath: "src/registry/examples/satellite-ring/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/color.tsx");
       const exportName =
@@ -3022,7 +3022,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-demo": {
     name: "satellite-ring-demo",
-    filePath: "registry/examples/satellite-ring/demo.tsx",
+    filePath: "src/registry/examples/satellite-ring/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/demo.tsx");
       const exportName =
@@ -3035,7 +3035,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-duration": {
     name: "satellite-ring-duration",
-    filePath: "registry/examples/satellite-ring/duration.tsx",
+    filePath: "src/registry/examples/satellite-ring/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/duration.tsx");
       const exportName =
@@ -3048,7 +3048,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-ring-weight": {
     name: "satellite-ring-ring-weight",
-    filePath: "registry/examples/satellite-ring/ring-weight.tsx",
+    filePath: "src/registry/examples/satellite-ring/ring-weight.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/ring-weight.tsx");
       const exportName =
@@ -3061,7 +3061,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-sheet": {
     name: "satellite-ring-sheet",
-    filePath: "registry/examples/satellite-ring/sheet.tsx",
+    filePath: "src/registry/examples/satellite-ring/sheet.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/sheet.tsx");
       const exportName =
@@ -3074,7 +3074,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "satellite-ring-size": {
     name: "satellite-ring-size",
-    filePath: "registry/examples/satellite-ring/size.tsx",
+    filePath: "src/registry/examples/satellite-ring/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/size.tsx");
       const exportName =
@@ -3087,7 +3087,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-avatar": {
     name: "skeleton-avatar",
-    filePath: "registry/examples/skeleton/avatar.tsx",
+    filePath: "src/registry/examples/skeleton/avatar.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/avatar.tsx");
       const exportName =
@@ -3100,7 +3100,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-card": {
     name: "skeleton-card",
-    filePath: "registry/examples/skeleton/card.tsx",
+    filePath: "src/registry/examples/skeleton/card.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/card.tsx");
       const exportName =
@@ -3113,7 +3113,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-demo": {
     name: "skeleton-demo",
-    filePath: "registry/examples/skeleton/demo.tsx",
+    filePath: "src/registry/examples/skeleton/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/demo.tsx");
       const exportName =
@@ -3126,7 +3126,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-duration": {
     name: "skeleton-duration",
-    filePath: "registry/examples/skeleton/duration.tsx",
+    filePath: "src/registry/examples/skeleton/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/duration.tsx");
       const exportName =
@@ -3139,7 +3139,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-form": {
     name: "skeleton-form",
-    filePath: "registry/examples/skeleton/form.tsx",
+    filePath: "src/registry/examples/skeleton/form.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/form.tsx");
       const exportName =
@@ -3152,7 +3152,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-table": {
     name: "skeleton-table",
-    filePath: "registry/examples/skeleton/table.tsx",
+    filePath: "src/registry/examples/skeleton/table.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/table.tsx");
       const exportName =
@@ -3165,7 +3165,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "skeleton-text": {
     name: "skeleton-text",
-    filePath: "registry/examples/skeleton/text.tsx",
+    filePath: "src/registry/examples/skeleton/text.tsx",
     component: React.lazy(async () => {
       const mod = await import("./skeleton/text.tsx");
       const exportName =
@@ -3178,7 +3178,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-button": {
     name: "spiral-button",
-    filePath: "registry/examples/spiral/button.tsx",
+    filePath: "src/registry/examples/spiral/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/button.tsx");
       const exportName =
@@ -3191,7 +3191,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-collapsible": {
     name: "spiral-collapsible",
-    filePath: "registry/examples/spiral/collapsible.tsx",
+    filePath: "src/registry/examples/spiral/collapsible.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/collapsible.tsx");
       const exportName =
@@ -3204,7 +3204,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-color": {
     name: "spiral-color",
-    filePath: "registry/examples/spiral/color.tsx",
+    filePath: "src/registry/examples/spiral/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/color.tsx");
       const exportName =
@@ -3217,7 +3217,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-demo": {
     name: "spiral-demo",
-    filePath: "registry/examples/spiral/demo.tsx",
+    filePath: "src/registry/examples/spiral/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/demo.tsx");
       const exportName =
@@ -3230,7 +3230,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-dots": {
     name: "spiral-dots",
-    filePath: "registry/examples/spiral/dots.tsx",
+    filePath: "src/registry/examples/spiral/dots.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/dots.tsx");
       const exportName =
@@ -3243,7 +3243,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-empty": {
     name: "spiral-empty",
-    filePath: "registry/examples/spiral/empty.tsx",
+    filePath: "src/registry/examples/spiral/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/empty.tsx");
       const exportName =
@@ -3256,7 +3256,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-radius": {
     name: "spiral-radius",
-    filePath: "registry/examples/spiral/radius.tsx",
+    filePath: "src/registry/examples/spiral/radius.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/radius.tsx");
       const exportName =
@@ -3269,7 +3269,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-size": {
     name: "spiral-size",
-    filePath: "registry/examples/spiral/size.tsx",
+    filePath: "src/registry/examples/spiral/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/size.tsx");
       const exportName =
@@ -3282,7 +3282,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spiral-tabs": {
     name: "spiral-tabs",
-    filePath: "registry/examples/spiral/tabs.tsx",
+    filePath: "src/registry/examples/spiral/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spiral/tabs.tsx");
       const exportName =
@@ -3295,7 +3295,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-alert": {
     name: "spokes-alert",
-    filePath: "registry/examples/spokes/alert.tsx",
+    filePath: "src/registry/examples/spokes/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/alert.tsx");
       const exportName =
@@ -3308,7 +3308,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-badge": {
     name: "spokes-badge",
-    filePath: "registry/examples/spokes/badge.tsx",
+    filePath: "src/registry/examples/spokes/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/badge.tsx");
       const exportName =
@@ -3321,7 +3321,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-button": {
     name: "spokes-button",
-    filePath: "registry/examples/spokes/button.tsx",
+    filePath: "src/registry/examples/spokes/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/button.tsx");
       const exportName =
@@ -3334,7 +3334,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-color": {
     name: "spokes-color",
-    filePath: "registry/examples/spokes/color.tsx",
+    filePath: "src/registry/examples/spokes/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/color.tsx");
       const exportName =
@@ -3347,7 +3347,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-demo": {
     name: "spokes-demo",
-    filePath: "registry/examples/spokes/demo.tsx",
+    filePath: "src/registry/examples/spokes/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/demo.tsx");
       const exportName =
@@ -3360,7 +3360,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-duration": {
     name: "spokes-duration",
-    filePath: "registry/examples/spokes/duration.tsx",
+    filePath: "src/registry/examples/spokes/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/duration.tsx");
       const exportName =
@@ -3373,7 +3373,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-input-group": {
     name: "spokes-input-group",
-    filePath: "registry/examples/spokes/input-group.tsx",
+    filePath: "src/registry/examples/spokes/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/input-group.tsx");
       const exportName =
@@ -3386,7 +3386,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-size": {
     name: "spokes-size",
-    filePath: "registry/examples/spokes/size.tsx",
+    filePath: "src/registry/examples/spokes/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/size.tsx");
       const exportName =
@@ -3399,7 +3399,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "spokes-stroke-width": {
     name: "spokes-stroke-width",
-    filePath: "registry/examples/spokes/stroke-width.tsx",
+    filePath: "src/registry/examples/spokes/stroke-width.tsx",
     component: React.lazy(async () => {
       const mod = await import("./spokes/stroke-width.tsx");
       const exportName =
@@ -3412,7 +3412,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-accordion-color": {
     name: "square-accordion-color",
-    filePath: "registry/examples/square-accordion/color.tsx",
+    filePath: "src/registry/examples/square-accordion/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/color.tsx");
       const exportName =
@@ -3425,7 +3425,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-accordion-demo": {
     name: "square-accordion-demo",
-    filePath: "registry/examples/square-accordion/demo.tsx",
+    filePath: "src/registry/examples/square-accordion/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/demo.tsx");
       const exportName =
@@ -3438,7 +3438,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-accordion-duration": {
     name: "square-accordion-duration",
-    filePath: "registry/examples/square-accordion/duration.tsx",
+    filePath: "src/registry/examples/square-accordion/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/duration.tsx");
       const exportName =
@@ -3451,7 +3451,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-accordion-glyphs": {
     name: "square-accordion-glyphs",
-    filePath: "registry/examples/square-accordion/glyphs.tsx",
+    filePath: "src/registry/examples/square-accordion/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/glyphs.tsx");
       const exportName =
@@ -3464,7 +3464,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-accordion-size": {
     name: "square-accordion-size",
-    filePath: "registry/examples/square-accordion/size.tsx",
+    filePath: "src/registry/examples/square-accordion/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/size.tsx");
       const exportName =
@@ -3477,7 +3477,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-grid-color": {
     name: "square-grid-color",
-    filePath: "registry/examples/square-grid/color.tsx",
+    filePath: "src/registry/examples/square-grid/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-grid/color.tsx");
       const exportName =
@@ -3490,7 +3490,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-grid-demo": {
     name: "square-grid-demo",
-    filePath: "registry/examples/square-grid/demo.tsx",
+    filePath: "src/registry/examples/square-grid/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-grid/demo.tsx");
       const exportName =
@@ -3503,7 +3503,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-grid-duration": {
     name: "square-grid-duration",
-    filePath: "registry/examples/square-grid/duration.tsx",
+    filePath: "src/registry/examples/square-grid/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-grid/duration.tsx");
       const exportName =
@@ -3516,7 +3516,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-grid-glyphs": {
     name: "square-grid-glyphs",
-    filePath: "registry/examples/square-grid/glyphs.tsx",
+    filePath: "src/registry/examples/square-grid/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-grid/glyphs.tsx");
       const exportName =
@@ -3529,7 +3529,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-grid-size": {
     name: "square-grid-size",
-    filePath: "registry/examples/square-grid/size.tsx",
+    filePath: "src/registry/examples/square-grid/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-grid/size.tsx");
       const exportName =
@@ -3542,7 +3542,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-snake-color": {
     name: "square-snake-color",
-    filePath: "registry/examples/square-snake/color.tsx",
+    filePath: "src/registry/examples/square-snake/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-snake/color.tsx");
       const exportName =
@@ -3555,7 +3555,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-snake-demo": {
     name: "square-snake-demo",
-    filePath: "registry/examples/square-snake/demo.tsx",
+    filePath: "src/registry/examples/square-snake/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-snake/demo.tsx");
       const exportName =
@@ -3568,7 +3568,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-snake-duration": {
     name: "square-snake-duration",
-    filePath: "registry/examples/square-snake/duration.tsx",
+    filePath: "src/registry/examples/square-snake/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-snake/duration.tsx");
       const exportName =
@@ -3581,7 +3581,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-snake-glyphs": {
     name: "square-snake-glyphs",
-    filePath: "registry/examples/square-snake/glyphs.tsx",
+    filePath: "src/registry/examples/square-snake/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-snake/glyphs.tsx");
       const exportName =
@@ -3594,7 +3594,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "square-snake-size": {
     name: "square-snake-size",
-    filePath: "registry/examples/square-snake/size.tsx",
+    filePath: "src/registry/examples/square-snake/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./square-snake/size.tsx");
       const exportName =
@@ -3607,7 +3607,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-alert": {
     name: "swirling-alert",
-    filePath: "registry/examples/swirling/alert.tsx",
+    filePath: "src/registry/examples/swirling/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/alert.tsx");
       const exportName =
@@ -3620,7 +3620,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-button": {
     name: "swirling-button",
-    filePath: "registry/examples/swirling/button.tsx",
+    filePath: "src/registry/examples/swirling/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/button.tsx");
       const exportName =
@@ -3633,7 +3633,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-collapsible": {
     name: "swirling-collapsible",
-    filePath: "registry/examples/swirling/collapsible.tsx",
+    filePath: "src/registry/examples/swirling/collapsible.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/collapsible.tsx");
       const exportName =
@@ -3646,7 +3646,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-color": {
     name: "swirling-color",
-    filePath: "registry/examples/swirling/color.tsx",
+    filePath: "src/registry/examples/swirling/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/color.tsx");
       const exportName =
@@ -3659,7 +3659,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-demo": {
     name: "swirling-demo",
-    filePath: "registry/examples/swirling/demo.tsx",
+    filePath: "src/registry/examples/swirling/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/demo.tsx");
       const exportName =
@@ -3672,7 +3672,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-empty": {
     name: "swirling-empty",
-    filePath: "registry/examples/swirling/empty.tsx",
+    filePath: "src/registry/examples/swirling/empty.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/empty.tsx");
       const exportName =
@@ -3685,7 +3685,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-line-cap": {
     name: "swirling-line-cap",
-    filePath: "registry/examples/swirling/line-cap.tsx",
+    filePath: "src/registry/examples/swirling/line-cap.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/line-cap.tsx");
       const exportName =
@@ -3698,7 +3698,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-size": {
     name: "swirling-size",
-    filePath: "registry/examples/swirling/size.tsx",
+    filePath: "src/registry/examples/swirling/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/size.tsx");
       const exportName =
@@ -3711,7 +3711,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "swirling-stroke-width": {
     name: "swirling-stroke-width",
-    filePath: "registry/examples/swirling/stroke-width.tsx",
+    filePath: "src/registry/examples/swirling/stroke-width.tsx",
     component: React.lazy(async () => {
       const mod = await import("./swirling/stroke-width.tsx");
       const exportName =
@@ -3724,7 +3724,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "symmetric-wave-color": {
     name: "symmetric-wave-color",
-    filePath: "registry/examples/symmetric-wave/color.tsx",
+    filePath: "src/registry/examples/symmetric-wave/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/color.tsx");
       const exportName =
@@ -3737,7 +3737,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "symmetric-wave-demo": {
     name: "symmetric-wave-demo",
-    filePath: "registry/examples/symmetric-wave/demo.tsx",
+    filePath: "src/registry/examples/symmetric-wave/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/demo.tsx");
       const exportName =
@@ -3750,7 +3750,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "symmetric-wave-duration": {
     name: "symmetric-wave-duration",
-    filePath: "registry/examples/symmetric-wave/duration.tsx",
+    filePath: "src/registry/examples/symmetric-wave/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/duration.tsx");
       const exportName =
@@ -3763,7 +3763,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "symmetric-wave-glyphs": {
     name: "symmetric-wave-glyphs",
-    filePath: "registry/examples/symmetric-wave/glyphs.tsx",
+    filePath: "src/registry/examples/symmetric-wave/glyphs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/glyphs.tsx");
       const exportName =
@@ -3776,7 +3776,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "symmetric-wave-size": {
     name: "symmetric-wave-size",
-    filePath: "registry/examples/symmetric-wave/size.tsx",
+    filePath: "src/registry/examples/symmetric-wave/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/size.tsx");
       const exportName =
@@ -3789,7 +3789,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-alert": {
     name: "terminal-alert",
-    filePath: "registry/examples/terminal/alert.tsx",
+    filePath: "src/registry/examples/terminal/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/alert.tsx");
       const exportName =
@@ -3802,7 +3802,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-badge": {
     name: "terminal-badge",
-    filePath: "registry/examples/terminal/badge.tsx",
+    filePath: "src/registry/examples/terminal/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/badge.tsx");
       const exportName =
@@ -3815,7 +3815,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-button": {
     name: "terminal-button",
-    filePath: "registry/examples/terminal/button.tsx",
+    filePath: "src/registry/examples/terminal/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/button.tsx");
       const exportName =
@@ -3828,7 +3828,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-color": {
     name: "terminal-color",
-    filePath: "registry/examples/terminal/color.tsx",
+    filePath: "src/registry/examples/terminal/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/color.tsx");
       const exportName =
@@ -3841,7 +3841,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-demo": {
     name: "terminal-demo",
-    filePath: "registry/examples/terminal/demo.tsx",
+    filePath: "src/registry/examples/terminal/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/demo.tsx");
       const exportName =
@@ -3854,7 +3854,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-duration": {
     name: "terminal-duration",
-    filePath: "registry/examples/terminal/duration.tsx",
+    filePath: "src/registry/examples/terminal/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/duration.tsx");
       const exportName =
@@ -3867,7 +3867,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-input-group": {
     name: "terminal-input-group",
-    filePath: "registry/examples/terminal/input-group.tsx",
+    filePath: "src/registry/examples/terminal/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/input-group.tsx");
       const exportName =
@@ -3880,7 +3880,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "terminal-prompt": {
     name: "terminal-prompt",
-    filePath: "registry/examples/terminal/prompt.tsx",
+    filePath: "src/registry/examples/terminal/prompt.tsx",
     component: React.lazy(async () => {
       const mod = await import("./terminal/prompt.tsx");
       const exportName =
@@ -3893,7 +3893,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-alert": {
     name: "text-blink-alert",
-    filePath: "registry/examples/text-blink/alert.tsx",
+    filePath: "src/registry/examples/text-blink/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/alert.tsx");
       const exportName =
@@ -3906,7 +3906,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-badge": {
     name: "text-blink-badge",
-    filePath: "registry/examples/text-blink/badge.tsx",
+    filePath: "src/registry/examples/text-blink/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/badge.tsx");
       const exportName =
@@ -3919,7 +3919,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-button": {
     name: "text-blink-button",
-    filePath: "registry/examples/text-blink/button.tsx",
+    filePath: "src/registry/examples/text-blink/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/button.tsx");
       const exportName =
@@ -3932,7 +3932,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-color": {
     name: "text-blink-color",
-    filePath: "registry/examples/text-blink/color.tsx",
+    filePath: "src/registry/examples/text-blink/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/color.tsx");
       const exportName =
@@ -3945,7 +3945,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-demo": {
     name: "text-blink-demo",
-    filePath: "registry/examples/text-blink/demo.tsx",
+    filePath: "src/registry/examples/text-blink/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/demo.tsx");
       const exportName =
@@ -3958,7 +3958,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-duration": {
     name: "text-blink-duration",
-    filePath: "registry/examples/text-blink/duration.tsx",
+    filePath: "src/registry/examples/text-blink/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/duration.tsx");
       const exportName =
@@ -3971,7 +3971,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-opacity": {
     name: "text-blink-opacity",
-    filePath: "registry/examples/text-blink/opacity.tsx",
+    filePath: "src/registry/examples/text-blink/opacity.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/opacity.tsx");
       const exportName =
@@ -3984,7 +3984,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-blink-tabs": {
     name: "text-blink-tabs",
-    filePath: "registry/examples/text-blink/tabs.tsx",
+    filePath: "src/registry/examples/text-blink/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-blink/tabs.tsx");
       const exportName =
@@ -3997,7 +3997,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-alert": {
     name: "text-dots-alert",
-    filePath: "registry/examples/text-dots/alert.tsx",
+    filePath: "src/registry/examples/text-dots/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/alert.tsx");
       const exportName =
@@ -4010,7 +4010,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-badge": {
     name: "text-dots-badge",
-    filePath: "registry/examples/text-dots/badge.tsx",
+    filePath: "src/registry/examples/text-dots/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/badge.tsx");
       const exportName =
@@ -4023,7 +4023,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-button": {
     name: "text-dots-button",
-    filePath: "registry/examples/text-dots/button.tsx",
+    filePath: "src/registry/examples/text-dots/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/button.tsx");
       const exportName =
@@ -4036,7 +4036,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-color": {
     name: "text-dots-color",
-    filePath: "registry/examples/text-dots/color.tsx",
+    filePath: "src/registry/examples/text-dots/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/color.tsx");
       const exportName =
@@ -4049,7 +4049,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-count": {
     name: "text-dots-count",
-    filePath: "registry/examples/text-dots/count.tsx",
+    filePath: "src/registry/examples/text-dots/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/count.tsx");
       const exportName =
@@ -4062,7 +4062,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-demo": {
     name: "text-dots-demo",
-    filePath: "registry/examples/text-dots/demo.tsx",
+    filePath: "src/registry/examples/text-dots/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/demo.tsx");
       const exportName =
@@ -4075,7 +4075,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-duration": {
     name: "text-dots-duration",
-    filePath: "registry/examples/text-dots/duration.tsx",
+    filePath: "src/registry/examples/text-dots/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/duration.tsx");
       const exportName =
@@ -4088,7 +4088,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-dots-input-group": {
     name: "text-dots-input-group",
-    filePath: "registry/examples/text-dots/input-group.tsx",
+    filePath: "src/registry/examples/text-dots/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-dots/input-group.tsx");
       const exportName =
@@ -4101,7 +4101,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-alert": {
     name: "text-shimmer-wave-alert",
-    filePath: "registry/examples/text-shimmer-wave/alert.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/alert.tsx");
       const exportName =
@@ -4114,7 +4114,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-badge": {
     name: "text-shimmer-wave-badge",
-    filePath: "registry/examples/text-shimmer-wave/badge.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/badge.tsx");
       const exportName =
@@ -4127,7 +4127,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-button": {
     name: "text-shimmer-wave-button",
-    filePath: "registry/examples/text-shimmer-wave/button.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/button.tsx");
       const exportName =
@@ -4140,7 +4140,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-color": {
     name: "text-shimmer-wave-color",
-    filePath: "registry/examples/text-shimmer-wave/color.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/color.tsx");
       const exportName =
@@ -4153,7 +4153,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-demo": {
     name: "text-shimmer-wave-demo",
-    filePath: "registry/examples/text-shimmer-wave/demo.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/demo.tsx");
       const exportName =
@@ -4166,7 +4166,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-duration": {
     name: "text-shimmer-wave-duration",
-    filePath: "registry/examples/text-shimmer-wave/duration.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/duration.tsx");
       const exportName =
@@ -4179,7 +4179,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-motion": {
     name: "text-shimmer-wave-motion",
-    filePath: "registry/examples/text-shimmer-wave/motion.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/motion.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/motion.tsx");
       const exportName =
@@ -4192,7 +4192,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-wave-tabs": {
     name: "text-shimmer-wave-tabs",
-    filePath: "registry/examples/text-shimmer-wave/tabs.tsx",
+    filePath: "src/registry/examples/text-shimmer-wave/tabs.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/tabs.tsx");
       const exportName =
@@ -4205,7 +4205,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-alert": {
     name: "text-shimmer-alert",
-    filePath: "registry/examples/text-shimmer/alert.tsx",
+    filePath: "src/registry/examples/text-shimmer/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/alert.tsx");
       const exportName =
@@ -4218,7 +4218,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-badge": {
     name: "text-shimmer-badge",
-    filePath: "registry/examples/text-shimmer/badge.tsx",
+    filePath: "src/registry/examples/text-shimmer/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/badge.tsx");
       const exportName =
@@ -4231,7 +4231,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-button": {
     name: "text-shimmer-button",
-    filePath: "registry/examples/text-shimmer/button.tsx",
+    filePath: "src/registry/examples/text-shimmer/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/button.tsx");
       const exportName =
@@ -4244,7 +4244,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-color": {
     name: "text-shimmer-color",
-    filePath: "registry/examples/text-shimmer/color.tsx",
+    filePath: "src/registry/examples/text-shimmer/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/color.tsx");
       const exportName =
@@ -4257,7 +4257,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-demo": {
     name: "text-shimmer-demo",
-    filePath: "registry/examples/text-shimmer/demo.tsx",
+    filePath: "src/registry/examples/text-shimmer/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/demo.tsx");
       const exportName =
@@ -4270,7 +4270,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-duration": {
     name: "text-shimmer-duration",
-    filePath: "registry/examples/text-shimmer/duration.tsx",
+    filePath: "src/registry/examples/text-shimmer/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/duration.tsx");
       const exportName =
@@ -4283,7 +4283,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-input-group": {
     name: "text-shimmer-input-group",
-    filePath: "registry/examples/text-shimmer/input-group.tsx",
+    filePath: "src/registry/examples/text-shimmer/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/input-group.tsx");
       const exportName =
@@ -4296,7 +4296,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "text-shimmer-spread": {
     name: "text-shimmer-spread",
-    filePath: "registry/examples/text-shimmer/spread.tsx",
+    filePath: "src/registry/examples/text-shimmer/spread.tsx",
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/spread.tsx");
       const exportName =
@@ -4309,7 +4309,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-alert": {
     name: "triple-dot-spinner-alert",
-    filePath: "registry/examples/triple-dot-spinner/alert.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/alert.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/alert.tsx");
       const exportName =
@@ -4322,7 +4322,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-badge": {
     name: "triple-dot-spinner-badge",
-    filePath: "registry/examples/triple-dot-spinner/badge.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/badge.tsx");
       const exportName =
@@ -4335,7 +4335,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-button": {
     name: "triple-dot-spinner-button",
-    filePath: "registry/examples/triple-dot-spinner/button.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/button.tsx");
       const exportName =
@@ -4348,7 +4348,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-color": {
     name: "triple-dot-spinner-color",
-    filePath: "registry/examples/triple-dot-spinner/color.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/color.tsx");
       const exportName =
@@ -4361,7 +4361,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-demo": {
     name: "triple-dot-spinner-demo",
-    filePath: "registry/examples/triple-dot-spinner/demo.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/demo.tsx");
       const exportName =
@@ -4374,7 +4374,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-duration": {
     name: "triple-dot-spinner-duration",
-    filePath: "registry/examples/triple-dot-spinner/duration.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/duration.tsx");
       const exportName =
@@ -4387,7 +4387,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "triple-dot-spinner-size": {
     name: "triple-dot-spinner-size",
-    filePath: "registry/examples/triple-dot-spinner/size.tsx",
+    filePath: "src/registry/examples/triple-dot-spinner/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/size.tsx");
       const exportName =
@@ -4400,7 +4400,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "twin-orbit-color": {
     name: "twin-orbit-color",
-    filePath: "registry/examples/twin-orbit/color.tsx",
+    filePath: "src/registry/examples/twin-orbit/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/color.tsx");
       const exportName =
@@ -4413,7 +4413,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "twin-orbit-demo": {
     name: "twin-orbit-demo",
-    filePath: "registry/examples/twin-orbit/demo.tsx",
+    filePath: "src/registry/examples/twin-orbit/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/demo.tsx");
       const exportName =
@@ -4426,7 +4426,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "twin-orbit-duration": {
     name: "twin-orbit-duration",
-    filePath: "registry/examples/twin-orbit/duration.tsx",
+    filePath: "src/registry/examples/twin-orbit/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/duration.tsx");
       const exportName =
@@ -4439,7 +4439,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "twin-orbit-size": {
     name: "twin-orbit-size",
-    filePath: "registry/examples/twin-orbit/size.tsx",
+    filePath: "src/registry/examples/twin-orbit/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/size.tsx");
       const exportName =
@@ -4452,7 +4452,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-accordion": {
     name: "typing-accordion",
-    filePath: "registry/examples/typing/accordion.tsx",
+    filePath: "src/registry/examples/typing/accordion.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/accordion.tsx");
       const exportName =
@@ -4465,7 +4465,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-badge": {
     name: "typing-badge",
-    filePath: "registry/examples/typing/badge.tsx",
+    filePath: "src/registry/examples/typing/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/badge.tsx");
       const exportName =
@@ -4478,7 +4478,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-button": {
     name: "typing-button",
-    filePath: "registry/examples/typing/button.tsx",
+    filePath: "src/registry/examples/typing/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/button.tsx");
       const exportName =
@@ -4491,7 +4491,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-color": {
     name: "typing-color",
-    filePath: "registry/examples/typing/color.tsx",
+    filePath: "src/registry/examples/typing/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/color.tsx");
       const exportName =
@@ -4504,7 +4504,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-count": {
     name: "typing-count",
-    filePath: "registry/examples/typing/count.tsx",
+    filePath: "src/registry/examples/typing/count.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/count.tsx");
       const exportName =
@@ -4517,7 +4517,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-demo": {
     name: "typing-demo",
-    filePath: "registry/examples/typing/demo.tsx",
+    filePath: "src/registry/examples/typing/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/demo.tsx");
       const exportName =
@@ -4530,7 +4530,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-duration": {
     name: "typing-duration",
-    filePath: "registry/examples/typing/duration.tsx",
+    filePath: "src/registry/examples/typing/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/duration.tsx");
       const exportName =
@@ -4543,7 +4543,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-input-group": {
     name: "typing-input-group",
-    filePath: "registry/examples/typing/input-group.tsx",
+    filePath: "src/registry/examples/typing/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/input-group.tsx");
       const exportName =
@@ -4556,7 +4556,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-size": {
     name: "typing-size",
-    filePath: "registry/examples/typing/size.tsx",
+    filePath: "src/registry/examples/typing/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/size.tsx");
       const exportName =
@@ -4569,7 +4569,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "typing-tooltip": {
     name: "typing-tooltip",
-    filePath: "registry/examples/typing/tooltip.tsx",
+    filePath: "src/registry/examples/typing/tooltip.tsx",
     component: React.lazy(async () => {
       const mod = await import("./typing/tooltip.tsx");
       const exportName =
@@ -4582,7 +4582,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wandering-eyes-color": {
     name: "wandering-eyes-color",
-    filePath: "registry/examples/wandering-eyes/color.tsx",
+    filePath: "src/registry/examples/wandering-eyes/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/color.tsx");
       const exportName =
@@ -4595,7 +4595,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wandering-eyes-demo": {
     name: "wandering-eyes-demo",
-    filePath: "registry/examples/wandering-eyes/demo.tsx",
+    filePath: "src/registry/examples/wandering-eyes/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/demo.tsx");
       const exportName =
@@ -4608,7 +4608,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wandering-eyes-duration": {
     name: "wandering-eyes-duration",
-    filePath: "registry/examples/wandering-eyes/duration.tsx",
+    filePath: "src/registry/examples/wandering-eyes/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/duration.tsx");
       const exportName =
@@ -4621,7 +4621,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wandering-eyes-expression": {
     name: "wandering-eyes-expression",
-    filePath: "registry/examples/wandering-eyes/expression.tsx",
+    filePath: "src/registry/examples/wandering-eyes/expression.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/expression.tsx");
       const exportName =
@@ -4634,7 +4634,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wandering-eyes-size": {
     name: "wandering-eyes-size",
-    filePath: "registry/examples/wandering-eyes/size.tsx",
+    filePath: "src/registry/examples/wandering-eyes/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/size.tsx");
       const exportName =
@@ -4647,7 +4647,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wandering-eyes-variables": {
     name: "wandering-eyes-variables",
-    filePath: "registry/examples/wandering-eyes/variables.tsx",
+    filePath: "src/registry/examples/wandering-eyes/variables.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/variables.tsx");
       const exportName =
@@ -4660,7 +4660,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-badge": {
     name: "wave-badge",
-    filePath: "registry/examples/wave/badge.tsx",
+    filePath: "src/registry/examples/wave/badge.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/badge.tsx");
       const exportName =
@@ -4673,7 +4673,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-button": {
     name: "wave-button",
-    filePath: "registry/examples/wave/button.tsx",
+    filePath: "src/registry/examples/wave/button.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/button.tsx");
       const exportName =
@@ -4686,7 +4686,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-color": {
     name: "wave-color",
-    filePath: "registry/examples/wave/color.tsx",
+    filePath: "src/registry/examples/wave/color.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/color.tsx");
       const exportName =
@@ -4699,7 +4699,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-demo": {
     name: "wave-demo",
-    filePath: "registry/examples/wave/demo.tsx",
+    filePath: "src/registry/examples/wave/demo.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/demo.tsx");
       const exportName =
@@ -4712,7 +4712,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-duration": {
     name: "wave-duration",
-    filePath: "registry/examples/wave/duration.tsx",
+    filePath: "src/registry/examples/wave/duration.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/duration.tsx");
       const exportName =
@@ -4725,7 +4725,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-input-group": {
     name: "wave-input-group",
-    filePath: "registry/examples/wave/input-group.tsx",
+    filePath: "src/registry/examples/wave/input-group.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/input-group.tsx");
       const exportName =
@@ -4738,7 +4738,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-size": {
     name: "wave-size",
-    filePath: "registry/examples/wave/size.tsx",
+    filePath: "src/registry/examples/wave/size.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/size.tsx");
       const exportName =
@@ -4751,7 +4751,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   },
   "wave-stagger": {
     name: "wave-stagger",
-    filePath: "registry/examples/wave/stagger.tsx",
+    filePath: "src/registry/examples/wave/stagger.tsx",
     component: React.lazy(async () => {
       const mod = await import("./wave/stagger.tsx");
       const exportName =

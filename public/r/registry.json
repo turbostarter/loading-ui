@@ -26,7 +26,7 @@
       "name": "ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/ring.tsx",
+          "path": "src/registry/components/loading-ui/ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -37,7 +37,7 @@
       "name": "spokes",
       "files": [
         {
-          "path": "registry/components/loading-ui/spokes.tsx",
+          "path": "src/registry/components/loading-ui/spokes.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -48,7 +48,7 @@
       "name": "classic",
       "files": [
         {
-          "path": "registry/components/loading-ui/classic.tsx",
+          "path": "src/registry/components/loading-ui/classic.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -59,7 +59,7 @@
       "name": "dots-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/dots-ring.tsx",
+          "path": "src/registry/components/loading-ui/dots-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -71,7 +71,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/spiral.tsx",
+          "path": "src/registry/components/loading-ui/spiral.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -82,7 +82,7 @@
       "name": "swirling",
       "files": [
         {
-          "path": "registry/components/loading-ui/swirling.tsx",
+          "path": "src/registry/components/loading-ui/swirling.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -93,7 +93,7 @@
       "name": "arc",
       "files": [
         {
-          "path": "registry/components/loading-ui/arc.tsx",
+          "path": "src/registry/components/loading-ui/arc.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -104,7 +104,7 @@
       "name": "dual-arc",
       "files": [
         {
-          "path": "registry/components/loading-ui/dual-arc.tsx",
+          "path": "src/registry/components/loading-ui/dual-arc.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -115,7 +115,7 @@
       "name": "fade-arc",
       "files": [
         {
-          "path": "registry/components/loading-ui/fade-arc.tsx",
+          "path": "src/registry/components/loading-ui/fade-arc.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -126,7 +126,7 @@
       "name": "concentric-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/concentric-ring.tsx",
+          "path": "src/registry/components/loading-ui/concentric-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -137,7 +137,7 @@
       "name": "orbit-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/orbit-ring.tsx",
+          "path": "src/registry/components/loading-ui/orbit-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -148,7 +148,7 @@
       "name": "satellite-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/satellite-ring.tsx",
+          "path": "src/registry/components/loading-ui/satellite-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -159,7 +159,7 @@
       "name": "clock-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/clock-ring.tsx",
+          "path": "src/registry/components/loading-ui/clock-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -170,7 +170,7 @@
       "name": "quarter-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/quarter-ring.tsx",
+          "path": "src/registry/components/loading-ui/quarter-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -181,7 +181,7 @@
       "name": "dash-ring",
       "files": [
         {
-          "path": "registry/components/loading-ui/dash-ring.tsx",
+          "path": "src/registry/components/loading-ui/dash-ring.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -192,7 +192,7 @@
       "name": "comet-spinner",
       "files": [
         {
-          "path": "registry/components/loading-ui/comet-spinner.tsx",
+          "path": "src/registry/components/loading-ui/comet-spinner.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -203,7 +203,7 @@
       "name": "pulse",
       "files": [
         {
-          "path": "registry/components/loading-ui/pulse.tsx",
+          "path": "src/registry/components/loading-ui/pulse.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -214,7 +214,7 @@
       "name": "ripple",
       "files": [
         {
-          "path": "registry/components/loading-ui/ripple.tsx",
+          "path": "src/registry/components/loading-ui/ripple.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -225,7 +225,7 @@
       "name": "pulse-dot",
       "files": [
         {
-          "path": "registry/components/loading-ui/pulse-dot.tsx",
+          "path": "src/registry/components/loading-ui/pulse-dot.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -236,7 +236,7 @@
       "name": "dots",
       "files": [
         {
-          "path": "registry/components/loading-ui/dots.tsx",
+          "path": "src/registry/components/loading-ui/dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -248,7 +248,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/bobbing-dots.tsx",
+          "path": "src/registry/components/loading-ui/bobbing-dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -259,7 +259,7 @@
       "name": "bouncing-dots",
       "files": [
         {
-          "path": "registry/components/loading-ui/bouncing-dots.tsx",
+          "path": "src/registry/components/loading-ui/bouncing-dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -270,7 +270,7 @@
       "name": "typing",
       "files": [
         {
-          "path": "registry/components/loading-ui/typing.tsx",
+          "path": "src/registry/components/loading-ui/typing.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -281,7 +281,7 @@
       "name": "twin-orbit",
       "files": [
         {
-          "path": "registry/components/loading-ui/twin-orbit.tsx",
+          "path": "src/registry/components/loading-ui/twin-orbit.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -293,7 +293,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/pulsating-dots.tsx",
+          "path": "src/registry/components/loading-ui/pulsating-dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -304,7 +304,7 @@
       "name": "triple-dot-spinner",
       "files": [
         {
-          "path": "registry/components/loading-ui/triple-dot-spinner.tsx",
+          "path": "src/registry/components/loading-ui/triple-dot-spinner.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -316,7 +316,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/text-shimmer.tsx",
+          "path": "src/registry/components/loading-ui/text-shimmer.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -327,7 +327,7 @@
       "name": "text-blink",
       "files": [
         {
-          "path": "registry/components/loading-ui/text-blink.tsx",
+          "path": "src/registry/components/loading-ui/text-blink.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -338,7 +338,7 @@
       "name": "text-dots",
       "files": [
         {
-          "path": "registry/components/loading-ui/text-dots.tsx",
+          "path": "src/registry/components/loading-ui/text-dots.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -350,7 +350,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/text-shimmer-wave.tsx",
+          "path": "src/registry/components/loading-ui/text-shimmer-wave.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -362,7 +362,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/morphing-infinity.tsx",
+          "path": "src/registry/components/loading-ui/morphing-infinity.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -373,7 +373,7 @@
       "name": "infinity",
       "files": [
         {
-          "path": "registry/components/loading-ui/infinity.tsx",
+          "path": "src/registry/components/loading-ui/infinity.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -384,7 +384,7 @@
       "name": "accordion-loader",
       "files": [
         {
-          "path": "registry/components/loading-ui/accordion-loader.tsx",
+          "path": "src/registry/components/loading-ui/accordion-loader.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -395,7 +395,7 @@
       "name": "symmetric-wave",
       "files": [
         {
-          "path": "registry/components/loading-ui/symmetric-wave.tsx",
+          "path": "src/registry/components/loading-ui/symmetric-wave.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -406,7 +406,7 @@
       "name": "square-grid",
       "files": [
         {
-          "path": "registry/components/loading-ui/square-grid.tsx",
+          "path": "src/registry/components/loading-ui/square-grid.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -417,7 +417,7 @@
       "name": "square-accordion",
       "files": [
         {
-          "path": "registry/components/loading-ui/square-accordion.tsx",
+          "path": "src/registry/components/loading-ui/square-accordion.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -428,7 +428,7 @@
       "name": "conveyor-loop",
       "files": [
         {
-          "path": "registry/components/loading-ui/conveyor-loop.tsx",
+          "path": "src/registry/components/loading-ui/conveyor-loop.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -439,7 +439,7 @@
       "name": "square-snake",
       "files": [
         {
-          "path": "registry/components/loading-ui/square-snake.tsx",
+          "path": "src/registry/components/loading-ui/square-snake.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -450,7 +450,7 @@
       "name": "infinity-square-snake",
       "files": [
         {
-          "path": "registry/components/loading-ui/infinity-square-snake.tsx",
+          "path": "src/registry/components/loading-ui/infinity-square-snake.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -461,7 +461,7 @@
       "name": "infinity-track",
       "files": [
         {
-          "path": "registry/components/loading-ui/infinity-track.tsx",
+          "path": "src/registry/components/loading-ui/infinity-track.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -472,7 +472,7 @@
       "name": "diamond",
       "files": [
         {
-          "path": "registry/components/loading-ui/diamond.tsx",
+          "path": "src/registry/components/loading-ui/diamond.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -483,7 +483,7 @@
       "name": "wave",
       "files": [
         {
-          "path": "registry/components/loading-ui/wave.tsx",
+          "path": "src/registry/components/loading-ui/wave.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -494,7 +494,7 @@
       "name": "bars",
       "files": [
         {
-          "path": "registry/components/loading-ui/bars.tsx",
+          "path": "src/registry/components/loading-ui/bars.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -506,7 +506,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/components/loading-ui/analyzing-image.tsx",
+          "path": "src/registry/components/loading-ui/analyzing-image.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -517,7 +517,7 @@
       "name": "skeleton",
       "files": [
         {
-          "path": "registry/components/loading-ui/skeleton.tsx",
+          "path": "src/registry/components/loading-ui/skeleton.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -528,7 +528,7 @@
       "name": "terminal",
       "files": [
         {
-          "path": "registry/components/loading-ui/terminal.tsx",
+          "path": "src/registry/components/loading-ui/terminal.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -539,7 +539,7 @@
       "name": "wandering-eyes",
       "files": [
         {
-          "path": "registry/components/loading-ui/wandering-eyes.tsx",
+          "path": "src/registry/components/loading-ui/wandering-eyes.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -551,7 +551,7 @@
       "dependencies": ["clsx", "tailwind-merge"],
       "files": [
         {
-          "path": "registry/lib/utils.ts",
+          "path": "src/registry/lib/utils.ts",
           "type": "registry:lib",
           "target": ""
         }

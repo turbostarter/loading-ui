@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { getLLMText, source } from "@/lib/source";
 
-export const Route = createFileRoute("/llms.mdx/docs/$")({
+export const Route = createFileRoute("/(llms)/llms.mdx/docs/$")({
   server: {
     handlers: {
       GET: async ({ params }) => {

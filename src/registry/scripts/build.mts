@@ -74,8 +74,10 @@ async function formatGeneratedJson(value: unknown, filePath: string) {
   return formatGeneratedSource(JSON.stringify(value, null, 2), filePath);
 }
 
+const REGISTRY_ROOT = path.join(process.cwd(), "src/registry");
+
 async function buildExamplesIndex() {
-  const examplesDir = path.join(process.cwd(), "registry/examples");
+  const examplesDir = path.join(REGISTRY_ROOT, "examples");
 
   const files = (
     await collectFiles(
@@ -107,7 +109,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {`;
     index += `
     "${name}": {
       name: "${name}",
-      filePath: "registry/examples/${file}",
+      filePath: "src/registry/examples/${file}",
       component: React.lazy(async () => {
         const mod = await import("./${file}")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "${name}"
@@ -154,7 +156,10 @@ export const Index: Record<string, any> = {`;
       item.files
         ?.map((file) => {
           const filePath = `registry/${typeof file === "string" ? file : file.path}`;
-          const resolvedFilePath = path.resolve(filePath);
+          const resolvedFilePath = path.join(
+            REGISTRY_ROOT,
+            typeof file === "string" ? file : file.path,
+          );
           return typeof file === "string"
             ? `"${resolvedFilePath}"`
             : `{
@@ -184,7 +189,7 @@ export const Index: Record<string, any> = {`;
 
   console.log(`#️⃣  ${Object.keys(registry.items).length} items found`);
 
-  const outputPath = path.join(process.cwd(), "registry/__index__.tsx");
+  const outputPath = path.join(REGISTRY_ROOT, "__index__.tsx");
   await writeIfChanged(
     outputPath,
     await formatGeneratedSource(index, outputPath),
@@ -197,7 +202,7 @@ async function buildRegistryJsonFile() {
     items: registry.items.map((item) => {
       const files = normalizeRegistryFiles(item).map((file) =>
         Object.assign({}, file, {
-          path: `registry/${file.path}`,
+          path: `src/registry/${file.path}`,
           target: file.target ?? "",
         }),
       );

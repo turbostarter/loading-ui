@@ -3,7 +3,7 @@
   "name": "infinity",
   "files": [
     {
-      "path": "registry/components/loading-ui/infinity.tsx",
+      "path": "src/registry/components/loading-ui/infinity.tsx",
       "content": "import { cn } from \"@/lib/utils\";\n\nfunction InfinityLoop({ className, ...props }: React.ComponentProps<\"svg\">) {\n  return (\n    <svg\n      viewBox=\"0 0 100 100\"\n      preserveAspectRatio=\"xMidYMid\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(className)}\n      {...props}\n    >\n      <title>Loading...</title>\n      <style>{`\n        @keyframes loading-ui-infinity-dash {\n          to {\n            stroke-dashoffset: 256.58892822265625;\n          }\n        }\n      `}</style>\n      <path\n        d=\"M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z\"\n        stroke=\"currentColor\"\n        strokeWidth=\"10\"\n        strokeLinecap=\"round\"\n        strokeDasharray=\"205.271142578125 51.317785644531256\"\n        style={{\n          transform: \"scale(0.8)\",\n          transformOrigin: \"50px 50px\",\n          animationName: \"loading-ui-infinity-dash\",\n          animationDuration: \"var(--duration, 2s)\",\n          animationTimingFunction: \"linear\",\n          animationIterationCount: \"infinite\",\n        }}\n      />\n    </svg>\n  );\n}\n\nexport { InfinityLoop };\n",
       "type": "registry:component",
       "target": ""
