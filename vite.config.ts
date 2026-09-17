@@ -41,4 +41,17 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  environments: {
+    ssr: {
+      optimizeDeps: {
+        include: [
+          "react",
+          "react/jsx-runtime",
+          "react/jsx-dev-runtime",
+          "react-dom",
+          "react-dom/server",
+        ],
+      },
+    },
+  },
 });
