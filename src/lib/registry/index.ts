@@ -6,7 +6,6 @@ import {
 } from "@/registry/schema";
 import { LRUCache } from "lru-cache";
 import path from "path";
-import { promises as fs } from "fs";
 
 export { getDemoComponent, getRegistryComponent } from "@/lib/registry/client";
 export {
@@ -152,7 +151,7 @@ export async function getRegistryItem(name: string) {
 }
 
 async function getFileContent(file: RegistryItemFile) {
-  let code = await fs.readFile(file.path, "utf-8");
+  let code = await readFileFromRoot(file.path);
 
   // Some registry items uses default export.
   // We want to use named export instead.

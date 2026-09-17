@@ -15,6 +15,8 @@
     ".output/",
     ".nitro/",
     ".tanstack/",
-    "src/routeTree.gen.ts"
+    ".wrangler/",
+    "src/routeTree.gen.ts",
+    "worker-configuration.d.ts"
   ]
 }

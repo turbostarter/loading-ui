@@ -3,7 +3,7 @@
 import { Icons } from "@/components/common/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 
 export const TurbostarterButton = ({
   className,

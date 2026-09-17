@@ -1,0 +1,14 @@
+# Hashed Vite client assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# shadcn registry JSON (CLI, v0, and same-origin installer)
+/r/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+# Keep preview / workers.dev URLs out of search results
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
+https://:subdomain.workers.dev/*
+  X-Robots-Tag: noindex

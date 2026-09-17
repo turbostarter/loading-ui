@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "loading-ui",
+  "compatibility_date": "2026-09-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "preview_urls": true,
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+  "vars": {
+    "NODE_ENV": "production",
+    "SITE_URL": "https://loading-ui.com",
+  },
+  "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": ["/docs", "/docs/*", "/api/*"],
+  },
+  // "routes": [
+  //   { "pattern": "loading-ui.com", "custom_domain": true },
+  //   { "pattern": "www.loading-ui.com", "custom_domain": true }
+  // ]
+}

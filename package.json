@@ -18,6 +18,9 @@
     "predev": "bun run build:colors",
     "dev": "vite dev",
     "start": "vite preview",
+    "preview": "vite preview",
+    "deploy": "bun run build && wrangler deploy",
+    "cf-typegen": "wrangler types",
     "postinstall": "bun run build:colors",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
@@ -33,8 +36,6 @@
     "@tanstack/react-query": "^5.101.4",
     "@tanstack/react-router": "^1.168.50",
     "@tanstack/react-start": "^1.168.50",
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/og": "^0.8.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "envin": "^1.2.0",
@@ -53,21 +54,23 @@
     "tailwind-merge": "^3.6.0",
     "ts-morph": "^26.0.0",
     "tw-animate-css": "^1.4.0",
+    "workers-og": "^0.0.27",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.54.11",
     "@tailwindcss/vite": "^4.3.3",
     "@types/mdx": "^2.0.13",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6",
-    "nitro": "latest",
     "oxfmt": "0.61.0",
     "oxlint": "1.80.0",
     "oxlint-tsgolint": "7.0.2001",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.2",
-    "vite": "^8"
+    "vite": "^8",
+    "wrangler": "^4.133.0"
   }
 }

@@ -19,6 +19,13 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mts"],
-  "exclude": ["node_modules", ".output", ".nitro", ".tanstack"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.d.ts"],
+  "exclude": [
+    "node_modules",
+    ".output",
+    ".nitro",
+    ".tanstack",
+    ".wrangler",
+    "dist"
+  ]
 }
