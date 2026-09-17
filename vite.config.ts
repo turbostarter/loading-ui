@@ -50,6 +50,8 @@ export default defineConfig({
           "react/jsx-dev-runtime",
           "react-dom",
           "react-dom/server",
+          "fumadocs-mdx/macro",
+          "fumadocs-mdx/runtime/macro",
         ],
       },
     },

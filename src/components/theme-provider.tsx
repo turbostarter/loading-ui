@@ -26,19 +26,40 @@ const ThemeProviderContext = createContext<ThemeProviderState>({
   setTheme: () => {},
 });
 
-function applyTheme(theme: Theme) {
+let themeChangeId = 0;
+
+function withoutTransitions(apply: () => void) {
   const root = document.documentElement;
-  root.classList.remove("light", "dark");
+  const id = ++themeChangeId;
+  root.classList.add("theme-changing");
+  apply();
 
-  const resolved =
-    theme === "system"
-      ? window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
-      : theme;
+  // Flush the new theme while transitions are off, then restore them after paint.
+  window.getComputedStyle(root).getPropertyValue("color-scheme");
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if (id === themeChangeId) {
+        root.classList.remove("theme-changing");
+      }
+    });
+  });
+}
 
-  root.classList.add(resolved);
-  root.style.colorScheme = resolved;
+function applyTheme(theme: Theme) {
+  withoutTransitions(() => {
+    const root = document.documentElement;
+    root.classList.remove("light", "dark");
+
+    const resolved =
+      theme === "system"
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+        : theme;
+
+    root.classList.add(resolved);
+    root.style.colorScheme = resolved;
+  });
 }
 
 export function ThemeProvider({
