@@ -1,8 +1,8 @@
 "use client";
 
+import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
 
 export const ThemeSwitcher = ({
   className,

@@ -1,7 +1,8 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { preload } from "react-dom";
+
+import { useTheme } from "@/components/theme-provider";
 
 import type { ComponentProps } from "react";
 
