@@ -3,7 +3,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { formatCode } from "@/lib/format-code";
 import { highlightCode } from "@/lib/highlight-code";
 import { readFileFromRoot } from "@/lib/read-file";
-import { getDemoItem, getRegistryItem } from "@/lib/registry";
+import { getDemoItem, getRegistryItem } from "@/lib/registry/index";
 
 type SourceInput = {
   name?: string;
