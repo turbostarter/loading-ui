@@ -20,7 +20,6 @@ import { Route as HomeSponsorsRouteImport } from './routes/_home/sponsors'
 import { Route as ApiSearchRouteImport } from './routes/api/search'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
 import { Route as DocsSplatRouteImport } from './routes/docs/$'
-import { Route as IngestSplatRouteImport } from './routes/ingest/$'
 import { Route as ApiOgSplatRouteImport } from './routes/api/og/$'
 import { Route as llmsLlmsDotmdxDocsSplatRouteImport } from './routes/(llms)/llms[.]mdx.docs.$'
 
@@ -78,11 +77,6 @@ const DocsSplatRoute = DocsSplatRouteImport.update({
   path: '/$',
   getParentRoute: () => DocsRouteRoute,
 } as any)
-const IngestSplatRoute = IngestSplatRouteImport.update({
-  id: '/ingest/$',
-  path: '/ingest/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ApiOgSplatRoute = ApiOgSplatRouteImport.update({
   id: '/api/og/$',
   path: '/api/og/$',
@@ -104,7 +98,6 @@ export interface FileRoutesByFullPath {
   '/sponsors': typeof HomeSponsorsRoute
   '/api/search': typeof ApiSearchRoute
   '/docs/$': typeof DocsSplatRoute
-  '/ingest/$': typeof IngestSplatRoute
   '/docs/': typeof DocsIndexRoute
   '/api/og/$': typeof ApiOgSplatRoute
   '/llms.mdx/docs/$': typeof llmsLlmsDotmdxDocsSplatRoute
@@ -117,7 +110,6 @@ export interface FileRoutesByTo {
   '/sponsors': typeof HomeSponsorsRoute
   '/api/search': typeof ApiSearchRoute
   '/docs/$': typeof DocsSplatRoute
-  '/ingest/$': typeof IngestSplatRoute
   '/': typeof HomeIndexRoute
   '/docs': typeof DocsIndexRoute
   '/api/og/$': typeof ApiOgSplatRoute
@@ -134,7 +126,6 @@ export interface FileRoutesById {
   '/_home/sponsors': typeof HomeSponsorsRoute
   '/api/search': typeof ApiSearchRoute
   '/docs/$': typeof DocsSplatRoute
-  '/ingest/$': typeof IngestSplatRoute
   '/_home/': typeof HomeIndexRoute
   '/docs/': typeof DocsIndexRoute
   '/api/og/$': typeof ApiOgSplatRoute
@@ -152,7 +143,6 @@ export interface FileRouteTypes {
     | '/sponsors'
     | '/api/search'
     | '/docs/$'
-    | '/ingest/$'
     | '/docs/'
     | '/api/og/$'
     | '/llms.mdx/docs/$'
@@ -165,7 +155,6 @@ export interface FileRouteTypes {
     | '/sponsors'
     | '/api/search'
     | '/docs/$'
-    | '/ingest/$'
     | '/'
     | '/docs'
     | '/api/og/$'
@@ -181,7 +170,6 @@ export interface FileRouteTypes {
     | '/_home/sponsors'
     | '/api/search'
     | '/docs/$'
-    | '/ingest/$'
     | '/_home/'
     | '/docs/'
     | '/api/og/$'
@@ -196,7 +184,6 @@ export interface RootRouteChildren {
   llmsLlmsFullDottxtRoute: typeof llmsLlmsFullDottxtRoute
   llmsLlmsDottxtRoute: typeof llmsLlmsDottxtRoute
   ApiSearchRoute: typeof ApiSearchRoute
-  IngestSplatRoute: typeof IngestSplatRoute
   ApiOgSplatRoute: typeof ApiOgSplatRoute
   llmsLlmsDotmdxDocsSplatRoute: typeof llmsLlmsDotmdxDocsSplatRoute
 }
@@ -280,13 +267,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsSplatRouteImport
       parentRoute: typeof DocsRouteRoute
     }
-    '/ingest/$': {
-      id: '/ingest/$'
-      path: '/ingest/$'
-      fullPath: '/ingest/$'
-      preLoaderRoute: typeof IngestSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/og/$': {
       id: '/api/og/$'
       path: '/api/og/$'
@@ -340,7 +320,6 @@ const rootRouteChildren: RootRouteChildren = {
   llmsLlmsFullDottxtRoute: llmsLlmsFullDottxtRoute,
   llmsLlmsDottxtRoute: llmsLlmsDottxtRoute,
   ApiSearchRoute: ApiSearchRoute,
-  IngestSplatRoute: IngestSplatRoute,
   ApiOgSplatRoute: ApiOgSplatRoute,
   llmsLlmsDotmdxDocsSplatRoute: llmsLlmsDotmdxDocsSplatRoute,
 }
