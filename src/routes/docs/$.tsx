@@ -10,6 +10,7 @@ export const Route = createFileRoute("/docs/$")({
   loader: async ({ params }) => {
     const slugs = params._splat?.split("/").filter(Boolean) ?? [];
     const data = await getDocsPage({ data: slugs });
+
     if (!data) {
       throw notFound();
     }

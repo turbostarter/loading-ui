@@ -7,22 +7,21 @@ import { Link } from "@/components/common/link";
 import { mdxComponents } from "@/components/mdx";
 import { SponsorsSidebarCta } from "@/components/home/sponsors/sidebar-cta";
 import { buttonVariants } from "@/components/ui/button";
-import type { DocsPageData } from "@/lib/server";
+import type { getDocsPage } from "@/lib/server";
 import { docs } from "@/lib/source";
 import { cn } from "@/lib/utils";
 
 export function DocsPageView({
   path,
-  title,
-  description,
   markdownUrl,
   raw,
   neighbours,
 }: Pick<
-  DocsPageData,
-  "path" | "title" | "description" | "markdownUrl" | "raw" | "neighbours"
+  NonNullable<Awaited<ReturnType<typeof getDocsPage>>>,
+  "path" | "markdownUrl" | "raw" | "neighbours"
 >) {
   const page = docs.getPage(path);
+
   if (!page) {
     throw new Error(`unknown page: ${path}`);
   }
@@ -42,7 +41,7 @@ export function DocsPageView({
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between md:items-start">
                 <h1 className="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">
-                  {title}
+                  {page.title}
                 </h1>
                 <div className="docs-nav flex items-center gap-2">
                   <div className="hidden sm:block">
@@ -82,9 +81,9 @@ export function DocsPageView({
                   </div>
                 </div>
               </div>
-              {description ? (
+              {page.description ? (
                 <p className="text-muted-foreground text-[1.05rem] sm:text-base sm:text-balance md:max-w-[80%]">
-                  {description}
+                  {page.description}
                 </p>
               ) : null}
             </div>

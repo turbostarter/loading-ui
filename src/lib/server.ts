@@ -7,20 +7,6 @@ import { getPageMarkdownUrl, source } from "@/lib/source";
 
 export type DocsNeighbour = { url: string; name: string } | null;
 
-export type DocsPageData = {
-  path: string;
-  title: string;
-  description: string | undefined;
-  markdownUrl: string;
-  raw: string;
-  slugs: string[];
-  url: string;
-  neighbours: {
-    previous: DocsNeighbour;
-    next: DocsNeighbour;
-  };
-};
-
 function neighbourFrom(
   node: { url: string; name: unknown } | undefined,
 ): DocsNeighbour {
@@ -44,7 +30,7 @@ export const getGitHubStarsFn = createServerFn({ method: "GET" }).handler(() =>
 
 export const getDocsPage = createServerFn({ method: "GET" })
   .validator(z.array(z.string()))
-  .handler(async ({ data: slugs }): Promise<DocsPageData | null> => {
+  .handler(async ({ data: slugs }) => {
     const page = source.getPage(slugs);
     if (!page) {
       return null;
