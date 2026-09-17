@@ -39,7 +39,8 @@
     ".wrangler/",
     "dist/",
     "src/routeTree.gen.ts",
-    "worker-configuration.d.ts"
+    "worker-configuration.d.ts",
+    "src/**/*.test.ts"
   ],
   "options": {
     "typeAware": true,

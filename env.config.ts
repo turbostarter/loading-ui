@@ -7,6 +7,6 @@ export default defineEnv({
     SITE_URL: z.url().optional(),
     VITE_POSTHOG_PROJECT_TOKEN: z.string().optional(),
     VITE_POSTHOG_HOST: z.string().default("/ingest"),
-    POSTHOG_HOST: z.url().default("https://us.i.posthog.com"),
+    POSTHOG_HOST: z.url().default("https://eu.i.posthog.com"),
   },
 });
