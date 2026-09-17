@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { use } from "react";
+import { use, useMemo } from "react";
 
 import { DocsCopyPage } from "@/components/docs/copy-page";
 import { DocsTableOfContents } from "@/components/docs/toc";
@@ -11,6 +11,26 @@ import type { getDocsPage } from "@/lib/server";
 import { docs } from "@/lib/source";
 import { cn } from "@/lib/utils";
 
+function useDocsPage(path: string) {
+  const loaded = use(
+    useMemo(
+      () =>
+        (async () => {
+          const page = docs.getPage(path);
+          if (!page) {
+            throw new Error(`unknown page: ${path}`);
+          }
+
+          await page.preload();
+          return { page, ...(await page.load()) };
+        })(),
+      [path],
+    ),
+  );
+
+  return loaded;
+}
+
 export function DocsPageView({
   path,
   markdownUrl,
@@ -20,13 +40,7 @@ export function DocsPageView({
   NonNullable<Awaited<ReturnType<typeof getDocsPage>>>,
   "path" | "markdownUrl" | "raw" | "neighbours"
 >) {
-  const page = docs.getPage(path);
-
-  if (!page) {
-    throw new Error(`unknown page: ${path}`);
-  }
-
-  const { toc } = use(page.load());
+  const { page, toc } = useDocsPage(path);
   const MDX = page.body;
 
   return (

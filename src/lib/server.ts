@@ -40,12 +40,8 @@ export const getDocsPage = createServerFn({ method: "GET" })
 
     return {
       path: page.path,
-      title: page.data.title,
-      description: page.data.description,
       markdownUrl: getPageMarkdownUrl(page).url,
       raw: await page.data.getText("raw"),
-      slugs: page.slugs,
-      url: page.url,
       neighbours: {
         previous: neighbourFrom(neighbours.previous),
         next: neighbourFrom(neighbours.next),
