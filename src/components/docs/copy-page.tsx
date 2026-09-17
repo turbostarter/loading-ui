@@ -151,8 +151,17 @@ const menuItems = {
   ),
 };
 
-export function DocsCopyPage({ page, url }: { page: string; url: string }) {
+export function DocsCopyPage({ url }: { url: string }) {
   const { copyToClipboard, isCopied } = useCopyToClipboard();
+
+  const copyPage = async () => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to load markdown (${response.status})`);
+    }
+
+    await copyToClipboard(await response.text());
+  };
 
   const trigger = (
     <Button
@@ -172,7 +181,7 @@ export function DocsCopyPage({ page, url }: { page: string; url: string }) {
           variant="secondary"
           size="sm"
           className="h-8 gap-2 shadow-none md:text-[0.8rem]"
-          onClick={() => copyToClipboard(page)}
+          onClick={() => void copyPage()}
         >
           {isCopied ? <Check /> : <Copy />}
           Copy Page

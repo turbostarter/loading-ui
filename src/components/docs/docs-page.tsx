@@ -13,13 +13,12 @@ import { cn } from "@/lib/utils";
 
 type DocsPageLoaderData = Pick<
   NonNullable<Awaited<ReturnType<typeof getDocsPage>>>,
-  "path" | "markdownUrl" | "raw" | "neighbours"
+  "path" | "markdownUrl" | "neighbours"
 >;
 
 export function DocsPageContent({
   path,
   markdownUrl,
-  raw,
   neighbours,
 }: DocsPageLoaderData) {
   const page = docs.getPage(path);
@@ -46,7 +45,7 @@ export function DocsPageContent({
                 </h1>
                 <div className="docs-nav flex items-center gap-2">
                   <div className="hidden sm:block">
-                    <DocsCopyPage page={raw} url={markdownUrl} />
+                    <DocsCopyPage url={markdownUrl} />
                   </div>
                   <div className="ml-auto flex gap-1">
                     {neighbours.previous ? (

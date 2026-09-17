@@ -41,7 +41,6 @@ export const getDocsPage = createServerFn({ method: "GET" })
     return {
       path: page.path,
       markdownUrl: getPageMarkdownUrl(page).url,
-      raw: await page.data.getText("raw"),
       neighbours: {
         previous: neighbourFrom(neighbours.previous),
         next: neighbourFrom(neighbours.next),
