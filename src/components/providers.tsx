@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClientProvider } from "@/lib/query/client";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AnalyticsProvider } from "@/lib/analytics/provider";
+import { WaitlistPopover } from "@/components/waitlist";
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
@@ -18,7 +19,10 @@ export function Providers({ children }: { children: ReactNode }) {
               enabled: false,
             }}
           >
-            <TooltipProvider delay={0}>{children}</TooltipProvider>
+            <TooltipProvider delay={0}>
+              {children}
+              <WaitlistPopover />
+            </TooltipProvider>
           </RootProvider>
         </AnalyticsProvider>
       </ThemeProvider>

@@ -9,6 +9,8 @@ export default defineEnv({
   },
   server: {
     SITE_URL: z.url().optional(),
+    POSTHOG_PERSONAL_API_KEY: z.string().optional(),
+    POSTHOG_PROJECT_ID: z.string().optional(),
   },
   clientPrefix: "VITE_",
   client: {

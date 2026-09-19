@@ -12,7 +12,6 @@
   },
   "vars": {
     "NODE_ENV": "production",
-    "SITE_URL": "https://loading-ui.com",
   },
   "assets": {
     "binding": "ASSETS",

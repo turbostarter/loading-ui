@@ -6,6 +6,7 @@ import { z } from "zod";
 import { SPONSORS } from "@/lib/sponsors";
 import { getGitHubStars } from "@/lib/github-stars";
 import { getPageMarkdownUrl, source } from "@/lib/source";
+import envConfig from "../../env.config";
 
 export type DocsNeighbour = { url: string; name: string } | null;
 
@@ -29,6 +30,42 @@ export const getSerializedPageTree = createServerFn({ method: "GET" }).handler(
 export const getGitHubStarsFn = createServerFn({ method: "GET" }).handler(() =>
   getGitHubStars(),
 );
+
+export const getWaitlistSignupCountFn = createServerFn({
+  method: "GET",
+}).handler(async () => {
+  const response = await fetch(
+    `https://eu.posthog.com/api/projects/${envConfig.POSTHOG_PROJECT_ID}/query/`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${envConfig.POSTHOG_PERSONAL_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: {
+          kind: "HogQLQuery",
+          query: `
+            SELECT count(DISTINCT properties.email)
+            FROM events
+            WHERE event = 'waitlist_submitted'
+              AND properties.email != ''
+          `.trim(),
+        },
+      }),
+    },
+  );
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const data = (await response.json()) as { results?: unknown[][] };
+  const raw = data.results?.[0]?.[0];
+  const count = typeof raw === "number" ? raw : Number(raw);
+
+  return Number.isFinite(count) && count >= 0 ? count : null;
+});
 
 export const getDocsPage = createServerFn({ method: "GET" })
   .validator(z.array(z.string()))
