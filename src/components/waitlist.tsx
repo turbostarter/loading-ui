@@ -20,7 +20,7 @@ import {
   PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { track } from "@/lib/analytics/client";
+import { identify, track } from "@/lib/analytics/client";
 import { getWaitlistSignupCountFn } from "@/lib/server";
 import { Ring } from "@/registry/components/loading-ui/ring";
 import { cn } from "@/lib/utils";
@@ -80,10 +80,14 @@ export function WaitlistPopover() {
     staleTime: 60_000,
   });
 
-  const dismiss = () => setDismissedAt(new Date().toISOString());
+  const dismiss = () => {
+    track("waitlist_dismissed", { source: "popup" });
+    setDismissedAt(new Date().toISOString());
+  };
 
   const onSubmit = async (values: WaitlistFormValues) => {
     const email = values.email.trim();
+    identify(email, { email });
     await Promise.all([
       Promise.resolve(track("waitlist_submitted", { source: "popup", email })),
       new Promise(resolve => setTimeout(resolve, 1000)),

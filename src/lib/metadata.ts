@@ -5,7 +5,7 @@ export const DEFAULT_TITLE =
   "Loading UI - spinners, loaders, and loading animations for the web";
 
 const SITE_NAME_TEMPLATE = `%s - ${SITE_NAME}`;
-const PRODUCTION_HOST = "loading-ui.com";
+const PRODUCTION_HOST = "www.loading-ui.com";
 
 type OpenGraphType =
   | "article"
