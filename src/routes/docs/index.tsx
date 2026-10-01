@@ -2,12 +2,12 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { DocsPageContent } from "@/components/docs/docs-page";
 import { createMetadata } from "@/lib/metadata";
-import { getDocsPage } from "@/lib/server";
+import { getDocsPage } from "@/lib/docs-page-data";
 import { source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/")({
-  loader: async () => {
-    const data = await getDocsPage({ data: [] });
+  loader: () => {
+    const data = getDocsPage([]);
     if (!data) {
       throw notFound();
     }
