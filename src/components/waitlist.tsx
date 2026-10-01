@@ -90,7 +90,7 @@ export function WaitlistPopover() {
     identify(email, { email });
     await Promise.all([
       Promise.resolve(track("waitlist_submitted", { source: "popup", email })),
-      new Promise(resolve => setTimeout(resolve, 1000)),
+      new Promise((resolve) => setTimeout(resolve, 1000)),
     ]);
     void queryClient.invalidateQueries({ queryKey: ["waitlist-signup-count"] });
   };
@@ -126,9 +126,9 @@ export function WaitlistPopover() {
       >
         <div className="from-primary to-foreground/50 text-primary-foreground relative rounded-t-lg bg-gradient-to-br from-30% px-6 py-5">
           <PopoverHeader className="flex flex-col gap-1 pr-6">
-            <PopoverTitle className="tracking-tight leading-tight! text-xl">
+            <PopoverTitle className="text-xl leading-tight! tracking-tight">
               Want to track your{" "}
-              <Ring className="size-[1em] inline-block mt-[-0.2em] [--duration:0s]" />{" "}
+              <Ring className="mt-[-0.2em] inline-block size-[1em] [--duration:0s]" />{" "}
               loading times?
             </PopoverTitle>
             <PopoverDescription className="text-primary-foreground/85">
@@ -146,7 +146,7 @@ export function WaitlistPopover() {
           </button>
         </div>
 
-        <div className="flex flex-col gap-4 p-4 items-center w-full pt-0">
+        <div className="flex w-full flex-col items-center gap-4 p-4 pt-0">
           <div className="flex flex-col gap-3 px-2 tracking-tight">
             <p>
               <strong className="font-semibold">1 second</strong> of loading
@@ -160,7 +160,7 @@ export function WaitlistPopover() {
           <form
             noValidate
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-2 w-full"
+            className="flex w-full flex-col gap-2"
           >
             <Controller
               control={form.control}
@@ -191,7 +191,7 @@ export function WaitlistPopover() {
               type="submit"
               size="lg"
               className={cn("shrink-0 disabled:opacity-100", {
-                "bg-[#2dc653] text-primary-foreground":
+                "text-primary-foreground bg-[#2dc653]":
                   form.formState.isSubmitSuccessful,
               })}
               disabled={
@@ -211,7 +211,7 @@ export function WaitlistPopover() {
             </Button>
           </form>
 
-          <p className="text-muted-foreground text-center text-sm -mt-0.5">
+          <p className="text-muted-foreground -mt-0.5 text-center text-sm">
             <span className="font-semibold">
               {new Intl.NumberFormat("en-US").format((count.data ?? 0) + 147)}
             </span>{" "}

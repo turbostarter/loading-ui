@@ -5,10 +5,7 @@ type AnalyticsProperties = Record<
   string | number | boolean | undefined
 >;
 
-export function identify(
-  distinctId: string,
-  properties?: AnalyticsProperties,
-) {
+export function identify(distinctId: string, properties?: AnalyticsProperties) {
   if (typeof window === "undefined") {
     return;
   }
