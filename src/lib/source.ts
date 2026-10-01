@@ -1,13 +1,14 @@
 import { llms, loader, type InferPageType } from "fumadocs-core/source";
-import { lucideIconsPlugin } from "fumadocs-core/source/lucide-icons";
 import { metaSchema, pageSchema } from "fumadocs-core/source/schema";
 import { defineDocs } from "fumadocs-mdx/macro";
 
 import { DOCS_CONTENT_ROUTE, DOCS_ROUTE } from "./constants";
+import { getDocsIcon } from "./docs-icons";
 
 export const docs = defineDocs({
   dir: "src/content/docs",
   docs: {
+    async: true,
     schema: pageSchema,
     postprocess: {
       includeProcessedMarkdown: true,
@@ -21,7 +22,7 @@ export const docs = defineDocs({
 export const source = loader({
   source: docs.toFumadocsSource(),
   baseUrl: DOCS_ROUTE,
-  plugins: [lucideIconsPlugin()],
+  icon: getDocsIcon,
 });
 
 export function getPageMarkdownUrl(page: { slugs: string[] }) {

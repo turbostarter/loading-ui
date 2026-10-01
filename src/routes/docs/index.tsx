@@ -3,7 +3,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { DocsPageContent } from "@/components/docs/docs-page";
 import { createMetadata } from "@/lib/metadata";
 import { getDocsPage } from "@/lib/server";
-import { source } from "@/lib/source";
+import { docs, source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/")({
   loader: async () => {
@@ -12,6 +12,7 @@ export const Route = createFileRoute("/docs/")({
       throw notFound();
     }
 
+    await docs.getPage(data.path)?.preload();
     return data;
   },
   head: () => {
