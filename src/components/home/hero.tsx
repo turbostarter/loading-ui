@@ -9,7 +9,7 @@ import { getCLICommand } from "@/lib/registry/meta";
 import { Index } from "@/registry/__index__";
 import { GitHubStars } from "./github-stars";
 
-export const Hero = ({ stars }: { stars: number }) => {
+export const Hero = () => {
   return (
     <HeroSection>
       <HeroSectionTitle>
@@ -28,7 +28,7 @@ export const Hero = ({ stars }: { stars: number }) => {
           command={getCLICommand(Object.keys(Index)[0])}
           className="w-60 text-xs md:w-72"
         />
-        <GitHubStars stars={stars} />
+        <GitHubStars />
       </div>
     </HeroSection>
   );
