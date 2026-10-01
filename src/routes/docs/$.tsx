@@ -6,7 +6,7 @@ import { getDocsPage } from "@/lib/docs-page-data";
 import { source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/$")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const slugs = params._splat?.split("/").filter(Boolean) ?? [];
     const data = getDocsPage(slugs);
 

@@ -6,7 +6,7 @@ import { getDocsPage } from "@/lib/docs-page-data";
 import { source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/")({
-  loader: () => {
+  loader: async () => {
     const data = getDocsPage([]);
     if (!data) {
       throw notFound();
