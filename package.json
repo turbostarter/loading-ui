@@ -29,7 +29,7 @@
     "build:registry": "bun src/registry/scripts/build.mts && bun format:fix"
   },
   "dependencies": {
-    "@base-ui/react": "^1.6.0",
+    "@base-ui/react": "^1.8.0",
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
     "@hookform/resolvers": "^5.9.1",
