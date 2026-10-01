@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 import { Check, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import * as z from "zod";
@@ -43,11 +43,9 @@ const popupDismissedAtAtom = atomWithStorage<string | null>(
 );
 
 const REDISPLAY_MS = 24 * 60 * 60 * 1000;
-const SHOW_DELAY_MS = 3_000;
 
 export function WaitlistPopover() {
   const [dismissedAt, setDismissedAt] = useAtom(popupDismissedAtAtom);
-  const [showAfterDelay, setShowAfterDelay] = useState(false);
   const queryClient = useQueryClient();
 
   const form = useForm<WaitlistFormValues>({
@@ -58,15 +56,7 @@ export function WaitlistPopover() {
   const dismissedAtMs = dismissedAt ? Date.parse(dismissedAt) : Number.NaN;
   const dismissalExpired =
     !Number.isNaN(dismissedAtMs) && Date.now() - dismissedAtMs >= REDISPLAY_MS;
-  const open = showAfterDelay && (!dismissedAt || dismissalExpired);
-
-  useEffect(() => {
-    const timeout = window.setTimeout(
-      () => setShowAfterDelay(true),
-      SHOW_DELAY_MS,
-    );
-    return () => window.clearTimeout(timeout);
-  }, []);
+  const open = !dismissedAt || dismissalExpired;
 
   useEffect(() => {
     if (dismissalExpired && dismissedAt) {
@@ -75,6 +65,7 @@ export function WaitlistPopover() {
   }, [dismissalExpired, dismissedAt, setDismissedAt]);
 
   const count = useQuery({
+    enabled: open,
     queryKey: ["waitlist-signup-count"],
     queryFn: () => getWaitlistSignupCountFn(),
     staleTime: 60_000,
