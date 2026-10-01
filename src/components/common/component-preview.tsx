@@ -3,6 +3,7 @@ import * as React from "react";
 import { getRegistryComponent } from "@/lib/registry/client";
 import { ComponentSource } from "@/components/common/component-source";
 import { ComponentPreviewTabs } from "./component-preview-tabs";
+import type { ComponentSourceData } from "@/lib/component-source-data";
 
 export function ComponentPreview({
   name,
@@ -11,6 +12,8 @@ export function ComponentPreview({
   align = "center",
   hideCode = false,
   caption,
+  sourceData,
+  sourcePreviewData,
   ...props
 }: React.ComponentProps<"div"> & {
   name: string;
@@ -19,6 +22,8 @@ export function ComponentPreview({
   hideCode?: boolean;
   previewClassName?: string;
   caption?: string;
+  sourceData?: ComponentSourceData;
+  sourcePreviewData?: ComponentSourceData;
 }) {
   const Component = getRegistryComponent(name);
 
@@ -43,9 +48,9 @@ export function ComponentPreview({
       component={
         <React.Suspense>{React.createElement(Component)}</React.Suspense>
       }
-      source={<ComponentSource name={name} collapsible={false} />}
+      source={<ComponentSource sourceData={sourceData} collapsible={false} />}
       sourcePreview={
-        <ComponentSource name={name} collapsible={false} maxLines={3} />
+        <ComponentSource sourceData={sourcePreviewData} collapsible={false} />
       }
       {...props}
     />

@@ -1,10 +1,9 @@
 import * as React from "react";
-import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wrapper";
 import { CopyButton } from "@/components/common/copy-button";
 import { getIconForLanguageExtension } from "@/components/common/icons";
-import { getComponentSource } from "@/lib/get-component-source";
+import type { ComponentSourceData } from "@/lib/component-source-data";
 import { cn } from "@/lib/utils";
 
 type ComponentSourceProps = React.ComponentProps<"div"> & {
@@ -14,31 +13,15 @@ type ComponentSourceProps = React.ComponentProps<"div"> & {
   language?: string;
   collapsible?: boolean;
   maxLines?: number;
+  sourceData?: ComponentSourceData;
 };
 
-export function ComponentSource(props: ComponentSourceProps) {
-  return (
-    <React.Suspense fallback={null}>
-      <ComponentSourceContent {...props} />
-    </React.Suspense>
-  );
-}
-
-function ComponentSourceContent({
-  name,
-  src,
+export function ComponentSource({
   title,
-  language,
   collapsible = true,
   className,
-  maxLines,
+  sourceData: data,
 }: ComponentSourceProps) {
-  const input = { name, src, title, language, maxLines };
-  const { data } = useSuspenseQuery({
-    queryKey: ["component-source", input],
-    queryFn: () => getComponentSource({ data: input }),
-  });
-
   if (!data) {
     return null;
   }
@@ -50,7 +33,7 @@ function ComponentSourceContent({
           code={data.code}
           highlightedCode={data.highlightedCode}
           language={data.language}
-          title={data.title}
+          title={title}
         />
       </div>
     );
@@ -62,7 +45,7 @@ function ComponentSourceContent({
         code={data.code}
         highlightedCode={data.highlightedCode}
         language={data.language}
-        title={data.title}
+        title={title}
       />
     </CodeCollapsibleWrapper>
   );
