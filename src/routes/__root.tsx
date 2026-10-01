@@ -11,16 +11,14 @@ import { PageTreeProvider, usePageTree } from "@/components/docs/tree-context";
 import { Providers } from "@/components/providers";
 import { fonts } from "@/lib/fonts";
 import { defaultMetadata } from "@/lib/metadata";
-import { getDiamondSponsorFn, getSerializedPageTree } from "@/lib/server";
+import { getRootData } from "@/lib/server";
 import { cn } from "@/lib/utils";
 import "@/assets/styles/colors.css";
 import "@/assets/styles/global.css";
 
 export const Route = createRootRoute({
-  beforeLoad: async () => ({
-    diamondSponsorId: await getDiamondSponsorFn(),
-  }),
-  loader: () => getSerializedPageTree(),
+  loader: () => getRootData(),
+  staleTime: Infinity,
   head: () => {
     const seo = defaultMetadata();
 
@@ -45,7 +43,7 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
-  const pageTree = Route.useLoaderData();
+  const { pageTree } = Route.useLoaderData();
 
   return (
     <RootDocument>
