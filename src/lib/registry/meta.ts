@@ -1,11 +1,11 @@
-import { registry } from "@/registry/registry";
+import { registryConfig } from "@/registry/config";
 
 export function getCLICommand(name: string) {
-  return `npx shadcn add ${registry.name}/${name}`;
+  return `npx shadcn add ${registryConfig.name}/${name}`;
 }
 
 export function getRegistryItemUrl(name: string) {
-  return new URL(`/r/${name}.json`, registry.homepage).toString();
+  return new URL(`/r/${name}.json`, registryConfig.homepage).toString();
 }
 
 export function getOpenInV0Url(name: string) {
