@@ -29,7 +29,7 @@
     "build:registry": "bun src/registry/scripts/build.mts && bun format:fix"
   },
   "dependencies": {
-    "@base-ui/react": "^1.6.0",
+    "@base-ui/react": "^1.8.0",
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
     "@hookform/resolvers": "^5.9.1",
@@ -67,7 +67,7 @@
     "@cloudflare/vite-plugin": "^1.54.11",
     "@tailwindcss/vite": "^4.3.3",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^25.6.0",
+    "@types/node": "^26.6.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6",
