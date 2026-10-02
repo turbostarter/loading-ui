@@ -2,22 +2,16 @@ import { Link as RouterLink } from "@tanstack/react-router";
 import type { ComponentProps } from "react";
 
 type LinkProps = Omit<ComponentProps<"a">, "href"> & {
-  href: string;
+  href?: string;
   prefetch?: boolean;
 };
 
 function isExternalHref(href: string) {
-  return (
-    href.startsWith("http://") ||
-    href.startsWith("https://") ||
-    href.startsWith("mailto:") ||
-    href.startsWith("tel:") ||
-    href.startsWith("#")
-  );
+  return /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(href);
 }
 
 export function Link({ href, prefetch, children, ...props }: LinkProps) {
-  if (isExternalHref(href)) {
+  if (!href || isExternalHref(href) || props.download != null) {
     return (
       <a href={href} {...props}>
         {children}

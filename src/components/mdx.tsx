@@ -81,8 +81,9 @@ export const mdxComponents = {
       {...props}
     />
   ),
-  a: ({ className, ...props }: React.ComponentProps<"a">) => (
-    <a
+  a: ({ href, className, ...props }: React.ComponentProps<"a">) => (
+    <Link
+      href={href}
       className={cn("font-medium underline underline-offset-4", className)}
       {...props}
     />
