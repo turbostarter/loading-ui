@@ -93,7 +93,7 @@ export const getDiamondSponsorFn = createServerFn({ method: "GET" }).handler(
   () => {
     const sponsors = SPONSORS.diamond;
     const stored = getCookie(COOKIE_KEY);
-    const existing = sponsors.find(sponsor => sponsor.id === stored);
+    const existing = sponsors.find((sponsor) => sponsor.id === stored);
 
     if (existing) {
       return existing.id;
