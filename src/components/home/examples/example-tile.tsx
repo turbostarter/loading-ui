@@ -19,7 +19,6 @@ export function ExampleTile({ name }: { name: string }) {
       </div>
       <Link
         href={`/docs/components/${name}`}
-        prefetch={false}
         className="bg-background flex size-full items-center justify-center"
       >
         <ExamplePreview name={name} />
