@@ -23,8 +23,11 @@ function neighbourFrom(
   };
 }
 
-export const getSerializedPageTree = createServerFn({ method: "GET" }).handler(
-  async () => source.serializePageTree(source.getPageTree()),
+export const getRootData = createServerFn({ method: "GET" }).handler(
+  async () => ({
+    pageTree: await source.serializePageTree(source.getPageTree()),
+    diamondSponsorId: getDiamondSponsorId(),
+  }),
 );
 
 export const getGitHubStarsFn = createServerFn({ method: "GET" }).handler(() =>
@@ -89,18 +92,16 @@ export const getDocsPage = createServerFn({ method: "GET" })
 
 const COOKIE_KEY = "diamond-sponsor-id";
 
-export const getDiamondSponsorFn = createServerFn({ method: "GET" }).handler(
-  () => {
-    const sponsors = SPONSORS.diamond;
-    const stored = getCookie(COOKIE_KEY);
-    const existing = sponsors.find((sponsor) => sponsor.id === stored);
+function getDiamondSponsorId() {
+  const sponsors = SPONSORS.diamond;
+  const stored = getCookie(COOKIE_KEY);
+  const existing = sponsors.find((sponsor) => sponsor.id === stored);
 
-    if (existing) {
-      return existing.id;
-    }
+  if (existing) {
+    return existing.id;
+  }
 
-    const picked = sponsors[Math.floor(Math.random() * sponsors.length)];
-    setCookie(COOKIE_KEY, picked.id, { path: "/", sameSite: "lax" });
-    return picked.id;
-  },
-);
+  const picked = sponsors[Math.floor(Math.random() * sponsors.length)];
+  setCookie(COOKIE_KEY, picked.id, { path: "/", sameSite: "lax" });
+  return picked.id;
+}

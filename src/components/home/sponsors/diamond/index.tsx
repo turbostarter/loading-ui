@@ -2,7 +2,9 @@
 
 import { RankgrowButton, RankGrowMobileNavCta } from "./rankgrow";
 import { TurbostarterButton, TurboStarterMobileNavCta } from "./turbostarter";
-import { useRouteContext } from "@tanstack/react-router";
+import { getRouteApi } from "@tanstack/react-router";
+
+const rootRoute = getRouteApi("__root__");
 
 const HEADER_CTAS = {
   turbostarter: TurbostarterButton,
@@ -19,7 +21,7 @@ type DiamondSponsorId = keyof typeof HEADER_CTAS;
 export const DiamondSponsorHeaderCta = ({
   ...props
 }: React.HTMLAttributes<HTMLAnchorElement>) => {
-  const { diamondSponsorId } = useRouteContext({ from: "__root__" });
+  const { diamondSponsorId } = rootRoute.useLoaderData();
   const Cta = HEADER_CTAS[diamondSponsorId as DiamondSponsorId];
 
   if (!Cta) {
@@ -32,7 +34,7 @@ export const DiamondSponsorHeaderCta = ({
 export const DiamondSponsorMobileNavCta = ({
   ...props
 }: React.ComponentProps<"a">) => {
-  const { diamondSponsorId } = useRouteContext({ from: "__root__" });
+  const { diamondSponsorId } = rootRoute.useLoaderData();
   const Cta = MOBILE_NAV_CTAS[diamondSponsorId as DiamondSponsorId];
 
   if (!Cta) {
