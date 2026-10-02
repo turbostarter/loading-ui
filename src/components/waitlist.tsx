@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 import { Check, X } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import * as z from "zod";
@@ -43,8 +43,24 @@ const popupDismissedAtAtom = atomWithStorage<string | null>(
 );
 
 const REDISPLAY_MS = 24 * 60 * 60 * 1000;
+const MOUNT_DELAY_MS = 3_000;
 
-export function WaitlistPopover() {
+export function Waitlist() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => setReady(true), MOUNT_DELAY_MS);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
+  if (!ready) {
+    return null;
+  }
+
+  return <WaitlistPopover />;
+}
+
+function WaitlistPopover() {
   const [dismissedAt, setDismissedAt] = useAtom(popupDismissedAtAtom);
   const queryClient = useQueryClient();
 
@@ -65,7 +81,6 @@ export function WaitlistPopover() {
   }, [dismissalExpired, dismissedAt, setDismissedAt]);
 
   const count = useQuery({
-    enabled: open,
     queryKey: ["waitlist-signup-count"],
     queryFn: () => getWaitlistSignupCountFn(),
     staleTime: 60_000,

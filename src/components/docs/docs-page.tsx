@@ -6,7 +6,7 @@ import { Link } from "@/components/common/link";
 import { mdxComponents } from "@/components/mdx";
 import { SponsorsSidebarCta } from "@/components/home/sponsors/sidebar-cta";
 import { buttonVariants } from "@/components/ui/button";
-import type { getDocsPage } from "@/lib/server";
+import type { getDocsPage } from "@/lib/docs-page-data";
 import { docs } from "@/lib/source";
 import { cn } from "@/lib/utils";
 
