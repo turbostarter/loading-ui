@@ -4,6 +4,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wrapper";
 import { CopyButton } from "@/components/common/copy-button";
 import { getIconForLanguageExtension } from "@/components/common/icons";
+import { componentSourceQueryInput } from "@/lib/component-source-query";
 import { getComponentSource } from "@/lib/get-component-source";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +34,13 @@ function ComponentSourceContent({
   className,
   maxLines,
 }: ComponentSourceProps) {
-  const input = { name, src, title, language, maxLines };
+  const input = componentSourceQueryInput({
+    name,
+    src,
+    title,
+    language,
+    maxLines,
+  });
   const { data } = useSuspenseQuery({
     queryKey: ["component-source", input],
     queryFn: () => getComponentSource({ data: input }),

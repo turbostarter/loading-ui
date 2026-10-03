@@ -110,6 +110,11 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {`;
     "${name}": {
       name: "${name}",
       filePath: "src/registry/examples/${file}",
+      load: async () => {
+        const mod = await import("./${file}")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "${name}"
+        return { default: mod.default || mod[exportName] }
+      },
       component: React.lazy(async () => {
         const mod = await import("./${file}")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "${name}"
@@ -170,6 +175,15 @@ export const Index: Record<string, any> = {`;
         })
         .join(",\n") ?? ""
     }],
+    load: ${
+      componentPath
+        ? `async () => {
+      const mod = await import("${componentPath}")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "${item.name}"
+      return { default: mod.default || mod[exportName] }
+    }`
+        : "null"
+    },
     component: ${
       componentPath
         ? `React.lazy(async () => {

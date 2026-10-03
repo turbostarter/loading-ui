@@ -7,6 +7,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "accordion-loader-color": {
     name: "accordion-loader-color",
     filePath: "src/registry/examples/accordion-loader/color.tsx",
+    load: async () => {
+      const mod = await import("./accordion-loader/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/color.tsx");
       const exportName =
@@ -20,6 +29,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "accordion-loader-demo": {
     name: "accordion-loader-demo",
     filePath: "src/registry/examples/accordion-loader/demo.tsx",
+    load: async () => {
+      const mod = await import("./accordion-loader/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/demo.tsx");
       const exportName =
@@ -33,6 +51,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "accordion-loader-duration": {
     name: "accordion-loader-duration",
     filePath: "src/registry/examples/accordion-loader/duration.tsx",
+    load: async () => {
+      const mod = await import("./accordion-loader/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/duration.tsx");
       const exportName =
@@ -46,6 +73,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "accordion-loader-glyphs": {
     name: "accordion-loader-glyphs",
     filePath: "src/registry/examples/accordion-loader/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./accordion-loader/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/glyphs.tsx");
       const exportName =
@@ -59,6 +95,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "accordion-loader-size": {
     name: "accordion-loader-size",
     filePath: "src/registry/examples/accordion-loader/size.tsx",
+    load: async () => {
+      const mod = await import("./accordion-loader/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./accordion-loader/size.tsx");
       const exportName =
@@ -72,6 +117,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-badge": {
     name: "analyzing-image-badge",
     filePath: "src/registry/examples/analyzing-image/badge.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/badge.tsx");
       const exportName =
@@ -85,6 +139,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-button": {
     name: "analyzing-image-button",
     filePath: "src/registry/examples/analyzing-image/button.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/button.tsx");
       const exportName =
@@ -98,6 +161,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-color": {
     name: "analyzing-image-color",
     filePath: "src/registry/examples/analyzing-image/color.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/color.tsx");
       const exportName =
@@ -111,6 +183,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-demo": {
     name: "analyzing-image-demo",
     filePath: "src/registry/examples/analyzing-image/demo.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/demo.tsx");
       const exportName =
@@ -124,6 +205,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-empty": {
     name: "analyzing-image-empty",
     filePath: "src/registry/examples/analyzing-image/empty.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/empty.tsx");
       const exportName =
@@ -137,6 +227,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-shimmer": {
     name: "analyzing-image-shimmer",
     filePath: "src/registry/examples/analyzing-image/shimmer.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/shimmer.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-shimmer";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/shimmer.tsx");
       const exportName =
@@ -150,6 +249,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "analyzing-image-size": {
     name: "analyzing-image-size",
     filePath: "src/registry/examples/analyzing-image/size.tsx",
+    load: async () => {
+      const mod = await import("./analyzing-image/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./analyzing-image/size.tsx");
       const exportName =
@@ -163,6 +271,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-badge": {
     name: "arc-badge",
     filePath: "src/registry/examples/arc/badge.tsx",
+    load: async () => {
+      const mod = await import("./arc/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/badge.tsx");
       const exportName =
@@ -176,6 +293,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-border-width": {
     name: "arc-border-width",
     filePath: "src/registry/examples/arc/border-width.tsx",
+    load: async () => {
+      const mod = await import("./arc/border-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-border-width";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/border-width.tsx");
       const exportName =
@@ -189,6 +315,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-button": {
     name: "arc-button",
     filePath: "src/registry/examples/arc/button.tsx",
+    load: async () => {
+      const mod = await import("./arc/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/button.tsx");
       const exportName =
@@ -202,6 +337,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-color": {
     name: "arc-color",
     filePath: "src/registry/examples/arc/color.tsx",
+    load: async () => {
+      const mod = await import("./arc/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/color.tsx");
       const exportName =
@@ -215,6 +359,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-demo": {
     name: "arc-demo",
     filePath: "src/registry/examples/arc/demo.tsx",
+    load: async () => {
+      const mod = await import("./arc/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/demo.tsx");
       const exportName =
@@ -228,6 +381,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-duration": {
     name: "arc-duration",
     filePath: "src/registry/examples/arc/duration.tsx",
+    load: async () => {
+      const mod = await import("./arc/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/duration.tsx");
       const exportName =
@@ -241,6 +403,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-empty": {
     name: "arc-empty",
     filePath: "src/registry/examples/arc/empty.tsx",
+    load: async () => {
+      const mod = await import("./arc/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/empty.tsx");
       const exportName =
@@ -254,6 +425,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-size": {
     name: "arc-size",
     filePath: "src/registry/examples/arc/size.tsx",
+    load: async () => {
+      const mod = await import("./arc/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/size.tsx");
       const exportName =
@@ -267,6 +447,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "arc-tabs": {
     name: "arc-tabs",
     filePath: "src/registry/examples/arc/tabs.tsx",
+    load: async () => {
+      const mod = await import("./arc/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./arc/tabs.tsx");
       const exportName =
@@ -280,6 +469,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-badge": {
     name: "bars-badge",
     filePath: "src/registry/examples/bars/badge.tsx",
+    load: async () => {
+      const mod = await import("./bars/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/badge.tsx");
       const exportName =
@@ -293,6 +491,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-button": {
     name: "bars-button",
     filePath: "src/registry/examples/bars/button.tsx",
+    load: async () => {
+      const mod = await import("./bars/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/button.tsx");
       const exportName =
@@ -306,6 +513,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-color": {
     name: "bars-color",
     filePath: "src/registry/examples/bars/color.tsx",
+    load: async () => {
+      const mod = await import("./bars/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/color.tsx");
       const exportName =
@@ -319,6 +535,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-count": {
     name: "bars-count",
     filePath: "src/registry/examples/bars/count.tsx",
+    load: async () => {
+      const mod = await import("./bars/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/count.tsx");
       const exportName =
@@ -332,6 +557,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-demo": {
     name: "bars-demo",
     filePath: "src/registry/examples/bars/demo.tsx",
+    load: async () => {
+      const mod = await import("./bars/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/demo.tsx");
       const exportName =
@@ -345,6 +579,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-duration": {
     name: "bars-duration",
     filePath: "src/registry/examples/bars/duration.tsx",
+    load: async () => {
+      const mod = await import("./bars/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/duration.tsx");
       const exportName =
@@ -358,6 +601,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-input-group": {
     name: "bars-input-group",
     filePath: "src/registry/examples/bars/input-group.tsx",
+    load: async () => {
+      const mod = await import("./bars/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/input-group.tsx");
       const exportName =
@@ -371,6 +623,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-size": {
     name: "bars-size",
     filePath: "src/registry/examples/bars/size.tsx",
+    load: async () => {
+      const mod = await import("./bars/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/size.tsx");
       const exportName =
@@ -384,6 +645,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bars-stagger": {
     name: "bars-stagger",
     filePath: "src/registry/examples/bars/stagger.tsx",
+    load: async () => {
+      const mod = await import("./bars/stagger.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-stagger";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bars/stagger.tsx");
       const exportName =
@@ -397,6 +667,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-badge": {
     name: "bobbing-dots-badge",
     filePath: "src/registry/examples/bobbing-dots/badge.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/badge.tsx");
       const exportName =
@@ -410,6 +689,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-button": {
     name: "bobbing-dots-button",
     filePath: "src/registry/examples/bobbing-dots/button.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/button.tsx");
       const exportName =
@@ -423,6 +711,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-color": {
     name: "bobbing-dots-color",
     filePath: "src/registry/examples/bobbing-dots/color.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/color.tsx");
       const exportName =
@@ -436,6 +733,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-count": {
     name: "bobbing-dots-count",
     filePath: "src/registry/examples/bobbing-dots/count.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/count.tsx");
       const exportName =
@@ -449,6 +755,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-demo": {
     name: "bobbing-dots-demo",
     filePath: "src/registry/examples/bobbing-dots/demo.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/demo.tsx");
       const exportName =
@@ -462,6 +777,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-duration": {
     name: "bobbing-dots-duration",
     filePath: "src/registry/examples/bobbing-dots/duration.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/duration.tsx");
       const exportName =
@@ -475,6 +799,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-popover": {
     name: "bobbing-dots-popover",
     filePath: "src/registry/examples/bobbing-dots/popover.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-popover";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/popover.tsx");
       const exportName =
@@ -488,6 +821,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-sheet": {
     name: "bobbing-dots-sheet",
     filePath: "src/registry/examples/bobbing-dots/sheet.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-sheet";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/sheet.tsx");
       const exportName =
@@ -501,6 +843,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-size": {
     name: "bobbing-dots-size",
     filePath: "src/registry/examples/bobbing-dots/size.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/size.tsx");
       const exportName =
@@ -514,6 +865,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bobbing-dots-tabs": {
     name: "bobbing-dots-tabs",
     filePath: "src/registry/examples/bobbing-dots/tabs.tsx",
+    load: async () => {
+      const mod = await import("./bobbing-dots/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bobbing-dots/tabs.tsx");
       const exportName =
@@ -527,6 +887,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-alert": {
     name: "bouncing-dots-alert",
     filePath: "src/registry/examples/bouncing-dots/alert.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/alert.tsx");
       const exportName =
@@ -540,6 +909,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-badge": {
     name: "bouncing-dots-badge",
     filePath: "src/registry/examples/bouncing-dots/badge.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/badge.tsx");
       const exportName =
@@ -553,6 +931,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-button": {
     name: "bouncing-dots-button",
     filePath: "src/registry/examples/bouncing-dots/button.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/button.tsx");
       const exportName =
@@ -566,6 +953,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-color": {
     name: "bouncing-dots-color",
     filePath: "src/registry/examples/bouncing-dots/color.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/color.tsx");
       const exportName =
@@ -579,6 +975,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-count": {
     name: "bouncing-dots-count",
     filePath: "src/registry/examples/bouncing-dots/count.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/count.tsx");
       const exportName =
@@ -592,6 +997,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-demo": {
     name: "bouncing-dots-demo",
     filePath: "src/registry/examples/bouncing-dots/demo.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/demo.tsx");
       const exportName =
@@ -605,6 +1019,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-duration": {
     name: "bouncing-dots-duration",
     filePath: "src/registry/examples/bouncing-dots/duration.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/duration.tsx");
       const exportName =
@@ -618,6 +1041,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-popover": {
     name: "bouncing-dots-popover",
     filePath: "src/registry/examples/bouncing-dots/popover.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-popover";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/popover.tsx");
       const exportName =
@@ -631,6 +1063,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-sheet": {
     name: "bouncing-dots-sheet",
     filePath: "src/registry/examples/bouncing-dots/sheet.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-sheet";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/sheet.tsx");
       const exportName =
@@ -644,6 +1085,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-size": {
     name: "bouncing-dots-size",
     filePath: "src/registry/examples/bouncing-dots/size.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/size.tsx");
       const exportName =
@@ -657,6 +1107,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "bouncing-dots-tabs": {
     name: "bouncing-dots-tabs",
     filePath: "src/registry/examples/bouncing-dots/tabs.tsx",
+    load: async () => {
+      const mod = await import("./bouncing-dots/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./bouncing-dots/tabs.tsx");
       const exportName =
@@ -670,6 +1129,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "classic-button": {
     name: "classic-button",
     filePath: "src/registry/examples/classic/button.tsx",
+    load: async () => {
+      const mod = await import("./classic/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./classic/button.tsx");
       const exportName =
@@ -683,6 +1151,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "classic-color": {
     name: "classic-color",
     filePath: "src/registry/examples/classic/color.tsx",
+    load: async () => {
+      const mod = await import("./classic/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./classic/color.tsx");
       const exportName =
@@ -696,6 +1173,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "classic-demo": {
     name: "classic-demo",
     filePath: "src/registry/examples/classic/demo.tsx",
+    load: async () => {
+      const mod = await import("./classic/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./classic/demo.tsx");
       const exportName =
@@ -709,6 +1195,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "classic-input-group": {
     name: "classic-input-group",
     filePath: "src/registry/examples/classic/input-group.tsx",
+    load: async () => {
+      const mod = await import("./classic/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./classic/input-group.tsx");
       const exportName =
@@ -722,6 +1217,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "classic-size": {
     name: "classic-size",
     filePath: "src/registry/examples/classic/size.tsx",
+    load: async () => {
+      const mod = await import("./classic/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./classic/size.tsx");
       const exportName =
@@ -735,6 +1239,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-alert": {
     name: "clock-ring-alert",
     filePath: "src/registry/examples/clock-ring/alert.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/alert.tsx");
       const exportName =
@@ -748,6 +1261,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-button": {
     name: "clock-ring-button",
     filePath: "src/registry/examples/clock-ring/button.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/button.tsx");
       const exportName =
@@ -761,6 +1283,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-color": {
     name: "clock-ring-color",
     filePath: "src/registry/examples/clock-ring/color.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/color.tsx");
       const exportName =
@@ -774,6 +1305,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-demo": {
     name: "clock-ring-demo",
     filePath: "src/registry/examples/clock-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/demo.tsx");
       const exportName =
@@ -787,6 +1327,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-duration": {
     name: "clock-ring-duration",
     filePath: "src/registry/examples/clock-ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/duration.tsx");
       const exportName =
@@ -800,6 +1349,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-input-group": {
     name: "clock-ring-input-group",
     filePath: "src/registry/examples/clock-ring/input-group.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/input-group.tsx");
       const exportName =
@@ -813,6 +1371,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-popover": {
     name: "clock-ring-popover",
     filePath: "src/registry/examples/clock-ring/popover.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-popover";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/popover.tsx");
       const exportName =
@@ -826,6 +1393,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-ring-weight": {
     name: "clock-ring-ring-weight",
     filePath: "src/registry/examples/clock-ring/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/ring-weight.tsx");
       const exportName =
@@ -839,6 +1415,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "clock-ring-size": {
     name: "clock-ring-size",
     filePath: "src/registry/examples/clock-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./clock-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./clock-ring/size.tsx");
       const exportName =
@@ -852,6 +1437,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-alert": {
     name: "comet-spinner-alert",
     filePath: "src/registry/examples/comet-spinner/alert.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/alert.tsx");
       const exportName =
@@ -865,6 +1459,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-badge": {
     name: "comet-spinner-badge",
     filePath: "src/registry/examples/comet-spinner/badge.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/badge.tsx");
       const exportName =
@@ -878,6 +1481,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-button": {
     name: "comet-spinner-button",
     filePath: "src/registry/examples/comet-spinner/button.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/button.tsx");
       const exportName =
@@ -891,6 +1503,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-color": {
     name: "comet-spinner-color",
     filePath: "src/registry/examples/comet-spinner/color.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/color.tsx");
       const exportName =
@@ -904,6 +1525,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-demo": {
     name: "comet-spinner-demo",
     filePath: "src/registry/examples/comet-spinner/demo.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/demo.tsx");
       const exportName =
@@ -917,6 +1547,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-duration": {
     name: "comet-spinner-duration",
     filePath: "src/registry/examples/comet-spinner/duration.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/duration.tsx");
       const exportName =
@@ -930,6 +1569,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-geometry": {
     name: "comet-spinner-geometry",
     filePath: "src/registry/examples/comet-spinner/geometry.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/geometry.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-geometry";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/geometry.tsx");
       const exportName =
@@ -943,6 +1591,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-size": {
     name: "comet-spinner-size",
     filePath: "src/registry/examples/comet-spinner/size.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/size.tsx");
       const exportName =
@@ -956,6 +1613,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "comet-spinner-tabs": {
     name: "comet-spinner-tabs",
     filePath: "src/registry/examples/comet-spinner/tabs.tsx",
+    load: async () => {
+      const mod = await import("./comet-spinner/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./comet-spinner/tabs.tsx");
       const exportName =
@@ -969,6 +1635,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-alert": {
     name: "concentric-ring-alert",
     filePath: "src/registry/examples/concentric-ring/alert.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/alert.tsx");
       const exportName =
@@ -982,6 +1657,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-badge": {
     name: "concentric-ring-badge",
     filePath: "src/registry/examples/concentric-ring/badge.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/badge.tsx");
       const exportName =
@@ -995,6 +1679,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-button": {
     name: "concentric-ring-button",
     filePath: "src/registry/examples/concentric-ring/button.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/button.tsx");
       const exportName =
@@ -1008,6 +1701,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-collapsible": {
     name: "concentric-ring-collapsible",
     filePath: "src/registry/examples/concentric-ring/collapsible.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-collapsible";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/collapsible.tsx");
       const exportName =
@@ -1021,6 +1723,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-color": {
     name: "concentric-ring-color",
     filePath: "src/registry/examples/concentric-ring/color.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/color.tsx");
       const exportName =
@@ -1034,6 +1745,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-demo": {
     name: "concentric-ring-demo",
     filePath: "src/registry/examples/concentric-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/demo.tsx");
       const exportName =
@@ -1047,6 +1767,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-duration": {
     name: "concentric-ring-duration",
     filePath: "src/registry/examples/concentric-ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/duration.tsx");
       const exportName =
@@ -1060,6 +1789,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-ring-weight": {
     name: "concentric-ring-ring-weight",
     filePath: "src/registry/examples/concentric-ring/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/ring-weight.tsx");
       const exportName =
@@ -1073,6 +1811,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "concentric-ring-size": {
     name: "concentric-ring-size",
     filePath: "src/registry/examples/concentric-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./concentric-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./concentric-ring/size.tsx");
       const exportName =
@@ -1086,6 +1833,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "conveyor-loop-color": {
     name: "conveyor-loop-color",
     filePath: "src/registry/examples/conveyor-loop/color.tsx",
+    load: async () => {
+      const mod = await import("./conveyor-loop/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/color.tsx");
       const exportName =
@@ -1099,6 +1855,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "conveyor-loop-demo": {
     name: "conveyor-loop-demo",
     filePath: "src/registry/examples/conveyor-loop/demo.tsx",
+    load: async () => {
+      const mod = await import("./conveyor-loop/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/demo.tsx");
       const exportName =
@@ -1112,6 +1877,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "conveyor-loop-duration": {
     name: "conveyor-loop-duration",
     filePath: "src/registry/examples/conveyor-loop/duration.tsx",
+    load: async () => {
+      const mod = await import("./conveyor-loop/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/duration.tsx");
       const exportName =
@@ -1125,6 +1899,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "conveyor-loop-glyphs": {
     name: "conveyor-loop-glyphs",
     filePath: "src/registry/examples/conveyor-loop/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./conveyor-loop/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/glyphs.tsx");
       const exportName =
@@ -1138,6 +1921,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "conveyor-loop-size": {
     name: "conveyor-loop-size",
     filePath: "src/registry/examples/conveyor-loop/size.tsx",
+    load: async () => {
+      const mod = await import("./conveyor-loop/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./conveyor-loop/size.tsx");
       const exportName =
@@ -1151,6 +1943,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-alert": {
     name: "dash-ring-alert",
     filePath: "src/registry/examples/dash-ring/alert.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/alert.tsx");
       const exportName =
@@ -1164,6 +1965,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-button": {
     name: "dash-ring-button",
     filePath: "src/registry/examples/dash-ring/button.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/button.tsx");
       const exportName =
@@ -1177,6 +1987,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-collapsible": {
     name: "dash-ring-collapsible",
     filePath: "src/registry/examples/dash-ring/collapsible.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-collapsible";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/collapsible.tsx");
       const exportName =
@@ -1190,6 +2009,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-color": {
     name: "dash-ring-color",
     filePath: "src/registry/examples/dash-ring/color.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/color.tsx");
       const exportName =
@@ -1203,6 +2031,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-demo": {
     name: "dash-ring-demo",
     filePath: "src/registry/examples/dash-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/demo.tsx");
       const exportName =
@@ -1216,6 +2053,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-input-group": {
     name: "dash-ring-input-group",
     filePath: "src/registry/examples/dash-ring/input-group.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/input-group.tsx");
       const exportName =
@@ -1229,6 +2075,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-ring-weight": {
     name: "dash-ring-ring-weight",
     filePath: "src/registry/examples/dash-ring/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/ring-weight.tsx");
       const exportName =
@@ -1242,6 +2097,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dash-ring-size": {
     name: "dash-ring-size",
     filePath: "src/registry/examples/dash-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./dash-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dash-ring/size.tsx");
       const exportName =
@@ -1255,6 +2119,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "diamond-alert": {
     name: "diamond-alert",
     filePath: "src/registry/examples/diamond/alert.tsx",
+    load: async () => {
+      const mod = await import("./diamond/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./diamond/alert.tsx");
       const exportName =
@@ -1268,6 +2141,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "diamond-badge": {
     name: "diamond-badge",
     filePath: "src/registry/examples/diamond/badge.tsx",
+    load: async () => {
+      const mod = await import("./diamond/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./diamond/badge.tsx");
       const exportName =
@@ -1281,6 +2163,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "diamond-button": {
     name: "diamond-button",
     filePath: "src/registry/examples/diamond/button.tsx",
+    load: async () => {
+      const mod = await import("./diamond/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./diamond/button.tsx");
       const exportName =
@@ -1294,6 +2185,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "diamond-color": {
     name: "diamond-color",
     filePath: "src/registry/examples/diamond/color.tsx",
+    load: async () => {
+      const mod = await import("./diamond/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./diamond/color.tsx");
       const exportName =
@@ -1307,6 +2207,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "diamond-demo": {
     name: "diamond-demo",
     filePath: "src/registry/examples/diamond/demo.tsx",
+    load: async () => {
+      const mod = await import("./diamond/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./diamond/demo.tsx");
       const exportName =
@@ -1320,6 +2229,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "diamond-size": {
     name: "diamond-size",
     filePath: "src/registry/examples/diamond/size.tsx",
+    load: async () => {
+      const mod = await import("./diamond/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./diamond/size.tsx");
       const exportName =
@@ -1333,6 +2251,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-alert": {
     name: "dots-ring-alert",
     filePath: "src/registry/examples/dots-ring/alert.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/alert.tsx");
       const exportName =
@@ -1346,6 +2273,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-badge": {
     name: "dots-ring-badge",
     filePath: "src/registry/examples/dots-ring/badge.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/badge.tsx");
       const exportName =
@@ -1359,6 +2295,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-demo": {
     name: "dots-ring-demo",
     filePath: "src/registry/examples/dots-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/demo.tsx");
       const exportName =
@@ -1372,6 +2317,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-dot-scale": {
     name: "dots-ring-dot-scale",
     filePath: "src/registry/examples/dots-ring/dot-scale.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/dot-scale.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-dot-scale";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/dot-scale.tsx");
       const exportName =
@@ -1385,6 +2339,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-dots": {
     name: "dots-ring-dots",
     filePath: "src/registry/examples/dots-ring/dots.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/dots.tsx");
       const exportName =
@@ -1398,6 +2361,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-duration": {
     name: "dots-ring-duration",
     filePath: "src/registry/examples/dots-ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/duration.tsx");
       const exportName =
@@ -1411,6 +2383,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-input-group": {
     name: "dots-ring-input-group",
     filePath: "src/registry/examples/dots-ring/input-group.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/input-group.tsx");
       const exportName =
@@ -1424,6 +2405,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-radius-scale": {
     name: "dots-ring-radius-scale",
     filePath: "src/registry/examples/dots-ring/radius-scale.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/radius-scale.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-radius-scale";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/radius-scale.tsx");
       const exportName =
@@ -1437,6 +2427,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-size": {
     name: "dots-ring-size",
     filePath: "src/registry/examples/dots-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/size.tsx");
       const exportName =
@@ -1450,6 +2449,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-ring-tabs": {
     name: "dots-ring-tabs",
     filePath: "src/registry/examples/dots-ring/tabs.tsx",
+    load: async () => {
+      const mod = await import("./dots-ring/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots-ring/tabs.tsx");
       const exportName =
@@ -1463,6 +2471,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-accordion": {
     name: "dots-accordion",
     filePath: "src/registry/examples/dots/accordion.tsx",
+    load: async () => {
+      const mod = await import("./dots/accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-accordion";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/accordion.tsx");
       const exportName =
@@ -1476,6 +2493,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-badge": {
     name: "dots-badge",
     filePath: "src/registry/examples/dots/badge.tsx",
+    load: async () => {
+      const mod = await import("./dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/badge.tsx");
       const exportName =
@@ -1489,6 +2515,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-button": {
     name: "dots-button",
     filePath: "src/registry/examples/dots/button.tsx",
+    load: async () => {
+      const mod = await import("./dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/button.tsx");
       const exportName =
@@ -1502,6 +2537,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-color": {
     name: "dots-color",
     filePath: "src/registry/examples/dots/color.tsx",
+    load: async () => {
+      const mod = await import("./dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/color.tsx");
       const exportName =
@@ -1515,6 +2559,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-count": {
     name: "dots-count",
     filePath: "src/registry/examples/dots/count.tsx",
+    load: async () => {
+      const mod = await import("./dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/count.tsx");
       const exportName =
@@ -1528,6 +2581,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-demo": {
     name: "dots-demo",
     filePath: "src/registry/examples/dots/demo.tsx",
+    load: async () => {
+      const mod = await import("./dots/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/demo.tsx");
       const exportName =
@@ -1541,6 +2603,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-duration": {
     name: "dots-duration",
     filePath: "src/registry/examples/dots/duration.tsx",
+    load: async () => {
+      const mod = await import("./dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/duration.tsx");
       const exportName =
@@ -1554,6 +2625,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-empty": {
     name: "dots-empty",
     filePath: "src/registry/examples/dots/empty.tsx",
+    load: async () => {
+      const mod = await import("./dots/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/empty.tsx");
       const exportName =
@@ -1567,6 +2647,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-input-group": {
     name: "dots-input-group",
     filePath: "src/registry/examples/dots/input-group.tsx",
+    load: async () => {
+      const mod = await import("./dots/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/input-group.tsx");
       const exportName =
@@ -1580,6 +2669,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dots-size": {
     name: "dots-size",
     filePath: "src/registry/examples/dots/size.tsx",
+    load: async () => {
+      const mod = await import("./dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dots/size.tsx");
       const exportName =
@@ -1593,6 +2691,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-alert": {
     name: "dual-arc-alert",
     filePath: "src/registry/examples/dual-arc/alert.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/alert.tsx");
       const exportName =
@@ -1606,6 +2713,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-badge": {
     name: "dual-arc-badge",
     filePath: "src/registry/examples/dual-arc/badge.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/badge.tsx");
       const exportName =
@@ -1619,6 +2735,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-border-width": {
     name: "dual-arc-border-width",
     filePath: "src/registry/examples/dual-arc/border-width.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/border-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-border-width";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/border-width.tsx");
       const exportName =
@@ -1632,6 +2757,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-color": {
     name: "dual-arc-color",
     filePath: "src/registry/examples/dual-arc/color.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/color.tsx");
       const exportName =
@@ -1645,6 +2779,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-demo": {
     name: "dual-arc-demo",
     filePath: "src/registry/examples/dual-arc/demo.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/demo.tsx");
       const exportName =
@@ -1658,6 +2801,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-duration": {
     name: "dual-arc-duration",
     filePath: "src/registry/examples/dual-arc/duration.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/duration.tsx");
       const exportName =
@@ -1671,6 +2823,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-input-group": {
     name: "dual-arc-input-group",
     filePath: "src/registry/examples/dual-arc/input-group.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/input-group.tsx");
       const exportName =
@@ -1684,6 +2845,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-size": {
     name: "dual-arc-size",
     filePath: "src/registry/examples/dual-arc/size.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/size.tsx");
       const exportName =
@@ -1697,6 +2867,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "dual-arc-tabs": {
     name: "dual-arc-tabs",
     filePath: "src/registry/examples/dual-arc/tabs.tsx",
+    load: async () => {
+      const mod = await import("./dual-arc/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./dual-arc/tabs.tsx");
       const exportName =
@@ -1710,6 +2889,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-alert": {
     name: "fade-arc-alert",
     filePath: "src/registry/examples/fade-arc/alert.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/alert.tsx");
       const exportName =
@@ -1723,6 +2911,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-badge": {
     name: "fade-arc-badge",
     filePath: "src/registry/examples/fade-arc/badge.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/badge.tsx");
       const exportName =
@@ -1736,6 +2933,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-button": {
     name: "fade-arc-button",
     filePath: "src/registry/examples/fade-arc/button.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/button.tsx");
       const exportName =
@@ -1749,6 +2955,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-color": {
     name: "fade-arc-color",
     filePath: "src/registry/examples/fade-arc/color.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/color.tsx");
       const exportName =
@@ -1762,6 +2977,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-demo": {
     name: "fade-arc-demo",
     filePath: "src/registry/examples/fade-arc/demo.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/demo.tsx");
       const exportName =
@@ -1775,6 +2999,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-direction": {
     name: "fade-arc-direction",
     filePath: "src/registry/examples/fade-arc/direction.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/direction.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-direction";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/direction.tsx");
       const exportName =
@@ -1788,6 +3021,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-duration": {
     name: "fade-arc-duration",
     filePath: "src/registry/examples/fade-arc/duration.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/duration.tsx");
       const exportName =
@@ -1801,6 +3043,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-input-group": {
     name: "fade-arc-input-group",
     filePath: "src/registry/examples/fade-arc/input-group.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/input-group.tsx");
       const exportName =
@@ -1814,6 +3065,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-size": {
     name: "fade-arc-size",
     filePath: "src/registry/examples/fade-arc/size.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/size.tsx");
       const exportName =
@@ -1827,6 +3087,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "fade-arc-tabs": {
     name: "fade-arc-tabs",
     filePath: "src/registry/examples/fade-arc/tabs.tsx",
+    load: async () => {
+      const mod = await import("./fade-arc/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./fade-arc/tabs.tsx");
       const exportName =
@@ -1840,6 +3109,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-square-snake-color": {
     name: "infinity-square-snake-color",
     filePath: "src/registry/examples/infinity-square-snake/color.tsx",
+    load: async () => {
+      const mod = await import("./infinity-square-snake/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/color.tsx");
       const exportName =
@@ -1853,6 +3131,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-square-snake-demo": {
     name: "infinity-square-snake-demo",
     filePath: "src/registry/examples/infinity-square-snake/demo.tsx",
+    load: async () => {
+      const mod = await import("./infinity-square-snake/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/demo.tsx");
       const exportName =
@@ -1866,6 +3153,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-square-snake-duration": {
     name: "infinity-square-snake-duration",
     filePath: "src/registry/examples/infinity-square-snake/duration.tsx",
+    load: async () => {
+      const mod = await import("./infinity-square-snake/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/duration.tsx");
       const exportName =
@@ -1879,6 +3175,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-square-snake-glyphs": {
     name: "infinity-square-snake-glyphs",
     filePath: "src/registry/examples/infinity-square-snake/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./infinity-square-snake/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/glyphs.tsx");
       const exportName =
@@ -1892,6 +3197,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-square-snake-size": {
     name: "infinity-square-snake-size",
     filePath: "src/registry/examples/infinity-square-snake/size.tsx",
+    load: async () => {
+      const mod = await import("./infinity-square-snake/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-square-snake/size.tsx");
       const exportName =
@@ -1905,6 +3219,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-track-color": {
     name: "infinity-track-color",
     filePath: "src/registry/examples/infinity-track/color.tsx",
+    load: async () => {
+      const mod = await import("./infinity-track/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/color.tsx");
       const exportName =
@@ -1918,6 +3241,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-track-demo": {
     name: "infinity-track-demo",
     filePath: "src/registry/examples/infinity-track/demo.tsx",
+    load: async () => {
+      const mod = await import("./infinity-track/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/demo.tsx");
       const exportName =
@@ -1931,6 +3263,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-track-duration": {
     name: "infinity-track-duration",
     filePath: "src/registry/examples/infinity-track/duration.tsx",
+    load: async () => {
+      const mod = await import("./infinity-track/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/duration.tsx");
       const exportName =
@@ -1944,6 +3285,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-track-glyphs": {
     name: "infinity-track-glyphs",
     filePath: "src/registry/examples/infinity-track/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./infinity-track/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/glyphs.tsx");
       const exportName =
@@ -1957,6 +3307,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-track-size": {
     name: "infinity-track-size",
     filePath: "src/registry/examples/infinity-track/size.tsx",
+    load: async () => {
+      const mod = await import("./infinity-track/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity-track/size.tsx");
       const exportName =
@@ -1970,6 +3329,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-badge": {
     name: "infinity-badge",
     filePath: "src/registry/examples/infinity/badge.tsx",
+    load: async () => {
+      const mod = await import("./infinity/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/badge.tsx");
       const exportName =
@@ -1983,6 +3351,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-button": {
     name: "infinity-button",
     filePath: "src/registry/examples/infinity/button.tsx",
+    load: async () => {
+      const mod = await import("./infinity/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/button.tsx");
       const exportName =
@@ -1996,6 +3373,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-card": {
     name: "infinity-card",
     filePath: "src/registry/examples/infinity/card.tsx",
+    load: async () => {
+      const mod = await import("./infinity/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-card";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/card.tsx");
       const exportName =
@@ -2009,6 +3395,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-color": {
     name: "infinity-color",
     filePath: "src/registry/examples/infinity/color.tsx",
+    load: async () => {
+      const mod = await import("./infinity/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/color.tsx");
       const exportName =
@@ -2022,6 +3417,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-demo": {
     name: "infinity-demo",
     filePath: "src/registry/examples/infinity/demo.tsx",
+    load: async () => {
+      const mod = await import("./infinity/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/demo.tsx");
       const exportName =
@@ -2035,6 +3439,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-duration": {
     name: "infinity-duration",
     filePath: "src/registry/examples/infinity/duration.tsx",
+    load: async () => {
+      const mod = await import("./infinity/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/duration.tsx");
       const exportName =
@@ -2048,6 +3461,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-empty": {
     name: "infinity-empty",
     filePath: "src/registry/examples/infinity/empty.tsx",
+    load: async () => {
+      const mod = await import("./infinity/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/empty.tsx");
       const exportName =
@@ -2061,6 +3483,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-size": {
     name: "infinity-size",
     filePath: "src/registry/examples/infinity/size.tsx",
+    load: async () => {
+      const mod = await import("./infinity/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/size.tsx");
       const exportName =
@@ -2074,6 +3505,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "infinity-stroke-width": {
     name: "infinity-stroke-width",
     filePath: "src/registry/examples/infinity/stroke-width.tsx",
+    load: async () => {
+      const mod = await import("./infinity/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-stroke-width";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./infinity/stroke-width.tsx");
       const exportName =
@@ -2087,6 +3527,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "morphing-infinity-alert": {
     name: "morphing-infinity-alert",
     filePath: "src/registry/examples/morphing-infinity/alert.tsx",
+    load: async () => {
+      const mod = await import("./morphing-infinity/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/alert.tsx");
       const exportName =
@@ -2100,6 +3549,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "morphing-infinity-card": {
     name: "morphing-infinity-card",
     filePath: "src/registry/examples/morphing-infinity/card.tsx",
+    load: async () => {
+      const mod = await import("./morphing-infinity/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-card";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/card.tsx");
       const exportName =
@@ -2113,6 +3571,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "morphing-infinity-compact": {
     name: "morphing-infinity-compact",
     filePath: "src/registry/examples/morphing-infinity/compact.tsx",
+    load: async () => {
+      const mod = await import("./morphing-infinity/compact.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-compact";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/compact.tsx");
       const exportName =
@@ -2126,6 +3593,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "morphing-infinity-demo": {
     name: "morphing-infinity-demo",
     filePath: "src/registry/examples/morphing-infinity/demo.tsx",
+    load: async () => {
+      const mod = await import("./morphing-infinity/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/demo.tsx");
       const exportName =
@@ -2139,6 +3615,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "morphing-infinity-tabs": {
     name: "morphing-infinity-tabs",
     filePath: "src/registry/examples/morphing-infinity/tabs.tsx",
+    load: async () => {
+      const mod = await import("./morphing-infinity/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./morphing-infinity/tabs.tsx");
       const exportName =
@@ -2152,6 +3637,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-button": {
     name: "orbit-ring-button",
     filePath: "src/registry/examples/orbit-ring/button.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/button.tsx");
       const exportName =
@@ -2165,6 +3659,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-color": {
     name: "orbit-ring-color",
     filePath: "src/registry/examples/orbit-ring/color.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/color.tsx");
       const exportName =
@@ -2178,6 +3681,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-demo": {
     name: "orbit-ring-demo",
     filePath: "src/registry/examples/orbit-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/demo.tsx");
       const exportName =
@@ -2191,6 +3703,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-duration": {
     name: "orbit-ring-duration",
     filePath: "src/registry/examples/orbit-ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/duration.tsx");
       const exportName =
@@ -2204,6 +3725,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-empty": {
     name: "orbit-ring-empty",
     filePath: "src/registry/examples/orbit-ring/empty.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/empty.tsx");
       const exportName =
@@ -2217,6 +3747,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-input-group": {
     name: "orbit-ring-input-group",
     filePath: "src/registry/examples/orbit-ring/input-group.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/input-group.tsx");
       const exportName =
@@ -2230,6 +3769,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-ring-weight": {
     name: "orbit-ring-ring-weight",
     filePath: "src/registry/examples/orbit-ring/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/ring-weight.tsx");
       const exportName =
@@ -2243,6 +3791,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-size": {
     name: "orbit-ring-size",
     filePath: "src/registry/examples/orbit-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/size.tsx");
       const exportName =
@@ -2256,6 +3813,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "orbit-ring-tabs": {
     name: "orbit-ring-tabs",
     filePath: "src/registry/examples/orbit-ring/tabs.tsx",
+    load: async () => {
+      const mod = await import("./orbit-ring/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./orbit-ring/tabs.tsx");
       const exportName =
@@ -2269,6 +3835,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-badge": {
     name: "pulsating-dots-badge",
     filePath: "src/registry/examples/pulsating-dots/badge.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/badge.tsx");
       const exportName =
@@ -2282,6 +3857,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-button": {
     name: "pulsating-dots-button",
     filePath: "src/registry/examples/pulsating-dots/button.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/button.tsx");
       const exportName =
@@ -2295,6 +3879,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-color": {
     name: "pulsating-dots-color",
     filePath: "src/registry/examples/pulsating-dots/color.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/color.tsx");
       const exportName =
@@ -2308,6 +3901,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-count": {
     name: "pulsating-dots-count",
     filePath: "src/registry/examples/pulsating-dots/count.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/count.tsx");
       const exportName =
@@ -2321,6 +3923,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-demo": {
     name: "pulsating-dots-demo",
     filePath: "src/registry/examples/pulsating-dots/demo.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/demo.tsx");
       const exportName =
@@ -2334,6 +3945,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-duration": {
     name: "pulsating-dots-duration",
     filePath: "src/registry/examples/pulsating-dots/duration.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/duration.tsx");
       const exportName =
@@ -2347,6 +3967,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-input-group": {
     name: "pulsating-dots-input-group",
     filePath: "src/registry/examples/pulsating-dots/input-group.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/input-group.tsx");
       const exportName =
@@ -2360,6 +3989,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-popover": {
     name: "pulsating-dots-popover",
     filePath: "src/registry/examples/pulsating-dots/popover.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-popover";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/popover.tsx");
       const exportName =
@@ -2373,6 +4011,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-sheet": {
     name: "pulsating-dots-sheet",
     filePath: "src/registry/examples/pulsating-dots/sheet.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-sheet";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/sheet.tsx");
       const exportName =
@@ -2386,6 +4033,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulsating-dots-size": {
     name: "pulsating-dots-size",
     filePath: "src/registry/examples/pulsating-dots/size.tsx",
+    load: async () => {
+      const mod = await import("./pulsating-dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulsating-dots/size.tsx");
       const exportName =
@@ -2399,6 +4055,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-badge": {
     name: "pulse-dot-badge",
     filePath: "src/registry/examples/pulse-dot/badge.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/badge.tsx");
       const exportName =
@@ -2412,6 +4077,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-button": {
     name: "pulse-dot-button",
     filePath: "src/registry/examples/pulse-dot/button.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/button.tsx");
       const exportName =
@@ -2425,6 +4099,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-color": {
     name: "pulse-dot-color",
     filePath: "src/registry/examples/pulse-dot/color.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/color.tsx");
       const exportName =
@@ -2438,6 +4121,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-demo": {
     name: "pulse-dot-demo",
     filePath: "src/registry/examples/pulse-dot/demo.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/demo.tsx");
       const exportName =
@@ -2451,6 +4143,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-duration": {
     name: "pulse-dot-duration",
     filePath: "src/registry/examples/pulse-dot/duration.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/duration.tsx");
       const exportName =
@@ -2464,6 +4165,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-input-group": {
     name: "pulse-dot-input-group",
     filePath: "src/registry/examples/pulse-dot/input-group.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/input-group.tsx");
       const exportName =
@@ -2477,6 +4187,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-size": {
     name: "pulse-dot-size",
     filePath: "src/registry/examples/pulse-dot/size.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/size.tsx");
       const exportName =
@@ -2490,6 +4209,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-dot-tabs": {
     name: "pulse-dot-tabs",
     filePath: "src/registry/examples/pulse-dot/tabs.tsx",
+    load: async () => {
+      const mod = await import("./pulse-dot/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse-dot/tabs.tsx");
       const exportName =
@@ -2503,6 +4231,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-badge": {
     name: "pulse-badge",
     filePath: "src/registry/examples/pulse/badge.tsx",
+    load: async () => {
+      const mod = await import("./pulse/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/badge.tsx");
       const exportName =
@@ -2516,6 +4253,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-button": {
     name: "pulse-button",
     filePath: "src/registry/examples/pulse/button.tsx",
+    load: async () => {
+      const mod = await import("./pulse/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/button.tsx");
       const exportName =
@@ -2529,6 +4275,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-collapsible": {
     name: "pulse-collapsible",
     filePath: "src/registry/examples/pulse/collapsible.tsx",
+    load: async () => {
+      const mod = await import("./pulse/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-collapsible";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/collapsible.tsx");
       const exportName =
@@ -2542,6 +4297,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-color": {
     name: "pulse-color",
     filePath: "src/registry/examples/pulse/color.tsx",
+    load: async () => {
+      const mod = await import("./pulse/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/color.tsx");
       const exportName =
@@ -2555,6 +4319,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-demo": {
     name: "pulse-demo",
     filePath: "src/registry/examples/pulse/demo.tsx",
+    load: async () => {
+      const mod = await import("./pulse/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/demo.tsx");
       const exportName =
@@ -2568,6 +4341,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-duration": {
     name: "pulse-duration",
     filePath: "src/registry/examples/pulse/duration.tsx",
+    load: async () => {
+      const mod = await import("./pulse/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/duration.tsx");
       const exportName =
@@ -2581,6 +4363,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-ring-weight": {
     name: "pulse-ring-weight",
     filePath: "src/registry/examples/pulse/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./pulse/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/ring-weight.tsx");
       const exportName =
@@ -2594,6 +4385,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-size": {
     name: "pulse-size",
     filePath: "src/registry/examples/pulse/size.tsx",
+    load: async () => {
+      const mod = await import("./pulse/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/size.tsx");
       const exportName =
@@ -2607,6 +4407,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "pulse-tooltip": {
     name: "pulse-tooltip",
     filePath: "src/registry/examples/pulse/tooltip.tsx",
+    load: async () => {
+      const mod = await import("./pulse/tooltip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-tooltip";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./pulse/tooltip.tsx");
       const exportName =
@@ -2620,6 +4429,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-badge": {
     name: "quarter-ring-badge",
     filePath: "src/registry/examples/quarter-ring/badge.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/badge.tsx");
       const exportName =
@@ -2633,6 +4451,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-button": {
     name: "quarter-ring-button",
     filePath: "src/registry/examples/quarter-ring/button.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/button.tsx");
       const exportName =
@@ -2646,6 +4473,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-color": {
     name: "quarter-ring-color",
     filePath: "src/registry/examples/quarter-ring/color.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/color.tsx");
       const exportName =
@@ -2659,6 +4495,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-demo": {
     name: "quarter-ring-demo",
     filePath: "src/registry/examples/quarter-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/demo.tsx");
       const exportName =
@@ -2672,6 +4517,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-duration": {
     name: "quarter-ring-duration",
     filePath: "src/registry/examples/quarter-ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/duration.tsx");
       const exportName =
@@ -2685,6 +4539,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-empty": {
     name: "quarter-ring-empty",
     filePath: "src/registry/examples/quarter-ring/empty.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/empty.tsx");
       const exportName =
@@ -2698,6 +4561,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-ring-weight": {
     name: "quarter-ring-ring-weight",
     filePath: "src/registry/examples/quarter-ring/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/ring-weight.tsx");
       const exportName =
@@ -2711,6 +4583,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-size": {
     name: "quarter-ring-size",
     filePath: "src/registry/examples/quarter-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/size.tsx");
       const exportName =
@@ -2724,6 +4605,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "quarter-ring-tooltip": {
     name: "quarter-ring-tooltip",
     filePath: "src/registry/examples/quarter-ring/tooltip.tsx",
+    load: async () => {
+      const mod = await import("./quarter-ring/tooltip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-tooltip";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./quarter-ring/tooltip.tsx");
       const exportName =
@@ -2737,6 +4627,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-badge": {
     name: "ring-badge",
     filePath: "src/registry/examples/ring/badge.tsx",
+    load: async () => {
+      const mod = await import("./ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/badge.tsx");
       const exportName =
@@ -2750,6 +4649,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-button": {
     name: "ring-button",
     filePath: "src/registry/examples/ring/button.tsx",
+    load: async () => {
+      const mod = await import("./ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/button.tsx");
       const exportName =
@@ -2763,6 +4671,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-color": {
     name: "ring-color",
     filePath: "src/registry/examples/ring/color.tsx",
+    load: async () => {
+      const mod = await import("./ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/color.tsx");
       const exportName =
@@ -2776,6 +4693,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-demo": {
     name: "ring-demo",
     filePath: "src/registry/examples/ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/demo.tsx");
       const exportName =
@@ -2789,6 +4715,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-direction": {
     name: "ring-direction",
     filePath: "src/registry/examples/ring/direction.tsx",
+    load: async () => {
+      const mod = await import("./ring/direction.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-direction";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/direction.tsx");
       const exportName =
@@ -2802,6 +4737,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-duration": {
     name: "ring-duration",
     filePath: "src/registry/examples/ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/duration.tsx");
       const exportName =
@@ -2815,6 +4759,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-empty": {
     name: "ring-empty",
     filePath: "src/registry/examples/ring/empty.tsx",
+    load: async () => {
+      const mod = await import("./ring/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/empty.tsx");
       const exportName =
@@ -2828,6 +4781,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-input-group": {
     name: "ring-input-group",
     filePath: "src/registry/examples/ring/input-group.tsx",
+    load: async () => {
+      const mod = await import("./ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/input-group.tsx");
       const exportName =
@@ -2841,6 +4803,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-size": {
     name: "ring-size",
     filePath: "src/registry/examples/ring/size.tsx",
+    load: async () => {
+      const mod = await import("./ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/size.tsx");
       const exportName =
@@ -2854,6 +4825,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ring-stroke-width": {
     name: "ring-stroke-width",
     filePath: "src/registry/examples/ring/stroke-width.tsx",
+    load: async () => {
+      const mod = await import("./ring/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring-stroke-width";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ring/stroke-width.tsx");
       const exportName =
@@ -2867,6 +4847,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-alert": {
     name: "ripple-alert",
     filePath: "src/registry/examples/ripple/alert.tsx",
+    load: async () => {
+      const mod = await import("./ripple/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/alert.tsx");
       const exportName =
@@ -2880,6 +4869,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-badge": {
     name: "ripple-badge",
     filePath: "src/registry/examples/ripple/badge.tsx",
+    load: async () => {
+      const mod = await import("./ripple/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/badge.tsx");
       const exportName =
@@ -2893,6 +4891,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-button": {
     name: "ripple-button",
     filePath: "src/registry/examples/ripple/button.tsx",
+    load: async () => {
+      const mod = await import("./ripple/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/button.tsx");
       const exportName =
@@ -2906,6 +4913,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-color": {
     name: "ripple-color",
     filePath: "src/registry/examples/ripple/color.tsx",
+    load: async () => {
+      const mod = await import("./ripple/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/color.tsx");
       const exportName =
@@ -2919,6 +4935,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-demo": {
     name: "ripple-demo",
     filePath: "src/registry/examples/ripple/demo.tsx",
+    load: async () => {
+      const mod = await import("./ripple/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/demo.tsx");
       const exportName =
@@ -2932,6 +4957,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-empty": {
     name: "ripple-empty",
     filePath: "src/registry/examples/ripple/empty.tsx",
+    load: async () => {
+      const mod = await import("./ripple/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/empty.tsx");
       const exportName =
@@ -2945,6 +4979,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-ring-weight": {
     name: "ripple-ring-weight",
     filePath: "src/registry/examples/ripple/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./ripple/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/ring-weight.tsx");
       const exportName =
@@ -2958,6 +5001,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "ripple-size": {
     name: "ripple-size",
     filePath: "src/registry/examples/ripple/size.tsx",
+    load: async () => {
+      const mod = await import("./ripple/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./ripple/size.tsx");
       const exportName =
@@ -2971,6 +5023,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-accordion": {
     name: "satellite-ring-accordion",
     filePath: "src/registry/examples/satellite-ring/accordion.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-accordion";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/accordion.tsx");
       const exportName =
@@ -2984,6 +5045,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-badge": {
     name: "satellite-ring-badge",
     filePath: "src/registry/examples/satellite-ring/badge.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/badge.tsx");
       const exportName =
@@ -2997,6 +5067,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-button": {
     name: "satellite-ring-button",
     filePath: "src/registry/examples/satellite-ring/button.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/button.tsx");
       const exportName =
@@ -3010,6 +5089,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-color": {
     name: "satellite-ring-color",
     filePath: "src/registry/examples/satellite-ring/color.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/color.tsx");
       const exportName =
@@ -3023,6 +5111,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-demo": {
     name: "satellite-ring-demo",
     filePath: "src/registry/examples/satellite-ring/demo.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/demo.tsx");
       const exportName =
@@ -3036,6 +5133,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-duration": {
     name: "satellite-ring-duration",
     filePath: "src/registry/examples/satellite-ring/duration.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/duration.tsx");
       const exportName =
@@ -3049,6 +5155,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-ring-weight": {
     name: "satellite-ring-ring-weight",
     filePath: "src/registry/examples/satellite-ring/ring-weight.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/ring-weight.tsx");
       const exportName =
@@ -3062,6 +5177,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-sheet": {
     name: "satellite-ring-sheet",
     filePath: "src/registry/examples/satellite-ring/sheet.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-sheet";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/sheet.tsx");
       const exportName =
@@ -3075,6 +5199,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "satellite-ring-size": {
     name: "satellite-ring-size",
     filePath: "src/registry/examples/satellite-ring/size.tsx",
+    load: async () => {
+      const mod = await import("./satellite-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./satellite-ring/size.tsx");
       const exportName =
@@ -3088,6 +5221,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-avatar": {
     name: "skeleton-avatar",
     filePath: "src/registry/examples/skeleton/avatar.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/avatar.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-avatar";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/avatar.tsx");
       const exportName =
@@ -3101,6 +5243,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-card": {
     name: "skeleton-card",
     filePath: "src/registry/examples/skeleton/card.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-card";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/card.tsx");
       const exportName =
@@ -3114,6 +5265,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-demo": {
     name: "skeleton-demo",
     filePath: "src/registry/examples/skeleton/demo.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/demo.tsx");
       const exportName =
@@ -3127,6 +5287,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-duration": {
     name: "skeleton-duration",
     filePath: "src/registry/examples/skeleton/duration.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/duration.tsx");
       const exportName =
@@ -3140,6 +5309,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-form": {
     name: "skeleton-form",
     filePath: "src/registry/examples/skeleton/form.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/form.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-form";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/form.tsx");
       const exportName =
@@ -3153,6 +5331,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-table": {
     name: "skeleton-table",
     filePath: "src/registry/examples/skeleton/table.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/table.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-table";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/table.tsx");
       const exportName =
@@ -3166,6 +5353,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "skeleton-text": {
     name: "skeleton-text",
     filePath: "src/registry/examples/skeleton/text.tsx",
+    load: async () => {
+      const mod = await import("./skeleton/text.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-text";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./skeleton/text.tsx");
       const exportName =
@@ -3179,6 +5375,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-button": {
     name: "spiral-button",
     filePath: "src/registry/examples/spiral/button.tsx",
+    load: async () => {
+      const mod = await import("./spiral/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/button.tsx");
       const exportName =
@@ -3192,6 +5397,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-collapsible": {
     name: "spiral-collapsible",
     filePath: "src/registry/examples/spiral/collapsible.tsx",
+    load: async () => {
+      const mod = await import("./spiral/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-collapsible";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/collapsible.tsx");
       const exportName =
@@ -3205,6 +5419,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-color": {
     name: "spiral-color",
     filePath: "src/registry/examples/spiral/color.tsx",
+    load: async () => {
+      const mod = await import("./spiral/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/color.tsx");
       const exportName =
@@ -3218,6 +5441,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-demo": {
     name: "spiral-demo",
     filePath: "src/registry/examples/spiral/demo.tsx",
+    load: async () => {
+      const mod = await import("./spiral/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/demo.tsx");
       const exportName =
@@ -3231,6 +5463,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-dots": {
     name: "spiral-dots",
     filePath: "src/registry/examples/spiral/dots.tsx",
+    load: async () => {
+      const mod = await import("./spiral/dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/dots.tsx");
       const exportName =
@@ -3244,6 +5485,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-empty": {
     name: "spiral-empty",
     filePath: "src/registry/examples/spiral/empty.tsx",
+    load: async () => {
+      const mod = await import("./spiral/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/empty.tsx");
       const exportName =
@@ -3257,6 +5507,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-radius": {
     name: "spiral-radius",
     filePath: "src/registry/examples/spiral/radius.tsx",
+    load: async () => {
+      const mod = await import("./spiral/radius.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-radius";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/radius.tsx");
       const exportName =
@@ -3270,6 +5529,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-size": {
     name: "spiral-size",
     filePath: "src/registry/examples/spiral/size.tsx",
+    load: async () => {
+      const mod = await import("./spiral/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/size.tsx");
       const exportName =
@@ -3283,6 +5551,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spiral-tabs": {
     name: "spiral-tabs",
     filePath: "src/registry/examples/spiral/tabs.tsx",
+    load: async () => {
+      const mod = await import("./spiral/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spiral/tabs.tsx");
       const exportName =
@@ -3296,6 +5573,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-alert": {
     name: "spokes-alert",
     filePath: "src/registry/examples/spokes/alert.tsx",
+    load: async () => {
+      const mod = await import("./spokes/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/alert.tsx");
       const exportName =
@@ -3309,6 +5595,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-badge": {
     name: "spokes-badge",
     filePath: "src/registry/examples/spokes/badge.tsx",
+    load: async () => {
+      const mod = await import("./spokes/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/badge.tsx");
       const exportName =
@@ -3322,6 +5617,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-button": {
     name: "spokes-button",
     filePath: "src/registry/examples/spokes/button.tsx",
+    load: async () => {
+      const mod = await import("./spokes/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/button.tsx");
       const exportName =
@@ -3335,6 +5639,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-color": {
     name: "spokes-color",
     filePath: "src/registry/examples/spokes/color.tsx",
+    load: async () => {
+      const mod = await import("./spokes/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/color.tsx");
       const exportName =
@@ -3348,6 +5661,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-demo": {
     name: "spokes-demo",
     filePath: "src/registry/examples/spokes/demo.tsx",
+    load: async () => {
+      const mod = await import("./spokes/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/demo.tsx");
       const exportName =
@@ -3361,6 +5683,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-duration": {
     name: "spokes-duration",
     filePath: "src/registry/examples/spokes/duration.tsx",
+    load: async () => {
+      const mod = await import("./spokes/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/duration.tsx");
       const exportName =
@@ -3374,6 +5705,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-input-group": {
     name: "spokes-input-group",
     filePath: "src/registry/examples/spokes/input-group.tsx",
+    load: async () => {
+      const mod = await import("./spokes/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/input-group.tsx");
       const exportName =
@@ -3387,6 +5727,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-size": {
     name: "spokes-size",
     filePath: "src/registry/examples/spokes/size.tsx",
+    load: async () => {
+      const mod = await import("./spokes/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/size.tsx");
       const exportName =
@@ -3400,6 +5749,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "spokes-stroke-width": {
     name: "spokes-stroke-width",
     filePath: "src/registry/examples/spokes/stroke-width.tsx",
+    load: async () => {
+      const mod = await import("./spokes/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes-stroke-width";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./spokes/stroke-width.tsx");
       const exportName =
@@ -3413,6 +5771,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-accordion-color": {
     name: "square-accordion-color",
     filePath: "src/registry/examples/square-accordion/color.tsx",
+    load: async () => {
+      const mod = await import("./square-accordion/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/color.tsx");
       const exportName =
@@ -3426,6 +5793,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-accordion-demo": {
     name: "square-accordion-demo",
     filePath: "src/registry/examples/square-accordion/demo.tsx",
+    load: async () => {
+      const mod = await import("./square-accordion/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/demo.tsx");
       const exportName =
@@ -3439,6 +5815,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-accordion-duration": {
     name: "square-accordion-duration",
     filePath: "src/registry/examples/square-accordion/duration.tsx",
+    load: async () => {
+      const mod = await import("./square-accordion/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/duration.tsx");
       const exportName =
@@ -3452,6 +5837,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-accordion-glyphs": {
     name: "square-accordion-glyphs",
     filePath: "src/registry/examples/square-accordion/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./square-accordion/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/glyphs.tsx");
       const exportName =
@@ -3465,6 +5859,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-accordion-size": {
     name: "square-accordion-size",
     filePath: "src/registry/examples/square-accordion/size.tsx",
+    load: async () => {
+      const mod = await import("./square-accordion/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-accordion/size.tsx");
       const exportName =
@@ -3478,6 +5881,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-grid-color": {
     name: "square-grid-color",
     filePath: "src/registry/examples/square-grid/color.tsx",
+    load: async () => {
+      const mod = await import("./square-grid/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-grid/color.tsx");
       const exportName =
@@ -3491,6 +5903,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-grid-demo": {
     name: "square-grid-demo",
     filePath: "src/registry/examples/square-grid/demo.tsx",
+    load: async () => {
+      const mod = await import("./square-grid/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-grid/demo.tsx");
       const exportName =
@@ -3504,6 +5925,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-grid-duration": {
     name: "square-grid-duration",
     filePath: "src/registry/examples/square-grid/duration.tsx",
+    load: async () => {
+      const mod = await import("./square-grid/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-grid/duration.tsx");
       const exportName =
@@ -3517,6 +5947,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-grid-glyphs": {
     name: "square-grid-glyphs",
     filePath: "src/registry/examples/square-grid/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./square-grid/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-grid/glyphs.tsx");
       const exportName =
@@ -3530,6 +5969,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-grid-size": {
     name: "square-grid-size",
     filePath: "src/registry/examples/square-grid/size.tsx",
+    load: async () => {
+      const mod = await import("./square-grid/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-grid/size.tsx");
       const exportName =
@@ -3543,6 +5991,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-snake-color": {
     name: "square-snake-color",
     filePath: "src/registry/examples/square-snake/color.tsx",
+    load: async () => {
+      const mod = await import("./square-snake/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-snake/color.tsx");
       const exportName =
@@ -3556,6 +6013,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-snake-demo": {
     name: "square-snake-demo",
     filePath: "src/registry/examples/square-snake/demo.tsx",
+    load: async () => {
+      const mod = await import("./square-snake/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-snake/demo.tsx");
       const exportName =
@@ -3569,6 +6035,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-snake-duration": {
     name: "square-snake-duration",
     filePath: "src/registry/examples/square-snake/duration.tsx",
+    load: async () => {
+      const mod = await import("./square-snake/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-snake/duration.tsx");
       const exportName =
@@ -3582,6 +6057,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-snake-glyphs": {
     name: "square-snake-glyphs",
     filePath: "src/registry/examples/square-snake/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./square-snake/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-snake/glyphs.tsx");
       const exportName =
@@ -3595,6 +6079,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "square-snake-size": {
     name: "square-snake-size",
     filePath: "src/registry/examples/square-snake/size.tsx",
+    load: async () => {
+      const mod = await import("./square-snake/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./square-snake/size.tsx");
       const exportName =
@@ -3608,6 +6101,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-alert": {
     name: "swirling-alert",
     filePath: "src/registry/examples/swirling/alert.tsx",
+    load: async () => {
+      const mod = await import("./swirling/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/alert.tsx");
       const exportName =
@@ -3621,6 +6123,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-button": {
     name: "swirling-button",
     filePath: "src/registry/examples/swirling/button.tsx",
+    load: async () => {
+      const mod = await import("./swirling/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/button.tsx");
       const exportName =
@@ -3634,6 +6145,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-collapsible": {
     name: "swirling-collapsible",
     filePath: "src/registry/examples/swirling/collapsible.tsx",
+    load: async () => {
+      const mod = await import("./swirling/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-collapsible";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/collapsible.tsx");
       const exportName =
@@ -3647,6 +6167,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-color": {
     name: "swirling-color",
     filePath: "src/registry/examples/swirling/color.tsx",
+    load: async () => {
+      const mod = await import("./swirling/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/color.tsx");
       const exportName =
@@ -3660,6 +6189,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-demo": {
     name: "swirling-demo",
     filePath: "src/registry/examples/swirling/demo.tsx",
+    load: async () => {
+      const mod = await import("./swirling/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/demo.tsx");
       const exportName =
@@ -3673,6 +6211,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-empty": {
     name: "swirling-empty",
     filePath: "src/registry/examples/swirling/empty.tsx",
+    load: async () => {
+      const mod = await import("./swirling/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-empty";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/empty.tsx");
       const exportName =
@@ -3686,6 +6233,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-line-cap": {
     name: "swirling-line-cap",
     filePath: "src/registry/examples/swirling/line-cap.tsx",
+    load: async () => {
+      const mod = await import("./swirling/line-cap.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-line-cap";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/line-cap.tsx");
       const exportName =
@@ -3699,6 +6255,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-size": {
     name: "swirling-size",
     filePath: "src/registry/examples/swirling/size.tsx",
+    load: async () => {
+      const mod = await import("./swirling/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/size.tsx");
       const exportName =
@@ -3712,6 +6277,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "swirling-stroke-width": {
     name: "swirling-stroke-width",
     filePath: "src/registry/examples/swirling/stroke-width.tsx",
+    load: async () => {
+      const mod = await import("./swirling/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling-stroke-width";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./swirling/stroke-width.tsx");
       const exportName =
@@ -3725,6 +6299,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "symmetric-wave-color": {
     name: "symmetric-wave-color",
     filePath: "src/registry/examples/symmetric-wave/color.tsx",
+    load: async () => {
+      const mod = await import("./symmetric-wave/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/color.tsx");
       const exportName =
@@ -3738,6 +6321,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "symmetric-wave-demo": {
     name: "symmetric-wave-demo",
     filePath: "src/registry/examples/symmetric-wave/demo.tsx",
+    load: async () => {
+      const mod = await import("./symmetric-wave/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/demo.tsx");
       const exportName =
@@ -3751,6 +6343,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "symmetric-wave-duration": {
     name: "symmetric-wave-duration",
     filePath: "src/registry/examples/symmetric-wave/duration.tsx",
+    load: async () => {
+      const mod = await import("./symmetric-wave/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/duration.tsx");
       const exportName =
@@ -3764,6 +6365,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "symmetric-wave-glyphs": {
     name: "symmetric-wave-glyphs",
     filePath: "src/registry/examples/symmetric-wave/glyphs.tsx",
+    load: async () => {
+      const mod = await import("./symmetric-wave/glyphs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-glyphs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/glyphs.tsx");
       const exportName =
@@ -3777,6 +6387,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "symmetric-wave-size": {
     name: "symmetric-wave-size",
     filePath: "src/registry/examples/symmetric-wave/size.tsx",
+    load: async () => {
+      const mod = await import("./symmetric-wave/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./symmetric-wave/size.tsx");
       const exportName =
@@ -3790,6 +6409,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-alert": {
     name: "terminal-alert",
     filePath: "src/registry/examples/terminal/alert.tsx",
+    load: async () => {
+      const mod = await import("./terminal/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/alert.tsx");
       const exportName =
@@ -3803,6 +6431,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-badge": {
     name: "terminal-badge",
     filePath: "src/registry/examples/terminal/badge.tsx",
+    load: async () => {
+      const mod = await import("./terminal/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/badge.tsx");
       const exportName =
@@ -3816,6 +6453,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-button": {
     name: "terminal-button",
     filePath: "src/registry/examples/terminal/button.tsx",
+    load: async () => {
+      const mod = await import("./terminal/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/button.tsx");
       const exportName =
@@ -3829,6 +6475,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-color": {
     name: "terminal-color",
     filePath: "src/registry/examples/terminal/color.tsx",
+    load: async () => {
+      const mod = await import("./terminal/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/color.tsx");
       const exportName =
@@ -3842,6 +6497,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-demo": {
     name: "terminal-demo",
     filePath: "src/registry/examples/terminal/demo.tsx",
+    load: async () => {
+      const mod = await import("./terminal/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/demo.tsx");
       const exportName =
@@ -3855,6 +6519,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-duration": {
     name: "terminal-duration",
     filePath: "src/registry/examples/terminal/duration.tsx",
+    load: async () => {
+      const mod = await import("./terminal/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/duration.tsx");
       const exportName =
@@ -3868,6 +6541,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-input-group": {
     name: "terminal-input-group",
     filePath: "src/registry/examples/terminal/input-group.tsx",
+    load: async () => {
+      const mod = await import("./terminal/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/input-group.tsx");
       const exportName =
@@ -3881,6 +6563,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "terminal-prompt": {
     name: "terminal-prompt",
     filePath: "src/registry/examples/terminal/prompt.tsx",
+    load: async () => {
+      const mod = await import("./terminal/prompt.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-prompt";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./terminal/prompt.tsx");
       const exportName =
@@ -3894,6 +6585,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-alert": {
     name: "text-blink-alert",
     filePath: "src/registry/examples/text-blink/alert.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/alert.tsx");
       const exportName =
@@ -3907,6 +6607,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-badge": {
     name: "text-blink-badge",
     filePath: "src/registry/examples/text-blink/badge.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/badge.tsx");
       const exportName =
@@ -3920,6 +6629,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-button": {
     name: "text-blink-button",
     filePath: "src/registry/examples/text-blink/button.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/button.tsx");
       const exportName =
@@ -3933,6 +6651,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-color": {
     name: "text-blink-color",
     filePath: "src/registry/examples/text-blink/color.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/color.tsx");
       const exportName =
@@ -3946,6 +6673,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-demo": {
     name: "text-blink-demo",
     filePath: "src/registry/examples/text-blink/demo.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/demo.tsx");
       const exportName =
@@ -3959,6 +6695,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-duration": {
     name: "text-blink-duration",
     filePath: "src/registry/examples/text-blink/duration.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/duration.tsx");
       const exportName =
@@ -3972,6 +6717,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-opacity": {
     name: "text-blink-opacity",
     filePath: "src/registry/examples/text-blink/opacity.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/opacity.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-opacity";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/opacity.tsx");
       const exportName =
@@ -3985,6 +6739,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-blink-tabs": {
     name: "text-blink-tabs",
     filePath: "src/registry/examples/text-blink/tabs.tsx",
+    load: async () => {
+      const mod = await import("./text-blink/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-blink/tabs.tsx");
       const exportName =
@@ -3998,6 +6761,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-alert": {
     name: "text-dots-alert",
     filePath: "src/registry/examples/text-dots/alert.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/alert.tsx");
       const exportName =
@@ -4011,6 +6783,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-badge": {
     name: "text-dots-badge",
     filePath: "src/registry/examples/text-dots/badge.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/badge.tsx");
       const exportName =
@@ -4024,6 +6805,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-button": {
     name: "text-dots-button",
     filePath: "src/registry/examples/text-dots/button.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/button.tsx");
       const exportName =
@@ -4037,6 +6827,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-color": {
     name: "text-dots-color",
     filePath: "src/registry/examples/text-dots/color.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/color.tsx");
       const exportName =
@@ -4050,6 +6849,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-count": {
     name: "text-dots-count",
     filePath: "src/registry/examples/text-dots/count.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/count.tsx");
       const exportName =
@@ -4063,6 +6871,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-demo": {
     name: "text-dots-demo",
     filePath: "src/registry/examples/text-dots/demo.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/demo.tsx");
       const exportName =
@@ -4076,6 +6893,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-duration": {
     name: "text-dots-duration",
     filePath: "src/registry/examples/text-dots/duration.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/duration.tsx");
       const exportName =
@@ -4089,6 +6915,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-dots-input-group": {
     name: "text-dots-input-group",
     filePath: "src/registry/examples/text-dots/input-group.tsx",
+    load: async () => {
+      const mod = await import("./text-dots/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-dots/input-group.tsx");
       const exportName =
@@ -4102,6 +6937,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-alert": {
     name: "text-shimmer-wave-alert",
     filePath: "src/registry/examples/text-shimmer-wave/alert.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/alert.tsx");
       const exportName =
@@ -4115,6 +6959,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-badge": {
     name: "text-shimmer-wave-badge",
     filePath: "src/registry/examples/text-shimmer-wave/badge.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/badge.tsx");
       const exportName =
@@ -4128,6 +6981,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-button": {
     name: "text-shimmer-wave-button",
     filePath: "src/registry/examples/text-shimmer-wave/button.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/button.tsx");
       const exportName =
@@ -4141,6 +7003,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-color": {
     name: "text-shimmer-wave-color",
     filePath: "src/registry/examples/text-shimmer-wave/color.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/color.tsx");
       const exportName =
@@ -4154,6 +7025,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-demo": {
     name: "text-shimmer-wave-demo",
     filePath: "src/registry/examples/text-shimmer-wave/demo.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/demo.tsx");
       const exportName =
@@ -4167,6 +7047,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-duration": {
     name: "text-shimmer-wave-duration",
     filePath: "src/registry/examples/text-shimmer-wave/duration.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/duration.tsx");
       const exportName =
@@ -4180,6 +7069,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-motion": {
     name: "text-shimmer-wave-motion",
     filePath: "src/registry/examples/text-shimmer-wave/motion.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/motion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-motion";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/motion.tsx");
       const exportName =
@@ -4193,6 +7091,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-wave-tabs": {
     name: "text-shimmer-wave-tabs",
     filePath: "src/registry/examples/text-shimmer-wave/tabs.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer-wave/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave-tabs";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer-wave/tabs.tsx");
       const exportName =
@@ -4206,6 +7113,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-alert": {
     name: "text-shimmer-alert",
     filePath: "src/registry/examples/text-shimmer/alert.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/alert.tsx");
       const exportName =
@@ -4219,6 +7135,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-badge": {
     name: "text-shimmer-badge",
     filePath: "src/registry/examples/text-shimmer/badge.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/badge.tsx");
       const exportName =
@@ -4232,6 +7157,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-button": {
     name: "text-shimmer-button",
     filePath: "src/registry/examples/text-shimmer/button.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/button.tsx");
       const exportName =
@@ -4245,6 +7179,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-color": {
     name: "text-shimmer-color",
     filePath: "src/registry/examples/text-shimmer/color.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/color.tsx");
       const exportName =
@@ -4258,6 +7201,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-demo": {
     name: "text-shimmer-demo",
     filePath: "src/registry/examples/text-shimmer/demo.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/demo.tsx");
       const exportName =
@@ -4271,6 +7223,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-duration": {
     name: "text-shimmer-duration",
     filePath: "src/registry/examples/text-shimmer/duration.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/duration.tsx");
       const exportName =
@@ -4284,6 +7245,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-input-group": {
     name: "text-shimmer-input-group",
     filePath: "src/registry/examples/text-shimmer/input-group.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/input-group.tsx");
       const exportName =
@@ -4297,6 +7267,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "text-shimmer-spread": {
     name: "text-shimmer-spread",
     filePath: "src/registry/examples/text-shimmer/spread.tsx",
+    load: async () => {
+      const mod = await import("./text-shimmer/spread.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-spread";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./text-shimmer/spread.tsx");
       const exportName =
@@ -4310,6 +7289,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-alert": {
     name: "triple-dot-spinner-alert",
     filePath: "src/registry/examples/triple-dot-spinner/alert.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-alert";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/alert.tsx");
       const exportName =
@@ -4323,6 +7311,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-badge": {
     name: "triple-dot-spinner-badge",
     filePath: "src/registry/examples/triple-dot-spinner/badge.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/badge.tsx");
       const exportName =
@@ -4336,6 +7333,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-button": {
     name: "triple-dot-spinner-button",
     filePath: "src/registry/examples/triple-dot-spinner/button.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/button.tsx");
       const exportName =
@@ -4349,6 +7355,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-color": {
     name: "triple-dot-spinner-color",
     filePath: "src/registry/examples/triple-dot-spinner/color.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/color.tsx");
       const exportName =
@@ -4362,6 +7377,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-demo": {
     name: "triple-dot-spinner-demo",
     filePath: "src/registry/examples/triple-dot-spinner/demo.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/demo.tsx");
       const exportName =
@@ -4375,6 +7399,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-duration": {
     name: "triple-dot-spinner-duration",
     filePath: "src/registry/examples/triple-dot-spinner/duration.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/duration.tsx");
       const exportName =
@@ -4388,6 +7421,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "triple-dot-spinner-size": {
     name: "triple-dot-spinner-size",
     filePath: "src/registry/examples/triple-dot-spinner/size.tsx",
+    load: async () => {
+      const mod = await import("./triple-dot-spinner/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./triple-dot-spinner/size.tsx");
       const exportName =
@@ -4401,6 +7443,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "twin-orbit-color": {
     name: "twin-orbit-color",
     filePath: "src/registry/examples/twin-orbit/color.tsx",
+    load: async () => {
+      const mod = await import("./twin-orbit/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/color.tsx");
       const exportName =
@@ -4414,6 +7465,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "twin-orbit-demo": {
     name: "twin-orbit-demo",
     filePath: "src/registry/examples/twin-orbit/demo.tsx",
+    load: async () => {
+      const mod = await import("./twin-orbit/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/demo.tsx");
       const exportName =
@@ -4427,6 +7487,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "twin-orbit-duration": {
     name: "twin-orbit-duration",
     filePath: "src/registry/examples/twin-orbit/duration.tsx",
+    load: async () => {
+      const mod = await import("./twin-orbit/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/duration.tsx");
       const exportName =
@@ -4440,6 +7509,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "twin-orbit-size": {
     name: "twin-orbit-size",
     filePath: "src/registry/examples/twin-orbit/size.tsx",
+    load: async () => {
+      const mod = await import("./twin-orbit/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./twin-orbit/size.tsx");
       const exportName =
@@ -4453,6 +7531,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-accordion": {
     name: "typing-accordion",
     filePath: "src/registry/examples/typing/accordion.tsx",
+    load: async () => {
+      const mod = await import("./typing/accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-accordion";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/accordion.tsx");
       const exportName =
@@ -4466,6 +7553,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-badge": {
     name: "typing-badge",
     filePath: "src/registry/examples/typing/badge.tsx",
+    load: async () => {
+      const mod = await import("./typing/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/badge.tsx");
       const exportName =
@@ -4479,6 +7575,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-button": {
     name: "typing-button",
     filePath: "src/registry/examples/typing/button.tsx",
+    load: async () => {
+      const mod = await import("./typing/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/button.tsx");
       const exportName =
@@ -4492,6 +7597,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-color": {
     name: "typing-color",
     filePath: "src/registry/examples/typing/color.tsx",
+    load: async () => {
+      const mod = await import("./typing/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/color.tsx");
       const exportName =
@@ -4505,6 +7619,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-count": {
     name: "typing-count",
     filePath: "src/registry/examples/typing/count.tsx",
+    load: async () => {
+      const mod = await import("./typing/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-count";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/count.tsx");
       const exportName =
@@ -4518,6 +7641,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-demo": {
     name: "typing-demo",
     filePath: "src/registry/examples/typing/demo.tsx",
+    load: async () => {
+      const mod = await import("./typing/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/demo.tsx");
       const exportName =
@@ -4531,6 +7663,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-duration": {
     name: "typing-duration",
     filePath: "src/registry/examples/typing/duration.tsx",
+    load: async () => {
+      const mod = await import("./typing/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/duration.tsx");
       const exportName =
@@ -4544,6 +7685,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-input-group": {
     name: "typing-input-group",
     filePath: "src/registry/examples/typing/input-group.tsx",
+    load: async () => {
+      const mod = await import("./typing/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/input-group.tsx");
       const exportName =
@@ -4557,6 +7707,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-size": {
     name: "typing-size",
     filePath: "src/registry/examples/typing/size.tsx",
+    load: async () => {
+      const mod = await import("./typing/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/size.tsx");
       const exportName =
@@ -4570,6 +7729,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "typing-tooltip": {
     name: "typing-tooltip",
     filePath: "src/registry/examples/typing/tooltip.tsx",
+    load: async () => {
+      const mod = await import("./typing/tooltip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-tooltip";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./typing/tooltip.tsx");
       const exportName =
@@ -4583,6 +7751,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wandering-eyes-color": {
     name: "wandering-eyes-color",
     filePath: "src/registry/examples/wandering-eyes/color.tsx",
+    load: async () => {
+      const mod = await import("./wandering-eyes/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/color.tsx");
       const exportName =
@@ -4596,6 +7773,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wandering-eyes-demo": {
     name: "wandering-eyes-demo",
     filePath: "src/registry/examples/wandering-eyes/demo.tsx",
+    load: async () => {
+      const mod = await import("./wandering-eyes/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/demo.tsx");
       const exportName =
@@ -4609,6 +7795,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wandering-eyes-duration": {
     name: "wandering-eyes-duration",
     filePath: "src/registry/examples/wandering-eyes/duration.tsx",
+    load: async () => {
+      const mod = await import("./wandering-eyes/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/duration.tsx");
       const exportName =
@@ -4622,6 +7817,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wandering-eyes-expression": {
     name: "wandering-eyes-expression",
     filePath: "src/registry/examples/wandering-eyes/expression.tsx",
+    load: async () => {
+      const mod = await import("./wandering-eyes/expression.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-expression";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/expression.tsx");
       const exportName =
@@ -4635,6 +7839,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wandering-eyes-size": {
     name: "wandering-eyes-size",
     filePath: "src/registry/examples/wandering-eyes/size.tsx",
+    load: async () => {
+      const mod = await import("./wandering-eyes/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/size.tsx");
       const exportName =
@@ -4648,6 +7861,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wandering-eyes-variables": {
     name: "wandering-eyes-variables",
     filePath: "src/registry/examples/wandering-eyes/variables.tsx",
+    load: async () => {
+      const mod = await import("./wandering-eyes/variables.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-variables";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wandering-eyes/variables.tsx");
       const exportName =
@@ -4661,6 +7883,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-badge": {
     name: "wave-badge",
     filePath: "src/registry/examples/wave/badge.tsx",
+    load: async () => {
+      const mod = await import("./wave/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-badge";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/badge.tsx");
       const exportName =
@@ -4674,6 +7905,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-button": {
     name: "wave-button",
     filePath: "src/registry/examples/wave/button.tsx",
+    load: async () => {
+      const mod = await import("./wave/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-button";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/button.tsx");
       const exportName =
@@ -4687,6 +7927,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-color": {
     name: "wave-color",
     filePath: "src/registry/examples/wave/color.tsx",
+    load: async () => {
+      const mod = await import("./wave/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-color";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/color.tsx");
       const exportName =
@@ -4700,6 +7949,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-demo": {
     name: "wave-demo",
     filePath: "src/registry/examples/wave/demo.tsx",
+    load: async () => {
+      const mod = await import("./wave/demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-demo";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/demo.tsx");
       const exportName =
@@ -4713,6 +7971,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-duration": {
     name: "wave-duration",
     filePath: "src/registry/examples/wave/duration.tsx",
+    load: async () => {
+      const mod = await import("./wave/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-duration";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/duration.tsx");
       const exportName =
@@ -4726,6 +7993,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-input-group": {
     name: "wave-input-group",
     filePath: "src/registry/examples/wave/input-group.tsx",
+    load: async () => {
+      const mod = await import("./wave/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-input-group";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/input-group.tsx");
       const exportName =
@@ -4739,6 +8015,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-size": {
     name: "wave-size",
     filePath: "src/registry/examples/wave/size.tsx",
+    load: async () => {
+      const mod = await import("./wave/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-size";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/size.tsx");
       const exportName =
@@ -4752,6 +8037,15 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
   "wave-stagger": {
     name: "wave-stagger",
     filePath: "src/registry/examples/wave/stagger.tsx",
+    load: async () => {
+      const mod = await import("./wave/stagger.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-stagger";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("./wave/stagger.tsx");
       const exportName =

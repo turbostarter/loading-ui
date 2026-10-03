@@ -16,6 +16,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/ring.tsx");
       const exportName =
@@ -40,6 +49,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/spokes.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spokes";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/spokes.tsx");
       const exportName =
@@ -64,6 +82,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/classic.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/classic.tsx");
       const exportName =
@@ -88,6 +115,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/dots-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/dots-ring.tsx");
@@ -113,6 +150,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/spiral.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/spiral.tsx");
       const exportName =
@@ -137,6 +183,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/swirling.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "swirling";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/swirling.tsx");
       const exportName =
@@ -161,6 +216,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/arc.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/arc.tsx");
       const exportName =
@@ -185,6 +249,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/dual-arc.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dual-arc";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/dual-arc.tsx");
       const exportName =
@@ -209,6 +282,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/fade-arc.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "fade-arc";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/fade-arc.tsx");
       const exportName =
@@ -233,6 +315,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/concentric-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/concentric-ring.tsx");
@@ -258,6 +350,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/orbit-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/orbit-ring.tsx");
@@ -283,6 +385,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/satellite-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/satellite-ring.tsx");
@@ -308,6 +420,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/clock-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/clock-ring.tsx");
@@ -333,6 +455,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/quarter-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/quarter-ring.tsx");
@@ -358,6 +490,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/dash-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dash-ring";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/dash-ring.tsx");
@@ -383,6 +525,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/comet-spinner.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/comet-spinner.tsx");
@@ -408,6 +560,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/pulse.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/pulse.tsx");
       const exportName =
@@ -432,6 +593,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/ripple.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/ripple.tsx");
       const exportName =
@@ -456,6 +626,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/pulse-dot.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/pulse-dot.tsx");
@@ -481,6 +661,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/dots.tsx");
       const exportName =
@@ -505,6 +694,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/bobbing-dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/bobbing-dots.tsx");
@@ -530,6 +729,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/bouncing-dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/bouncing-dots.tsx");
@@ -555,6 +764,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/typing.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/typing.tsx");
       const exportName =
@@ -579,6 +797,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/twin-orbit.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/twin-orbit.tsx");
@@ -604,6 +832,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/pulsating-dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/pulsating-dots.tsx");
@@ -629,6 +867,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/triple-dot-spinner.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/triple-dot-spinner.tsx");
@@ -654,6 +902,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/text-shimmer.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/text-shimmer.tsx");
@@ -679,6 +937,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/text-blink.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/text-blink.tsx");
@@ -704,6 +972,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/text-dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/text-dots.tsx");
@@ -729,6 +1007,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/text-shimmer-wave.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-shimmer-wave";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/text-shimmer-wave.tsx");
@@ -754,6 +1042,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/morphing-infinity.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "morphing-infinity";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/morphing-infinity.tsx");
@@ -779,6 +1077,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/infinity.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/infinity.tsx");
       const exportName =
@@ -803,6 +1110,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/accordion-loader.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "accordion-loader";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/accordion-loader.tsx");
@@ -828,6 +1145,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/symmetric-wave.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "symmetric-wave";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/symmetric-wave.tsx");
@@ -853,6 +1180,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/square-grid.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-grid";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/square-grid.tsx");
@@ -878,6 +1215,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/square-accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-accordion";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/square-accordion.tsx");
@@ -903,6 +1250,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/conveyor-loop.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "conveyor-loop";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/conveyor-loop.tsx");
@@ -928,6 +1285,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/square-snake.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "square-snake";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/square-snake.tsx");
@@ -953,6 +1320,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/infinity-square-snake.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-square-snake";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/infinity-square-snake.tsx");
@@ -978,6 +1355,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/infinity-track.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-track";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/infinity-track.tsx");
@@ -1003,6 +1390,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/diamond.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "diamond";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/diamond.tsx");
       const exportName =
@@ -1027,6 +1423,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/wave.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/wave.tsx");
       const exportName =
@@ -1051,6 +1456,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/bars.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/bars.tsx");
       const exportName =
@@ -1075,6 +1489,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/analyzing-image.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "analyzing-image";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/analyzing-image.tsx");
@@ -1100,6 +1524,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/skeleton.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/skeleton.tsx");
       const exportName =
@@ -1124,6 +1557,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/components/loading-ui/terminal.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/terminal.tsx");
       const exportName =
@@ -1148,6 +1590,16 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/wandering-eyes.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/wandering-eyes.tsx");
@@ -1173,6 +1625,15 @@ export const Index: Record<string, any> = {
         target: "",
       },
     ],
+    load: async () => {
+      const mod = await import("@/registry/lib/utils.ts");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "utils";
+      return { default: mod.default || mod[exportName] };
+    },
     component: React.lazy(async () => {
       const mod = await import("@/registry/lib/utils.ts");
       const exportName =

@@ -40,9 +40,7 @@ export function ComponentPreview({
       previewClassName={previewClassName}
       align={align}
       hideCode={hideCode}
-      component={
-        <React.Suspense>{React.createElement(Component)}</React.Suspense>
-      }
+      component={React.createElement(Component)}
       source={<ComponentSource name={name} collapsible={false} />}
       sourcePreview={
         <ComponentSource name={name} collapsible={false} maxLines={3} />
