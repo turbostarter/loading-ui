@@ -6,6 +6,7 @@ import { getDocsPage } from "@/lib/docs-page-data";
 import { source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/")({
+  staleTime: Infinity,
   loader: async () => {
     const data = getDocsPage([]);
     if (!data) {

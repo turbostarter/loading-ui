@@ -9,12 +9,17 @@ import { createQueryClient } from "@/lib/query/utils";
 import { source } from "@/lib/source";
 
 export const Route = createFileRoute("/docs/$")({
+  staleTime: Infinity,
   loader: async ({ params }) => {
     const slugs = params._splat?.split("/").filter(Boolean) ?? [];
     const data = getDocsPage(slugs);
 
     if (!data) {
       throw notFound();
+    }
+
+    if (!import.meta.env.SSR) {
+      return data;
     }
 
     const preloads = await collectDocsPreloads(data.path);
@@ -55,7 +60,13 @@ export const Route = createFileRoute("/docs/$")({
 });
 
 function DocsSplatPage() {
-  const { dehydratedState, ...data } = Route.useLoaderData();
+  const loaderData = Route.useLoaderData();
+
+  if (!("dehydratedState" in loaderData) || !loaderData.dehydratedState) {
+    return <DocsPageContent {...loaderData} />;
+  }
+
+  const { dehydratedState, ...data } = loaderData;
 
   return (
     <HydrationBoundary state={dehydratedState}>
