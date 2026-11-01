@@ -36,7 +36,7 @@
     "@octokit/rest": "^22.0.1",
     "@posthog/react": "^1.11.0",
     "@tanstack/react-query": "^5.101.4",
-    "@tanstack/react-router": "^1.168.50",
+    "@tanstack/react-router": "^1.170.46",
     "@tanstack/react-start": "^1.168.50",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
